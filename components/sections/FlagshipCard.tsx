@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 type Spec = { label: string; value: string };
 
 type Props = {
-  visual: "oif" | "cap" | "ibf";
+  visual: "oif" | "cap" | "ibf" | "gov";
   badge: string;
   badgeType: "dev" | "live" | "done";
   category: string;
@@ -173,10 +173,53 @@ function IbfVisual() {
   );
 }
 
+function GovVisual() {
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
+      {/* Band 1 — Portail public */}
+      <rect x="12" y="10" width="256" height="46" fill="rgba(245,239,230,0.06)" stroke="rgba(194,112,31,0.45)" strokeWidth="0.8" rx="3"/>
+      <text x="20" y="22" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(194,112,31,0.8)" fontWeight="500" letterSpacing="0.08em">PORTAIL PUBLIC</text>
+      <rect x="20" y="28" width="68" height="20" fill="rgba(245,239,230,0.07)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.5" rx="2"/>
+      <rect x="24" y="31" width="14" height="14" fill="rgba(194,112,31,0.3)" rx="1"/>
+      <text x="44" y="41" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Ind. A</text>
+      <rect x="96" y="28" width="68" height="20" fill="rgba(245,239,230,0.07)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.5" rx="2"/>
+      <rect x="100" y="31" width="14" height="14" fill="rgba(194,112,31,0.25)" rx="1"/>
+      <text x="120" y="41" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Ind. B</text>
+      <rect x="172" y="28" width="68" height="20" fill="rgba(245,239,230,0.07)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.5" rx="2"/>
+      <rect x="176" y="31" width="14" height="14" fill="rgba(194,112,31,0.2)" rx="1"/>
+      <text x="196" y="41" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Ind. C</text>
+
+      {/* Band 2 — Espace authentifié */}
+      <rect x="12" y="64" width="256" height="72" fill="rgba(180,83,9,0.1)" stroke="rgba(194,112,31,0.6)" strokeWidth="0.8" rx="3"/>
+      <text x="20" y="76" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(194,112,31,0.8)" fontWeight="500" letterSpacing="0.06em">ESPACE AUTHENTIFIÉ</text>
+      <circle cx="55" cy="98" r="10" fill="rgba(180,83,9,0.45)" stroke="rgba(194,112,31,0.85)" strokeWidth="1"/>
+      <text x="55" y="102" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="#F5EFE6">ADM</text>
+      <circle cx="140" cy="98" r="10" fill="rgba(180,83,9,0.25)" stroke="rgba(194,112,31,0.6)" strokeWidth="1"/>
+      <text x="140" y="102" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="#F5EFE6">ÉDI</text>
+      <circle cx="225" cy="98" r="10" fill="rgba(180,83,9,0.12)" stroke="rgba(194,112,31,0.4)" strokeWidth="1"/>
+      <text x="225" y="102" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="#F5EFE6">LEC</text>
+      <line x1="65" y1="98" x2="130" y2="98" stroke="rgba(194,112,31,0.4)" strokeWidth="0.8" strokeDasharray="3,2"/>
+      <line x1="150" y1="98" x2="215" y2="98" stroke="rgba(194,112,31,0.3)" strokeWidth="0.8" strokeDasharray="3,2"/>
+      <text x="55" y="117" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Admin</text>
+      <text x="140" y="117" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Éditeur</text>
+      <text x="225" y="117" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.45)">Lecteur</text>
+      <rect x="20" y="122" width="240" height="5" fill="rgba(245,239,230,0.08)" rx="2.5"/>
+      <rect x="20" y="122" width="180" height="5" fill="rgba(194,112,31,0.5)" rx="2.5"/>
+      <text x="205" y="129" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(194,112,31,0.7)">75 %</text>
+
+      {/* Band 3 — Référentiel & audit */}
+      <rect x="12" y="144" width="256" height="28" fill="rgba(245,239,230,0.04)" stroke="rgba(194,112,31,0.3)" strokeWidth="0.8" rx="3"/>
+      <text x="20" y="156" fontFamily="JetBrains Mono" fontSize="7" fill="rgba(194,112,31,0.6)" fontWeight="500" letterSpacing="0.06em">RÉFÉRENTIEL &amp; AUDIT</text>
+      <text x="20" y="166" fontFamily="JetBrains Mono" fontSize="6" fill="rgba(245,239,230,0.3)">▪ Journal · Certifications · PDC</text>
+    </svg>
+  );
+}
+
 const visualBg: Record<string, string> = {
   oif: "linear-gradient(135deg, #060F1C 0%, #0A1628 100%)",
   cap: "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #060F1C 100%)",
   ibf: "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #816A37 100%)",
+  gov: "linear-gradient(135deg, #0A1628 0%, #1A1410 60%, #0C0A06 100%)",
 };
 
 const badgeColors: Record<string, string> = {
@@ -288,6 +331,7 @@ export default function FlagshipCard({
         {visual === "oif" && <OifVisual />}
         {visual === "cap" && <CapVisual alt={capImageAlt} />}
         {visual === "ibf" && <IbfVisual />}
+        {visual === "gov" && <GovVisual />}
       </div>
 
       {/* Content */}

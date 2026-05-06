@@ -40,6 +40,7 @@
       "Union Européenne",
       "CHU de Québec",
       "Cap Citoyen",
+      "Mairie au Bénin",
       "Agence Française de Développement",
       "Coopération allemande GIZ",
       "Coopération suisse DDC",
@@ -110,10 +111,10 @@
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Trois projets, trois",
+    "h2Part1": "Quatre projets, quatre",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Une plateforme institutionnelle pour une organisation multilatérale, deux outils de pilotage pour des programmes financés par l'Union Européenne, et un produit SaaS en propre. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés — du cadrage stratégique au déploiement opérationnel.",
+    "intro": "Une plateforme institutionnelle pour une organisation multilatérale, deux outils de pilotage pour des programmes financés par l'Union Européenne, un produit SaaS en propre et une plateforme de gouvernance territoriale. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés — du cadrage stratégique au déploiement opérationnel.",
     "card1": {
       "category": "Architecture institutionnelle",
       "role": "Architecte / Chef de projet",
@@ -166,6 +167,23 @@
       "spec4Value": "Livré · Adopté",
       "stack": ["Architecture web", "Reporting bailleur", "Multi-rôles", "CAD-OCDE"],
       "cta": "🔒 Mission confidentielle"
+    },
+    "card4": {
+      "category": "Gouvernance locale",
+      "role": "Architecte / Concepteur",
+      "status": "En développement",
+      "title": "Plateforme de pilotage par les indicateurs",
+      "description": "Conception et développement d'une plateforme web sécurisée pour le pilotage du développement communal par les données. Référentiel d'indicateurs aligné sur le Plan Communal de Développement, workflow de certification, journal d'audit et accès différencié par profil.",
+      "spec1Label": "Échelle",
+      "spec1Value": "Commune et arrondissements",
+      "spec2Label": "Cadre",
+      "spec2Value": "Plan Communal de Développement",
+      "spec3Label": "Profils",
+      "spec3Value": "3 rôles différenciés (Admin / Éditeur / Lecteur)",
+      "spec4Label": "Statut",
+      "spec4Value": "En développement",
+      "stack": ["Architecture web sécurisée", "Référentiel d'indicateurs", "Workflow de certification", "Journal d'audit", "Multi-rôles"],
+      "cta": "🔒 Document confidentiel"
     }
   },
   "stats": {

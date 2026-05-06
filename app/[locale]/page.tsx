@@ -102,6 +102,7 @@ export default async function Home({ params }: Props) {
           card1={flagship.raw("card1") as Parameters<typeof Flagship>[0]["card1"]}
           card2={flagship.raw("card2") as Parameters<typeof Flagship>[0]["card2"]}
           card3={flagship.raw("card3") as Parameters<typeof Flagship>[0]["card3"]}
+          card4={flagship.raw("card4") as Parameters<typeof Flagship>[0]["card4"]}
         />
 
         <Stats

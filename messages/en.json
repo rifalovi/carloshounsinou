@@ -40,6 +40,7 @@
       "European Union",
       "CHU de Québec",
       "Cap Citoyen",
+      "Municipality in Benin",
       "Agence Française de Développement",
       "GIZ German Cooperation",
       "Swiss Development Cooperation DDC",
@@ -110,10 +111,10 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Three projects, three",
+    "h2Part1": "Four projects, four",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "An institutional platform for a multilateral organisation, two monitoring tools for European Union-funded programmes, and a SaaS product of my own. Each project illustrates my ability to design and deliver integrated systems — from strategic scoping to operational deployment.",
+    "intro": "An institutional platform for a multilateral organisation, two monitoring tools for European Union-funded programmes, a SaaS product of my own, and a territorial governance platform. Each project illustrates my ability to design and deliver integrated systems — from strategic scoping to operational deployment.",
     "card1": {
       "category": "Institutional architecture",
       "role": "Architect / Project lead",
@@ -166,6 +167,23 @@
       "spec4Value": "Delivered · Adopted",
       "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
       "cta": "🔒 Confidential mission"
+    },
+    "card4": {
+      "category": "Local governance",
+      "role": "Architect / Designer",
+      "status": "In development",
+      "title": "Indicator-based steering platform",
+      "description": "Design and development of a secure web platform for data-driven municipal development steering. Indicator framework aligned with the Municipal Development Plan, certification workflow, audit trail and differentiated access by role.",
+      "spec1Label": "Scale",
+      "spec1Value": "Municipality and districts",
+      "spec2Label": "Framework",
+      "spec2Value": "Municipal Development Plan",
+      "spec3Label": "Profiles",
+      "spec3Value": "3 differentiated roles (Admin / Editor / Reader)",
+      "spec4Label": "Status",
+      "spec4Value": "In development",
+      "stack": ["Secure web architecture", "Indicator framework", "Certification workflow", "Audit trail", "Multi-role"],
+      "cta": "🔒 Confidential document"
     }
   },
   "stats": {

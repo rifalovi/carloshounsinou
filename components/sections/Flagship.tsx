@@ -30,6 +30,7 @@ type Props = {
   card1: CardData;
   card2: CardData;
   card3: CardData;
+  card4: CardData;
 };
 
 const statusType = (status: string): "dev" | "live" | "done" => {
@@ -38,7 +39,7 @@ const statusType = (status: string): "dev" | "live" | "done" => {
   return "done";
 };
 
-export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, card1, card2, card3 }: Props) {
+export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, card1, card2, card3, card4 }: Props) {
   return (
     <section
       id="realisations"
@@ -86,14 +87,15 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "24px",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: "20px",
         }}
       >
         {[
           { data: card1, visual: "oif" as const },
           { data: card2, visual: "cap" as const },
           { data: card3, visual: "ibf" as const },
+          { data: card4, visual: "gov" as const },
         ].map(({ data, visual }, i) => (
           <FlagshipCard
             key={visual}
@@ -122,7 +124,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
       </div>
 
       <style>{`
-        @media (max-width: 1200px) {
+        @media (max-width: 1280px) {
           #realisations > div:last-child {
             grid-template-columns: 1fr 1fr !important;
           }
