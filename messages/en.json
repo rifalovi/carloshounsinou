@@ -39,7 +39,13 @@
       "IBF International Consulting",
       "European Union",
       "CHU de Québec",
-      "Cap Citoyen"
+      "Cap Citoyen",
+      "Agence Française de Développement",
+      "GIZ German Cooperation",
+      "Swiss Development Cooperation DDC",
+      "Bill & Melinda Gates Foundation",
+      "CIHR · Canadian Institutes of Health Research",
+      "Fondation Mérieux"
     ]
   },
   "about": {
@@ -72,7 +78,7 @@
         "period": "2018 — 2021",
         "title": "Systems Designer for EU Donors",
         "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
-        "description": "Built two complete web-based monitoring & evaluation platforms for European Union-funded projects. Refined the logical framework, designed the online system, transferred skills to field teams.",
+        "description": "Implementation of two complete web platforms for monitoring and evaluation under the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system, training of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants.",
         "tags": ["EU", "Platform", "Consulting"],
         "accent": "primary"
       },
@@ -80,7 +86,7 @@
         "period": "2019 — 2020",
         "title": "Architect of Programming Tools",
         "org": "OIF · External Representations Service · Paris",
-        "description": "Designed and deployed indicator monitoring tools for the 2019–2022 programming cycle. Supported national structures throughout the full strategic planning cycle.",
+        "description": "International Volunteer of La Francophonie (VIF) at the Coordination Service for Off-Site Units. Design and deployment of indicator monitoring tools for the 2019-2022 four-year programming. Support to national structures (RESIFS) on the complete strategic planning cycle.",
         "tags": ["Multilateral", "Tools", "Planning"],
         "accent": "tertiary"
       },
@@ -88,7 +94,7 @@
         "period": "2016 — 2018",
         "title": "Statistician · Health Research",
         "org": "CHU de Québec · Benin",
-        "description": "Designed databases and monitoring tools for sexual and reproductive health research. Rebuilt the monitoring system and contributed to the 'Health Equity' project.",
+        "description": "Statistician within the Project Coordination of CHU de Québec in Benin, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research and improvement of living conditions of vulnerable populations ('Health Equity' project).",
         "tags": ["Research", "Health", "Data"],
         "accent": "tertiary"
       },

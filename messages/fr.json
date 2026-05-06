@@ -39,7 +39,13 @@
       "IBF International Consulting",
       "Union Européenne",
       "CHU de Québec",
-      "Cap Citoyen"
+      "Cap Citoyen",
+      "Agence Française de Développement",
+      "Coopération allemande GIZ",
+      "Coopération suisse DDC",
+      "Fondation Bill et Melinda Gates",
+      "IRSC · Instituts de Recherche en Santé du Canada",
+      "Fondation Mérieux"
     ]
   },
   "about": {
@@ -72,7 +78,7 @@
         "period": "2018 — 2021",
         "title": "Concepteur de systèmes pour bailleurs UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
-        "description": "Mise en place de deux plateformes web complètes de suivi-évaluation pour des projets financés par l'Union Européenne. Affinement du cadre logique, conception du dispositif en ligne, transfert de compétences aux équipes terrain.",
+        "description": "Mise en place de deux plateformes web complètes de suivi-évaluation pour le programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé, formation des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques.",
         "tags": ["UE", "Plateforme", "Conseil"],
         "accent": "primary"
       },
@@ -80,7 +86,7 @@
         "period": "2019 — 2020",
         "title": "Architecte d'outils de programmation",
         "org": "OIF · Service des Représentations Extérieures · Paris",
-        "description": "Conception et déploiement d'outils de suivi des indicateurs pour la programmation 2019-2022. Appui aux structures nationales sur le cycle complet de planification stratégique.",
+        "description": "Volontaire International de la Francophonie (VIF) au Service de la Coordination des Unités Hors Siège. Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022. Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique.",
         "tags": ["Multilatéral", "Outils", "Planification"],
         "accent": "tertiary"
       },
@@ -88,7 +94,7 @@
         "period": "2016 — 2018",
         "title": "Statisticien · Recherche en santé",
         "org": "CHU de Québec · Bénin",
-        "description": "Conception de bases de données et d'outils de suivi pour la recherche en santé sexuelle et reproductive. Refonte du système de monitoring, contribution au projet 'Équité en Santé'.",
+        "description": "Statisticien au sein de la Coordination des Projets du CHU de Québec au Bénin, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
         "tags": ["Recherche", "Santé", "Data"],
         "accent": "tertiary"
       },
