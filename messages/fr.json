@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "title": "Carlos HOUNSINOU — Architecte de systèmes intégrés & Spécialiste S&E",
+    "description": "Carlos Hounsinou, Chargé d'Ingénierie de Projet à l'OIF. 13 ans d'expérience en suivi-évaluation et architecture de plateformes pour institutions internationales, bailleurs et organisations.",
+    "keywords": "suivi-évaluation, ingénierie de projet, OIF, architecte de systèmes, consultant S&E, Carlos Hounsinou"
+  },
+  "nav": {
+    "about": "I. Parcours",
+    "flagship": "II. Réalisations",
+    "expertise": "III. Expertise",
+    "contact": "IV. Contact",
+    "cta": "Échanger",
+    "status": "Disponible"
+  },
+  "hero": {
+    "eyebrowLeft": "FR · 33 Paris, Île-de-France",
+    "eyebrowCenter": "Portfolio · Édition MMXXVI",
+    "eyebrowRight": "Architecte de systèmes intégrés",
+    "tag": "Chargé d'Ingénierie de Projet · Organisation Internationale de la Francophonie",
+    "h1Line1": "Concevoir des",
+    "h1Emphasis1": "systèmes",
+    "h1Line2": "qui livrent de l'",
+    "h1Emphasis2": "impact",
+    "h1End": ".",
+    "portraitQuote": "« Du cadre logique au code source. »",
+    "portraitLocation": "2024 → · OIF · Paris",
+    "kpi1Label": "I. Expérience",
+    "kpi1Value": "13 années",
+    "kpi2Label": "II. Périmètre",
+    "kpi2Value": "4 pays · 3 continents",
+    "kpi3Label": "III. Réalisations",
+    "kpi3Value": "3 plateformes majeures",
+    "ctaPrimary": "Discuter d'un projet",
+    "ctaSecondary": "Voir mes réalisations"
+  },
+  "marquee": {
+    "items": [
+      "Organisation Internationale de la Francophonie",
+      "IBF International Consulting",
+      "Union Européenne",
+      "CHU de Québec",
+      "Cap Citoyen",
+      "Fondateur"
+    ]
+  },
+  "about": {
+    "eyebrow": "Le parcours",
+    "h2Part1": "D'une rigueur statistique à une",
+    "h2Emphasis": "vision systémique",
+    "h2End": ".",
+    "p1": "Ingénieur de formation en statistiques et titulaire d'un Master en Gestion de Projet, j'ai construit en treize ans une expertise rare à la croisée de trois mondes : la méthodologie du suivi-évaluation, la technique de la donnée, et la conception produit.",
+    "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
+    "p2Org": "Organisation Internationale de la Francophonie",
+    "p2Part2": " en tant que Chargé d'Ingénierie de Projet — après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
+    "timeline": [
+      {
+        "period": "2024 — Aujourd'hui",
+        "role": "Chargé d'Ingénierie de Projet",
+        "org": "Organisation Internationale de la Francophonie"
+      },
+      {
+        "period": "2021 — 2024",
+        "role": "Consultant Senior · Stratégies numériques",
+        "org": "Heaven Immobilier · OIF (DAF, ADM, DPE)"
+      },
+      {
+        "period": "2018 — 2021",
+        "role": "Expert Consultant en Suivi-Évaluation",
+        "org": "IBF International · Programmes Union Européenne"
+      },
+      {
+        "period": "2016 — 2018",
+        "role": "Statisticien · Recherche en santé",
+        "org": "CHU de Québec · Bénin"
+      },
+      {
+        "period": "2012 — 2016",
+        "role": "Chef du service Analyse & S&E",
+        "org": "Administration Communale · Bénin"
+      }
+    ]
+  },
+  "flagship": {
+    "eyebrow": "Réalisations phares",
+    "h2Part1": "Trois projets, trois",
+    "h2Emphasis": "échelles",
+    "h2End": " de transformation.",
+    "intro": "Une plateforme institutionnelle pour une organisation multilatérale, deux outils de pilotage pour des programmes financés par l'Union Européenne, et un produit SaaS en propre. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés — du cadrage stratégique au déploiement opérationnel.",
+    "card1": {
+      "category": "Architecture institutionnelle",
+      "role": "Architecte / Chef de projet",
+      "status": "En développement",
+      "title": "Plateforme de pilotage de portefeuille programmatique",
+      "description": "Conception et spécification d'une plateforme web sécurisée pour le suivi-évaluation d'un portefeuille de programmes internationaux, déployée auprès d'une organisation multilatérale francophone. Architecture en 4 rôles avec sécurité au niveau des lignes (RLS) et conformité RGPD intégrée.",
+      "spec1Label": "Échelle pilote",
+      "spec1Value": "60 partenaires",
+      "spec2Label": "Indicateurs",
+      "spec2Value": "18 · architecture modulaire",
+      "spec3Label": "Modules",
+      "spec3Value": "9 modules fonctionnels",
+      "spec4Label": "Lancement",
+      "spec4Value": "Pilote · 2026",
+      "stack": ["Architecture", "PostgreSQL", "Supabase", "RLS", "RGPD"],
+      "cta": "🔒 Document confidentiel"
+    },
+    "card2": {
+      "category": "Produit SaaS · EdTech",
+      "role": "Fondateur",
+      "status": "En production",
+      "title": "Cap Citoyen · Examen civique français",
+      "description": "Plateforme web et mobile pour la préparation à l'examen civique de naturalisation, obligatoire depuis janvier 2026. 800+ questions QCM, 100 épisodes audio, IA Coach intégrée (API Anthropic + GPT-4o-mini), assistant démarches et communauté d'entraide.",
+      "spec1Label": "Marché ciblé",
+      "spec1Value": "300 000 / an",
+      "spec2Label": "Plateformes",
+      "spec2Value": "Web · Android · PWA",
+      "spec3Label": "Modèle",
+      "spec3Value": "Freemium / Premium",
+      "spec4Label": "Statut",
+      "spec4Value": "Live · Google Play",
+      "stack": ["Next.js", "API Anthropic", "GPT-4", "PWA", "Stripe"],
+      "ctaWebsite": "cap-citoyen.fr",
+      "ctaPlay": "Google Play"
+    },
+    "card3": {
+      "category": "Mission de conseil · UE",
+      "role": "Expert Consultant S&E",
+      "status": "Livré",
+      "title": "Plateformes de suivi · projets financés UE",
+      "description": "Mission de conseil pour le compte d'IBF International Consulting : conception et mise en place de deux plateformes web dédiées au suivi-évaluation de projets financés par l'Union Européenne. Outils de pilotage destinés aux coordonnateurs, bailleurs et partenaires de mise en œuvre.",
+      "spec1Label": "Bailleur",
+      "spec1Value": "Union Européenne",
+      "spec2Label": "Plateformes",
+      "spec2Value": "2 outils dédiés",
+      "spec3Label": "Cadre",
+      "spec3Value": "Standards CAD-OCDE",
+      "spec4Label": "Statut",
+      "spec4Value": "Livré · Adopté",
+      "stack": ["Architecture web", "Reporting bailleur", "Multi-rôles", "CAD-OCDE"],
+      "cta": "🔒 Mission confidentielle"
+    }
+  },
+  "stats": {
+    "eyebrow": "Réalisations · KPI",
+    "h2Part1": "Treize années, quatre",
+    "h2Emphasis": "continents",
+    "h2End": " d'impact mesurable.",
+    "intro": "Au-delà des titres, ce qui compte ce sont les outils déployés, les projets livrés, les équipes formées. Voici ce que représentent treize années de pratique de terrain.",
+    "items": [
+      {
+        "label": "I. Outils",
+        "value": 65,
+        "description": "Outils de suivi-évaluation conçus, dont 46 en VBA-Excel et 19 en Access",
+        "bar": 92
+      },
+      {
+        "label": "II. Projets",
+        "value": 19,
+        "description": "Projets de développement planifiés et gérés au sein de plusieurs organismes",
+        "bar": 70
+      },
+      {
+        "label": "III. OSC",
+        "value": 57,
+        "description": "Organisations de la société civile accompagnées en planification & S&E",
+        "bar": 85
+      },
+      {
+        "label": "IV. Formations",
+        "value": 39,
+        "description": "Ateliers animés dans 4 pays sur des thématiques variées",
+        "bar": 78
+      }
+    ],
+    "footerLeft": "// Mise à jour : Mai 2026",
+    "footerRight": "Bénin · Belgique · France · Québec"
+  },
+  "expertise": {
+    "eyebrow": "Domaines d'expertise",
+    "h2Part1": "Cinq piliers, une",
+    "h2Emphasis": "même",
+    "h2End": " exigence.",
+    "intro": "Du cadrage méthodologique à la mise en production logicielle. Chaque mission mobilise au moins deux de ces piliers — c'est ce qui en fait la différence.",
+    "feature": {
+      "label": "I. Pilier principal",
+      "title": "Architecture de systèmes intégrés de Suivi-Évaluation",
+      "description": "Conception de plateformes complètes alignées sur la Gestion Axée Résultats. Du cadre logique aux spécifications techniques, jusqu'à la gouvernance des données (RLS, audit, RGPD).",
+      "tags": ["GAR", "CAD-OCDE", "Cadre logique", "Théorie du changement", "PostgreSQL", "RLS"],
+      "cta": "Voir les services →"
+    },
+    "tiles": [
+      {
+        "label": "II",
+        "title": "Data analytics & Business Intelligence",
+        "description": "Analyse statistique avancée, tableaux de bord, valorisation de la donnée.",
+        "tags": ["Power BI", "SPSS", "R"]
+      },
+      {
+        "label": "III",
+        "title": "Solutions SaaS & produits digitaux",
+        "description": "Conception et lancement de plateformes web/mobiles, intégration IA.",
+        "tags": ["Next.js", "API Anthropic", "GPT-4"]
+      },
+      {
+        "label": "IV",
+        "title": "Outils No-Code & automatisation",
+        "description": "Déploiement rapide d'applications métiers, automatisation de processus.",
+        "tags": ["Glide", "Airtable", "Make"]
+      },
+      {
+        "label": "V",
+        "title": "Formation & renforcement de capacités",
+        "description": "Transmission par la pratique. Modules sur-mesure, coaching individuel.",
+        "tags": ["Présentiel", "Distanciel"]
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Carlos a transformé notre dispositif de suivi-évaluation. Sa rigueur méthodologique alliée à sa maîtrise des outils digitaux nous a permis de gagner en clarté et en réactivité dans le pilotage de nos projets.",
+    "author": "[À compléter]",
+    "role": "Direction de programme · Organisation internationale"
+  },
+  "contact": {
+    "eyebrow": "Prendre contact",
+    "h2Part1": "Parlons de votre",
+    "h2Emphasis": "projet",
+    "h2End": ".",
+    "intro": "ONG, bailleur, entreprise ou institution publique : un premier échange de 30 minutes pour comprendre votre besoin et identifier les leviers d'action — sans engagement.",
+    "email": "carlos.hounsinou@outlook.fr",
+    "phone": "+33 (0) 7 58 36 78 08",
+    "linkedin": "linkedin.com/in/carlos-hounsinou",
+    "form": {
+      "step1Label": "I.",
+      "step1Question": "Comment vous appelez-vous ?",
+      "step1Placeholder": "Votre nom et organisation",
+      "step2Label": "II.",
+      "step2Question": "Comment puis-je vous joindre ?",
+      "step2Placeholder": "vous@organisation.org",
+      "step3Label": "III.",
+      "step3Question": "Sur quel sujet souhaitez-vous échanger ?",
+      "step3Chips": ["Suivi-évaluation", "Tableau de bord BI", "Application SaaS", "No-Code", "Formation", "Autre"],
+      "step4Label": "IV.",
+      "step4Question": "Décrivez brièvement votre projet",
+      "step4Placeholder": "Quelques lignes suffisent — nous approfondirons lors de l'échange.",
+      "submit": "Envoyer ma demande →",
+      "success": "Merci ! Votre message a bien été envoyé. Je vous réponds sous 24 à 48 heures ouvrées.",
+      "error": "Une erreur est survenue. Vous pouvez aussi me joindre directement à carlos.hounsinou@outlook.fr."
+    }
+  },
+  "footer": {
+    "brand": "CH",
+    "brandName": "Carlos Hounsinou",
+    "copyright": "© MMXXVI · Tous droits réservés · carloshounsinou.com",
+    "linkedin": "LinkedIn",
+    "suiviprojet": "suivi-projet.org",
+    "capcit": "cap-citoyen.fr",
+    "langFr": "FR",
+    "langEn": "EN"
+  }
+}

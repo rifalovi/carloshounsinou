@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "title": "Carlos HOUNSINOU — Integrated Systems Architect & M&E Specialist",
+    "description": "Carlos Hounsinou, Project Engineering Officer at the OIF. 13 years of experience in monitoring, evaluation and platform architecture for international institutions, donors and organizations.",
+    "keywords": "monitoring evaluation, project engineering, OIF, systems architect, M&E consultant, Carlos Hounsinou"
+  },
+  "nav": {
+    "about": "I. Background",
+    "flagship": "II. Achievements",
+    "expertise": "III. Expertise",
+    "contact": "IV. Contact",
+    "cta": "Get in touch",
+    "status": "Available"
+  },
+  "hero": {
+    "eyebrowLeft": "FR · 33 Paris, Île-de-France",
+    "eyebrowCenter": "Portfolio · MMXXVI Edition",
+    "eyebrowRight": "Integrated Systems Architect",
+    "tag": "Project Engineering Officer · International Organisation of La Francophonie",
+    "h1Line1": "Designing",
+    "h1Emphasis1": "systems",
+    "h1Line2": "that deliver",
+    "h1Emphasis2": "impact",
+    "h1End": ".",
+    "portraitQuote": "\"From logical framework to source code.\"",
+    "portraitLocation": "2024 → · OIF · Paris",
+    "kpi1Label": "I. Experience",
+    "kpi1Value": "13 years",
+    "kpi2Label": "II. Reach",
+    "kpi2Value": "4 countries · 3 continents",
+    "kpi3Label": "III. Achievements",
+    "kpi3Value": "3 major platforms",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "View my work"
+  },
+  "marquee": {
+    "items": [
+      "International Organisation of La Francophonie",
+      "IBF International Consulting",
+      "European Union",
+      "CHU de Québec",
+      "Cap Citoyen",
+      "Founder"
+    ]
+  },
+  "about": {
+    "eyebrow": "The journey",
+    "h2Part1": "From statistical rigor to a",
+    "h2Emphasis": "systemic vision",
+    "h2End": ".",
+    "p1": "A trained statistical engineer with a Master's in Project Management, I have built over thirteen years a rare expertise at the intersection of three worlds: monitoring & evaluation methodology, data engineering, and product design.",
+    "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
+    "p2Org": "International Organisation of La Francophonie",
+    "p2Part2": " as Project Engineering Officer — after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
+    "timeline": [
+      {
+        "period": "2024 — Today",
+        "role": "Project Engineering Officer",
+        "org": "International Organisation of La Francophonie"
+      },
+      {
+        "period": "2021 — 2024",
+        "role": "Senior Consultant · Digital strategies",
+        "org": "Heaven Immobilier · OIF"
+      },
+      {
+        "period": "2018 — 2021",
+        "role": "Senior M&E Consultant",
+        "org": "IBF International · European Union programmes"
+      },
+      {
+        "period": "2016 — 2018",
+        "role": "Statistician · Health research",
+        "org": "CHU de Québec · Benin"
+      },
+      {
+        "period": "2012 — 2016",
+        "role": "Head of Analysis & M&E Department",
+        "org": "Municipal Administration · Benin"
+      }
+    ]
+  },
+  "flagship": {
+    "eyebrow": "Flagship work",
+    "h2Part1": "Three projects, three",
+    "h2Emphasis": "scales",
+    "h2End": " of transformation.",
+    "intro": "An institutional platform for a multilateral organisation, two monitoring tools for European Union-funded programmes, and a SaaS product of my own. Each project illustrates my ability to design and deliver integrated systems — from strategic scoping to operational deployment.",
+    "card1": {
+      "category": "Institutional architecture",
+      "role": "Architect / Project lead",
+      "status": "In development",
+      "title": "Programme portfolio steering platform",
+      "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation. Architecture with 4 differentiated roles, row-level security (RLS) and built-in GDPR compliance.",
+      "spec1Label": "Pilot scale",
+      "spec1Value": "60 partners",
+      "spec2Label": "Indicators",
+      "spec2Value": "18 · modular architecture",
+      "spec3Label": "Modules",
+      "spec3Value": "9 functional modules",
+      "spec4Label": "Launch",
+      "spec4Value": "Pilot · 2026",
+      "stack": ["Architecture", "PostgreSQL", "Supabase", "RLS", "GDPR"],
+      "cta": "🔒 Confidential document"
+    },
+    "card2": {
+      "category": "SaaS product · EdTech",
+      "role": "Founder",
+      "status": "Live in production",
+      "title": "Cap Citoyen · French civic exam preparation",
+      "description": "Web and mobile platform for preparing the civic naturalisation exam, mandatory since January 2026. 800+ MCQ questions, 100 audio episodes, integrated AI Coach (Anthropic API + GPT-4o-mini), procedure assistant and peer community.",
+      "spec1Label": "Target market",
+      "spec1Value": "300,000 / year",
+      "spec2Label": "Platforms",
+      "spec2Value": "Web · Android · PWA",
+      "spec3Label": "Model",
+      "spec3Value": "Freemium / Premium",
+      "spec4Label": "Status",
+      "spec4Value": "Live · Google Play",
+      "stack": ["Next.js", "Anthropic API", "GPT-4", "PWA", "Stripe"],
+      "ctaWebsite": "cap-citoyen.fr",
+      "ctaPlay": "Google Play"
+    },
+    "card3": {
+      "category": "Consulting mission · EU",
+      "role": "Senior M&E Consultant",
+      "status": "Delivered",
+      "title": "Monitoring platforms · EU-funded projects",
+      "description": "Consulting mission for IBF International Consulting: design and implementation of two web platforms dedicated to monitoring & evaluation of European Union-funded projects. Steering tools for coordinators, donors and implementing partners.",
+      "spec1Label": "Donor",
+      "spec1Value": "European Union",
+      "spec2Label": "Platforms",
+      "spec2Value": "2 dedicated tools",
+      "spec3Label": "Framework",
+      "spec3Value": "OECD-DAC standards",
+      "spec4Label": "Status",
+      "spec4Value": "Delivered · Adopted",
+      "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
+      "cta": "🔒 Confidential mission"
+    }
+  },
+  "stats": {
+    "eyebrow": "Achievements · KPIs",
+    "h2Part1": "Thirteen years, four",
+    "h2Emphasis": "continents",
+    "h2End": " of measurable impact.",
+    "intro": "Beyond titles, what counts are the tools deployed, the projects delivered, the teams trained. Here is what thirteen years of field practice represent.",
+    "items": [
+      {
+        "label": "I. Tools",
+        "value": 65,
+        "description": "Monitoring & evaluation tools designed, including 46 in VBA-Excel and 19 in Access",
+        "bar": 92
+      },
+      {
+        "label": "II. Projects",
+        "value": 19,
+        "description": "Development projects planned and managed across multiple organisations",
+        "bar": 70
+      },
+      {
+        "label": "III. CSOs",
+        "value": 57,
+        "description": "Civil society organisations supported in planning & M&E",
+        "bar": 85
+      },
+      {
+        "label": "IV. Trainings",
+        "value": 39,
+        "description": "Workshops delivered in 4 countries on various themes",
+        "bar": 78
+      }
+    ],
+    "footerLeft": "// Last update: May 2026",
+    "footerRight": "Benin · Belgium · France · Québec"
+  },
+  "expertise": {
+    "eyebrow": "Areas of expertise",
+    "h2Part1": "Five pillars, one",
+    "h2Emphasis": "same",
+    "h2End": " standard.",
+    "intro": "From methodological framing to software production. Every mission mobilises at least two of these pillars — that is what makes the difference.",
+    "feature": {
+      "label": "I. Main pillar",
+      "title": "Integrated systems architecture for Monitoring & Evaluation",
+      "description": "Design of complete platforms aligned with Results-Based Management. From logical framework to technical specifications, including data governance (RLS, audit, GDPR).",
+      "tags": ["RBM", "OECD-DAC", "Logframe", "Theory of Change", "PostgreSQL", "RLS"],
+      "cta": "See services →"
+    },
+    "tiles": [
+      {
+        "label": "II",
+        "title": "Data analytics & Business Intelligence",
+        "description": "Advanced statistical analysis, dashboards, data valorisation.",
+        "tags": ["Power BI", "SPSS", "R"]
+      },
+      {
+        "label": "III",
+        "title": "SaaS solutions & digital products",
+        "description": "Design and launch of web/mobile platforms, AI integration.",
+        "tags": ["Next.js", "Anthropic API", "GPT-4"]
+      },
+      {
+        "label": "IV",
+        "title": "No-Code tools & automation",
+        "description": "Rapid deployment of business applications, process automation.",
+        "tags": ["Glide", "Airtable", "Make"]
+      },
+      {
+        "label": "V",
+        "title": "Training & capacity building",
+        "description": "Knowledge transfer through practice. Tailor-made modules, individual coaching.",
+        "tags": ["In-person", "Remote"]
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Carlos transformed our monitoring & evaluation system. His methodological rigor combined with his mastery of digital tools enabled us to gain clarity and responsiveness in steering our projects.",
+    "author": "[To complete]",
+    "role": "Programme Direction · International organisation"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "h2Part1": "Let's talk about your",
+    "h2Emphasis": "project",
+    "h2End": ".",
+    "intro": "NGO, donor, company or public institution: a first 30-minute conversation to understand your needs and identify the levers of action — no commitment.",
+    "email": "carlos.hounsinou@outlook.fr",
+    "phone": "+33 (0) 7 58 36 78 08",
+    "linkedin": "linkedin.com/in/carlos-hounsinou",
+    "form": {
+      "step1Label": "I.",
+      "step1Question": "What is your name?",
+      "step1Placeholder": "Your name and organisation",
+      "step2Label": "II.",
+      "step2Question": "How can I reach you?",
+      "step2Placeholder": "you@organisation.org",
+      "step3Label": "III.",
+      "step3Question": "What would you like to discuss?",
+      "step3Chips": ["Monitoring & evaluation", "BI dashboard", "SaaS application", "No-Code", "Training", "Other"],
+      "step4Label": "IV.",
+      "step4Question": "Briefly describe your project",
+      "step4Placeholder": "A few lines is enough — we will go deeper during the conversation.",
+      "submit": "Send my request →",
+      "success": "Thank you! Your message has been sent. I will reply within 24 to 48 working hours.",
+      "error": "Something went wrong. You can also reach me directly at carlos.hounsinou@outlook.fr."
+    }
+  },
+  "footer": {
+    "brand": "CH",
+    "brandName": "Carlos Hounsinou",
+    "copyright": "© MMXXVI · All rights reserved · carloshounsinou.com",
+    "linkedin": "LinkedIn",
+    "suiviprojet": "suivi-projet.org",
+    "capcit": "cap-citoyen.fr",
+    "langFr": "FR",
+    "langEn": "EN"
+  }
+}
