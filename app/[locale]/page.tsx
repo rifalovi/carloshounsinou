@@ -37,6 +37,8 @@ export default async function Home({ params }: Props) {
     step3Label: string; step3Question: string; step3Chips: string[];
     step4Label: string; step4Question: string; step4Placeholder: string;
     submit: string;
+    success: string;
+    error: string;
   };
 
   return (
@@ -99,10 +101,7 @@ export default async function Home({ params }: Props) {
           h2Emphasis={flagship("h2Emphasis")}
           h2End={flagship("h2End")}
           intro={flagship("intro")}
-          card1={flagship.raw("card1") as Parameters<typeof Flagship>[0]["card1"]}
-          card2={flagship.raw("card2") as Parameters<typeof Flagship>[0]["card2"]}
-          card3={flagship.raw("card3") as Parameters<typeof Flagship>[0]["card3"]}
-          card4={flagship.raw("card4") as Parameters<typeof Flagship>[0]["card4"]}
+          cards={flagship.raw("cards") as Parameters<typeof Flagship>[0]["cards"]}
         />
 
         <Stats

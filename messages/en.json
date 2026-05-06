@@ -40,7 +40,8 @@
       "European Union",
       "CHU de Québec",
       "Cap Citoyen",
-      "Municipality in Benin",
+      "Municipality in West Africa",
+      "Multilateral programmes",
       "Agence Française de Développement",
       "GIZ German Cooperation",
       "Swiss Development Cooperation DDC",
@@ -111,80 +112,130 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Four projects, four",
+    "h2Part1": "Six projects, six",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "An institutional platform for a multilateral organisation, two monitoring tools for European Union-funded programmes, a SaaS product of my own, and a territorial governance platform. Each project illustrates my ability to design and deliver integrated systems — from strategic scoping to operational deployment.",
-    "card1": {
-      "category": "Institutional architecture",
-      "role": "Architect / Project lead",
-      "status": "In development",
-      "title": "Programme portfolio steering platform",
-      "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation.",
-      "spec1Label": "Category",
-      "spec1Value": "Institutional architecture",
-      "spec2Label": "Scope",
-      "spec2Value": "International programmes",
-      "spec3Label": "Approach",
-      "spec3Value": "Secure modular architecture",
-      "spec4Label": "Status",
-      "spec4Value": "In development",
-      "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
-      "cta": "🔒 Confidential document"
-    },
-    "card2": {
-      "category": "SaaS product · EdTech",
-      "role": "Product & technical architect",
-      "status": "Live in production",
-      "title": "Cap Citoyen · French civic exam preparation",
-      "description": "Web and mobile platform for preparing the French civic naturalisation exam, made mandatory in January 2026. Complete design: thematic learning paths, flashcards mode, audio content, exam simulation and peer community. Integrated AI Coach (Anthropic API and GPT-4o-mini).",
-      "spec1Label": "Target market",
-      "spec1Value": "100,000 / year (naturalisations)",
-      "spec2Label": "Content",
-      "spec2Value": "800+ questions, 100+ audios, 400 flashcards",
-      "spec3Label": "Platforms",
-      "spec3Value": "Web · Android · PWA · iOS pending",
-      "spec4Label": "Status",
-      "spec4Value": "Live · Google Play",
-      "stack": ["Next.js", "Anthropic API", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
-      "ctaWebsite": "cap-citoyen.fr",
-      "ctaPlay": "Google Play",
-      "capImageAlt": "Cap Citoyen app screenshot — home screen with stats"
-    },
-    "card3": {
-      "category": "Consulting mission · EU",
-      "role": "Senior M&E Consultant",
-      "status": "Delivered",
-      "title": "Monitoring platforms · EU-funded projects",
-      "description": "Consulting mission for IBF International Consulting: design and implementation of two web platforms dedicated to monitoring & evaluation of European Union-funded projects. Steering tools for coordinators, donors and implementing partners.",
-      "spec1Label": "Donor",
-      "spec1Value": "European Union",
-      "spec2Label": "Platforms",
-      "spec2Value": "2 dedicated tools",
-      "spec3Label": "Framework",
-      "spec3Value": "OECD-DAC standards",
-      "spec4Label": "Status",
-      "spec4Value": "Delivered · Adopted",
-      "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
-      "cta": "🔒 Confidential mission"
-    },
-    "card4": {
-      "category": "Local governance",
-      "role": "Architect / Designer",
-      "status": "In development",
-      "title": "Indicator-based steering platform",
-      "description": "Design and development of a secure web platform for data-driven municipal development steering. Indicator framework aligned with the Municipal Development Plan, certification workflow, audit trail and differentiated access by role.",
-      "spec1Label": "Scale",
-      "spec1Value": "Municipality and districts",
-      "spec2Label": "Framework",
-      "spec2Value": "Municipal Development Plan",
-      "spec3Label": "Profiles",
-      "spec3Value": "3 differentiated roles (Admin / Editor / Reader)",
-      "spec4Label": "Status",
-      "spec4Value": "In development",
-      "stack": ["Secure web architecture", "Indicator framework", "Certification workflow", "Audit trail", "Multi-role"],
-      "cta": "🔒 Confidential document"
-    }
+    "intro": "Six transformational projects — from institutional multilateral steering to my own SaaS product, including European donors and territorial governance. Each project illustrates my ability to design and deliver integrated systems, from strategic framing to operational deployment.",
+    "cards": [
+      {
+        "id": "oif-portfolio",
+        "visual": "oif",
+        "category": "Institutional architecture",
+        "role": "Architect / Project lead",
+        "title": "Programme portfolio steering platform",
+        "subtitle": "International organisation · Paris",
+        "status": "In development",
+        "statusType": "dev",
+        "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation.",
+        "specs": [
+          { "label": "Scope", "value": "International programmes" },
+          { "label": "Approach", "value": "Secure modular architecture" },
+          { "label": "Compliance", "value": "GDPR · Multi-role security" },
+          { "label": "Status", "value": "In development" }
+        ],
+        "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
+        "actions": [{ "label": "Learn more →", "type": "contact" }]
+      },
+      {
+        "id": "incubation-platform",
+        "visual": "incubation",
+        "category": "Business platform · Evaluation",
+        "role": "Product architect · Functional designer",
+        "title": "Project and programme incubation and steering platform",
+        "subtitle": "Institutional organisation · Paris",
+        "status": "Delivered · Live",
+        "statusType": "live",
+        "description": "Design and delivery of a comprehensive business platform for the development project lifecycle: training in results-based management standards, guided incubation, SMART indicators, performance measurement, mixed analysis and a conversational assistant based on the institutional knowledge base.",
+        "specs": [
+          { "label": "Architecture", "value": "8 modules · 50+ API endpoints" },
+          { "label": "Framework", "value": "RBM · DAC/OECD · SMART indicators" },
+          { "label": "Encapsulated AI", "value": "Documentary RAG · Vision · quotas" },
+          { "label": "Security", "value": "Multi-role RLS · audit · alerts" }
+        ],
+        "stack": ["Full-stack architecture", "Encapsulated AI", "Vector base", "Multi-role workflow", "Automated reporting"],
+        "actions": [{ "label": "Learn more →", "type": "contact" }]
+      },
+      {
+        "id": "valorisation-platform",
+        "visual": "valorisation",
+        "category": "Institutional platform",
+        "role": "Designer · Architect",
+        "title": "Programme portfolio valorisation platform",
+        "subtitle": "Institutional organisation · Paris",
+        "status": "Delivered · Active pilot",
+        "statusType": "live",
+        "description": "Design and delivery of an institutional web platform for the public valorisation of a portfolio of strategic projects. Architecture combining data storytelling project sheets, analytical dashboard, map exploration and a conversational assistant powered by semantic search.",
+        "specs": [
+          { "label": "Architecture", "value": "Full-stack · vector search" },
+          { "label": "Framework", "value": "International institutional standards" },
+          { "label": "Security", "value": "Multi-role RLS · anti-hallucination" },
+          { "label": "Status", "value": "Delivered · Live pilot" }
+        ],
+        "stack": ["Full-stack architecture", "Vector base", "Encapsulated AI", "Web cartography", "Multi-role editorial workflow"],
+        "actions": [{ "label": "Learn more →", "type": "contact" }]
+      },
+      {
+        "id": "ibf-eu-platforms",
+        "visual": "ibf",
+        "category": "Consulting mission · EU",
+        "role": "Senior M&E Consultant",
+        "title": "Monitoring platforms · EU-funded projects",
+        "subtitle": "IBF International Consulting · Belgium & Benin",
+        "status": "Delivered",
+        "statusType": "done",
+        "description": "Consulting mission for IBF International Consulting: design and implementation of two web platforms dedicated to monitoring & evaluation of European Union-funded projects. Steering tools for coordinators, donors and implementing partners.",
+        "specs": [
+          { "label": "Donor", "value": "European Union" },
+          { "label": "Platforms", "value": "2 dedicated tools" },
+          { "label": "Framework", "value": "OECD-DAC standards" },
+          { "label": "Status", "value": "Delivered · Adopted" }
+        ],
+        "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
+        "actions": [{ "label": "Learn more →", "type": "contact" }]
+      },
+      {
+        "id": "indicators-platform",
+        "visual": "gov",
+        "category": "Territorial governance",
+        "role": "Architect · Designer",
+        "title": "Indicator-based steering platform",
+        "subtitle": "Territorial governance · West Africa",
+        "status": "In development",
+        "statusType": "dev",
+        "description": "Design and development of a secure web platform for data-driven local development steering. Rigorous workflow from collection to publication: annual campaigns, automated quality controls, participatory certification by sectoral focal points, and complete audit trail.",
+        "specs": [
+          { "label": "Scale", "value": "Territory and sub-divisions" },
+          { "label": "Framework", "value": "Local Development Plan" },
+          { "label": "Profiles", "value": "3 roles (Admin / Editor / Reader)" },
+          { "label": "Status", "value": "In development" }
+        ],
+        "stack": ["Secure web architecture", "Indicator framework", "Certification workflow", "Audit trail", "Multi-role"],
+        "actions": [{ "label": "Learn more →", "type": "contact" }]
+      },
+      {
+        "id": "cap-citoyen",
+        "visual": "cap",
+        "category": "SaaS product · EdTech",
+        "role": "Product & technical architect",
+        "title": "Cap Citoyen · French civic exam preparation",
+        "subtitle": "cap-citoyen.fr · France",
+        "status": "Live in production",
+        "statusType": "live",
+        "description": "Web and mobile platform for preparing the French civic naturalisation exam, made mandatory in January 2026. Complete design: thematic learning paths, flashcards mode, audio content, exam simulation and peer community. Integrated AI Coach (Anthropic API and GPT-4o-mini).",
+        "specs": [
+          { "label": "Target market", "value": "100,000 / year (naturalisations)" },
+          { "label": "Content", "value": "800+ questions, 100+ audios, 400 flashcards" },
+          { "label": "Platforms", "value": "Web · Android · PWA · iOS pending" },
+          { "label": "Status", "value": "Live · Google Play" }
+        ],
+        "stack": ["Next.js", "Anthropic API", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
+        "actions": [
+          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" },
+          { "label": "Google Play", "type": "store", "href": "https://play.google.com/store/apps/details?id=fr.capcitoyen.app" }
+        ],
+        "capImageAlt": "Cap Citoyen app screenshot — home screen with stats"
+      }
+    ]
   },
   "stats": {
     "eyebrow": "Achievements · KPIs",
