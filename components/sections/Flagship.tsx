@@ -42,7 +42,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
   return (
     <section
       id="realisations"
-      style={{ padding: "140px 48px", background: "#F5F1E8", position: "relative" }}
+      style={{ padding: "140px 48px", background: "#EDE5D6", position: "relative" }}
     >
       {/* Header */}
       <motion.div
@@ -67,17 +67,17 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
               fontSize: "clamp(40px, 5.5vw, 76px)",
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color: "#1A2332",
+              color: "#0A1628",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#047857" }}>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
               {h2Emphasis}
             </em>
             {h2End}
           </h2>
         </div>
-        <p style={{ fontSize: "16px", color: "#525B66", lineHeight: 1.75, maxWidth: "480px" }}>
+        <p style={{ fontSize: "16px", color: "#475569", lineHeight: 1.75, maxWidth: "480px" }}>
           {intro}
         </p>
       </motion.div>

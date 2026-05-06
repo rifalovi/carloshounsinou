@@ -50,9 +50,9 @@ export default function Navigation({
         alignItems: "center",
         gap: "40px",
         transition: "all 0.4s ease",
-        background: scrolled ? "rgba(250,248,241,0.85)" : "transparent",
+        background: scrolled ? "rgba(245,239,230,0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(24px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(15,20,25,0.08)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(10,22,40,0.08)" : "none",
       }}
     >
       {/* Logo */}
@@ -61,12 +61,12 @@ export default function Navigation({
           style={{
             width: "36px",
             height: "36px",
-            background: "#1A2332",
+            background: "#0A1628",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "var(--font-serif)",
-            color: "#FAF8F1",
+            color: "#F5EFE6",
             fontSize: "16px",
             fontWeight: 500,
             position: "relative",
@@ -82,7 +82,7 @@ export default function Navigation({
               right: "-3px",
               width: "12px",
               height: "12px",
-              background: "#047857",
+              background: "#B45309",
             }}
           />
         </div>
@@ -91,7 +91,7 @@ export default function Navigation({
             fontFamily: "var(--font-serif)",
             fontSize: "17px",
             fontWeight: 500,
-            color: "#1A2332",
+            color: "#0A1628",
             letterSpacing: "-0.01em",
           }}
         >
@@ -125,13 +125,13 @@ export default function Navigation({
                 fontFamily: "var(--font-sans)",
                 fontSize: "14px",
                 fontWeight: 500,
-                color: "#2C3640",
+                color: "#1F2937",
                 cursor: "pointer",
                 padding: 0,
                 transition: "color 0.3s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#047857")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#2C3640")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#B45309")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#1F2937")}
             >
               {label}
             </button>
@@ -156,7 +156,7 @@ export default function Navigation({
             gap: "8px",
             fontFamily: "var(--font-mono)",
             fontSize: "12px",
-            color: "#525B66",
+            color: "#475569",
           }}
         >
           <span
@@ -181,8 +181,8 @@ export default function Navigation({
           onClick={() => scrollTo("contact")}
           aria-label={navCta}
           style={{
-            background: "#1A2332",
-            color: "#FAF8F1",
+            background: "#0A1628",
+            color: "#F5EFE6",
             padding: "11px 20px",
             border: "none",
             borderRadius: "100px",
@@ -195,8 +195,8 @@ export default function Navigation({
             gap: "8px",
             transition: "background 0.3s",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#047857")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#1A2332")}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "#B45309")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "#0A1628")}
         >
           {navCta} →
         </button>

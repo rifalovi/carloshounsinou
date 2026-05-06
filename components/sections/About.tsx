@@ -34,7 +34,7 @@ export default function About({
       id="parcours"
       style={{
         padding: "140px 48px",
-        background: "#FAF8F1",
+        background: "#F5EFE6",
         position: "relative",
       }}
     >
@@ -61,11 +61,11 @@ export default function About({
               fontSize: "clamp(40px, 5.5vw, 76px)",
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color: "#1A2332",
+              color: "#0A1628",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#047857" }}>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
               {h2Emphasis}
             </em>
             {h2End}
@@ -77,7 +77,7 @@ export default function About({
           <p
             style={{
               fontSize: "17px",
-              color: "#2C3640",
+              color: "#1F2937",
               lineHeight: 1.75,
               marginBottom: "22px",
             }}
@@ -99,13 +99,13 @@ export default function About({
             </span>
             {p1.slice(1)}
           </p>
-          <p style={{ fontSize: "17px", color: "#2C3640", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "17px", color: "#1F2937", lineHeight: 1.75 }}>
             {p2Part1}
             <strong
               style={{
-                color: "#1A2332",
+                color: "#0A1628",
                 fontWeight: 600,
-                background: "linear-gradient(transparent 60%, #ECFDF5 60%)",
+                background: "linear-gradient(transparent 60%, #FEF3E7 60%)",
                 padding: "0 2px",
               }}
             >

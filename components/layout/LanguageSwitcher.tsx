@@ -19,11 +19,11 @@ export default function LanguageSwitcher({ locale }: Props) {
         fontFamily: "var(--font-mono)",
         fontSize: "11px",
         fontWeight: 500,
-        color: "#525B66",
+        color: "#475569",
         textDecoration: "none",
         letterSpacing: "0.04em",
         padding: "4px 8px",
-        border: "1px solid rgba(15,20,25,0.12)",
+        border: "1px solid rgba(10,22,40,0.12)",
         borderRadius: "4px",
         transition: "all 0.2s",
       }}

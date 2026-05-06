@@ -15,7 +15,7 @@ type TimelineItem = {
 type Props = { items: TimelineItem[] };
 
 const ACCENT: Record<string, string> = {
-  primary: "#10B981",
+  primary: "#B45309",
   secondary: "#A88B4A",
   tertiary: "#475569",
 };
@@ -30,7 +30,7 @@ function Card({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
-  const color = ACCENT[item.accent] ?? "#10B981";
+  const color = ACCENT[item.accent] ?? "#C2701F";
 
   return (
     <motion.div
@@ -43,8 +43,8 @@ function Card({
       style={{
         position: "relative",
         padding: "24px",
-        background: hovered ? "#F5F1E8" : "transparent",
-        border: `1px solid ${hovered ? color + "55" : "rgba(15,20,25,0.08)"}`,
+        background: hovered ? "#EDE5D6" : "transparent",
+        border: `1px solid ${hovered ? color + "55" : "rgba(10,22,40,0.08)"}`,
         boxShadow: hovered ? "0 4px 24px rgba(0,0,0,0.07)" : "none",
         transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
         maxWidth: "420px",
@@ -88,7 +88,7 @@ function Card({
           fontFamily: "var(--font-serif)",
           fontSize: "20px",
           fontWeight: 500,
-          color: "#1A2332",
+          color: "#0A1628",
           lineHeight: 1.25,
           letterSpacing: "-0.01em",
           marginBottom: "8px",
@@ -102,7 +102,7 @@ function Card({
         style={{
           fontFamily: "var(--font-mono)",
           fontSize: "11px",
-          color: "#525B66",
+          color: "#475569",
           lineHeight: 1.5,
           marginBottom: "14px",
         }}
@@ -115,7 +115,7 @@ function Card({
         style={{
           fontFamily: "var(--font-sans)",
           fontSize: "14px",
-          color: "#2C3640",
+          color: "#1F2937",
           lineHeight: 1.7,
           margin: "0 0 18px",
         }}
@@ -133,9 +133,9 @@ function Card({
               fontSize: "10px",
               fontWeight: 600,
               padding: "3px 10px",
-              border: "1px solid rgba(15,20,25,0.18)",
+              border: "1px solid rgba(10,22,40,0.18)",
               borderRadius: "100px",
-              color: "#2C3640",
+              color: "#1F2937",
               letterSpacing: "0.05em",
               textTransform: "uppercase",
             }}
@@ -170,7 +170,7 @@ export default function Timeline({ items }: Props) {
           top: 0,
           bottom: 0,
           width: "1px",
-          background: "rgba(15,20,25,0.06)",
+          background: "rgba(10,22,40,0.06)",
           transform: "translateX(-50%)",
         }}
       />
@@ -188,14 +188,14 @@ export default function Timeline({ items }: Props) {
           transform: "translateX(-50%)",
           scaleY: prefersReducedMotion ? 1 : lineScaleY,
           transformOrigin: "top",
-          background: "linear-gradient(to bottom, #A88B4A 0%, rgba(4,120,87,0.5) 60%, rgba(71,86,105,0.3) 100%)",
+          background: "linear-gradient(to bottom, #A88B4A 0%, rgba(180,83,9,0.5) 60%, rgba(71,86,105,0.3) 100%)",
         }}
       />
 
       <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
         {items.map((item, i) => {
           const isLeft = i % 2 === 0;
-          const accentColor = ACCENT[item.accent] ?? "#10B981";
+          const accentColor = ACCENT[item.accent] ?? "#C2701F";
 
           return (
             <div
@@ -237,7 +237,7 @@ export default function Timeline({ items }: Props) {
                     width: "16px",
                     height: "16px",
                     borderRadius: "50%",
-                    background: "#FAF8F1",
+                    background: "#F5EFE6",
                     border: `2.5px solid ${accentColor}`,
                     flexShrink: 0,
                     boxShadow: `0 0 0 4px ${accentColor}18`,

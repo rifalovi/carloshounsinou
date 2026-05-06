@@ -28,7 +28,7 @@ type Props = {
 function OifVisual() {
   return (
     <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", maxWidth: "320px", height: "auto", opacity: 0.85 }}>
-      <g fill="none" stroke="rgba(16,185,129,0.7)" strokeWidth="1">
+      <g fill="none" stroke="rgba(194,112,31,0.7)" strokeWidth="1">
         <line x1="160" y1="30" x2="60" y2="80"/>
         <line x1="160" y1="30" x2="160" y2="80"/>
         <line x1="160" y1="30" x2="260" y2="80"/>
@@ -37,19 +37,19 @@ function OifVisual() {
         <line x1="260" y1="100" x2="260" y2="135"/>
         <line x1="40" y1="150" x2="280" y2="150" strokeDasharray="2,3" opacity="0.4"/>
       </g>
-      <circle cx="160" cy="30" r="12" fill="#10B981"/>
-      <text x="160" y="34" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="9" fontWeight="500">SCS</text>
-      <rect x="40" y="80" width="40" height="20" fill="rgba(250,248,241,0.1)" stroke="rgba(250,248,241,0.4)" strokeWidth="0.5"/>
-      <text x="60" y="93" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="8">Coord.</text>
-      <rect x="140" y="80" width="40" height="20" fill="rgba(250,248,241,0.1)" stroke="rgba(250,248,241,0.4)" strokeWidth="0.5"/>
-      <text x="160" y="93" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="8">Partn.</text>
-      <rect x="240" y="80" width="40" height="20" fill="rgba(250,248,241,0.1)" stroke="rgba(250,248,241,0.4)" strokeWidth="0.5"/>
-      <text x="260" y="93" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="8">Lect.</text>
-      <g fontFamily="JetBrains Mono" fontSize="7" fill="rgba(250,248,241,0.6)">
+      <circle cx="160" cy="30" r="12" fill="#B45309"/>
+      <text x="160" y="34" textAnchor="middle" fill="#F5EFE6" fontFamily="JetBrains Mono" fontSize="9" fontWeight="500">SCS</text>
+      <rect x="40" y="80" width="40" height="20" fill="rgba(245,239,230,0.1)" stroke="rgba(245,239,230,0.4)" strokeWidth="0.5"/>
+      <text x="60" y="93" textAnchor="middle" fill="#F5EFE6" fontFamily="JetBrains Mono" fontSize="8">Coord.</text>
+      <rect x="140" y="80" width="40" height="20" fill="rgba(245,239,230,0.1)" stroke="rgba(245,239,230,0.4)" strokeWidth="0.5"/>
+      <text x="160" y="93" textAnchor="middle" fill="#F5EFE6" fontFamily="JetBrains Mono" fontSize="8">Partn.</text>
+      <rect x="240" y="80" width="40" height="20" fill="rgba(245,239,230,0.1)" stroke="rgba(245,239,230,0.4)" strokeWidth="0.5"/>
+      <text x="260" y="93" textAnchor="middle" fill="#F5EFE6" fontFamily="JetBrains Mono" fontSize="8">Lect.</text>
+      <g fontFamily="JetBrains Mono" fontSize="7" fill="rgba(245,239,230,0.6)">
         <text x="60" y="148" textAnchor="middle">Cluster A</text>
         <text x="160" y="148" textAnchor="middle">Cluster B</text>
         <text x="260" y="148" textAnchor="middle">Cluster C</text>
-        <text x="160" y="170" textAnchor="middle" fill="#10B981">Indicateurs · Architecture modulaire</text>
+        <text x="160" y="170" textAnchor="middle" fill="#B45309">Indicateurs · Architecture modulaire</text>
       </g>
     </svg>
   );
@@ -101,31 +101,31 @@ function IbfVisual() {
         <line x1="240" y1="55" x2="220" y2="110"/>
       </g>
       <rect x="22" y="22" width="116" height="6" fill="rgba(200,185,120,0.4)" rx="1"/>
-      <rect x="22" y="33" width="80" height="4" fill="rgba(250,248,241,0.2)" rx="1"/>
-      <rect x="22" y="41" width="90" height="4" fill="rgba(250,248,241,0.15)" rx="1"/>
-      <rect x="22" y="49" width="70" height="4" fill="rgba(250,248,241,0.15)" rx="1"/>
+      <rect x="22" y="33" width="80" height="4" fill="rgba(245,239,230,0.2)" rx="1"/>
+      <rect x="22" y="41" width="90" height="4" fill="rgba(245,239,230,0.15)" rx="1"/>
+      <rect x="22" y="49" width="70" height="4" fill="rgba(245,239,230,0.15)" rx="1"/>
       <rect x="182" y="22" width="116" height="6" fill="rgba(200,185,120,0.4)" rx="1"/>
-      <rect x="182" y="33" width="85" height="4" fill="rgba(250,248,241,0.2)" rx="1"/>
-      <rect x="182" y="41" width="75" height="4" fill="rgba(250,248,241,0.15)" rx="1"/>
+      <rect x="182" y="33" width="85" height="4" fill="rgba(245,239,230,0.2)" rx="1"/>
+      <rect x="182" y="41" width="75" height="4" fill="rgba(245,239,230,0.15)" rx="1"/>
       <text x="80" y="73" textAnchor="middle" fill="rgba(200,185,120,0.9)" fontFamily="JetBrains Mono" fontSize="8">Plateforme 1</text>
       <text x="240" y="73" textAnchor="middle" fill="rgba(200,185,120,0.9)" fontFamily="JetBrains Mono" fontSize="8">Plateforme 2</text>
       <text x="160" y="140" textAnchor="middle" fill="rgba(200,185,120,0.9)" fontFamily="JetBrains Mono" fontSize="8">Reporting UE · CAD-OCDE</text>
       <circle cx="160" cy="90" r="8" fill="rgba(200,185,120,0.3)" stroke="rgba(200,185,120,0.6)" strokeWidth="1"/>
-      <text x="160" y="94" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="7">IBF</text>
+      <text x="160" y="94" textAnchor="middle" fill="#F5EFE6" fontFamily="JetBrains Mono" fontSize="7">IBF</text>
     </svg>
   );
 }
 
 const visualBg: Record<string, string> = {
-  oif: "linear-gradient(135deg, #0E1622 0%, #1A2332 100%)",
-  cap: "linear-gradient(135deg, #1A2332 0%, #2A3445 60%, #0E1622 100%)",
-  ibf: "linear-gradient(135deg, #1A2332 0%, #2A3445 60%, #816A37 100%)",
+  oif: "linear-gradient(135deg, #060F1C 0%, #0A1628 100%)",
+  cap: "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #060F1C 100%)",
+  ibf: "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #816A37 100%)",
 };
 
 const badgeColors: Record<string, string> = {
-  dev: "#B45309",
+  dev: "#D97706",
   live: "#10B981",
-  done: "#047857",
+  done: "#A88B4A",
 };
 
 export default function FlagshipCard({
@@ -156,8 +156,8 @@ export default function FlagshipCard({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: "#FAF8F1",
-        border: hovered ? "1px solid #047857" : "1px solid rgba(15,20,25,0.08)",
+        background: "#F5EFE6",
+        border: hovered ? "1px solid #B45309" : "1px solid rgba(10,22,40,0.08)",
         position: "relative",
         display: "flex",
         flexDirection: "column",
@@ -174,7 +174,7 @@ export default function FlagshipCard({
           left: 0,
           right: 0,
           height: "3px",
-          background: "linear-gradient(90deg, #047857, #10B981)",
+          background: "linear-gradient(90deg, #B45309, #C2701F)",
           opacity: hovered ? 1 : 0,
           transition: "opacity 0.4s",
           zIndex: 2,
@@ -187,7 +187,7 @@ export default function FlagshipCard({
           height: "220px",
           position: "relative",
           overflow: "hidden",
-          borderBottom: "1px solid rgba(15,20,25,0.08)",
+          borderBottom: "1px solid rgba(10,22,40,0.08)",
           background: visualBg[visual],
           display: "flex",
           alignItems: "center",
@@ -200,12 +200,12 @@ export default function FlagshipCard({
             position: "absolute",
             top: "16px",
             left: "16px",
-            background: "rgba(250,248,241,0.95)",
+            background: "rgba(245,239,230,0.95)",
             backdropFilter: "blur(8px)",
             padding: "5px 10px",
             fontFamily: "var(--font-mono)",
             fontSize: "10px",
-            color: "#1A2332",
+            color: "#0A1628",
             fontWeight: 500,
             letterSpacing: "0.04em",
             textTransform: "uppercase",
@@ -254,7 +254,7 @@ export default function FlagshipCard({
             style={{
               fontFamily: "var(--font-mono)",
               fontSize: "11px",
-              color: "#047857",
+              color: "#B45309",
               fontWeight: 500,
               letterSpacing: "0.04em",
               textTransform: "uppercase",
@@ -266,7 +266,7 @@ export default function FlagshipCard({
             style={{
               fontFamily: "var(--font-mono)",
               fontSize: "11px",
-              color: "#525B66",
+              color: "#475569",
               fontWeight: 500,
             }}
           >
@@ -279,7 +279,7 @@ export default function FlagshipCard({
             fontFamily: "var(--font-serif)",
             fontSize: "26px",
             fontWeight: 400,
-            color: "#1A2332",
+            color: "#0A1628",
             lineHeight: 1.15,
             letterSpacing: "-0.015em",
             marginBottom: "14px",
@@ -291,7 +291,7 @@ export default function FlagshipCard({
         <p
           style={{
             fontSize: "14px",
-            color: "#2C3640",
+            color: "#1F2937",
             lineHeight: 1.65,
             marginBottom: "24px",
           }}
@@ -307,8 +307,8 @@ export default function FlagshipCard({
             gap: "12px",
             padding: "18px 0",
             marginBottom: "24px",
-            borderTop: "1px solid rgba(15,20,25,0.08)",
-            borderBottom: "1px solid rgba(15,20,25,0.08)",
+            borderTop: "1px solid rgba(10,22,40,0.08)",
+            borderBottom: "1px solid rgba(10,22,40,0.08)",
           }}
         >
           {specs.map(({ label, value }) => (
@@ -317,7 +317,7 @@ export default function FlagshipCard({
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: "10px",
-                  color: "#525B66",
+                  color: "#475569",
                   textTransform: "uppercase",
                   letterSpacing: "0.04em",
                   marginBottom: "4px",
@@ -326,7 +326,7 @@ export default function FlagshipCard({
               >
                 {label}
               </div>
-              <div style={{ fontSize: "13px", color: "#1A2332", fontWeight: 500 }}>
+              <div style={{ fontSize: "13px", color: "#0A1628", fontWeight: 500 }}>
                 {value}
               </div>
             </div>
@@ -342,9 +342,9 @@ export default function FlagshipCard({
                 fontFamily: "var(--font-mono)",
                 fontSize: "10px",
                 padding: "4px 10px",
-                border: "1px solid rgba(15,20,25,0.18)",
+                border: "1px solid rgba(10,22,40,0.18)",
                 borderRadius: "100px",
-                color: "#2C3640",
+                color: "#1F2937",
                 fontWeight: 500,
               }}
             >
@@ -373,8 +373,8 @@ export default function FlagshipCard({
                 alignItems: "center",
                 gap: "8px",
                 padding: "10px 16px",
-                background: "#1A2332",
-                color: "#FAF8F1",
+                background: "#0A1628",
+                color: "#F5EFE6",
                 borderRadius: "100px",
                 fontFamily: "var(--font-mono)",
                 fontSize: "12px",
@@ -382,8 +382,8 @@ export default function FlagshipCard({
                 textDecoration: "none",
                 transition: "background 0.3s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "#047857")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "#1A2332")}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#B45309")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#0A1628")}
             >
               {cta} ↗
             </a>
@@ -395,8 +395,8 @@ export default function FlagshipCard({
                 gap: "8px",
                 padding: "10px 16px",
                 background: "transparent",
-                color: "#525B66",
-                border: "1px dashed rgba(15,20,25,0.18)",
+                color: "#475569",
+                border: "1px dashed rgba(10,22,40,0.18)",
                 borderRadius: "100px",
                 fontFamily: "var(--font-mono)",
                 fontSize: "12px",
@@ -418,8 +418,8 @@ export default function FlagshipCard({
                 gap: "8px",
                 padding: "10px 16px",
                 background: "transparent",
-                color: "#1A2332",
-                border: "1px solid rgba(15,20,25,0.18)",
+                color: "#0A1628",
+                border: "1px solid rgba(10,22,40,0.18)",
                 borderRadius: "100px",
                 fontFamily: "var(--font-mono)",
                 fontSize: "12px",
@@ -428,12 +428,12 @@ export default function FlagshipCard({
                 transition: "all 0.3s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#047857";
-                e.currentTarget.style.color = "#047857";
+                e.currentTarget.style.borderColor = "#B45309";
+                e.currentTarget.style.color = "#B45309";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(15,20,25,0.18)";
-                e.currentTarget.style.color = "#1A2332";
+                e.currentTarget.style.borderColor = "rgba(10,22,40,0.18)";
+                e.currentTarget.style.color = "#0A1628";
               }}
             >
               {ctaSecondary} ↗

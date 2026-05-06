@@ -38,7 +38,7 @@ export default function Contact({
       id="contact"
       style={{
         padding: "140px 48px",
-        background: "#0E1622",
+        background: "#060F1C",
         position: "relative",
         overflow: "hidden",
       }}
@@ -49,7 +49,7 @@ export default function Contact({
         style={{
           position: "absolute", top: 0, right: 0,
           width: "60%", height: "100%",
-          background: "radial-gradient(ellipse at top right, rgba(16,185,129,0.06) 0%, transparent 60%)",
+          background: "radial-gradient(ellipse at top right, rgba(180,83,9,0.06) 0%, transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -80,18 +80,18 @@ export default function Contact({
               fontSize: "clamp(40px, 5.5vw, 76px)",
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color: "#FAF8F1",
+              color: "#F5EFE6",
               marginBottom: "32px",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#10B981" }}>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>
               {h2Emphasis}
             </em>
             {h2End}
           </h2>
 
-          <p style={{ fontSize: "16px", color: "rgba(250,248,241,0.7)", lineHeight: 1.7, marginBottom: "40px" }}>
+          <p style={{ fontSize: "16px", color: "rgba(245,239,230,0.7)", lineHeight: 1.7, marginBottom: "40px" }}>
             {intro}
           </p>
 
@@ -101,7 +101,7 @@ export default function Contact({
               display: "flex",
               flexDirection: "column",
               paddingTop: "36px",
-              borderTop: "1px solid rgba(250,248,241,0.1)",
+              borderTop: "1px solid rgba(245,239,230,0.1)",
             }}
           >
             {channels.map(({ label, value, href }) => (
@@ -115,7 +115,7 @@ export default function Contact({
                   alignItems: "center",
                   justifyContent: "space-between",
                   padding: "18px 0",
-                  borderBottom: "1px solid rgba(250,248,241,0.06)",
+                  borderBottom: "1px solid rgba(245,239,230,0.06)",
                   textDecoration: "none",
                   transition: "padding-left 0.3s",
                 }}
@@ -123,21 +123,21 @@ export default function Contact({
                 onMouseLeave={(e) => (e.currentTarget.style.paddingLeft = "0")}
               >
                 <div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#10B981", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 500, marginBottom: "2px" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#C2701F", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 500, marginBottom: "2px" }}>
                     {label}
                   </div>
-                  <div style={{ fontSize: "15px", color: "#FAF8F1", fontWeight: 500 }}>{value}</div>
+                  <div style={{ fontSize: "15px", color: "#F5EFE6", fontWeight: 500 }}>{value}</div>
                 </div>
                 <div
                   aria-hidden="true"
                   style={{
                     width: "32px", height: "32px",
-                    border: "1px solid rgba(250,248,241,0.2)",
+                    border: "1px solid rgba(245,239,230,0.2)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#FAF8F1",
+                    color: "#F5EFE6",
                     fontSize: "12px",
                     transition: "all 0.3s",
                     flexShrink: 0,
@@ -157,7 +157,7 @@ export default function Contact({
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.15 }}
           style={{
-            background: "#FAF8F1",
+            background: "#F5EFE6",
             padding: "48px",
             position: "relative",
           }}
@@ -168,7 +168,7 @@ export default function Contact({
             style={{
               position: "absolute", top: 0, left: 0,
               width: "100%", height: "4px",
-              background: "linear-gradient(90deg, #047857, #10B981)",
+              background: "linear-gradient(90deg, #B45309, #C2701F)",
             }}
           />
 
@@ -185,9 +185,9 @@ export default function Contact({
                   style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: "11px",
-                    color: "#047857",
+                    color: "#B45309",
                     fontWeight: 500,
-                    background: "#ECFDF5",
+                    background: "#FEF3E7",
                     padding: "3px 8px",
                     borderRadius: "4px",
                     flexShrink: 0,
@@ -199,7 +199,7 @@ export default function Contact({
                   style={{
                     fontFamily: "var(--font-serif)",
                     fontSize: "18px",
-                    color: "#1A2332",
+                    color: "#0A1628",
                     fontWeight: 500,
                     letterSpacing: "-0.01em",
                   }}
@@ -215,11 +215,11 @@ export default function Contact({
                       key={chip}
                       style={{
                         padding: "8px 14px",
-                        border: "1px solid rgba(15,20,25,0.18)",
+                        border: "1px solid rgba(10,22,40,0.18)",
                         borderRadius: "100px",
                         fontSize: "13px",
                         fontWeight: 500,
-                        color: "#2C3640",
+                        color: "#1F2937",
                         fontFamily: "var(--font-sans)",
                         cursor: "pointer",
                       }}
@@ -233,10 +233,10 @@ export default function Contact({
                   style={{
                     width: "100%",
                     paddingBottom: "14px",
-                    borderBottom: "1px solid rgba(15,20,25,0.18)",
+                    borderBottom: "1px solid rgba(10,22,40,0.18)",
                     fontFamily: "var(--font-sans)",
                     fontSize: "15px",
-                    color: "#7B8290",
+                    color: "#64748B",
                     fontStyle: "italic",
                   }}
                 >
@@ -247,10 +247,10 @@ export default function Contact({
                   style={{
                     width: "100%",
                     paddingBottom: "14px",
-                    borderBottom: "1px solid rgba(15,20,25,0.18)",
+                    borderBottom: "1px solid rgba(10,22,40,0.18)",
                     fontFamily: "var(--font-sans)",
                     fontSize: "15px",
-                    color: "#7B8290",
+                    color: "#64748B",
                     fontStyle: "italic",
                   }}
                 >
@@ -265,8 +265,8 @@ export default function Contact({
             disabled
             style={{
               width: "100%",
-              background: "#1A2332",
-              color: "#FAF8F1",
+              background: "#0A1628",
+              color: "#F5EFE6",
               padding: "18px",
               border: "none",
               borderRadius: "100px",
@@ -286,8 +286,8 @@ export default function Contact({
             <span
               style={{
                 width: "24px", height: "24px",
-                background: "#FAF8F1",
-                color: "#1A2332",
+                background: "#F5EFE6",
+                color: "#0A1628",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",

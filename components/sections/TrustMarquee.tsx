@@ -7,7 +7,7 @@ export default function TrustMarquee({ items }: Props) {
   return (
     <div
       style={{
-        background: "#0E1622",
+        background: "#060F1C",
         padding: "24px 0",
         overflow: "hidden",
         position: "relative",
@@ -28,7 +28,7 @@ export default function TrustMarquee({ items }: Props) {
             style={{
               fontFamily: "var(--font-serif)",
               fontSize: "22px",
-              color: "#FAF8F1",
+              color: "#F5EFE6",
               fontWeight: 400,
               letterSpacing: "-0.01em",
               opacity: 0.85,
@@ -44,7 +44,7 @@ export default function TrustMarquee({ items }: Props) {
               style={{
                 width: "8px",
                 height: "8px",
-                background: "#047857",
+                background: "#B45309",
                 borderRadius: "50%",
                 display: "inline-block",
                 flexShrink: 0,

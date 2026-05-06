@@ -64,7 +64,7 @@ export default function Hero({
         minHeight: "100vh",
         padding: "130px 48px 80px",
         position: "relative",
-        background: "#FAF8F1",
+        background: "#F5EFE6",
       }}
     >
       {/* Top meta bar */}
@@ -75,16 +75,16 @@ export default function Hero({
           alignItems: "center",
           fontFamily: "var(--font-mono)",
           fontSize: "11px",
-          color: "#525B66",
+          color: "#475569",
           textTransform: "uppercase",
           letterSpacing: "0.08em",
           marginBottom: "60px",
           paddingBottom: "20px",
-          borderBottom: "1px solid rgba(15,20,25,0.08)",
+          borderBottom: "1px solid rgba(10,22,40,0.08)",
         }}
       >
         <span>
-          <span style={{ color: "#047857", fontWeight: 500 }}>FR · 33</span>
+          <span style={{ color: "#B45309", fontWeight: 500 }}>FR · 33</span>
           {" · "}
           {eyebrowLeft.replace("FR · 33 ", "")}
         </span>
@@ -114,11 +114,11 @@ export default function Hero({
               alignItems: "center",
               gap: "10px",
               padding: "8px 14px",
-              background: "#EDE7D6",
+              background: "#E5DAC4",
               borderRadius: "100px",
               fontSize: "12px",
               fontWeight: 500,
-              color: "#2C3640",
+              color: "#1F2937",
               marginBottom: "36px",
             }}
           >
@@ -127,7 +127,7 @@ export default function Hero({
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                background: "#047857",
+                background: "#B45309",
                 flexShrink: 0,
               }}
             />
@@ -146,7 +146,7 @@ export default function Hero({
               fontSize: "clamp(56px, 8vw, 112px)",
               lineHeight: 0.95,
               letterSpacing: "-0.04em",
-              color: "#1A2332",
+              color: "#0A1628",
               marginBottom: 0,
             }}
           >
@@ -157,7 +157,7 @@ export default function Hero({
               style={{
                 fontStyle: "italic",
                 fontWeight: 400,
-                color: "#047857",
+                color: "#B45309",
               }}
             >
               {h1Emphasis1}
@@ -169,7 +169,7 @@ export default function Hero({
               style={{
                 fontStyle: "italic",
                 fontWeight: 400,
-                color: "#047857",
+                color: "#B45309",
               }}
             >
               {h1Emphasis2}
@@ -189,7 +189,7 @@ export default function Hero({
               gap: "32px",
               marginTop: "56px",
               paddingTop: "32px",
-              borderTop: "1px solid rgba(15,20,25,0.08)",
+              borderTop: "1px solid rgba(10,22,40,0.08)",
               maxWidth: "700px",
             }}
           >
@@ -203,7 +203,7 @@ export default function Hero({
                   style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: "11px",
-                    color: "#047857",
+                    color: "#B45309",
                     marginBottom: "8px",
                     fontWeight: 500,
                   }}
@@ -213,7 +213,7 @@ export default function Hero({
                 <div
                   style={{
                     fontSize: "13px",
-                    color: "#525B66",
+                    color: "#475569",
                     marginBottom: "6px",
                     textTransform: "uppercase",
                     letterSpacing: "0.04em",
@@ -225,7 +225,7 @@ export default function Hero({
                 <div
                   style={{
                     fontSize: "15px",
-                    color: "#1A2332",
+                    color: "#0A1628",
                     fontWeight: 500,
                   }}
                 >
@@ -252,8 +252,8 @@ export default function Hero({
             <button
               onClick={() => scrollTo("contact")}
               style={{
-                background: "#1A2332",
-                color: "#FAF8F1",
+                background: "#0A1628",
+                color: "#F5EFE6",
                 padding: "18px 28px",
                 border: "none",
                 borderRadius: "100px",
@@ -267,11 +267,11 @@ export default function Hero({
                 transition: "all 0.3s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#047857";
+                e.currentTarget.style.background = "#B45309";
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#1A2332";
+                e.currentTarget.style.background = "#0A1628";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -280,8 +280,8 @@ export default function Hero({
                 style={{
                   width: "24px",
                   height: "24px",
-                  background: "#FAF8F1",
-                  color: "#1A2332",
+                  background: "#F5EFE6",
+                  color: "#0A1628",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -301,7 +301,7 @@ export default function Hero({
                 border: "none",
                 fontFamily: "var(--font-mono)",
                 fontSize: "13px",
-                color: "#2C3640",
+                color: "#1F2937",
                 cursor: "pointer",
                 padding: "18px 0",
                 display: "inline-flex",
@@ -309,14 +309,14 @@ export default function Hero({
                 gap: "10px",
                 transition: "color 0.3s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#047857")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#2C3640")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#B45309")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#1F2937")}
             >
               <span
                 style={{
                   width: "24px",
                   height: "24px",
-                  border: "1px solid rgba(15,20,25,0.18)",
+                  border: "1px solid rgba(10,22,40,0.18)",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -373,7 +373,7 @@ export default function Hero({
             {/* Top-right — quote */}
             <div
               style={{
-                background: "#EDE7D6",
+                background: "#E5DAC4",
                 padding: "14px",
                 display: "flex",
                 flexDirection: "column",
@@ -384,7 +384,7 @@ export default function Hero({
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: "11px",
-                  color: "#047857",
+                  color: "#B45309",
                   fontWeight: 500,
                 }}
               >
@@ -394,7 +394,7 @@ export default function Hero({
                 style={{
                   fontFamily: "var(--font-serif)",
                   fontSize: "16px",
-                  color: "#1A2332",
+                  color: "#0A1628",
                   lineHeight: 1.2,
                   fontStyle: "italic",
                 }}
@@ -406,8 +406,8 @@ export default function Hero({
             {/* Bottom-right — location */}
             <div
               style={{
-                background: "#047857",
-                color: "#FAF8F1",
+                background: "#B45309",
+                color: "#F5EFE6",
                 padding: "14px",
                 display: "flex",
                 flexDirection: "column",

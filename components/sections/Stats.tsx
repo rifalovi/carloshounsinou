@@ -45,14 +45,14 @@ function StatBar({ target }: { target: number }) {
   return (
     <div
       ref={ref}
-      style={{ height: "3px", background: "rgba(250,248,241,0.12)", marginBottom: "20px", position: "relative", overflow: "hidden" }}
+      style={{ height: "3px", background: "rgba(245,239,230,0.12)", marginBottom: "20px", position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
           position: "absolute",
           top: 0, left: 0,
           height: "100%",
-          background: "#10B981",
+          background: "#C2701F",
           width: `${width}%`,
           transition: "width 1.4s cubic-bezier(0.4,0,0.2,1)",
         }}
@@ -67,8 +67,8 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
       id="stats"
       style={{
         padding: "140px 48px",
-        background: "#1A2332",
-        color: "#FAF8F1",
+        background: "#0A1628",
+        color: "#F5EFE6",
         position: "relative",
         overflow: "hidden",
       }}
@@ -79,7 +79,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
         style={{
           position: "absolute", top: 0, right: 0,
           width: "40%", height: "100%",
-          background: "radial-gradient(circle at 70% 30%, rgba(16,185,129,0.08) 0%, transparent 60%)",
+          background: "radial-gradient(circle at 70% 30%, rgba(180,83,9,0.08) 0%, transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -109,17 +109,17 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
               fontSize: "clamp(40px, 5.5vw, 76px)",
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color: "#FAF8F1",
+              color: "#F5EFE6",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#10B981" }}>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>
               {h2Emphasis}
             </em>
             {h2End}
           </h2>
         </div>
-        <p style={{ fontSize: "16px", color: "rgba(250,248,241,0.7)", lineHeight: 1.7, maxWidth: "480px" }}>
+        <p style={{ fontSize: "16px", color: "rgba(245,239,230,0.7)", lineHeight: 1.7, maxWidth: "480px" }}>
           {intro}
         </p>
       </motion.div>
@@ -130,9 +130,9 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
           gap: "1px",
-          background: "rgba(250,248,241,0.08)",
-          borderTop: "1px solid rgba(250,248,241,0.12)",
-          borderBottom: "1px solid rgba(250,248,241,0.12)",
+          background: "rgba(245,239,230,0.08)",
+          borderTop: "1px solid rgba(245,239,230,0.12)",
+          borderBottom: "1px solid rgba(245,239,230,0.12)",
           position: "relative",
           zIndex: 1,
         }}
@@ -141,18 +141,18 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           <div
             key={item.label}
             style={{
-              background: "#1A2332",
+              background: "#0A1628",
               padding: "56px 32px",
               transition: "background 0.4s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#2A3445")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#1A2332")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "#1A2537")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "#0A1628")}
           >
             <div
               style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "11px",
-                color: "#10B981",
+                color: "#C2701F",
                 fontWeight: 500,
                 marginBottom: "24px",
               }}
@@ -164,7 +164,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
                 fontFamily: "var(--font-serif)",
                 fontSize: "clamp(60px, 7vw, 100px)",
                 fontWeight: 300,
-                color: "#FAF8F1",
+                color: "#F5EFE6",
                 lineHeight: 1,
                 letterSpacing: "-0.04em",
                 marginBottom: "20px",
@@ -177,7 +177,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
               style={{
                 fontSize: "13px",
                 lineHeight: 1.5,
-                color: "rgba(250,248,241,0.75)",
+                color: "rgba(245,239,230,0.75)",
                 fontWeight: 400,
               }}
             >
@@ -195,7 +195,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           justifyContent: "space-between",
           fontFamily: "var(--font-mono)",
           fontSize: "11px",
-          color: "rgba(250,248,241,0.5)",
+          color: "rgba(245,239,230,0.5)",
           textTransform: "uppercase",
           letterSpacing: "0.05em",
           position: "relative",

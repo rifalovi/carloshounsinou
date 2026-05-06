@@ -1,25 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* ─── Palette ─── */
-  --color-slate:         #1A2332;
-  --color-slate-deep:    #0E1622;
-  --color-slate-mid:     #2A3445;
+  /* ─── Palette "Force tranquille" ─── */
+  --color-slate:         #0A1628;
+  --color-slate-deep:    #060F1C;
+  --color-slate-mid:     #1A2537;
   --color-slate-light:   #475569;
-  --color-emerald:       #047857;
-  --color-emerald-soft:  #10B981;
-  --color-emerald-pale:  #ECFDF5;
+  --color-copper:        #B45309;
+  --color-copper-soft:   #C2701F;
+  --color-copper-pale:   #FEF3E7;
   --color-gold:          #A88B4A;
   --color-gold-soft:     #C9AE7A;
   --color-gold-deep:     #816A37;
-  --color-copper:        #B45309;
-  --color-ivory:         #FAF8F1;
-  --color-paper:         #F5F1E8;
-  --color-bone:          #EDE7D6;
-  --color-ink:           #0F1419;
-  --color-ink-soft:      #2C3640;
-  --color-grey:          #525B66;
-  --color-grey-soft:     #7B8290;
+  --color-cream:         #F5EFE6;
+  --color-cream-soft:    #EDE5D6;
+  --color-bone:          #E5DAC4;
+  --color-ink:           #080E18;
+  --color-ink-soft:      #1F2937;
+  --color-grey:          #475569;
+  --color-grey-soft:     #64748B;
 
   /* ─── Fonts — variables injectées par next/font via className sur <html> ─── */
   /* --font-serif  → Source Serif 4  */
@@ -28,8 +27,8 @@
 }
 
 :root {
-  --line:        rgba(15, 20, 25, 0.08);
-  --line-strong: rgba(15, 20, 25, 0.18);
+  --line:        rgba(10, 22, 40, 0.08);
+  --line-strong: rgba(10, 22, 40, 0.18);
 }
 
 * {
@@ -45,22 +44,22 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #0F1419;
-  background: #FAF8F1;
+  color: #080E18;
+  background: #F5EFE6;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #047857;
-  color: #FAF8F1;
+  background: #B45309;
+  color: #F5EFE6;
 }
 
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #047857;
-  color: #FAF8F1;
+  background: #B45309;
+  color: #F5EFE6;
   padding: 8px 16px;
   z-index: 999;
   font-family: var(--font-sans);

@@ -30,8 +30,8 @@ export default function Footer({
   return (
     <footer
       style={{
-        background: "#0E1622",
-        borderTop: "1px solid rgba(250,248,241,0.1)",
+        background: "#060F1C",
+        borderTop: "1px solid rgba(245,239,230,0.1)",
         padding: "32px 48px",
       }}
     >
@@ -49,8 +49,8 @@ export default function Footer({
             style={{
               width: "28px",
               height: "28px",
-              background: "#FAF8F1",
-              color: "#1A2332",
+              background: "#F5EFE6",
+              color: "#0A1628",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -65,7 +65,7 @@ export default function Footer({
           <span
             style={{
               fontFamily: "var(--font-serif)",
-              color: "#FAF8F1",
+              color: "#F5EFE6",
               fontSize: "16px",
               fontWeight: 500,
             }}
@@ -79,7 +79,7 @@ export default function Footer({
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "11px",
-            color: "rgba(250,248,241,0.4)",
+            color: "rgba(245,239,230,0.4)",
             textAlign: "center",
             letterSpacing: "0.04em",
           }}
@@ -106,12 +106,12 @@ export default function Footer({
               style={{
                 width: "36px",
                 height: "36px",
-                border: "1px solid rgba(250,248,241,0.18)",
+                border: "1px solid rgba(245,239,230,0.18)",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#FAF8F1",
+                color: "#F5EFE6",
                 textDecoration: "none",
                 fontFamily: "var(--font-mono)",
                 fontSize: "9px",
@@ -120,13 +120,13 @@ export default function Footer({
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "#047857";
-                el.style.borderColor = "#047857";
+                el.style.background = "#B45309";
+                el.style.borderColor = "#B45309";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.background = "transparent";
-                el.style.borderColor = "rgba(250,248,241,0.18)";
+                el.style.borderColor = "rgba(245,239,230,0.18)";
               }}
             >
               {abbr.toUpperCase()}
