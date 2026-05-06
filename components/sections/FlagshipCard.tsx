@@ -44,10 +44,10 @@ function OifVisual() {
       <rect x="240" y="80" width="40" height="20" fill="rgba(250,248,241,0.1)" stroke="rgba(250,248,241,0.4)" strokeWidth="0.5"/>
       <text x="260" y="93" textAnchor="middle" fill="#FAF8F1" fontFamily="JetBrains Mono" fontSize="8">Lect.</text>
       <g fontFamily="JetBrains Mono" fontSize="7" fill="rgba(250,248,241,0.6)">
-        <text x="60" y="148" textAnchor="middle">A1—A5</text>
-        <text x="160" y="148" textAnchor="middle">B1—B4</text>
-        <text x="260" y="148" textAnchor="middle">C5 · F1</text>
-        <text x="160" y="170" textAnchor="middle" fill="#10B981">18 indicateurs · 5 familles</text>
+        <text x="60" y="148" textAnchor="middle">Cluster A</text>
+        <text x="160" y="148" textAnchor="middle">Cluster B</text>
+        <text x="260" y="148" textAnchor="middle">Cluster C</text>
+        <text x="160" y="170" textAnchor="middle" fill="#10B981">Indicateurs · Architecture modulaire</text>
       </g>
     </svg>
   );

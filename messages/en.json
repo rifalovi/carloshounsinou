@@ -56,26 +56,26 @@
       {
         "period": "2024 — Today",
         "role": "Project Engineering Officer",
-        "org": "International Organisation of La Francophonie"
+        "org": "International Organisation of La Francophonie · Project Design and Monitoring Service"
       },
       {
         "period": "2021 — 2024",
-        "role": "Senior Consultant · Digital strategies",
-        "org": "Heaven Immobilier · OIF"
+        "role": "Business Development Officer",
+        "org": "Heaven Immobilier Groupe · France"
+      },
+      {
+        "period": "2019 — 2020",
+        "role": "Programme Assistant",
+        "org": "OIF · External Representations Service"
       },
       {
         "period": "2018 — 2021",
-        "role": "Senior M&E Consultant",
-        "org": "IBF International · European Union programmes"
-      },
-      {
-        "period": "2016 — 2018",
-        "role": "Statistician · Health research",
-        "org": "CHU de Québec · Benin"
+        "role": "Expert M&E Consultant",
+        "org": "IBF International Consulting · RePaSOC Programme (European Union)"
       },
       {
         "period": "2012 — 2016",
-        "role": "Head of Analysis & M&E Department",
+        "role": "Head of Development",
         "org": "Municipal Administration · Benin"
       }
     ]
@@ -91,16 +91,16 @@
       "role": "Architect / Project lead",
       "status": "In development",
       "title": "Programme portfolio steering platform",
-      "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation. Architecture with 4 differentiated roles, row-level security (RLS) and built-in GDPR compliance.",
-      "spec1Label": "Pilot scale",
-      "spec1Value": "60 partners",
-      "spec2Label": "Indicators",
-      "spec2Value": "18 · modular architecture",
-      "spec3Label": "Modules",
-      "spec3Value": "9 functional modules",
-      "spec4Label": "Launch",
-      "spec4Value": "Pilot · 2026",
-      "stack": ["Architecture", "PostgreSQL", "Supabase", "RLS", "GDPR"],
+      "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation.",
+      "spec1Label": "Category",
+      "spec1Value": "Institutional architecture",
+      "spec2Label": "Scope",
+      "spec2Value": "International programmes",
+      "spec3Label": "Approach",
+      "spec3Value": "Secure modular architecture",
+      "spec4Label": "Status",
+      "spec4Value": "In development",
+      "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
       "cta": "🔒 Confidential document"
     },
     "card2": {
@@ -183,8 +183,8 @@
     "feature": {
       "label": "I. Main pillar",
       "title": "Integrated systems architecture for Monitoring & Evaluation",
-      "description": "Design of complete platforms aligned with Results-Based Management. From logical framework to technical specifications, including data governance (RLS, audit, GDPR).",
-      "tags": ["RBM", "OECD-DAC", "Logframe", "Theory of Change", "PostgreSQL", "RLS"],
+      "description": "Design of complete platforms aligned with Results-Based Management. From logical framework to technical specifications, including data governance and security.",
+      "tags": ["RBM", "OECD-DAC", "Logframe", "Theory of Change", "Databases", "Governance"],
       "cta": "See services →"
     },
     "tiles": [

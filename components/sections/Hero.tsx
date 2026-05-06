@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -349,49 +350,24 @@ export default function Hero({
               width: "100%",
             }}
           >
-            {/* Photo note */}
-            <div
-              style={{
-                position: "absolute",
-                top: "12px",
-                left: "12px",
-                background: "rgba(250,248,241,0.92)",
-                backdropFilter: "blur(8px)",
-                padding: "6px 10px",
-                fontFamily: "var(--font-mono)",
-                fontSize: "10px",
-                color: "#B45309",
-                fontWeight: 500,
-                zIndex: 5,
-              }}
-            >
-              📷 Photo pro à insérer
-            </div>
-
             {/* Main tile — spans 2 rows */}
             <div
               style={{
                 gridRow: "1 / 3",
-                background:
-                  "linear-gradient(135deg, #0E1622 0%, #1A2332 60%, #2A3445 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                position: "relative",
                 overflow: "hidden",
               }}
             >
-              <span
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "140px",
-                  fontWeight: 300,
-                  color: "#047857",
-                  letterSpacing: "-0.05em",
-                  lineHeight: 1,
-                }}
-              >
-                CH
-              </span>
+              <Image
+                src="/images/carlos-hero-1200.webp"
+                alt="Carlos Hounsinou"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                style={{ objectFit: "cover", objectPosition: "center top" }}
+                priority
+                placeholder="blur"
+                blurDataURL="/images/carlos-hero-placeholder.webp"
+              />
             </div>
 
             {/* Top-right — quote */}

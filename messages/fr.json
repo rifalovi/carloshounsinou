@@ -56,26 +56,26 @@
       {
         "period": "2024 — Aujourd'hui",
         "role": "Chargé d'Ingénierie de Projet",
-        "org": "Organisation Internationale de la Francophonie"
+        "org": "Organisation Internationale de la Francophonie · Service Conception et Suivi de Projet"
       },
       {
         "period": "2021 — 2024",
-        "role": "Consultant Senior · Stratégies numériques",
-        "org": "Heaven Immobilier · OIF (DAF, ADM, DPE)"
+        "role": "Chargé d'affaires · Développement et recherche",
+        "org": "Heaven Immobilier Groupe · France"
+      },
+      {
+        "period": "2019 — 2020",
+        "role": "Assistant de programme",
+        "org": "OIF · Service des Représentations Extérieures"
       },
       {
         "period": "2018 — 2021",
         "role": "Expert Consultant en Suivi-Évaluation",
-        "org": "IBF International · Programmes Union Européenne"
-      },
-      {
-        "period": "2016 — 2018",
-        "role": "Statisticien · Recherche en santé",
-        "org": "CHU de Québec · Bénin"
+        "org": "IBF International Consulting · Programme RePaSOC (Union Européenne)"
       },
       {
         "period": "2012 — 2016",
-        "role": "Chef du service Analyse & S&E",
+        "role": "Responsable du développement",
         "org": "Administration Communale · Bénin"
       }
     ]
@@ -91,16 +91,16 @@
       "role": "Architecte / Chef de projet",
       "status": "En développement",
       "title": "Plateforme de pilotage de portefeuille programmatique",
-      "description": "Conception et spécification d'une plateforme web sécurisée pour le suivi-évaluation d'un portefeuille de programmes internationaux, déployée auprès d'une organisation multilatérale francophone. Architecture en 4 rôles avec sécurité au niveau des lignes (RLS) et conformité RGPD intégrée.",
-      "spec1Label": "Échelle pilote",
-      "spec1Value": "60 partenaires",
-      "spec2Label": "Indicateurs",
-      "spec2Value": "18 · architecture modulaire",
-      "spec3Label": "Modules",
-      "spec3Value": "9 modules fonctionnels",
-      "spec4Label": "Lancement",
-      "spec4Value": "Pilote · 2026",
-      "stack": ["Architecture", "PostgreSQL", "Supabase", "RLS", "RGPD"],
+      "description": "Conception et spécification d'une plateforme web sécurisée pour le suivi-évaluation d'un portefeuille de programmes internationaux, déployée auprès d'une organisation multilatérale francophone.",
+      "spec1Label": "Catégorie",
+      "spec1Value": "Architecture institutionnelle",
+      "spec2Label": "Périmètre",
+      "spec2Value": "Programmes internationaux",
+      "spec3Label": "Approche",
+      "spec3Value": "Architecture modulaire sécurisée",
+      "spec4Label": "Statut",
+      "spec4Value": "En développement",
+      "stack": ["Architecture web", "Bases de données", "Conformité RGPD", "Sécurité multi-rôles"],
       "cta": "🔒 Document confidentiel"
     },
     "card2": {
@@ -183,8 +183,8 @@
     "feature": {
       "label": "I. Pilier principal",
       "title": "Architecture de systèmes intégrés de Suivi-Évaluation",
-      "description": "Conception de plateformes complètes alignées sur la Gestion Axée Résultats. Du cadre logique aux spécifications techniques, jusqu'à la gouvernance des données (RLS, audit, RGPD).",
-      "tags": ["GAR", "CAD-OCDE", "Cadre logique", "Théorie du changement", "PostgreSQL", "RLS"],
+      "description": "Conception de plateformes complètes alignées sur la Gestion Axée Résultats. Du cadre logique aux spécifications techniques, jusqu'à la gouvernance et la sécurité des données.",
+      "tags": ["GAR", "CAD-OCDE", "Cadre logique", "Théorie du changement", "Bases de données", "Gouvernance"],
       "cta": "Voir les services →"
     },
     "tiles": [
