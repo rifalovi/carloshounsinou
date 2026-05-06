@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -19,6 +20,7 @@ type Props = {
   ctaHref?: string;
   ctaSecondary?: string;
   ctaSecondaryHref?: string;
+  capImageAlt?: string;
   index?: number;
 };
 
@@ -53,38 +55,37 @@ function OifVisual() {
   );
 }
 
-function CapVisual() {
-  const PhoneBar = ({ h = 6, style = {} }: { h?: number; style?: React.CSSProperties }) => (
-    <div style={{ height: `${h}px`, background: "#EDE7D6", borderRadius: "2px", ...style }} />
-  );
-
+function CapVisual({ alt }: { alt?: string }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", padding: "24px", position: "relative", width: "100%", height: "100%" }}>
-      {[0, 1].map((j) => (
-        <div key={j} style={{ width: "90px", height: "170px", background: "#FAF8F1", borderRadius: "12px", border: "2px solid rgba(255,255,255,0.4)", padding: "8px", display: "flex", flexDirection: "column", gap: "4px" }}>
-          <div style={{ width: "24px", height: "4px", background: "rgba(0,0,0,0.4)", borderRadius: "2px", margin: "0 auto 4px" }} />
-          {j === 0 ? (
-            <>
-              <div style={{ height: "16px", background: "linear-gradient(to right, #002654 33%, #FFF 33%, #FFF 66%, #EF4135 66%)", borderRadius: "2px" }} />
-              <PhoneBar h={6} style={{ width: "70%", background: "#1A2332" }} />
-              <PhoneBar h={28} style={{ background: "#ECFDF5" }} />
-              <PhoneBar />
-              <PhoneBar style={{ width: "60%" }} />
-              <PhoneBar style={{ width: "80%" }} />
-            </>
-          ) : (
-            <>
-              <PhoneBar h={28} style={{ background: "rgba(255,255,255,0.3)" }} />
-              <PhoneBar style={{ background: "rgba(255,255,255,0.4)" }} />
-              <PhoneBar style={{ background: "rgba(255,255,255,0.2)", width: "70%" }} />
-              <PhoneBar style={{ background: "rgba(255,255,255,0.4)" }} />
-              <PhoneBar style={{ background: "rgba(255,255,255,0.2)" }} />
-              <PhoneBar style={{ background: "rgba(255,255,255,0.4)", width: "50%" }} />
-            </>
-          )}
-        </div>
-      ))}
-      <span aria-hidden="true" style={{ position: "absolute", fontSize: "56px", opacity: 0.15, bottom: "-10px", right: "-10px", filter: "blur(0.5px)" }}>🇫🇷</span>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100%",
+        padding: "16px",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          height: "184px",
+          width: "85px",
+          filter: "drop-shadow(0 8px 28px rgba(0,0,0,0.32))",
+          flexShrink: 0,
+        }}
+      >
+        <Image
+          src="/images/cap-citoyen/cap-citoyen-iphone-600.webp"
+          alt={alt ?? "Cap Citoyen app"}
+          fill
+          sizes="(max-width: 600px) 200px, 300px"
+          style={{ objectFit: "contain" }}
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBQCdASoUACsAPzmMulavKSUjsBVYAeAnCWQAwoALPFugS0KUzgCrL9BEJpJih+YITZd4AP7kBSD72FM6jIhLH/eaadxHnyVXH6KWk744CuYm3/n7LXXxWPvpPLHq+2unkJ17C43emBx1RVaVqiDRyeheCzFVtwc6JGAW+wstKqbg/7AKw2/gNsQrnC7c1aBwgAAA="
+        />
+      </div>
     </div>
   );
 }
@@ -117,7 +118,7 @@ function IbfVisual() {
 
 const visualBg: Record<string, string> = {
   oif: "linear-gradient(135deg, #0E1622 0%, #1A2332 100%)",
-  cap: "linear-gradient(135deg, #002654 0%, #0055A4 50%, #EF4135 100%)",
+  cap: "linear-gradient(135deg, #1A2332 0%, #2A3445 60%, #0E1622 100%)",
   ibf: "linear-gradient(135deg, #1A2332 0%, #2A3445 60%, #816A37 100%)",
 };
 
@@ -141,6 +142,7 @@ export default function FlagshipCard({
   ctaHref,
   ctaSecondary,
   ctaSecondaryHref,
+  capImageAlt,
   index = 0,
 }: Props) {
   const [hovered, setHovered] = useState(false);
@@ -227,7 +229,7 @@ export default function FlagshipCard({
         </div>
 
         {visual === "oif" && <OifVisual />}
-        {visual === "cap" && <CapVisual />}
+        {visual === "cap" && <CapVisual alt={capImageAlt} />}
         {visual === "ibf" && <IbfVisual />}
       </div>
 

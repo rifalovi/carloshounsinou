@@ -18,6 +18,7 @@ type CardData = {
   cta?: string;
   ctaWebsite?: string;
   ctaPlay?: string;
+  capImageAlt?: string;
 };
 
 type Props = {
@@ -114,7 +115,8 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
             cta={data.cta ?? data.ctaWebsite}
             ctaHref={visual === "cap" ? "https://cap-citoyen.fr" : undefined}
             ctaSecondary={visual === "cap" ? data.ctaPlay : undefined}
-            ctaSecondaryHref={visual === "cap" ? "https://play.google.com/store/apps/details?id=fr.capcit" : undefined}
+            ctaSecondaryHref={visual === "cap" ? "https://play.google.com/store/apps/details?id=fr.capcitoyen.app" : undefined}
+            capImageAlt={visual === "cap" ? data.capImageAlt : undefined}
           />
         ))}
       </div>
