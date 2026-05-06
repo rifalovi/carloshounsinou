@@ -1,13 +1,13 @@
-import { Fraunces, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Source_Serif_4, Inter, JetBrains_Mono } from "next/font/google";
 
-export const fraunces = Fraunces({
+export const fraunces = Source_Serif_4({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
   axes: ["opsz"],
 });
 
-export const jakarta = Plus_Jakarta_Sans({
+export const jakarta = Inter({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",

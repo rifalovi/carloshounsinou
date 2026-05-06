@@ -22,8 +22,8 @@
   --color-grey-soft:     #7B8290;
 
   /* ─── Fonts ─── */
-  --font-serif: var(--font-fraunces), Georgia, serif;
-  --font-sans:  var(--font-jakarta), system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), "Georgia", serif;
+  --font-sans:  var(--font-jakarta), "Helvetica Neue", system-ui, sans-serif;
   --font-mono:  var(--font-jetbrains), "Courier New", monospace;
 }
 
