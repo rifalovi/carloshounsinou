@@ -163,17 +163,13 @@ export default function Hero({
               {h1Emphasis1}
             </em>
             <br />
-            {h1Line2}
-            <br />
-            <em
+            {h1Line2}<em
               style={{
                 fontStyle: "italic",
                 fontWeight: 400,
                 color: "#B45309",
               }}
-            >
-              {h1Emphasis2}
-            </em>
+            >{h1Emphasis2}</em>
             {h1End}
           </motion.h1>
 
