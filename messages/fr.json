@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Carlos HOUNSINOU — Architecte de systèmes intégrés & Spécialiste S&E",
-    "description": "Carlos Hounsinou, Chargé d'Ingénierie de Projet à l'OIF. 13 ans d'expérience en suivi-évaluation et architecture de plateformes pour institutions internationales, bailleurs et organisations.",
+    "description": "Carlos Hounsinou, Chargé d'Ingénierie de Projet à l'OIF. Expert en suivi-évaluation et architecture de plateformes pour institutions internationales, bailleurs et organisations.",
     "keywords": "suivi-évaluation, ingénierie de projet, OIF, architecte de systèmes, consultant S&E, Carlos Hounsinou"
   },
   "nav": {
@@ -39,16 +39,15 @@
       "IBF International Consulting",
       "Union Européenne",
       "CHU de Québec",
-      "Cap Citoyen",
-      "Fondateur"
+      "Cap Citoyen"
     ]
   },
   "about": {
     "eyebrow": "Trajectoire",
-    "h2Part1": "13 années de transformations",
+    "h2Part1": "Une trajectoire de transformations",
     "h2Emphasis": "livrées",
     "h2End": ".",
-    "p1": "Ingénieur de formation en statistiques et titulaire d'un Master en Gestion de Projet, j'ai construit en treize ans une expertise rare à la croisée de trois mondes : la méthodologie du suivi-évaluation, la technique de la donnée, et la conception produit.",
+    "p1": "Ingénieur de formation en statistiques et titulaire d'un Master en Gestion de Projet, j'ai construit une expertise rare à la croisée de trois mondes : la méthodologie du suivi-évaluation, la technique de la donnée, et la conception produit.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet — après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
@@ -128,7 +127,7 @@
     },
     "card2": {
       "category": "Produit SaaS · EdTech",
-      "role": "Fondateur",
+      "role": "Architecte produit & technique",
       "status": "En production",
       "title": "Cap Citoyen · Examen civique français",
       "description": "Plateforme web et mobile pour la préparation à l'examen civique de naturalisation, devenu obligatoire en janvier 2026. Conception complète : parcours par thèmes, mode flash-cards, contenus audio, simulation d'examen et communauté d'entraide. Coach IA intégré (API Anthropic et GPT-4o-mini).",
@@ -165,10 +164,10 @@
   },
   "stats": {
     "eyebrow": "Réalisations · KPI",
-    "h2Part1": "Treize années, quatre",
+    "h2Part1": "Quatre",
     "h2Emphasis": "continents",
     "h2End": " d'impact mesurable.",
-    "intro": "Au-delà des titres, ce qui compte ce sont les outils déployés, les projets livrés, les équipes formées. Voici ce que représentent treize années de pratique de terrain.",
+    "intro": "Au-delà des titres, ce qui compte ce sont les outils déployés, les projets livrés, les équipes formées. Voici ce que représente un parcours de terrain.",
     "items": [
       {
         "label": "I. Outils",

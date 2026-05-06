@@ -388,7 +388,7 @@ export default function Hero({
                   fontWeight: 500,
                 }}
               >
-                — 13 ans
+                Bénin · Paris
               </div>
               <div
                 style={{

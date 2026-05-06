@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Carlos HOUNSINOU — Integrated Systems Architect & M&E Specialist",
-    "description": "Carlos Hounsinou, Project Engineering Officer at the OIF. 13 years of experience in monitoring, evaluation and platform architecture for international institutions, donors and organizations.",
+    "description": "Carlos Hounsinou, Project Engineering Officer at the OIF. Expert in monitoring, evaluation and platform architecture for international institutions, donors and organizations.",
     "keywords": "monitoring evaluation, project engineering, OIF, systems architect, M&E consultant, Carlos Hounsinou"
   },
   "nav": {
@@ -39,16 +39,15 @@
       "IBF International Consulting",
       "European Union",
       "CHU de Québec",
-      "Cap Citoyen",
-      "Founder"
+      "Cap Citoyen"
     ]
   },
   "about": {
     "eyebrow": "Trajectory",
-    "h2Part1": "13 years of transformations",
+    "h2Part1": "A trajectory of transformations",
     "h2Emphasis": "delivered",
     "h2End": ".",
-    "p1": "A trained statistical engineer with a Master's in Project Management, I have built over thirteen years a rare expertise at the intersection of three worlds: monitoring & evaluation methodology, data engineering, and product design.",
+    "p1": "A trained statistical engineer with a Master's in Project Management, I have built a rare expertise at the intersection of three worlds: monitoring & evaluation methodology, data engineering, and product design.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer — after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
@@ -128,7 +127,7 @@
     },
     "card2": {
       "category": "SaaS product · EdTech",
-      "role": "Founder",
+      "role": "Product & technical architect",
       "status": "Live in production",
       "title": "Cap Citoyen · French civic exam preparation",
       "description": "Web and mobile platform for preparing the French civic naturalisation exam, made mandatory in January 2026. Complete design: thematic learning paths, flashcards mode, audio content, exam simulation and peer community. Integrated AI Coach (Anthropic API and GPT-4o-mini).",
@@ -165,10 +164,10 @@
   },
   "stats": {
     "eyebrow": "Achievements · KPIs",
-    "h2Part1": "Thirteen years, four",
+    "h2Part1": "Four",
     "h2Emphasis": "continents",
     "h2End": " of measurable impact.",
-    "intro": "Beyond titles, what counts are the tools deployed, the projects delivered, the teams trained. Here is what thirteen years of field practice represent.",
+    "intro": "Beyond titles, what counts are the tools deployed, the projects delivered, the teams trained. Here is what a field career represents.",
     "items": [
       {
         "label": "I. Tools",
