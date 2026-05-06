@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 type Spec = { label: string; value: string };
@@ -55,37 +55,94 @@ function OifVisual() {
   );
 }
 
+const CAP_BLUR = "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBQCdASoUACsAPzmMulavKSUjsBVYAeAnCWQAwoALPFugS0KUzgCrL9BEJpJih+YITZd4AP7kBSD72FM6jIhLH/eaadxHnyVXH6KWk744CuYm3/n7LXXxWPvpPLHq+2unkJ17C43emBx1RVaVqiDRyeheCzFVtwc6JGAW+wstKqbg/7AKw2/gNsQrnC7c1aBwgAAA=";
+
 function CapVisual({ alt }: { alt?: string }) {
+  const phoneStyle: React.CSSProperties = {
+    borderRadius: "16px",
+    objectFit: "contain" as const,
+  };
+
   return (
     <div
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        position: "relative",
         width: "100%",
         height: "100%",
-        padding: "16px",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "center",
+        paddingBottom: "14px",
       }}
     >
+      {/* Left — progression (tablet+) */}
       <div
+        className="cap-fan-left"
         style={{
-          position: "relative",
-          height: "184px",
-          width: "85px",
-          filter: "drop-shadow(0 8px 28px rgba(0,0,0,0.32))",
-          flexShrink: 0,
+          position: "absolute",
+          zIndex: 10,
+          transform: "translateX(-58px) rotate(-10deg) scale(0.91)",
+          transformOrigin: "bottom center",
+          opacity: 0.93,
         }}
       >
         <Image
-          src="/images/cap-citoyen/cap-citoyen-iphone-600.webp"
-          alt={alt ?? "Cap Citoyen app"}
-          fill
-          sizes="(max-width: 600px) 200px, 300px"
-          style={{ objectFit: "contain" }}
+          src="/images/cap-citoyen/02-progression-600.webp"
+          alt="Cap Citoyen — suivi de progression"
+          width={76}
+          height={164}
+          sizes="76px"
+          style={{ ...phoneStyle, boxShadow: "0 8px 24px rgba(0,0,0,0.36)" }}
           placeholder="blur"
-          blurDataURL="data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABwBQCdASoUACsAPzmMulavKSUjsBVYAeAnCWQAwoALPFugS0KUzgCrL9BEJpJih+YITZd4AP7kBSD72FM6jIhLH/eaadxHnyVXH6KWk744CuYm3/n7LXXxWPvpPLHq+2unkJ17C43emBx1RVaVqiDRyeheCzFVtwc6JGAW+wstKqbg/7AKw2/gNsQrnC7c1aBwgAAA="
+          blurDataURL={CAP_BLUR}
         />
       </div>
+
+      {/* Centre — accueil, always visible */}
+      <div style={{ position: "relative", zIndex: 20, flexShrink: 0 }}>
+        <Image
+          src="/images/cap-citoyen/01-accueil-600.webp"
+          alt={alt ?? "Cap Citoyen — écran d'accueil"}
+          width={84}
+          height={182}
+          sizes="84px"
+          style={{ ...phoneStyle, boxShadow: "0 12px 36px rgba(0,0,0,0.44)" }}
+          placeholder="blur"
+          blurDataURL={CAP_BLUR}
+        />
+      </div>
+
+      {/* Right — thématiques (tablet+) */}
+      <div
+        className="cap-fan-right"
+        style={{
+          position: "absolute",
+          zIndex: 10,
+          transform: "translateX(58px) rotate(10deg) scale(0.91)",
+          transformOrigin: "bottom center",
+          opacity: 0.93,
+        }}
+      >
+        <Image
+          src="/images/cap-citoyen/05-thematiques-600.webp"
+          alt="Cap Citoyen — thématiques visuelles"
+          width={76}
+          height={164}
+          sizes="76px"
+          style={{ ...phoneStyle, boxShadow: "0 8px 24px rgba(0,0,0,0.36)" }}
+          placeholder="blur"
+          blurDataURL={CAP_BLUR}
+        />
+      </div>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .cap-fan-left, .cap-fan-right { display: none !important; }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .cap-fan-left { display: none !important; }
+        }
+      `}</style>
     </div>
   );
 }
