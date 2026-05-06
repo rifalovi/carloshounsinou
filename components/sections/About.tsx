@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui-custom/SectionLabel";
 import Timeline from "./Timeline";
 
-type TimelineItem = { period: string; role: string; org: string };
+type TimelineItem = { period: string; title: string; org: string; description: string; tags: string[]; accent: string };
 
 type Props = {
   eyebrow: string;
@@ -64,8 +64,7 @@ export default function About({
               color: "#1A2332",
             }}
           >
-            {h2Part1}
-            <br />à une{" "}
+            {h2Part1}{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#047857" }}>
               {h2Emphasis}
             </em>

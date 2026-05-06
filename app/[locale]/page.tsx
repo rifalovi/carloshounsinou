@@ -27,7 +27,7 @@ export default async function Home({ params }: Props) {
   const footer = await getTranslations({ locale, namespace: "footer" });
 
   const marqueeItems = marquee.raw("items") as string[];
-  const aboutTimeline = about.raw("timeline") as { period: string; role: string; org: string }[];
+  const aboutTimeline = about.raw("timeline") as { period: string; title: string; org: string; description: string; tags: string[]; accent: string }[];
   const statsItems = stats.raw("items") as { label: string; value: number; description: string; bar: number }[];
   const expertiseTiles = expertise.raw("tiles") as { label: string; title: string; description: string; tags: string[] }[];
   const featureRaw = expertise.raw("feature") as { label: string; title: string; description: string; tags: string[]; cta: string };

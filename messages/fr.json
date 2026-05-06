@@ -44,9 +44,9 @@
     ]
   },
   "about": {
-    "eyebrow": "Le parcours",
-    "h2Part1": "D'une rigueur statistique à une",
-    "h2Emphasis": "vision systémique",
+    "eyebrow": "Trajectoire",
+    "h2Part1": "13 années de transformations",
+    "h2Emphasis": "livrées",
     "h2End": ".",
     "p1": "Ingénieur de formation en statistiques et titulaire d'un Master en Gestion de Projet, j'ai construit en treize ans une expertise rare à la croisée de trois mondes : la méthodologie du suivi-évaluation, la technique de la donnée, et la conception produit.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
@@ -55,28 +55,51 @@
     "timeline": [
       {
         "period": "2024 — Aujourd'hui",
-        "role": "Chargé d'Ingénierie de Projet",
-        "org": "Organisation Internationale de la Francophonie · Service Conception et Suivi de Projet"
+        "title": "Architecte de la modernisation S&E",
+        "org": "Organisation Internationale de la Francophonie · Paris",
+        "description": "Conception d'une plateforme institutionnelle pour digitaliser le pilotage d'un portefeuille de programmes internationaux. De la spécification à la gouvernance, je structure un dispositif qui transformera la prise de décision sur le terrain.",
+        "tags": ["Multilatéral", "Architecture", "S&E"],
+        "accent": "primary"
       },
       {
         "period": "2021 — 2024",
-        "role": "Chargé d'affaires · Développement et recherche",
-        "org": "Heaven Immobilier Groupe · France"
-      },
-      {
-        "period": "2019 — 2020",
-        "role": "Assistant de programme",
-        "org": "OIF · Service des Représentations Extérieures"
+        "title": "Catalyseur de croissance · Stratégie data",
+        "org": "Heaven Immobilier Groupe · France",
+        "description": "Mise en place du dispositif de pilotage data du groupe. Conception d'outils d'estimation et de KPIs financiers (coût, marge, rentabilité). Veille immo-tech et expansion sur de nouveaux marchés.",
+        "tags": ["Privé", "Data", "BI"],
+        "accent": "secondary"
       },
       {
         "period": "2018 — 2021",
-        "role": "Expert Consultant en Suivi-Évaluation",
-        "org": "IBF International Consulting · Programme RePaSOC (Union Européenne)"
+        "title": "Concepteur de systèmes pour bailleurs UE",
+        "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
+        "description": "Mise en place de deux plateformes web complètes de suivi-évaluation pour des projets financés par l'Union Européenne. Affinement du cadre logique, conception du dispositif en ligne, transfert de compétences aux équipes terrain.",
+        "tags": ["UE", "Plateforme", "Conseil"],
+        "accent": "primary"
+      },
+      {
+        "period": "2019 — 2020",
+        "title": "Architecte d'outils de programmation",
+        "org": "OIF · Service des Représentations Extérieures · Paris",
+        "description": "Conception et déploiement d'outils de suivi des indicateurs pour la programmation 2019-2022. Appui aux structures nationales sur le cycle complet de planification stratégique.",
+        "tags": ["Multilatéral", "Outils", "Planification"],
+        "accent": "tertiary"
+      },
+      {
+        "period": "2016 — 2018",
+        "title": "Statisticien · Recherche en santé",
+        "org": "CHU de Québec · Bénin",
+        "description": "Conception de bases de données et d'outils de suivi pour la recherche en santé sexuelle et reproductive. Refonte du système de monitoring, contribution au projet 'Équité en Santé'.",
+        "tags": ["Recherche", "Santé", "Data"],
+        "accent": "tertiary"
       },
       {
         "period": "2012 — 2016",
-        "role": "Responsable du développement",
-        "org": "Administration Communale · Bénin"
+        "title": "Bâtisseur du suivi-évaluation territorial",
+        "org": "Administration Communale · Bénin",
+        "description": "Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils Access pour le suivi du Plan de Développement Communal (PDC) et la gestion financière.",
+        "tags": ["Public", "Territoire", "S&E"],
+        "accent": "tertiary"
       }
     ]
   },

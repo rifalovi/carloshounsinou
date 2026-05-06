@@ -44,9 +44,9 @@
     ]
   },
   "about": {
-    "eyebrow": "The journey",
-    "h2Part1": "From statistical rigor to a",
-    "h2Emphasis": "systemic vision",
+    "eyebrow": "Trajectory",
+    "h2Part1": "13 years of transformations",
+    "h2Emphasis": "delivered",
     "h2End": ".",
     "p1": "A trained statistical engineer with a Master's in Project Management, I have built over thirteen years a rare expertise at the intersection of three worlds: monitoring & evaluation methodology, data engineering, and product design.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
@@ -55,28 +55,51 @@
     "timeline": [
       {
         "period": "2024 — Today",
-        "role": "Project Engineering Officer",
-        "org": "International Organisation of La Francophonie · Project Design and Monitoring Service"
+        "title": "Architect of M&E Modernisation",
+        "org": "Organisation Internationale de la Francophonie · Paris",
+        "description": "Designing an institutional platform to digitalise the steering of an international programme portfolio. From specification to governance, I am structuring a system that will transform decision-making in the field.",
+        "tags": ["Multilateral", "Architecture", "M&E"],
+        "accent": "primary"
       },
       {
         "period": "2021 — 2024",
-        "role": "Business Development Officer",
-        "org": "Heaven Immobilier Groupe · France"
-      },
-      {
-        "period": "2019 — 2020",
-        "role": "Programme Assistant",
-        "org": "OIF · External Representations Service"
+        "title": "Growth Catalyst · Data Strategy",
+        "org": "Heaven Immobilier Groupe · France",
+        "description": "Built the group's data-driven steering system. Designed estimation tools and financial KPIs (cost, margin, profitability). Market intelligence and expansion into new segments.",
+        "tags": ["Private", "Data", "BI"],
+        "accent": "secondary"
       },
       {
         "period": "2018 — 2021",
-        "role": "Expert M&E Consultant",
-        "org": "IBF International Consulting · RePaSOC Programme (European Union)"
+        "title": "Systems Designer for EU Donors",
+        "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
+        "description": "Built two complete web-based monitoring & evaluation platforms for European Union-funded projects. Refined the logical framework, designed the online system, transferred skills to field teams.",
+        "tags": ["EU", "Platform", "Consulting"],
+        "accent": "primary"
+      },
+      {
+        "period": "2019 — 2020",
+        "title": "Architect of Programming Tools",
+        "org": "OIF · External Representations Service · Paris",
+        "description": "Designed and deployed indicator monitoring tools for the 2019–2022 programming cycle. Supported national structures throughout the full strategic planning cycle.",
+        "tags": ["Multilateral", "Tools", "Planning"],
+        "accent": "tertiary"
+      },
+      {
+        "period": "2016 — 2018",
+        "title": "Statistician · Health Research",
+        "org": "CHU de Québec · Benin",
+        "description": "Designed databases and monitoring tools for sexual and reproductive health research. Rebuilt the monitoring system and contributed to the 'Health Equity' project.",
+        "tags": ["Research", "Health", "Data"],
+        "accent": "tertiary"
       },
       {
         "period": "2012 — 2016",
-        "role": "Head of Development",
-        "org": "Municipal Administration · Benin"
+        "title": "Builder of Territorial M&E Systems",
+        "org": "Municipal Administration · Benin",
+        "description": "Built the monitoring system for the Decennial Education Plan. Designed Access tools for the Municipal Development Plan (PDC) monitoring and financial management.",
+        "tags": ["Public", "Territory", "M&E"],
+        "accent": "tertiary"
       }
     ]
   },
