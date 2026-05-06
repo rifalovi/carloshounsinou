@@ -55,6 +55,24 @@ body {
   color: #FAF8F1;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #047857;
+  color: #FAF8F1;
+  padding: 8px 16px;
+  z-index: 999;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition: top 0.2s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
