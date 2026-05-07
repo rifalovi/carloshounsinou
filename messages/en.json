@@ -47,7 +47,9 @@
       "Swiss Development Cooperation DDC",
       "Bill & Melinda Gates Foundation",
       "CIHR · Canadian Institutes of Health Research",
-      "Fondation Mérieux"
+      "Fondation Mérieux",
+      "Encapsulated generative AI",
+      "Institutional RAG"
     ]
   },
   "about": {
@@ -55,7 +57,7 @@
     "h2Part1": "A trajectory of transformations",
     "h2Emphasis": "delivered",
     "h2End": ".",
-    "p1": "I have built my career in service of a simple conviction: organisations that steer by data deliver more impact, and those that master their systems deserve to be served by architects, not by vendors. At the intersection of applied statistics, institutional monitoring-evaluation, and software design, I have been supporting donors, institutions, and private actors for thirteen years. From territorial municipalities to multilateral organisations, from bilateral European programmes to consumer products, my signature remains constant: methodological rigour in the service of architectures that last.",
+    "p1": "I have built my career in service of a simple conviction: organisations that steer by data deliver more impact, and those that master their systems deserve to be served by architects, not by vendors. At the intersection of applied statistics, institutional monitoring-evaluation, and software design augmented by artificial intelligence, I have been supporting donors, institutions, and private actors for thirteen years. From territorial municipalities to multilateral organisations, from bilateral European programmes to consumer products, my signature remains constant: methodological rigour in the service of architectures that last, integrating generative AI tools with the safeguards essential to institutional contexts.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
@@ -133,6 +135,7 @@
           { "label": "Compliance", "value": "GDPR · Multi-role security" },
           { "label": "Status", "value": "In development" }
         ],
+        "hasAI": true,
         "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
         "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/institutional-pilot" }]
       },
@@ -152,6 +155,7 @@
           { "label": "Encapsulated AI", "value": "Documentary RAG · Vision · quotas" },
           { "label": "Security", "value": "Multi-role RLS · audit · alerts" }
         ],
+        "hasAI": true,
         "stack": ["Full-stack architecture", "Encapsulated AI", "Vector base", "Multi-role workflow", "Automated reporting"],
         "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/incubation-platform" }]
       },
@@ -171,6 +175,7 @@
           { "label": "Security", "value": "Multi-role RLS · anti-hallucination" },
           { "label": "Status", "value": "Delivered · Live pilot" }
         ],
+        "hasAI": true,
         "stack": ["Full-stack architecture", "Vector base", "Encapsulated AI", "Web cartography", "Multi-role editorial workflow"],
         "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/valorisation-platform" }]
       },
@@ -228,6 +233,7 @@
           { "label": "Platforms", "value": "Web · Android · PWA · iOS pending" },
           { "label": "Status", "value": "Live · Google Play" }
         ],
+        "hasAI": true,
         "stack": ["Next.js", "Anthropic API", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
         "actions": [
           { "label": "View project →", "type": "detail", "href": "/realisations/cap-citoyen" },
@@ -328,6 +334,37 @@
         "title": "Training & capacity building",
         "description": "Knowledge transfer through practice. Tailor-made modules, individual coaching.",
         "tags": ["In-person", "Remote"]
+      }
+    ]
+  },
+  "aiCapabilities": {
+    "eyebrow": "─── ARTIFICIAL INTELLIGENCE",
+    "title": "Artificial intelligence, integrated with rigour.",
+    "subtitle": "Three years of concrete generative AI integration in institutional platforms. Always with safeguards, source citation, and controlled quotas.",
+    "cards": [
+      {
+        "label": "DOCUMENTARY RAG",
+        "title": "Semantic search on institutional knowledge bases",
+        "description": "Multilingual vector bases optimised for French, high-quality embeddings, systematic source citation.",
+        "tags": ["Voyage AI", "Embeddings", "pgvector"]
+      },
+      {
+        "label": "CONVERSATIONAL ASSISTANTS",
+        "title": "Coaches and copilots integrated into business workflows",
+        "description": "Real-time streaming, conversational memory, multimodal upload (text, images, documents), contextual responses aligned to the project cycle.",
+        "tags": ["Claude API", "Vision", "Streaming"]
+      },
+      {
+        "label": "GUIDED GENERATION",
+        "title": "Indicators, questionnaires, analyses generated",
+        "description": "Assisted production of SMART indicators, survey questionnaires, and analytical notes with systematic human validation.",
+        "tags": ["LLM", "Workflow", "Validation"]
+      },
+      {
+        "label": "ETHICAL SAFEGUARDS",
+        "title": "Anti-hallucination, quotas, controlled refusal",
+        "description": "Mandatory source citation, explicit refusal of off-topic queries, per-role token quotas, full API call audit, institutional compliance.",
+        "tags": ["Anti-hallucination", "Quotas", "Audit"]
       }
     ]
   },

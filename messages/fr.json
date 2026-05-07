@@ -47,7 +47,9 @@
       "Coopération suisse DDC",
       "Fondation Bill et Melinda Gates",
       "IRSC · Instituts de Recherche en Santé du Canada",
-      "Fondation Mérieux"
+      "Fondation Mérieux",
+      "IA générative encadrée",
+      "RAG institutionnel"
     ]
   },
   "about": {
@@ -55,7 +57,7 @@
     "h2Part1": "Une trajectoire de transformations",
     "h2Emphasis": "livrées",
     "h2End": ".",
-    "p1": "J'ai construit ma carrière au service d'une conviction simple : les organisations qui pilotent par les données livrent plus d'impact, et celles qui maîtrisent leurs systèmes méritent d'être servies par des architectes, pas par des prestataires. Au croisement de la statistique appliquée, du suivi-évaluation institutionnel et de la conception logicielle, j'accompagne les bailleurs, les institutions et les acteurs privés depuis treize ans. De la commune territoriale à l'organisation multilatérale, du programme bilatéral européen au produit grand public, ma signature reste constante : la rigueur méthodologique au service d'architectures qui durent.",
+    "p1": "J'ai construit ma carrière au service d'une conviction simple : les organisations qui pilotent par les données livrent plus d'impact, et celles qui maîtrisent leurs systèmes méritent d'être servies par des architectes, pas par des prestataires. Au croisement de la statistique appliquée, du suivi-évaluation institutionnel et de la conception logicielle augmentée par l'intelligence artificielle, j'accompagne les bailleurs, les institutions et les acteurs privés depuis treize ans. De la commune territoriale à l'organisation multilatérale, du programme bilatéral européen au produit grand public, ma signature reste constante : la rigueur méthodologique au service d'architectures qui durent, intégrant les outils d'IA générative avec les garde-fous indispensables aux contextes institutionnels.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
@@ -133,6 +135,7 @@
           { "label": "Conformité", "value": "RGPD · Sécurité multi-rôles" },
           { "label": "Statut", "value": "En développement" }
         ],
+        "hasAI": true,
         "stack": ["Architecture web", "Bases de données", "Conformité RGPD", "Sécurité multi-rôles"],
         "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/institutional-pilot" }]
       },
@@ -152,6 +155,7 @@
           { "label": "IA encadrée", "value": "RAG documentaire · Vision · quotas" },
           { "label": "Sécurité", "value": "RLS multi-rôles · audit · alertes" }
         ],
+        "hasAI": true,
         "stack": ["Architecture full-stack", "IA générative encadrée", "Base vectorielle", "Workflow multi-rôles", "Reporting automatisé"],
         "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/incubation-platform" }]
       },
@@ -171,6 +175,7 @@
           { "label": "Sécurité", "value": "RLS multi-rôles · anti-hallucination" },
           { "label": "Statut", "value": "Livré · Pilote en production" }
         ],
+        "hasAI": true,
         "stack": ["Architecture full-stack", "Base vectorielle", "IA générative encadrée", "Cartographie web", "Workflow éditorial multi-rôles"],
         "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/valorisation-platform" }]
       },
@@ -228,6 +233,7 @@
           { "label": "Plateformes", "value": "Web · Android · PWA · iOS en validation" },
           { "label": "Statut", "value": "Live · Google Play" }
         ],
+        "hasAI": true,
         "stack": ["Next.js", "API Anthropic", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
         "actions": [
           { "label": "Voir le projet →", "type": "detail", "href": "/realisations/cap-citoyen" },
@@ -328,6 +334,37 @@
         "title": "Formation & renforcement de capacités",
         "description": "Transmission par la pratique. Modules sur-mesure, coaching individuel.",
         "tags": ["Présentiel", "Distanciel"]
+      }
+    ]
+  },
+  "aiCapabilities": {
+    "eyebrow": "─── INTELLIGENCE ARTIFICIELLE",
+    "title": "L'intelligence artificielle, intégrée avec rigueur.",
+    "subtitle": "Trois ans d'intégration concrète d'IA générative dans des plateformes institutionnelles. Toujours avec garde-fous, citation des sources, et quotas maîtrisés.",
+    "cards": [
+      {
+        "label": "RAG DOCUMENTAIRE",
+        "title": "Recherche sémantique sur bases institutionnelles",
+        "description": "Bases vectorielles multilingues optimisées pour le français, embeddings de haute qualité, citation systématique des sources.",
+        "tags": ["Voyage AI", "Embeddings", "pgvector"]
+      },
+      {
+        "label": "ASSISTANTS CONVERSATIONNELS",
+        "title": "Coachs et copilotes intégrés aux flux métier",
+        "description": "Streaming temps réel, mémoire conversationnelle, upload multimodal (texte, images, documents), réponses contextuelles au cycle de projet.",
+        "tags": ["Claude API", "Vision", "Streaming"]
+      },
+      {
+        "label": "GÉNÉRATION ENCADRÉE",
+        "title": "Indicateurs, questionnaires, analyses générés",
+        "description": "Production assistée d'indicateurs SMART, de questionnaires d'enquête, et de notes analytiques avec validation humaine systématique.",
+        "tags": ["LLM", "Workflow", "Validation"]
+      },
+      {
+        "label": "GARDE-FOUS ÉTHIQUES",
+        "title": "Anti-hallucination, quotas, refus contrôlé",
+        "description": "Citation obligatoire des sources, refus explicite du hors-sujet, quotas tokens par rôle, audit complet des appels API, conformité institutionnelle.",
+        "tags": ["Anti-hallucination", "Quotas", "Audit"]
       }
     ]
   },
