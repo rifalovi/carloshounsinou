@@ -34,6 +34,8 @@ export default function Contact({
   const [contactEmail, setContactEmail] = useState("");
   const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
+  const [project, setProject] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   useEffect(() => {
@@ -42,6 +44,7 @@ export default function Contact({
       try {
         const prefill = JSON.parse(raw) as { message?: string; project?: string };
         if (prefill.message) setMessage(prefill.message);
+        if (prefill.project) setProject(prefill.project);
       } catch {}
       sessionStorage.removeItem("contactPrefill");
     }
@@ -50,12 +53,13 @@ export default function Contact({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !contactEmail) return;
+    if (honeypot) { setStatus("success"); return; }
     setStatus("sending");
     try {
-      const res = await fetch("https://formspree.io/f/xpwzeqpk", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ name, email: contactEmail, topic, message }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email: contactEmail, topic, message, project }),
       });
       setStatus(res.ok ? "success" : "error");
     } catch {
@@ -129,6 +133,17 @@ export default function Contact({
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
+              {/* Honeypot — invisible to users, bots fill it */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: "absolute", opacity: 0, height: 0, width: 0, pointerEvents: "none" }}
+              />
               {/* Step 1 */}
               <div style={{ marginBottom: "32px" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "12px" }}>
