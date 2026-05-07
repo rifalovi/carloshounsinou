@@ -16,6 +16,7 @@ type Props = {
   visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
   badge: string;
   badgeType: "dev" | "live" | "done";
+  hasAI?: boolean;
   category: string;
   role: string;
   title: string;
@@ -407,7 +408,7 @@ function handleContactRequest(projectTitle: string) {
 
 /* ── component ── */
 export default function FlagshipCard({
-  visual, badge, badgeType, category, role, title, subtitle,
+  visual, badge, badgeType, hasAI, category, role, title, subtitle,
   description, specs, stack, actions, capImageAlt, index = 0,
 }: Props) {
   const [hovered, setHovered] = useState(false);
@@ -453,7 +454,7 @@ export default function FlagshipCard({
         alignItems: "center",
         justifyContent: "center",
       }}>
-        {/* Badge */}
+        {/* Status badge */}
         <div style={{
           position: "absolute", top: "16px", left: "16px",
           background: "rgba(245,239,230,0.95)",
@@ -474,6 +475,27 @@ export default function FlagshipCard({
           <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: badgeColors[badgeType], flexShrink: 0 }}/>
           {badge}
         </div>
+        {/* AI badge */}
+        {hasAI && (
+          <div
+            aria-label="Réalisation intégrant l'IA générative"
+            style={{
+              position: "absolute", top: "16px", right: "16px",
+              background: "rgba(245,239,230,0.95)",
+              border: "1px solid #B45309",
+              padding: "4px 10px",
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.75rem",
+              color: "#B45309",
+              fontWeight: 500,
+              letterSpacing: "0.04em",
+              borderRadius: "100px",
+              zIndex: 1,
+            }}
+          >
+            ✦ IA
+          </div>
+        )}
         {visual === "oif" && <OifVisual />}
         {visual === "incubation" && <IncubationVisual />}
         {visual === "valorisation" && <ValorisationVisual />}

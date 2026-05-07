@@ -11,6 +11,7 @@ type Action = { label: string; type: "contact" | "external" | "store" | "detail"
 export type CardData = {
   id: string;
   visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
+  hasAI?: boolean;
   category: string;
   role: string;
   title: string;
@@ -201,6 +202,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
                   visual={card.visual}
                   badge={card.status}
                   badgeType={card.statusType}
+                  hasAI={card.hasAI}
                   category={card.category}
                   role={card.role}
                   title={card.title}
