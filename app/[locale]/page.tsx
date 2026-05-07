@@ -7,10 +7,11 @@ import About from "@/components/sections/About";
 import Flagship from "@/components/sections/Flagship";
 import Stats from "@/components/sections/Stats";
 import Expertise from "@/components/sections/Expertise";
-import Testimonial from "@/components/sections/Testimonial";
+import SecondaryRealizations from "@/components/sections/SecondaryRealizations";
 import Contact from "@/components/sections/Contact";
 
 type Props = { params: Promise<{ locale: string }> };
+type Card = { id: string; eyebrow: string; title: string; description: string; tags: string[] };
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
@@ -22,7 +23,7 @@ export default async function Home({ params }: Props) {
   const flagship = await getTranslations({ locale, namespace: "flagship" });
   const stats = await getTranslations({ locale, namespace: "stats" });
   const expertise = await getTranslations({ locale, namespace: "expertise" });
-  const testimonial = await getTranslations({ locale, namespace: "testimonial" });
+  const secondaryRealizations = await getTranslations({ locale, namespace: "secondaryRealizations" });
   const contact = await getTranslations({ locale, namespace: "contact" });
   const footer = await getTranslations({ locale, namespace: "footer" });
 
@@ -125,10 +126,12 @@ export default async function Home({ params }: Props) {
           tiles={expertiseTiles}
         />
 
-        <Testimonial
-          quote={testimonial("quote")}
-          author={testimonial("author")}
-          role={testimonial("role")}
+        <SecondaryRealizations
+          eyebrow={secondaryRealizations("eyebrow")}
+          h2Part1={secondaryRealizations("h2Part1")}
+          h2Emphasis={secondaryRealizations("h2Emphasis")}
+          h2End={secondaryRealizations("h2End")}
+          cards={secondaryRealizations.raw("cards") as Card[]}
         />
 
         <Contact

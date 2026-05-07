@@ -331,10 +331,55 @@
       }
     ]
   },
-  "testimonial": {
-    "quote": "Carlos transformed our monitoring & evaluation system. His methodological rigor combined with his mastery of digital tools enabled us to gain clarity and responsiveness in steering our projects.",
-    "author": "[To complete]",
-    "role": "Programme Direction · International organisation"
+  "secondaryRealizations": {
+    "eyebrow": "Additional Projects",
+    "h2Part1": "More",
+    "h2Emphasis": "architectures",
+    "h2End": "that mattered.",
+    "cards": [
+      {
+        "id": "electoral-statistics",
+        "eyebrow": "Electoral Statistics",
+        "title": "Mapping Voting Behaviour in Benin",
+        "description": "Statistical analysis of communal electoral results to identify territorial dynamics and socio-demographic correlations.",
+        "tags": ["R", "GIS", "Statistics", "Governance"]
+      },
+      {
+        "id": "health-mapping",
+        "eyebrow": "Health Mapping",
+        "title": "Rural Health Coverage Analysis",
+        "description": "Geolocation system for health infrastructure and analysis of medical deserts to guide resource allocation policies.",
+        "tags": ["QGIS", "ODK", "Public Health", "NGO"]
+      },
+      {
+        "id": "padlaf-women",
+        "eyebrow": "Economic Empowerment",
+        "title": "PADLAF Women Programme M&E Framework",
+        "description": "Results measurement framework for a rural women's economic empowerment programme under a bilateral European funding arrangement.",
+        "tags": ["M&E", "Gender", "EU", "Rural Development"]
+      },
+      {
+        "id": "communal-budgets",
+        "eyebrow": "Local Public Finance",
+        "title": "Communal Budget Dashboard",
+        "description": "Visualisation and comparison platform for Beninese municipal budgets, enabling elected officials and civil society to track budget execution.",
+        "tags": ["Power BI", "Public Finance", "Open Data", "Decentralisation"]
+      },
+      {
+        "id": "territorial-pcd",
+        "eyebrow": "Territorial Planning",
+        "title": "Communal Development Plans — Participatory Diagnosis",
+        "description": "Data collection and analysis framework for development plan diagnostics across ten municipalities.",
+        "tags": ["ODK", "Citizen Participation", "Planning", "Decentralisation"]
+      },
+      {
+        "id": "health-equity",
+        "eyebrow": "Health Equity",
+        "title": "Composite Healthcare Access Index",
+        "description": "Development of a multidimensional index measuring equitable access to primary healthcare in rural settings, integrating distance, cost, and availability.",
+        "tags": ["Python", "Statistics", "Public Health", "Research"]
+      }
+    ]
   },
   "contact": {
     "eyebrow": "Get in touch",

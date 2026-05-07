@@ -331,10 +331,55 @@
       }
     ]
   },
-  "testimonial": {
-    "quote": "Carlos a transformé notre dispositif de suivi-évaluation. Sa rigueur méthodologique alliée à sa maîtrise des outils digitaux nous a permis de gagner en clarté et en réactivité dans le pilotage de nos projets.",
-    "author": "[À compléter]",
-    "role": "Direction de programme · Organisation internationale"
+  "secondaryRealizations": {
+    "eyebrow": "Réalisations complémentaires",
+    "h2Part1": "D'autres",
+    "h2Emphasis": "architectures",
+    "h2End": "qui ont compté.",
+    "cards": [
+      {
+        "id": "electoral-statistics",
+        "eyebrow": "Statistiques électorales",
+        "title": "Cartographie des comportements de vote au Bénin",
+        "description": "Analyse statistique des résultats électoraux communaux pour identifier les dynamiques territoriales et les corrélations socio-démographiques.",
+        "tags": ["R", "SIG", "Statistiques", "Gouvernance"]
+      },
+      {
+        "id": "health-mapping",
+        "eyebrow": "Cartographie sanitaire",
+        "title": "Couverture sanitaire des zones rurales",
+        "description": "Système de géolocalisation des infrastructures de santé et analyse des déserts médicaux pour orienter les politiques d'allocation des ressources.",
+        "tags": ["QGIS", "ODK", "Santé publique", "ONG"]
+      },
+      {
+        "id": "padlaf-women",
+        "eyebrow": "Autonomisation économique",
+        "title": "Suivi-évaluation du programme PADLAF Femmes",
+        "description": "Cadre de mesure des résultats pour un programme d'autonomisation économique des femmes rurales dans le cadre d'un financement bilatéral européen.",
+        "tags": ["Suivi-évaluation", "Genre", "UE", "Développement rural"]
+      },
+      {
+        "id": "communal-budgets",
+        "eyebrow": "Finance publique locale",
+        "title": "Tableau de bord des budgets communaux",
+        "description": "Plateforme de visualisation et de comparaison des budgets des communes béninoises, permettant aux élus et à la société civile de suivre l'exécution budgétaire.",
+        "tags": ["Power BI", "Finances publiques", "Open data", "Décentralisation"]
+      },
+      {
+        "id": "territorial-pcd",
+        "eyebrow": "Planification territoriale",
+        "title": "Plans communaux de développement — Diagnostic participatif",
+        "description": "Dispositif de collecte et d'analyse des données de diagnostic pour l'élaboration des plans communaux de développement dans dix communes.",
+        "tags": ["ODK", "Participation citoyenne", "Planification", "Décentralisation"]
+      },
+      {
+        "id": "health-equity",
+        "eyebrow": "Équité en santé",
+        "title": "Indice composite d'accès aux soins",
+        "description": "Développement d'un indice multidimensionnel mesurant l'équité d'accès aux soins de santé primaires en milieu rural, intégrant distance, coût et disponibilité.",
+        "tags": ["Python", "Statistiques", "Santé publique", "Recherche"]
+      }
+    ]
   },
   "contact": {
     "eyebrow": "Prendre contact",
