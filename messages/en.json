@@ -393,7 +393,7 @@
         "category": "Institutional architecture",
         "status": "In development",
         "context": "A multilateral francophone organisation managing a portfolio of international multi-stakeholder programmes needed to modernise its monitoring and evaluation setup. Processes relied on disparate office tools, making data consolidation and reporting to governance bodies laborious and unreliable.",
-        "challenge": "Design a secure institutional web platform meeting the strict confidentiality requirements of the multilateral sector, while offering a smooth enough experience to drive adoption among non-technical teams spread across headquarters and field representations.",
+        "challenge": "Designing a secure institutional web platform that meets the strict confidentiality requirements of the multilateral sector, while offering a smooth enough experience to drive adoption among non-technical teams spread across headquarters and field representations.",
         "approach": [
           "Detailed functional scoping with programme teams to model the portfolio and validation workflows.",
           "Multi-role modular architecture with Row-Level Security ensuring isolation of sensitive data.",
@@ -412,7 +412,7 @@
         "category": "Business platform · Evaluation",
         "status": "Delivered · Live",
         "context": "An institution supporting development project owners needed a unified framework to cover the full lifecycle: training in Results-Based Management standards, guided incubation, SMART indicator tracking, performance measurement, mixed analysis and report production.",
-        "challenge": "Integrate into one platform capabilities ranging from pedagogy to advanced analytics, with encapsulated generative AI preventing hallucinations on institutional documents, and a secure architecture supporting distinct access profiles for project owners, coaches and administrators.",
+        "challenge": "Integrating into a single platform capabilities ranging from pedagogy to advanced analytics, with encapsulated generative AI preventing hallucinations on institutional documents, and a secure architecture supporting distinct access profiles for project owners, coaches and administrators.",
         "approach": [
           "8-module coupled architecture covering training, incubation, SMART indicators, measurement, analysis and reporting.",
           "50+ API endpoints with complex state management, notifications and scheduled alerts.",
@@ -432,7 +432,7 @@
         "category": "Institutional platform",
         "status": "Delivered · Active pilot",
         "context": "An international institution wanted to make its added value visible through its portfolio of strategic projects. The data existed but was buried in PDF reports inaccessible to the general public and potential partners.",
-        "challenge": "Transform static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant, a major institutional reputation issue, and managing the editorial workflow for teams with heterogeneous digital skills.",
+        "challenge": "Transforming static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant, a major institutional reputation issue, and managing the editorial workflow for teams with heterogeneous digital skills.",
         "approach": [
           "Multi-role editorial CMS enabling teams to create, review and publish structured project pages.",
           "Data storytelling: data visualisations, key indicators, impact timeline per project.",
@@ -452,7 +452,7 @@
         "category": "Consulting mission · EU",
         "status": "Delivered",
         "context": "As part of a consulting mission for IBF International Consulting, I was responsible for designing and deploying the monitoring and evaluation tools for a European Union-funded development programme involving partners in Belgium and West Africa.",
-        "challenge": "Design two distinct platforms each meeting the specific needs of their users, coordinators, donors and implementing partners, while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
+        "challenge": "Designing two distinct platforms each tailored to the specific needs of their users, coordinators, donors and implementing partners, while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
         "approach": [
           "Methodological framing: refinement of the overall logical framework, definition of indicators and targets.",
           "Design of two dedicated web platforms adapted to the skill levels of field users.",
@@ -472,7 +472,7 @@
         "category": "Territorial governance",
         "status": "In development",
         "context": "A territorial governance body in West Africa wanted to move from managing its local development plan with fragmented Excel files to a shared web platform guaranteeing the quality and traceability of data produced by multiple sectoral actors.",
-        "challenge": "Design a participatory certification workflow adapted to sectoral focal points with limited digital literacy, while ensuring the rigour of published data: structured collection, automated quality controls and a tamper-proof audit trail.",
+        "challenge": "Designing a participatory certification workflow adapted to sectoral focal points with limited digital literacy, while ensuring the rigour of published data: structured collection, automated quality controls and a tamper-proof audit trail.",
         "approach": [
           "3 distinct access profiles (Admin / Editor / Reader) with RLS ensuring data isolation.",
           "Structured annual campaigns: collection windows, automated reminders, close-out and archiving.",
@@ -493,7 +493,7 @@
         "category": "SaaS product · EdTech",
         "status": "Live",
         "context": "The mandatory civic exam for naturalisation applications, effective from January 1, 2026, created a market of 100 000 candidates per year. At Cap Citoyen's launch, no quality application addressed this emerging need with a rigorous pedagogical approach.",
-        "challenge": "Design an engaging learning experience for an extremely heterogeneous audience (ages, backgrounds, digital skill levels), integrating diverse formats (quiz, audio, flash-cards, exam simulation) and an AI coach capable of adapting to each user's level.",
+        "challenge": "Designing an engaging learning experience for an extremely heterogeneous audience (ages, backgrounds, digital skill levels), combining diverse formats (quiz, audio, flash-cards, exam simulation) with an AI coach capable of adapting to each user's level.",
         "approach": [
           "Next.js PWA architecture delivering a native mobile experience without native-app constraints.",
           "800+ questions structured by theme, with progressive difficulty and pedagogical explanations.",
@@ -515,7 +515,7 @@
         "category": "Business platform · Private sector",
         "status": "Delivered · Live",
         "context": "A private operational sector company managed a fleet of field agents with complex schedules, geolocated missions and an entirely manual billing chain. Information scattered across Excel spreadsheets, Word files and informal exchanges was generating costly errors and excessive time-to-invoice.",
-        "challenge": "Integrate into one coherent experience the agent portfolio, site geolocation, automated mission planning, calendar tracking, quote generation and invoicing, with a tight delivery timeline imposed by the operational context.",
+        "challenge": "Integrating into a single coherent experience the agent portfolio, site geolocation, automated mission planning, calendar tracking, quote generation and invoicing, within a tight delivery timeline imposed by the operational context.",
         "approach": [
           "Accelerated no-code architecture to reduce time-to-market while guaranteeing robustness.",
           "Agent portfolio: profiles, skills, availability, geolocated intervention zones.",
