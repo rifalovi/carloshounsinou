@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import DetailCTA from "@/components/ui-custom/DetailCTA";
+import { ProductBadge } from "@/components/ui-custom/ProductBadge";
 
 type DetailItem = {
   id: string;
@@ -69,6 +70,7 @@ export default async function RealisationDetail({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "realisations" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const footer = await getTranslations({ locale, namespace: "footer" });
+  const productBadge = await getTranslations({ locale, namespace: "productBadge" });
 
   const ui = t.raw("ui") as UI;
   const items = t.raw("items") as DetailItem[];
@@ -110,6 +112,11 @@ export default async function RealisationDetail({ params }: Props) {
                 {detail.status}
               </span>
             </div>
+            {slug === "cap-citoyen" && (
+              <div style={{ marginBottom: "20px" }}>
+                <ProductBadge label={productBadge("saas")} />
+              </div>
+            )}
             <h1 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.025em", color: "#F5EFE6", marginBottom: "16px" }}>
               {detail.title}
             </h1>

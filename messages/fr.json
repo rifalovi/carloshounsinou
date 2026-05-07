@@ -58,7 +58,7 @@
     "h2Part1": "Une trajectoire de transformations",
     "h2Emphasis": "livrées",
     "h2End": ".",
-    "p1": "J'ai construit ma carrière au service d'une conviction simple : les organisations qui pilotent par les données livrent plus d'impact, et celles qui maîtrisent leurs systèmes méritent d'être servies par des architectes, pas par des prestataires. Au croisement de la statistique appliquée, du suivi-évaluation institutionnel et de la conception logicielle augmentée par l'intelligence artificielle, j'accompagne les bailleurs, les institutions et les acteurs privés depuis treize ans. De la commune territoriale à l'organisation multilatérale, du programme bilatéral européen au produit grand public, ma signature reste constante : la rigueur méthodologique au service d'architectures qui durent, intégrant les outils d'IA générative avec les garde-fous indispensables aux contextes institutionnels.",
+    "p1": "J'ai construit ma carrière sur une exigence simple : les institutions qui pilotent par la donnée produisent des effets attribuables, et celles qui maîtrisent leurs systèmes méritent des architectes, pas des prestataires. Au croisement de la statistique appliquée, du suivi-évaluation institutionnel et de la conception logicielle augmentée par l'intelligence artificielle, j'accompagne les bailleurs, les institutions et les acteurs privés depuis treize ans. De la commune territoriale à l'organisation multilatérale, du programme bilatéral européen au produit grand public, ma signature reste constante : la rigueur méthodologique au service d'architectures qui durent, indépendantes des prestataires, fondées sur des garde-fous indispensables aux contraintes institutionnelles.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
@@ -267,7 +267,7 @@
     "eyebrow": "Réalisations · KPI",
     "h2Part1": "Quatre",
     "h2Emphasis": "continents",
-    "h2End": " d'impact mesurable.",
+    "h2End": " d'effets mesurables.",
     "intro": "Au-delà des titres, ce qui compte ce sont les outils déployés, les projets livrés, les équipes formées. Voici ce que représente un parcours de terrain.",
     "items": [
       {
@@ -518,7 +518,7 @@
         "challenge": "Transformer des rapports statiques en expériences web interactives tout en garantissant l'exactitude des informations présentées par l'assistant conversationnel, enjeu d'image institutionnelle majeur, et en maîtrisant le workflow éditorial pour des équipes aux compétences numériques hétérogènes.",
         "approach": [
           "CMS éditorial multi-rôles permettant aux équipes de créer, relire et publier des fiches projet structurées.",
-          "Data storytelling : visualisations de données, indicateurs clés, timeline d'impact par projet.",
+          "Data storytelling : visualisations de données, indicateurs clés, chronologie des résultats par projet.",
           "Dashboard analytique offrant une vue d'ensemble du portefeuille : répartition géographique, thématiques, niveaux d'avancement.",
           "Exploration cartographique interactive des projets par zone géographique.",
           "Assistant conversationnel basé sur une base vectorielle propriétaire, avec guardrails anti-hallucination et audit des réponses."
@@ -612,5 +612,8 @@
         "stackDetail": "Plateforme no-code · APIs tierces · Cartographie web · Workflow automatisé · Application mobile · Génération de documents"
       }
     ]
+  },
+  "productBadge": {
+    "saas": "SaaS propriétaire"
   }
 }

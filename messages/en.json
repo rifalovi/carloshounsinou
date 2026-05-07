@@ -58,7 +58,7 @@
     "h2Part1": "A trajectory of transformations",
     "h2Emphasis": "delivered",
     "h2End": ".",
-    "p1": "I have built my career in service of a simple conviction: organisations that steer by data deliver more impact, and those that master their systems deserve to be served by architects, not by vendors. At the intersection of applied statistics, institutional monitoring-evaluation, and software design augmented by artificial intelligence, I have been supporting donors, institutions, and private actors for thirteen years. From territorial municipalities to multilateral organisations, from bilateral European programmes to consumer products, my signature remains constant: methodological rigour in the service of architectures that last, integrating generative AI tools with the safeguards essential to institutional contexts.",
+    "p1": "I have built my career on a simple requirement: institutions that govern through data produce attributable effects, and those that master their systems deserve architects, not vendors. At the crossroads of applied statistics, institutional monitoring and evaluation, and AI-augmented software design, I have served funders, institutions and private operators for thirteen years. From local government to multilateral organisation, from European bilateral programmes to consumer products, my signature remains constant: methodological rigour at the service of architectures that last, vendor-independent, built on the safeguards that institutional constraints demand.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
@@ -267,7 +267,7 @@
     "eyebrow": "Achievements · KPIs",
     "h2Part1": "Four",
     "h2Emphasis": "continents",
-    "h2End": " of measurable impact.",
+    "h2End": " of measurable effects.",
     "intro": "Beyond titles, what counts are the tools deployed, the projects delivered, the teams trained. Here is what a field career represents.",
     "items": [
       {
@@ -518,7 +518,7 @@
         "challenge": "Transforming static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant, a major institutional reputation issue, and managing the editorial workflow for teams with heterogeneous digital skills.",
         "approach": [
           "Multi-role editorial CMS enabling teams to create, review and publish structured project pages.",
-          "Data storytelling: data visualisations, key indicators, impact timeline per project.",
+          "Data storytelling: data visualisations, key indicators, results timeline per project.",
           "Analytical dashboard offering a portfolio overview: geographic spread, themes, progress levels.",
           "Interactive map exploration of projects by geographic zone.",
           "Conversational assistant powered by a proprietary vector base, with anti-hallucination guardrails and response audit."
@@ -612,5 +612,8 @@
         "stackDetail": "No-code platform · Third-party APIs · Web cartography · Automated workflow · Mobile app · Document generation"
       }
     ]
+  },
+  "productBadge": {
+    "saas": "Proprietary SaaS"
   }
 }
