@@ -492,7 +492,7 @@
         "subtitle": "cap-citoyen.fr · France",
         "category": "Produit SaaS · EdTech",
         "status": "En production",
-        "context": "La réforme de 2024 rendant l'examen civique obligatoire pour toute demande de naturalisation a créé un marché de 100 000 candidats par an. Au moment du lancement de Cap Citoyen, aucune application de qualité ne couvrait ce besoin émergent avec une approche pédagogique rigoureuse.",
+        "context": "L'entrée en vigueur au 1er janvier 2026 de l'obligation de l'examen civique pour toute demande de naturalisation a créé un marché de 100 000 candidats par an. Au lancement de Cap Citoyen, aucune application de qualité ne couvrait ce besoin émergent avec une approche pédagogique rigoureuse.",
         "challenge": "Concevoir une expérience d'apprentissage engageante pour une audience extrêmement hétérogène (âges, origines, niveaux de maîtrise du numérique), en intégrant des formats variés (quiz, audio, flash-cards, simulation d'examen) et un coach IA capable de s'adapter au niveau de chaque utilisateur.",
         "approach": [
           "Architecture Next.js PWA permettant une expérience native sur mobile sans les contraintes d'une app native.",

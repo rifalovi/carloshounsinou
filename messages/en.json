@@ -492,7 +492,7 @@
         "subtitle": "cap-citoyen.fr · France",
         "category": "SaaS product · EdTech",
         "status": "Live",
-        "context": "The 2024 reform making the civic exam mandatory for all naturalisation applications created a market of 100 000 candidates per year. When Cap Citoyen launched, no quality application covered this emerging need with a rigorous pedagogical approach.",
+        "context": "The mandatory civic exam for naturalisation applications, effective from January 1, 2026, created a market of 100 000 candidates per year. At Cap Citoyen's launch, no quality application addressed this emerging need with a rigorous pedagogical approach.",
         "challenge": "Design an engaging learning experience for an extremely heterogeneous audience (ages, backgrounds, digital skill levels), integrating diverse formats (quiz, audio, flash-cards, exam simulation) and an AI coach capable of adapting to each user's level.",
         "approach": [
           "Next.js PWA architecture delivering a native mobile experience without native-app constraints.",
