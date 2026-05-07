@@ -148,6 +148,9 @@ export default function Footer({
             justify-content: center !important;
           }
         }
+        @media (max-width: 480px) {
+          footer { padding: 24px 20px !important; }
+        }
       `}</style>
     </footer>
   );

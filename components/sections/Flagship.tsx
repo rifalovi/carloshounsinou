@@ -143,7 +143,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
               {h2End}
             </h2>
           </div>
-          <p style={{ fontSize: "16px", color: "#475569", lineHeight: 1.75, maxWidth: "480px" }}>
+          <p className="prose-justify" style={{ fontSize: "16px", color: "#475569", lineHeight: 1.75, maxWidth: "480px" }}>
             {intro}
           </p>
         </div>

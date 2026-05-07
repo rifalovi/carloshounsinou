@@ -13,7 +13,7 @@
     "status": "Available"
   },
   "hero": {
-    "eyebrowLeft": "FR · 33 Paris, Île-de-France",
+    "eyebrowLeft": "Paris, Île-de-France",
     "eyebrowCenter": "Portfolio · MMXXVI Edition",
     "eyebrowRight": "Integrated Systems Architect",
     "tag": "Project Engineering Officer · International Organisation of La Francophonie",
@@ -22,7 +22,7 @@
     "h1Line2": "to",
     "h1Emphasis2": "source code",
     "h1End": ".",
-    "h1Subtitle": "Systems built to last.",
+    "signature": "Architectures built to hold",
     "portraitQuote": "\"From logical framework to source code.\"",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Experience",
@@ -615,5 +615,16 @@
   },
   "productBadge": {
     "saas": "Proprietary SaaS"
+  },
+  "identityCard": {
+    "role": "Integrated Systems Architect",
+    "availabilityLabel": "Availability",
+    "availabilityValue": "Open to missions Q3 2026",
+    "locationLabel": "Location",
+    "locationValue": "Paris · Île-de-France",
+    "domainsLabel": "Domains",
+    "domainsValue": "M&E · Governed AI · SaaS",
+    "fundersLabel": "Funders",
+    "fundersValue": "EU · AFD · GIZ · Mérieux · Bill & Melinda Gates"
   }
 }

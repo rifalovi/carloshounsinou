@@ -63,18 +63,13 @@ export default async function Home({ params }: Props) {
 
       <main id="main-content">
         <Hero
-          eyebrowLeft={hero("eyebrowLeft")}
-          eyebrowCenter={hero("eyebrowCenter")}
-          eyebrowRight={hero("eyebrowRight")}
           tag={hero("tag")}
           h1Line1={hero("h1Line1")}
           h1Emphasis1={hero("h1Emphasis1")}
           h1Line2={hero("h1Line2")}
           h1Emphasis2={hero("h1Emphasis2")}
           h1End={hero("h1End")}
-          h1Subtitle={hero("h1Subtitle")}
-          portraitQuote={hero("portraitQuote")}
-          portraitLocation={hero("portraitLocation")}
+          signature={hero("signature")}
           kpi1Label={hero("kpi1Label")}
           kpi1Value={hero("kpi1Value")}
           kpi2Label={hero("kpi2Label")}
@@ -83,6 +78,8 @@ export default async function Home({ params }: Props) {
           kpi3Value={hero("kpi3Value")}
           ctaPrimary={hero("ctaPrimary")}
           ctaSecondary={hero("ctaSecondary")}
+          portraitQuote={hero("portraitQuote")}
+          portraitLocation={hero("portraitLocation")}
         />
 
         <TrustMarquee items={marqueeItems} />

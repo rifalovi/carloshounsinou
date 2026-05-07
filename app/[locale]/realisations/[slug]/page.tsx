@@ -207,6 +207,8 @@ const bodyStyle: React.CSSProperties = {
   fontSize: "15px",
   color: "#1F2937",
   lineHeight: 1.75,
+  textAlign: "justify",
+  hyphens: "auto",
 };
 
 function Section({ label, children }: { label: string; children: React.ReactNode }) {

@@ -48,7 +48,7 @@ export default function About({
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "80px",
-          marginBottom: "100px",
+          marginBottom: "120px",
           alignItems: "end",
         }}
       >
@@ -75,6 +75,7 @@ export default function About({
         <div>
           {/* Drop-cap paragraph */}
           <p
+            className="prose-justify"
             style={{
               fontSize: "17px",
               color: "#1F2937",
@@ -99,7 +100,7 @@ export default function About({
             </span>
             {p1.slice(1)}
           </p>
-          <p style={{ fontSize: "17px", color: "#1F2937", lineHeight: 1.75 }}>
+          <p className="prose-justify" style={{ fontSize: "17px", color: "#1F2937", lineHeight: 1.75 }}>
             {p2Part1}
             <strong
               style={{

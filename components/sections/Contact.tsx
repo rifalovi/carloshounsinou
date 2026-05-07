@@ -259,6 +259,9 @@ export default function Contact({
           #contact > div:last-child { grid-template-columns: 1fr !important; gap: 40px !important; }
           #contact { padding: 80px 24px !important; }
         }
+        @media (max-width: 480px) {
+          #contact > div:last-child > div:last-child { padding: 24px !important; }
+        }
       `}</style>
     </section>
   );

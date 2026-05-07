@@ -13,7 +13,7 @@
     "status": "Disponible"
   },
   "hero": {
-    "eyebrowLeft": "FR · 33 Paris, Île-de-France",
+    "eyebrowLeft": "Paris, Île-de-France",
     "eyebrowCenter": "Portfolio · Édition MMXXVI",
     "eyebrowRight": "Architecte de systèmes intégrés",
     "tag": "Chargé d'Ingénierie de Projet · Organisation Internationale de la Francophonie",
@@ -22,7 +22,7 @@
     "h1Line2": "au",
     "h1Emphasis2": "code source",
     "h1End": ".",
-    "h1Subtitle": "Des systèmes qui durent.",
+    "signature": "Des architectures qui tiennent",
     "portraitQuote": "« Du cadre logique au code source. »",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Expérience",
@@ -615,5 +615,16 @@
   },
   "productBadge": {
     "saas": "SaaS propriétaire"
+  },
+  "identityCard": {
+    "role": "Architecte de Systèmes Intégrés",
+    "availabilityLabel": "Disponibilité",
+    "availabilityValue": "Ouvert aux missions Q3 2026",
+    "locationLabel": "Localisation",
+    "locationValue": "Paris · Île-de-France",
+    "domainsLabel": "Domaines",
+    "domainsValue": "S&E · IA encadrée · SaaS",
+    "fundersLabel": "Bailleurs",
+    "fundersValue": "UE · AFD · GIZ · Mérieux · Bill & Melinda Gates"
   }
 }

@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Kit Claude Code — Site Carlos Hounsinou
 
-## Getting Started
+> **Bienvenue !** Ce kit contient tout ce dont Claude Code a besoin pour construire ton site `carloshounsinou.com`.
 
-First, run the development server:
+---
+
+## 📂 Contenu du kit
+
+| Fichier | Rôle |
+|---------|------|
+| `BRIEF.md` | Cahier des charges complet (architecture, design system, contraintes techniques) |
+| `CONTENU.md` | Tous les textes du site en FR et EN, organisés par section |
+| `PROMPTS.md` | Les 4 prompts séquentiels à copier-coller dans Claude Code |
+| `maquette-reference.html` | La maquette HTML cible pour la référence visuelle |
+| `README.md` | Ce fichier |
+
+---
+
+## 🚀 Démarrage rapide
+
+### 1. Préparer ton dossier de projet
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Créer le dossier
+mkdir -p ~/Sites/carloshounsinou
+cd ~/Sites/carloshounsinou
+
+# Copier le contenu de ce kit dans ce dossier
+# (BRIEF.md, CONTENU.md, PROMPTS.md, maquette-reference.html)
+
+# Vérifier
+ls -la
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Lancer Claude Code
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+claude
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Ouvrir `PROMPTS.md` et suivre les sessions dans l'ordre
 
-## Learn More
+- Session 1 → Bootstrapping (~15 min)
+- Session 2 → Composants visuels (~45 min)
+- Session 3 → Formulaire + SEO (~30 min)
+- Session 4 → Déploiement Vercel + DNS (~20 min)
 
-To learn more about Next.js, take a look at the following resources:
+**⚠️ IMPORTANT** : Ne pas enchaîner les sessions sans tester. Entre chaque session, vérifie que tout marche, fais un git commit, puis passe à la suivante.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Conseils stratégiques
 
-## Deploy on Vercel
+1. **Une session = un objectif clair**. Si Claude Code part en vrille, ferme la session et relance avec `/clear`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Toujours commit avant de tester en grand**. Un `git commit` après chaque session te permet de revenir en arrière si besoin.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Test sur mobile dès la session 2**. Beaucoup de bugs CSS apparaissent uniquement en responsive.
+
+4. **Garde une longueur d'avance sur les comptes externes** :
+   - Compte Resend créé avant la session 3
+   - Compte Vercel lié à GitHub avant la session 4
+   - Accès au panneau DNS de ton registrar avant la session 4
+
+5. **Si quelque chose ne te plaît pas visuellement** : demande à Claude Code de le modifier en référence à la maquette HTML. Exemple : *« Compare ton Hero avec celui de la maquette ligne 800-900. Le portrait modulaire n'a pas le bon cadre doré. Corrige. »*
+
+---
+
+## 🆘 Support
+
+Si tu rencontres un blocage que Claude Code n'arrive pas à résoudre, reviens me voir avec :
+- L'étape où tu es bloqué
+- Le message d'erreur complet
+- Ce que Claude Code a tenté
+
+On débuggera ensemble.
+
+---
+
+**Bonne construction ! 🛠️**
+
+— Préparé en mai 2026 par Claude

@@ -37,6 +37,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,6 +71,13 @@ body {
 
 .skip-link:focus {
   top: 0;
+}
+
+.prose-justify {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -47,3 +47,8 @@ maquette-reference.html
 BRIEF.md
 CONTENU.md
 PROMPTS.md
+
+# Carlos - exclusions confidentielles
+i18n/Kit_Claude_Code_*
+*.zip
+.claude/

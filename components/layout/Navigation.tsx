@@ -150,6 +150,7 @@ export default function Navigation({
       >
         {/* Status */}
         <div
+          className="nav-status"
           style={{
             display: "flex",
             alignItems: "center",
@@ -209,6 +210,10 @@ export default function Navigation({
         }
         @media (max-width: 1024px) {
           nav ul { display: none !important; }
+        }
+        @media (max-width: 768px) {
+          nav[aria-label="Navigation principale"] { padding: 12px 16px !important; }
+          .nav-status { display: none !important; }
         }
       `}</style>
     </nav>

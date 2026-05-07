@@ -1,21 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {
-  eyebrowLeft: string;
-  eyebrowCenter: string;
-  eyebrowRight: string;
   tag: string;
   h1Line1: string;
   h1Emphasis1: string;
   h1Line2: string;
   h1Emphasis2: string;
   h1End: string;
-  h1Subtitle: string;
-  portraitQuote: string;
-  portraitLocation: string;
+  signature: string;
   kpi1Label: string;
   kpi1Value: string;
   kpi2Label: string;
@@ -24,6 +19,8 @@ type Props = {
   kpi3Value: string;
   ctaPrimary: string;
   ctaSecondary: string;
+  portraitQuote: string;
+  portraitLocation: string;
 };
 
 const fadeUp = {
@@ -36,18 +33,13 @@ const fadeUp = {
 };
 
 export default function Hero({
-  eyebrowLeft,
-  eyebrowCenter,
-  eyebrowRight,
   tag,
   h1Line1,
   h1Emphasis1,
   h1Line2,
   h1Emphasis2,
   h1End,
-  h1Subtitle,
-  portraitQuote,
-  portraitLocation,
+  signature,
   kpi1Label,
   kpi1Value,
   kpi2Label,
@@ -56,51 +48,30 @@ export default function Hero({
   kpi3Value,
   ctaPrimary,
   ctaSecondary,
+  portraitQuote,
+  portraitLocation,
 }: Props) {
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section
+      className="hero-section"
       style={{
         minHeight: "100vh",
-        padding: "130px 48px 80px",
+        padding: "100px 48px 80px",
         position: "relative",
         background: "#F5EFE6",
       }}
     >
-      {/* Top meta bar */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          fontFamily: "var(--font-mono)",
-          fontSize: "11px",
-          color: "#475569",
-          textTransform: "uppercase",
-          letterSpacing: "0.08em",
-          marginBottom: "60px",
-          paddingBottom: "20px",
-          borderBottom: "1px solid rgba(10,22,40,0.08)",
-        }}
-      >
-        <span>
-          <span style={{ color: "#B45309", fontWeight: 500 }}>FR · 33</span>
-          {" · "}
-          {eyebrowLeft.replace("FR · 33 ", "")}
-        </span>
-        <span>{eyebrowCenter}</span>
-        <span>{eyebrowRight}</span>
-      </div>
-
       {/* Main grid */}
       <div
+        className="hero-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "7fr 5fr",
           gap: "60px",
-          alignItems: "end",
+          alignItems: "flex-start",
         }}
       >
         {/* Left */}
@@ -121,7 +92,7 @@ export default function Hero({
               fontSize: "12px",
               fontWeight: 500,
               color: "#1F2937",
-              marginBottom: "36px",
+              marginBottom: "16px",
             }}
           >
             <span
@@ -142,12 +113,13 @@ export default function Hero({
             initial="hidden"
             animate="visible"
             variants={fadeUp}
+            className="hero-h1"
             style={{
               fontFamily: "var(--font-serif)",
               fontWeight: 300,
-              fontSize: "clamp(56px, 8vw, 112px)",
-              lineHeight: 0.95,
-              letterSpacing: "-0.04em",
+              fontSize: "clamp(30px, 6vw, 80px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.035em",
               color: "#0A1628",
               marginBottom: 0,
             }}
@@ -161,11 +133,40 @@ export default function Hero({
               {h1Emphasis2}
             </em>
             {h1End}
-            <br />
-            <span style={{ color: "rgba(10,22,40,0.55)", fontWeight: 300 }}>
-              {h1Subtitle}
-            </span>
           </motion.h1>
+
+          {/* Signature monospace */}
+          <div
+            style={{
+              marginTop: "32px",
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+            }}
+          >
+            <span
+              aria-hidden="true"
+              style={{
+                height: "2px",
+                width: "48px",
+                background: "rgba(180,83,9,0.7)",
+                flexShrink: 0,
+                display: "inline-block",
+              }}
+            />
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "14px",
+                textTransform: "uppercase",
+                letterSpacing: "0.2em",
+                color: "rgba(6,15,28,0.8)",
+                margin: 0,
+              }}
+            >
+              {signature}
+            </p>
+          </div>
 
           {/* KPIs */}
           <motion.div
@@ -173,6 +174,7 @@ export default function Hero({
             initial="hidden"
             animate="visible"
             variants={fadeUp}
+            className="hero-kpis"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -429,15 +431,18 @@ export default function Hero({
       </div>
 
       <style>{`
+        .hero-section { overflow-x: hidden; }
+        .hero-h1 { text-wrap: balance; }
+
         @media (max-width: 1024px) {
-          section > div:last-child {
-            grid-template-columns: 1fr !important;
-          }
+          .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
         }
-        @media (max-width: 600px) {
-          section > div:last-child > div:first-child > h1 {
-            font-size: 56px !important;
-          }
+        @media (max-width: 768px) {
+          .hero-section { padding: 88px 28px 60px !important; }
+        }
+        @media (max-width: 480px) {
+          .hero-section { padding: 72px 20px 48px !important; }
+          .hero-kpis { gap: 20px !important; }
         }
       `}</style>
     </section>
