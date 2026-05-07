@@ -112,13 +112,13 @@
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Six projets, six",
+    "h2Part1": "Sept projets, sept",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Six projets transformationnels — du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens et la gouvernance territoriale. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés, du cadrage stratégique au déploiement opérationnel.",
+    "intro": "Sept projets transformationnels — du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et le secteur privé opérationnel. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés, du cadrage stratégique au déploiement opérationnel.",
     "cards": [
       {
-        "id": "oif-portfolio",
+        "id": "institutional-pilot",
         "visual": "oif",
         "category": "Architecture institutionnelle",
         "role": "Architecte / Chef de projet",
@@ -134,7 +134,7 @@
           { "label": "Statut", "value": "En développement" }
         ],
         "stack": ["Architecture web", "Bases de données", "Conformité RGPD", "Sécurité multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "contact" }]
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/institutional-pilot" }]
       },
       {
         "id": "incubation-platform",
@@ -153,7 +153,7 @@
           { "label": "Sécurité", "value": "RLS multi-rôles · audit · alertes" }
         ],
         "stack": ["Architecture full-stack", "IA générative encadrée", "Base vectorielle", "Workflow multi-rôles", "Reporting automatisé"],
-        "actions": [{ "label": "En savoir plus →", "type": "contact" }]
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/incubation-platform" }]
       },
       {
         "id": "valorisation-platform",
@@ -172,10 +172,10 @@
           { "label": "Statut", "value": "Livré · Pilote en production" }
         ],
         "stack": ["Architecture full-stack", "Base vectorielle", "IA générative encadrée", "Cartographie web", "Workflow éditorial multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "contact" }]
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/valorisation-platform" }]
       },
       {
-        "id": "ibf-eu-platforms",
+        "id": "eu-platforms",
         "visual": "ibf",
         "category": "Mission de conseil · UE",
         "role": "Expert Consultant S&E",
@@ -191,7 +191,7 @@
           { "label": "Statut", "value": "Livré · Adopté" }
         ],
         "stack": ["Architecture web", "Reporting bailleur", "Multi-rôles", "CAD-OCDE"],
-        "actions": [{ "label": "En savoir plus →", "type": "contact" }]
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/eu-platforms" }]
       },
       {
         "id": "indicators-platform",
@@ -210,7 +210,7 @@
           { "label": "Statut", "value": "En développement" }
         ],
         "stack": ["Architecture web sécurisée", "Référentiel d'indicateurs", "Workflow de certification", "Journal d'audit", "Multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "contact" }]
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/indicators-platform" }]
       },
       {
         "id": "cap-citoyen",
@@ -230,10 +230,29 @@
         ],
         "stack": ["Next.js", "API Anthropic", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
         "actions": [
-          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" },
-          { "label": "Google Play", "type": "store", "href": "https://play.google.com/store/apps/details?id=fr.capcitoyen.app" }
+          { "label": "Voir le projet →", "type": "detail", "href": "/realisations/cap-citoyen" },
+          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
         ],
         "capImageAlt": "Capture d'écran de l'application Cap Citoyen — accueil avec stats"
+      },
+      {
+        "id": "operations-platform",
+        "visual": "operations",
+        "category": "Plateforme métier · Secteur privé",
+        "role": "Architecte fonctionnel · Concepteur no-code",
+        "title": "Plateforme intégrée de gestion des plannings et missions",
+        "subtitle": "Acteur privé · Secteur opérationnel",
+        "status": "Livré · En production",
+        "statusType": "live",
+        "description": "Conception et déploiement d'une plateforme métier complète pour le pilotage des opérations terrain : portefeuille d'agents, référencement géographique, planification automatisée, suivi calendaire, génération de devis et facturation. Approche no-code accélérée pour un time-to-market réduit.",
+        "specs": [
+          { "label": "Architecture", "value": "Web responsive · Application mobile" },
+          { "label": "Fonctionnalités", "value": "Portefeuille · Affectation · Tableau de bord · Calendrier" },
+          { "label": "Approche", "value": "No-code accéléré · Inter-opérabilité API" },
+          { "label": "Statut", "value": "Livré · En production" }
+        ],
+        "stack": ["Plateforme no-code", "APIs tierces", "Cartographie web", "Workflow automatisé", "Application mobile"],
+        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/operations-platform" }]
       }
     ]
   },
@@ -353,5 +372,162 @@
     "capcit": "cap-citoyen.fr",
     "langFr": "FR",
     "langEn": "EN"
+  },
+  "realisations": {
+    "ui": {
+      "back": "← Retour aux réalisations",
+      "cta": "Prendre contact →",
+      "labelContext": "── Contexte",
+      "labelChallenge": "── Défi",
+      "labelApproach": "── Approche",
+      "labelResults": "── Résultats",
+      "labelStack": "── Stack & méthodes"
+    },
+    "items": [
+      {
+        "id": "institutional-pilot",
+        "metaTitle": "Plateforme de pilotage institutionnel · Carlos Hounsinou",
+        "metaDescription": "Conception d'une plateforme sécurisée de suivi-évaluation pour une organisation multilatérale francophone — architecture modulaire, conformité RGPD, multi-rôles.",
+        "title": "Plateforme de pilotage de portefeuille programmatique",
+        "subtitle": "Organisation internationale · Paris",
+        "category": "Architecture institutionnelle",
+        "status": "En développement",
+        "context": "Une organisation multilatérale francophone pilotant un portefeuille de programmes internationaux multi-acteurs avait besoin de moderniser son dispositif de suivi-évaluation. Les processus reposaient sur des outils bureautiques disparates, rendant la consolidation et le reporting aux instances de gouvernance laborieux et peu fiables.",
+        "challenge": "Concevoir une plateforme web institutionnelle sécurisée capable de répondre aux exigences de confidentialité propres au secteur multilatéral, tout en offrant une expérience suffisamment fluide pour être adoptée par des équipes non techniques réparties entre le siège et les représentations.",
+        "approach": [
+          "Cadrage fonctionnel détaillé avec les équipes métier pour modéliser le portefeuille et les flux de validation.",
+          "Architecture modulaire multi-rôles avec Row-Level Security garantissant l'isolation des données sensibles.",
+          "Spécification UX orientée adoption : interfaces minimalistes, guides contextuels intégrés, formations à l'outil.",
+          "Gouvernance de la donnée : référentiel d'indicateurs, cycle de vie des programmes, journal d'audit."
+        ],
+        "results": "Première version validée par les instances de gouvernance, intégration en cours. Le dispositif couvre l'ensemble du cycle de pilotage — de la planification des programmes à la production de rapports d'avancement.",
+        "stackDetail": "Architecture web sécurisée · Bases de données relationnelles · Conformité RGPD · Gestion multi-rôles · Row-Level Security"
+      },
+      {
+        "id": "incubation-platform",
+        "metaTitle": "Plateforme d'incubation et d'évaluation · Carlos Hounsinou",
+        "metaDescription": "Plateforme full-stack pour le cycle de vie complet des projets de développement : formation GAR, indicateurs SMART, IA encadrée, reporting automatisé.",
+        "title": "Plateforme d'incubation et de pilotage de projets et programmes",
+        "subtitle": "Organisation institutionnelle · Paris",
+        "category": "Plateforme métier · Évaluation",
+        "status": "Livré · En production",
+        "context": "Une institution accompagnant des porteurs de projets de développement avait besoin d'un cadre unifié pour couvrir l'intégralité du cycle de vie : formation aux standards de la Gestion Axée Résultats, incubation guidée, suivi des indicateurs SMART, mesure de rendement, analyse mixte et production de rapports.",
+        "challenge": "Intégrer dans une seule plateforme des fonctionnalités allant de la pédagogie à l'analyse avancée, avec une IA générative encadrée prévenant toute hallucination sur les documents institutionnels, et une architecture sécurisée permettant des profils d'accès distincts pour les porteurs de projets, les accompagnateurs et les administrateurs.",
+        "approach": [
+          "Architecture en 8 modules couplés couvrant formation, incubation, indicateurs SMART, mesure, analyse et reporting.",
+          "50+ endpoints API avec gestion d'états complexes, notifications et crons d'alertes.",
+          "IA encadrée : RAG sur base documentaire propriétaire, module Vision, quotas d'usage par profil, guardrails anti-hallucination.",
+          "Sécurité : RLS multi-rôles, journal d'audit complet, chiffrement des données sensibles.",
+          "Workflow collaboratif : assignation de projets, cycles de révision, validation institutionnelle."
+        ],
+        "results": "Plateforme livrée et déployée en production. Adoptée par l'institution pour l'accompagnement de son prochain cycle de projets. Les modules d'analyse et de reporting ont permis de réduire significativement le temps de préparation des rapports d'avancement.",
+        "stackDetail": "Architecture full-stack · Base vectorielle · IA générative encadrée (RAG + Vision) · Workflow multi-rôles · RLS · Cron alertes · Reporting automatisé"
+      },
+      {
+        "id": "valorisation-platform",
+        "metaTitle": "Plateforme de valorisation de portefeuille · Carlos Hounsinou",
+        "metaDescription": "Plateforme institutionnelle de data storytelling, cartographie et assistant IA pour valoriser un portefeuille de projets stratégiques.",
+        "title": "Plateforme de valorisation de portefeuille programmatique",
+        "subtitle": "Organisation institutionnelle · Paris",
+        "category": "Plateforme institutionnelle",
+        "status": "Livré · Pilote actif",
+        "context": "Une institution internationale souhaitait rendre visible sa valeur ajoutée à travers son portefeuille de projets stratégiques. Les données existaient, mais restaient enfouies dans des rapports PDF inaccessibles au grand public et aux partenaires potentiels.",
+        "challenge": "Transformer des rapports statiques en expériences web interactives tout en garantissant l'exactitude des informations présentées par l'assistant conversationnel — enjeu d'image institutionnelle majeur — et en maîtrisant le workflow éditorial pour des équipes aux compétences numériques hétérogènes.",
+        "approach": [
+          "CMS éditorial multi-rôles permettant aux équipes de créer, relire et publier des fiches projet structurées.",
+          "Data storytelling : visualisations de données, indicateurs clés, timeline d'impact par projet.",
+          "Dashboard analytique offrant une vue d'ensemble du portefeuille : répartition géographique, thématiques, niveaux d'avancement.",
+          "Exploration cartographique interactive des projets par zone géographique.",
+          "Assistant conversationnel basé sur une base vectorielle propriétaire, avec guardrails anti-hallucination et audit des réponses."
+        ],
+        "results": "Pilote déployé en production. Adoption par l'équipe éditoriale dès la première semaine. L'assistant conversationnel répond aux questions des partenaires externes avec une précision mesurée sur la base de référence institutionnelle.",
+        "stackDetail": "Architecture full-stack · Base vectorielle propriétaire · IA générative encadrée · Cartographie web · Workflow éditorial multi-rôles · RLS · Anti-hallucination"
+      },
+      {
+        "id": "eu-platforms",
+        "metaTitle": "Plateformes S&E · Projets financés UE · Carlos Hounsinou",
+        "metaDescription": "Conception et déploiement de deux plateformes web de suivi-évaluation pour des programmes financés par l'UE — standards CAD-OCDE, multi-acteurs, formation opérateurs.",
+        "title": "Plateformes de suivi · projets financés UE",
+        "subtitle": "IBF International Consulting · Belgique & Bénin",
+        "category": "Mission de conseil · UE",
+        "status": "Livré",
+        "context": "Dans le cadre d'une mission de conseil pour IBF International Consulting, j'ai pris en charge la conception et le déploiement des outils de suivi-évaluation pour un programme de développement financé par l'Union Européenne, impliquant des partenaires en Belgique et en Afrique de l'Ouest.",
+        "challenge": "Concevoir deux plateformes distinctes répondant chacune aux besoins spécifiques de leurs utilisateurs — coordinateurs, bailleurs et partenaires de mise en œuvre — tout en garantissant leur interopérabilité et leur conformité aux standards CAD-OCDE de reporting bailleur.",
+        "approach": [
+          "Cadrage méthodologique : affinement du cadre logique global, définition des indicateurs et des cibles.",
+          "Conception de deux plateformes web dédiées, adaptées aux niveaux de compétences des utilisateurs terrain.",
+          "Architecture alignée CAD-OCDE pour le reporting multi-bailleur : indicateurs, produits, résultats et impact.",
+          "Formation des opérateurs (CPSC, Régie, MdSC) et des Assistants Techniques en présentiel et à distance.",
+          "Documentation utilisateur et accompagnement au changement."
+        ],
+        "results": "Les deux plateformes ont été déployées et adoptées par l'ensemble des parties prenantes du programme. La formation des opérateurs a permis une prise en main rapide et une utilisation autonome dès les premiers mois.",
+        "stackDetail": "Architecture web · Standards CAD-OCDE · Reporting multi-bailleur · Multi-rôles · Formation opérateurs"
+      },
+      {
+        "id": "indicators-platform",
+        "metaTitle": "Plateforme de pilotage territorial · Carlos Hounsinou",
+        "metaDescription": "Plateforme sécurisée de pilotage du développement territorial par les données : campagnes annuelles, certification participative, journal d'audit — Afrique de l'Ouest.",
+        "title": "Plateforme de pilotage par les indicateurs",
+        "subtitle": "Gouvernance territoriale · Afrique de l'Ouest",
+        "category": "Gouvernance territoriale",
+        "status": "En développement",
+        "context": "Une structure de gouvernance territoriale en Afrique de l'Ouest souhaitait passer d'un pilotage de son plan de développement local par des fichiers Excel fragmentés à une plateforme web partagée, garantissant la qualité et la traçabilité des données produites par des acteurs sectoriels multiples.",
+        "challenge": "Concevoir un workflow de certification participatif adapté à des points focaux sectoriels peu familiers des outils numériques, tout en garantissant la rigueur des données publiées : collecte structurée, contrôles qualité automatiques et journal d'audit infalsifiable.",
+        "approach": [
+          "3 profils d'accès distincts (Admin / Éditeur / Lecteur) avec RLS garantissant l'isolation des données.",
+          "Campagnes annuelles structurées : périodes de collecte, relances automatiques, clôture et archivage.",
+          "Contrôles qualité automatiques à la saisie : plages de valeurs, cohérence inter-indicateurs, doublons.",
+          "Certification participative : validation séquentielle par les points focaux sectoriels avant publication.",
+          "Journal d'audit complet : traçabilité de chaque modification avec horodatage et identification de l'auteur.",
+          "Interface responsive adaptée aux contraintes de connectivité terrain."
+        ],
+        "results": "Première version testée avec les points focaux sectoriels. Les retours ont permis d'affiner le workflow de certification et l'interface de saisie. Déploiement complet en cours.",
+        "stackDetail": "Architecture web sécurisée · RLS multi-rôles · Référentiel d'indicateurs · Workflow de certification participatif · Journal d'audit · Interface responsive"
+      },
+      {
+        "id": "cap-citoyen",
+        "metaTitle": "Cap Citoyen · Application examen civique · Carlos Hounsinou",
+        "metaDescription": "SaaS EdTech pour la préparation à l'examen civique français de naturalisation — 800+ questions, coach IA, flash-cards audio, disponible sur Web et Android.",
+        "title": "Cap Citoyen · Examen civique français",
+        "subtitle": "cap-citoyen.fr · France",
+        "category": "Produit SaaS · EdTech",
+        "status": "En production",
+        "context": "La réforme de 2024 rendant l'examen civique obligatoire pour toute demande de naturalisation a créé un marché de 100 000 candidats par an. Au moment du lancement de Cap Citoyen, aucune application de qualité ne couvrait ce besoin émergent avec une approche pédagogique rigoureuse.",
+        "challenge": "Concevoir une expérience d'apprentissage engageante pour une audience extrêmement hétérogène (âges, origines, niveaux de maîtrise du numérique), en intégrant des formats variés (quiz, audio, flash-cards, simulation d'examen) et un coach IA capable de s'adapter au niveau de chaque utilisateur.",
+        "approach": [
+          "Architecture Next.js PWA permettant une expérience native sur mobile sans les contraintes d'une app native.",
+          "800+ questions structurées par thèmes, avec difficultés progressives et explications pédagogiques.",
+          "100+ contenus audio (ElevenLabs) pour les candidats ayant des difficultés de lecture.",
+          "Mode flash-cards pour la mémorisation et simulation d'examen avec minuteur officiel.",
+          "Coach IA intégré combinant API Anthropic et GPT-4o-mini, adapté au niveau et aux lacunes de chaque utilisateur.",
+          "Monétisation via Stripe : abonnement mensuel et accès à vie. Déploiement Android (Google Play) et PWA.",
+          "iOS en cours de validation Apple."
+        ],
+        "results": "Disponible en production sur le Web et Android (Google Play). Adoption croissante depuis la mise en ligne, avec un taux de satisfaction élevé mesuré via les avis Google Play. iOS en validation finale.",
+        "stackDetail": "Next.js · API Anthropic · GPT-4o-mini · ElevenLabs · Stripe · PWA · Android · PostgreSQL · Recherche vectorielle"
+      },
+      {
+        "id": "operations-platform",
+        "metaTitle": "Plateforme de gestion opérationnelle terrain · Carlos Hounsinou",
+        "metaDescription": "Conception et déploiement d'une plateforme métier no-code pour le pilotage des opérations terrain : portefeuille agents, géolocalisation, planning, devis et facturation.",
+        "title": "Plateforme intégrée de gestion des plannings et missions",
+        "subtitle": "Acteur privé · Secteur opérationnel",
+        "category": "Plateforme métier · Secteur privé",
+        "status": "Livré · En production",
+        "context": "Un acteur du secteur opérationnel privé gérait une flotte d'agents terrain avec des plannings complexes, des missions géolocalisées et une chaîne de facturation entièrement manuelle. La dispersion des informations entre tableaux Excel, fichiers Word et échanges informels générait des erreurs coûteuses et un time-to-invoice excessif.",
+        "challenge": "Intégrer dans une expérience cohérente le portefeuille d'agents, la géolocalisation des sites, la planification automatisée des missions, le suivi calendaire, la génération de devis et la facturation — avec un délai de livraison très court imposé par le contexte opérationnel.",
+        "approach": [
+          "Architecture no-code accélérée pour réduire le time-to-market tout en garantissant la robustesse.",
+          "Portefeuille d'agents : profils, compétences, disponibilités, zones d'intervention géolocalisées.",
+          "Planification automatisée : affectation des agents aux missions selon critères de proximité et disponibilité.",
+          "Suivi calendaire : vue hebdomadaire et mensuelle, alertes de conflit de planning.",
+          "Génération automatisée de devis et facturation : templates paramétrables, envoi par email, suivi des paiements.",
+          "Application mobile responsive pour les agents terrain : consultation des missions, signatures électroniques.",
+          "Interopérabilité API avec les outils existants du client."
+        ],
+        "results": "Plateforme déployée en production et adoptée par les équipes terrain dès la première semaine. Le time-to-invoice a été réduit de plus de 60 %. Les erreurs d'affectation ont quasiment disparu grâce aux contrôles automatiques de disponibilité.",
+        "stackDetail": "Plateforme no-code · APIs tierces · Cartographie web · Workflow automatisé · Application mobile · Génération de documents"
+      }
+    ]
   }
 }

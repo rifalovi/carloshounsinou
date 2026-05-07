@@ -3,16 +3,17 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 
 type Spec = { label: string; value: string };
 type Action = {
   label: string;
-  type: "contact" | "external" | "store";
+  type: "contact" | "external" | "store" | "detail";
   href?: string;
 };
 
 type Props = {
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
   badge: string;
   badgeType: "dev" | "live" | "done";
   category: string;
@@ -296,6 +297,83 @@ function CapVisual({ alt }: { alt?: string }) {
   );
 }
 
+function OperationsVisual() {
+  const cell: React.CSSProperties = {
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    padding: "12px 8px",
+    border: "0.8px solid rgba(245,239,230,0.18)",
+    borderRadius: "3px",
+    background: "rgba(245,239,230,0.05)",
+  };
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
+      {/* 2×2 grid */}
+      {/* Cell 1 — Portefeuille (top-left) */}
+      <rect x="14" y="14" width="116" height="70" fill="rgba(245,239,230,0.05)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.8" rx="3"/>
+      {/* Grid icon */}
+      <g stroke={C_SOFT} strokeWidth="0.8" fill="none">
+        <rect x="38" y="28" width="12" height="12" rx="1"/>
+        <rect x="54" y="28" width="12" height="12" rx="1"/>
+        <rect x="70" y="28" width="12" height="12" rx="1"/>
+        <rect x="38" y="44" width="12" height="12" rx="1"/>
+        <rect x="54" y="44" width="12" height="12" rx="1"/>
+        <rect x="70" y="44" width="12" height="12" rx="1"/>
+      </g>
+      <text x="72" y="72" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7"
+        fill={C_SOFT} fontWeight="500" letterSpacing="0.08em">PORTEFEUILLE</text>
+      {/* Cell 2 — Planning (top-right) */}
+      <rect x="150" y="14" width="116" height="70" fill="rgba(245,239,230,0.05)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.8" rx="3"/>
+      {/* Calendar icon */}
+      <rect x="188" y="26" width="40" height="36" rx="2" fill="none" stroke={C_SOFT} strokeWidth="0.8"/>
+      <line x1="188" y1="33" x2="228" y2="33" stroke={C_SOFT} strokeWidth="0.6"/>
+      <line x1="196" y1="23" x2="196" y2="30" stroke={C_SOFT} strokeWidth="1"/>
+      <line x1="220" y1="23" x2="220" y2="30" stroke={C_SOFT} strokeWidth="1"/>
+      {[0,1,2,3,4].map((c) => (
+        <rect key={c} x={192 + c * 7} y={37} width="5" height="5" fill="rgba(194,112,31,0.4)" rx="0.5"/>
+      ))}
+      {[0,1,2].map((c) => (
+        <rect key={c} x={192 + c * 7} y={46} width="5" height="5" fill="rgba(245,239,230,0.15)" rx="0.5"/>
+      ))}
+      <text x="208" y="72" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7"
+        fill={C_SOFT} fontWeight="500" letterSpacing="0.08em">PLANNING</text>
+      {/* Cell 3 — Géolocalisation (bottom-left) */}
+      <rect x="14" y="96" width="116" height="70" fill="rgba(245,239,230,0.05)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.8" rx="3"/>
+      {/* Map pin icon */}
+      <circle cx="72" cy="122" r="10" fill="none" stroke={C_SOFT} strokeWidth="0.8"/>
+      <circle cx="72" cy="120" r="4" fill="rgba(194,112,31,0.5)"/>
+      <path d="M67 128 Q72 138 77 128" fill="rgba(194,112,31,0.3)" stroke={C_SOFT} strokeWidth="0.5"/>
+      <line x1="50" y1="134" x2="94" y2="134" stroke="rgba(245,239,230,0.12)" strokeWidth="0.5" strokeDasharray="2,2"/>
+      <text x="72" y="155" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7"
+        fill={C_SOFT} fontWeight="500" letterSpacing="0.05em">GÉOLOCALISATION</text>
+      {/* Cell 4 — Facturation (bottom-right) */}
+      <rect x="150" y="96" width="116" height="70" fill="rgba(245,239,230,0.05)" stroke="rgba(245,239,230,0.18)" strokeWidth="0.8" rx="3"/>
+      {/* Invoice icon */}
+      <rect x="190" y="108" width="36" height="44" rx="2" fill="none" stroke={C_SOFT} strokeWidth="0.8"/>
+      <rect x="194" y="116" width="24" height="3" fill="rgba(194,112,31,0.4)" rx="1"/>
+      <rect x="194" y="122" width="20" height="2" fill="rgba(245,239,230,0.2)" rx="1"/>
+      <rect x="194" y="127" width="22" height="2" fill="rgba(245,239,230,0.15)" rx="1"/>
+      <rect x="194" y="136" width="28" height="8" fill="rgba(194,112,31,0.25)" stroke="rgba(194,112,31,0.5)" strokeWidth="0.5" rx="1"/>
+      <text x="208" y="143" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5" fill="rgba(245,239,230,0.55)">TOTAL</text>
+      <text x="208" y="155" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7"
+        fill={C_SOFT} fontWeight="500" letterSpacing="0.05em">FACTURATION</text>
+      {/* Centre hub — copper circle with gold star */}
+      <circle cx="140" cy="131" r="16" fill="#0A1628" stroke={COPPER} strokeWidth="1.2"/>
+      <circle cx="140" cy="131" r="12" fill="rgba(180,83,9,0.2)"/>
+      <text x="140" y="135" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="13" fill={GOLD}>★</text>
+      {/* Connector lines */}
+      <line x1="130" y1="131" x2="126" y2="131" stroke="rgba(194,112,31,0.3)" strokeWidth="0.6"/>
+      <line x1="150" y1="131" x2="154" y2="131" stroke="rgba(194,112,31,0.3)" strokeWidth="0.6"/>
+      <line x1="140" y1="119" x2="140" y2="116" stroke="rgba(194,112,31,0.3)" strokeWidth="0.6"/>
+    </svg>
+  );
+}
+
 /* ── visual config ── */
 const visualBg: Record<string, string> = {
   oif:          "linear-gradient(135deg, #060F1C 0%, #0A1628 100%)",
@@ -304,6 +382,7 @@ const visualBg: Record<string, string> = {
   ibf:          "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #816A37 100%)",
   gov:          "linear-gradient(135deg, #0A1628 0%, #1A1410 60%, #0C0A06 100%)",
   cap:          "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #060F1C 100%)",
+  operations:   "linear-gradient(135deg, #0A1628 0%, #0F1A08 55%, #060F1C 100%)",
 };
 
 const badgeColors: Record<string, string> = {
@@ -332,6 +411,7 @@ export default function FlagshipCard({
   description, specs, stack, actions, capImageAlt, index = 0,
 }: Props) {
   const [hovered, setHovered] = useState(false);
+  const locale = useLocale();
 
   return (
     <motion.article
@@ -400,6 +480,7 @@ export default function FlagshipCard({
         {visual === "ibf" && <IbfVisual />}
         {visual === "gov" && <GovVisual />}
         {visual === "cap" && <CapVisual alt={capImageAlt} />}
+        {visual === "operations" && <OperationsVisual />}
       </div>
 
       {/* Content */}
@@ -515,6 +596,37 @@ export default function FlagshipCard({
                   }}
                 >
                   {action.label} ↗
+                </a>
+              );
+            }
+            if (action.type === "detail") {
+              return (
+                <a
+                  key={i}
+                  href={action.href ? `/${locale}${action.href}` : "#"}
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: "6px",
+                    padding: "9px 16px",
+                    background: "transparent",
+                    color: "#B45309",
+                    border: "1.5px solid #B45309",
+                    borderRadius: "100px",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "11px",
+                    fontWeight: 500,
+                    textDecoration: "none",
+                    transition: "all 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#B45309";
+                    e.currentTarget.style.color = "#F5EFE6";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "#B45309";
+                  }}
+                >
+                  {action.label}
                 </a>
               );
             }

@@ -112,13 +112,13 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Six projects, six",
+    "h2Part1": "Seven projects, seven",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "Six transformational projects — from institutional multilateral steering to my own SaaS product, including European donors and territorial governance. Each project illustrates my ability to design and deliver integrated systems, from strategic framing to operational deployment.",
+    "intro": "Seven transformational projects — from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and the private operational sector. Each project illustrates my ability to design and deliver integrated systems, from strategic framing to operational deployment.",
     "cards": [
       {
-        "id": "oif-portfolio",
+        "id": "institutional-pilot",
         "visual": "oif",
         "category": "Institutional architecture",
         "role": "Architect / Project lead",
@@ -134,7 +134,7 @@
           { "label": "Status", "value": "In development" }
         ],
         "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
-        "actions": [{ "label": "Learn more →", "type": "contact" }]
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/institutional-pilot" }]
       },
       {
         "id": "incubation-platform",
@@ -153,7 +153,7 @@
           { "label": "Security", "value": "Multi-role RLS · audit · alerts" }
         ],
         "stack": ["Full-stack architecture", "Encapsulated AI", "Vector base", "Multi-role workflow", "Automated reporting"],
-        "actions": [{ "label": "Learn more →", "type": "contact" }]
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/incubation-platform" }]
       },
       {
         "id": "valorisation-platform",
@@ -172,10 +172,10 @@
           { "label": "Status", "value": "Delivered · Live pilot" }
         ],
         "stack": ["Full-stack architecture", "Vector base", "Encapsulated AI", "Web cartography", "Multi-role editorial workflow"],
-        "actions": [{ "label": "Learn more →", "type": "contact" }]
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/valorisation-platform" }]
       },
       {
-        "id": "ibf-eu-platforms",
+        "id": "eu-platforms",
         "visual": "ibf",
         "category": "Consulting mission · EU",
         "role": "Senior M&E Consultant",
@@ -191,7 +191,7 @@
           { "label": "Status", "value": "Delivered · Adopted" }
         ],
         "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
-        "actions": [{ "label": "Learn more →", "type": "contact" }]
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/eu-platforms" }]
       },
       {
         "id": "indicators-platform",
@@ -210,7 +210,7 @@
           { "label": "Status", "value": "In development" }
         ],
         "stack": ["Secure web architecture", "Indicator framework", "Certification workflow", "Audit trail", "Multi-role"],
-        "actions": [{ "label": "Learn more →", "type": "contact" }]
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/indicators-platform" }]
       },
       {
         "id": "cap-citoyen",
@@ -230,10 +230,29 @@
         ],
         "stack": ["Next.js", "Anthropic API", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
         "actions": [
-          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" },
-          { "label": "Google Play", "type": "store", "href": "https://play.google.com/store/apps/details?id=fr.capcitoyen.app" }
+          { "label": "View project →", "type": "detail", "href": "/realisations/cap-citoyen" },
+          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
         ],
         "capImageAlt": "Cap Citoyen app screenshot — home screen with stats"
+      },
+      {
+        "id": "operations-platform",
+        "visual": "operations",
+        "category": "Business platform · Private sector",
+        "role": "Functional architect · No-code designer",
+        "title": "Integrated platform for planning and mission management",
+        "subtitle": "Private actor · Operational sector",
+        "status": "Delivered · In production",
+        "statusType": "live",
+        "description": "Design and deployment of a comprehensive business platform for field operations steering: agent portfolio, geographic referencing, automated scheduling, calendar tracking, quote and invoice generation. No-code accelerated approach for reduced time-to-market.",
+        "specs": [
+          { "label": "Architecture", "value": "Responsive web · Mobile application" },
+          { "label": "Features", "value": "Portfolio · Assignment · Dashboard · Calendar" },
+          { "label": "Approach", "value": "Accelerated no-code · API interoperability" },
+          { "label": "Status", "value": "Delivered · In production" }
+        ],
+        "stack": ["No-code platform", "Third-party APIs", "Web cartography", "Automated workflow", "Mobile application"],
+        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/operations-platform" }]
       }
     ]
   },
@@ -353,5 +372,162 @@
     "capcit": "cap-citoyen.fr",
     "langFr": "FR",
     "langEn": "EN"
+  },
+  "realisations": {
+    "ui": {
+      "back": "← Back to projects",
+      "cta": "Get in touch →",
+      "labelContext": "── Context",
+      "labelChallenge": "── Challenge",
+      "labelApproach": "── Approach",
+      "labelResults": "── Results",
+      "labelStack": "── Stack & methods"
+    },
+    "items": [
+      {
+        "id": "institutional-pilot",
+        "metaTitle": "Institutional steering platform · Carlos Hounsinou",
+        "metaDescription": "Design of a secure monitoring & evaluation platform for a multilateral francophone organisation — modular architecture, GDPR compliance, multi-role access.",
+        "title": "Programme portfolio steering platform",
+        "subtitle": "International organisation · Paris",
+        "category": "Institutional architecture",
+        "status": "In development",
+        "context": "A multilateral francophone organisation managing a portfolio of international multi-stakeholder programmes needed to modernise its monitoring and evaluation setup. Processes relied on disparate office tools, making data consolidation and reporting to governance bodies laborious and unreliable.",
+        "challenge": "Design a secure institutional web platform meeting the strict confidentiality requirements of the multilateral sector, while offering a smooth enough experience to drive adoption among non-technical teams spread across headquarters and field representations.",
+        "approach": [
+          "Detailed functional scoping with programme teams to model the portfolio and validation workflows.",
+          "Multi-role modular architecture with Row-Level Security ensuring isolation of sensitive data.",
+          "Adoption-oriented UX design: minimal interfaces, contextual in-app guides, user training.",
+          "Data governance: indicator registry, programme lifecycle management, complete audit trail."
+        ],
+        "results": "First version validated by governance bodies, integration under way. The framework covers the full steering cycle — from programme planning to progress report generation.",
+        "stackDetail": "Secure web architecture · Relational databases · GDPR compliance · Multi-role management · Row-Level Security"
+      },
+      {
+        "id": "incubation-platform",
+        "metaTitle": "Project incubation and evaluation platform · Carlos Hounsinou",
+        "metaDescription": "Full-stack platform for the complete development project lifecycle: RBM training, SMART indicators, encapsulated AI, automated reporting.",
+        "title": "Project and programme incubation and steering platform",
+        "subtitle": "Institutional organisation · Paris",
+        "category": "Business platform · Evaluation",
+        "status": "Delivered · Live",
+        "context": "An institution supporting development project owners needed a unified framework to cover the full lifecycle: training in Results-Based Management standards, guided incubation, SMART indicator tracking, performance measurement, mixed analysis and report production.",
+        "challenge": "Integrate into one platform capabilities ranging from pedagogy to advanced analytics, with encapsulated generative AI preventing hallucinations on institutional documents, and a secure architecture supporting distinct access profiles for project owners, coaches and administrators.",
+        "approach": [
+          "8-module coupled architecture covering training, incubation, SMART indicators, measurement, analysis and reporting.",
+          "50+ API endpoints with complex state management, notifications and scheduled alerts.",
+          "Encapsulated AI: RAG on proprietary document base, Vision module, usage quotas per profile, anti-hallucination guardrails.",
+          "Security: multi-role RLS, complete audit log, sensitive data encryption.",
+          "Collaborative workflow: project assignment, review cycles, institutional validation."
+        ],
+        "results": "Platform delivered and deployed in production. Adopted by the institution for its next project cohort. Analytics and reporting modules significantly reduced the time needed to produce progress reports.",
+        "stackDetail": "Full-stack architecture · Vector base · Encapsulated generative AI (RAG + Vision) · Multi-role workflow · RLS · Scheduled alerts · Automated reporting"
+      },
+      {
+        "id": "valorisation-platform",
+        "metaTitle": "Programme portfolio valorisation platform · Carlos Hounsinou",
+        "metaDescription": "Institutional platform combining data storytelling, cartography and AI assistant to valorise a portfolio of strategic projects — RLS, anti-hallucination.",
+        "title": "Programme portfolio valorisation platform",
+        "subtitle": "Institutional organisation · Paris",
+        "category": "Institutional platform",
+        "status": "Delivered · Active pilot",
+        "context": "An international institution wanted to make its added value visible through its portfolio of strategic projects. The data existed but was buried in PDF reports inaccessible to the general public and potential partners.",
+        "challenge": "Transform static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant — a major institutional reputation issue — and managing the editorial workflow for teams with heterogeneous digital skills.",
+        "approach": [
+          "Multi-role editorial CMS enabling teams to create, review and publish structured project pages.",
+          "Data storytelling: data visualisations, key indicators, impact timeline per project.",
+          "Analytical dashboard offering a portfolio overview: geographic spread, themes, progress levels.",
+          "Interactive map exploration of projects by geographic zone.",
+          "Conversational assistant powered by a proprietary vector base, with anti-hallucination guardrails and response audit."
+        ],
+        "results": "Pilot deployed in production. Adopted by the editorial team from day one. The conversational assistant responds to external partner questions with precision benchmarked against the institutional reference base.",
+        "stackDetail": "Full-stack architecture · Proprietary vector base · Encapsulated AI · Web cartography · Multi-role editorial workflow · RLS · Anti-hallucination"
+      },
+      {
+        "id": "eu-platforms",
+        "metaTitle": "M&E platforms · EU-funded projects · Carlos Hounsinou",
+        "metaDescription": "Design and deployment of two web monitoring & evaluation platforms for EU-funded programmes — OECD-DAC standards, multi-stakeholder, operator training.",
+        "title": "Monitoring platforms · EU-funded projects",
+        "subtitle": "IBF International Consulting · Belgium & Benin",
+        "category": "Consulting mission · EU",
+        "status": "Delivered",
+        "context": "As part of a consulting mission for IBF International Consulting, I was responsible for designing and deploying the monitoring and evaluation tools for a European Union-funded development programme involving partners in Belgium and West Africa.",
+        "challenge": "Design two distinct platforms each meeting the specific needs of their users — coordinators, donors and implementing partners — while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
+        "approach": [
+          "Methodological framing: refinement of the overall logical framework, definition of indicators and targets.",
+          "Design of two dedicated web platforms adapted to the skill levels of field users.",
+          "OECD-DAC aligned architecture for multi-donor reporting: indicators, outputs, outcomes and impact.",
+          "Training of operators (CPSC, Régie, MdSC) and Technical Assistants in person and remotely.",
+          "User documentation and change management support."
+        ],
+        "results": "Both platforms were deployed and adopted across all programme stakeholders. Operator training enabled quick uptake and autonomous use from the first months.",
+        "stackDetail": "Web architecture · OECD-DAC standards · Multi-donor reporting · Multi-role access · Operator training"
+      },
+      {
+        "id": "indicators-platform",
+        "metaTitle": "Territorial steering platform · Carlos Hounsinou",
+        "metaDescription": "Secure platform for data-driven local development steering: annual campaigns, participatory certification, audit trail — West Africa.",
+        "title": "Indicator-based steering platform",
+        "subtitle": "Territorial governance · West Africa",
+        "category": "Territorial governance",
+        "status": "In development",
+        "context": "A territorial governance body in West Africa wanted to move from managing its local development plan with fragmented Excel files to a shared web platform guaranteeing the quality and traceability of data produced by multiple sectoral actors.",
+        "challenge": "Design a participatory certification workflow adapted to sectoral focal points with limited digital literacy, while ensuring the rigour of published data: structured collection, automated quality controls and a tamper-proof audit trail.",
+        "approach": [
+          "3 distinct access profiles (Admin / Editor / Reader) with RLS ensuring data isolation.",
+          "Structured annual campaigns: collection windows, automated reminders, close-out and archiving.",
+          "Automated quality controls on entry: value ranges, cross-indicator consistency checks, duplicate detection.",
+          "Participatory certification: sequential validation by sectoral focal points before publication.",
+          "Complete audit log: full traceability of every change with timestamp and author identification.",
+          "Responsive interface adapted to field connectivity constraints."
+        ],
+        "results": "First version tested with sectoral focal points. Feedback enabled refinement of the certification workflow and the data entry interface. Full deployment under way.",
+        "stackDetail": "Secure web architecture · Multi-role RLS · Indicator registry · Participatory certification workflow · Audit trail · Responsive interface"
+      },
+      {
+        "id": "cap-citoyen",
+        "metaTitle": "Cap Citoyen · Civic exam application · Carlos Hounsinou",
+        "metaDescription": "EdTech SaaS for preparing the French civic naturalisation exam — 800+ questions, AI coach, audio flash-cards, available on Web and Android.",
+        "title": "Cap Citoyen · French civic exam",
+        "subtitle": "cap-citoyen.fr · France",
+        "category": "SaaS product · EdTech",
+        "status": "Live",
+        "context": "The 2024 reform making the civic exam mandatory for all naturalisation applications created a market of 100 000 candidates per year. When Cap Citoyen launched, no quality application covered this emerging need with a rigorous pedagogical approach.",
+        "challenge": "Design an engaging learning experience for an extremely heterogeneous audience (ages, backgrounds, digital skill levels), integrating diverse formats (quiz, audio, flash-cards, exam simulation) and an AI coach capable of adapting to each user's level.",
+        "approach": [
+          "Next.js PWA architecture delivering a native mobile experience without native-app constraints.",
+          "800+ questions structured by theme, with progressive difficulty and pedagogical explanations.",
+          "100+ audio tracks (ElevenLabs) for candidates with reading difficulties.",
+          "Flash-card mode for memorisation and exam simulation with official timer.",
+          "Integrated AI coach combining Anthropic API and GPT-4o-mini, adapted to each user's level and gaps.",
+          "Monetisation via Stripe: monthly subscription and lifetime access. Android (Google Play) and PWA deployment.",
+          "iOS under Apple review."
+        ],
+        "results": "Live on Web and Android (Google Play). Growing adoption since launch, with high satisfaction measured through Google Play reviews. iOS in final validation.",
+        "stackDetail": "Next.js · Anthropic API · GPT-4o-mini · ElevenLabs · Stripe · PWA · Android · PostgreSQL · Vector search"
+      },
+      {
+        "id": "operations-platform",
+        "metaTitle": "Field operations management platform · Carlos Hounsinou",
+        "metaDescription": "Design and deployment of a no-code business platform for field operations: agent portfolio, geolocation, scheduling, quotes and invoicing.",
+        "title": "Integrated scheduling and mission management platform",
+        "subtitle": "Private actor · Operational sector",
+        "category": "Business platform · Private sector",
+        "status": "Delivered · Live",
+        "context": "A private operational sector company managed a fleet of field agents with complex schedules, geolocated missions and an entirely manual billing chain. Information scattered across Excel spreadsheets, Word files and informal exchanges was generating costly errors and excessive time-to-invoice.",
+        "challenge": "Integrate into one coherent experience the agent portfolio, site geolocation, automated mission planning, calendar tracking, quote generation and invoicing — with a very short delivery timeline imposed by the operational context.",
+        "approach": [
+          "Accelerated no-code architecture to reduce time-to-market while guaranteeing robustness.",
+          "Agent portfolio: profiles, skills, availability, geolocated intervention zones.",
+          "Automated scheduling: agent assignment to missions based on proximity and availability criteria.",
+          "Calendar tracking: weekly and monthly views, scheduling conflict alerts.",
+          "Automated quote generation and invoicing: configurable templates, email delivery, payment tracking.",
+          "Responsive mobile app for field agents: mission consultation, digital signatures.",
+          "API interoperability with the client's existing tools."
+        ],
+        "results": "Platform deployed in production and adopted by field teams from the first week. Time-to-invoice reduced by over 60%. Assignment errors virtually eliminated through automated availability checks.",
+        "stackDetail": "No-code platform · Third-party APIs · Web cartography · Automated workflow · Mobile app · Document generation"
+      }
+    ]
   }
 }

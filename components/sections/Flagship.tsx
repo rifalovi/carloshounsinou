@@ -6,11 +6,11 @@ import SectionLabel from "@/components/ui-custom/SectionLabel";
 import FlagshipCard from "./FlagshipCard";
 
 type Spec = { label: string; value: string };
-type Action = { label: string; type: "contact" | "external" | "store"; href?: string };
+type Action = { label: string; type: "contact" | "external" | "store" | "detail"; href?: string };
 
 export type CardData = {
   id: string;
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
   category: string;
   role: string;
   title: string;
