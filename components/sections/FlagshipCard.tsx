@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocale } from "next-intl";
+import { AIBadge } from "@/components/ui-custom/AIBadge";
 
 type Spec = { label: string; value: string };
 type Action = {
@@ -477,23 +478,8 @@ export default function FlagshipCard({
         </div>
         {/* AI badge */}
         {hasAI && (
-          <div
-            aria-label="Réalisation intégrant l'IA générative"
-            style={{
-              position: "absolute", top: "16px", right: "16px",
-              background: "rgba(245,239,230,0.95)",
-              border: "1px solid #B45309",
-              padding: "4px 10px",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.75rem",
-              color: "#B45309",
-              fontWeight: 500,
-              letterSpacing: "0.04em",
-              borderRadius: "100px",
-              zIndex: 1,
-            }}
-          >
-            ✦ IA
+          <div style={{ position: "absolute", top: "16px", right: "16px", zIndex: 1 }}>
+            <AIBadge variant="subtle" />
           </div>
         )}
         {visual === "oif" && <OifVisual />}
