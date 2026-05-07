@@ -17,11 +17,12 @@
     "eyebrowCenter": "Portfolio · Édition MMXXVI",
     "eyebrowRight": "Architecte de systèmes intégrés",
     "tag": "Chargé d'Ingénierie de Projet · Organisation Internationale de la Francophonie",
-    "h1Line1": "Concevoir des",
-    "h1Emphasis1": "systèmes",
-    "h1Line2": "qui livrent de l'",
-    "h1Emphasis2": "impact",
+    "h1Line1": "Du",
+    "h1Emphasis1": "cadre logique",
+    "h1Line2": "au",
+    "h1Emphasis2": "code source",
     "h1End": ".",
+    "h1Subtitle": "Des systèmes qui durent.",
     "portraitQuote": "« Du cadre logique au code source. »",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Expérience",
@@ -35,21 +36,21 @@
   },
   "marquee": {
     "items": [
-      "Organisation Internationale de la Francophonie",
-      "IBF International Consulting",
       "Union Européenne",
-      "CHU de Québec",
-      "Cap Citoyen",
-      "Mairie en Afrique de l'Ouest",
-      "Programmes multilatéraux",
       "Agence Française de Développement",
-      "Coopération allemande GIZ",
-      "Coopération suisse DDC",
-      "Fondation Bill et Melinda Gates",
-      "IRSC · Instituts de Recherche en Santé du Canada",
+      "Coopération Allemande (GIZ)",
+      "Coopération Suisse",
+      "Instituts de Recherche en Santé du Canada",
+      "Fondation Bill & Melinda Gates",
       "Fondation Mérieux",
-      "IA générative encadrée",
-      "RAG institutionnel"
+      "Suivi-évaluation augmenté",
+      "Architecture S&E",
+      "Plateformes de pilotage",
+      "Gouvernance de la donnée",
+      "✦ IA générative encadrée",
+      "✦ RAG institutionnel",
+      "✦ Assistants documentaires",
+      "✦ Garde-fous éthiques"
     ]
   },
   "about": {
@@ -97,8 +98,8 @@
       {
         "period": "2016 — 2018",
         "title": "Statisticien · Recherche en santé",
-        "org": "CHU de Québec · Bénin",
-        "description": "Statisticien au sein de la Coordination des Projets du CHU de Québec au Bénin, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
+        "org": "Coordination de projets en santé · Bénin",
+        "description": "Statisticien au sein d'une coordination de projets de recherche en santé au Bénin, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
         "tags": ["Recherche", "Santé", "Data"],
         "accent": "tertiary"
       },
@@ -327,7 +328,7 @@
         "label": "IV",
         "title": "Outils No-Code & automatisation",
         "description": "Déploiement rapide d'applications métiers, automatisation de processus.",
-        "tags": ["Glide", "Airtable", "Make"]
+        "tags": ["No-code mobile", "Airtable", "Make"]
       },
       {
         "label": "V",

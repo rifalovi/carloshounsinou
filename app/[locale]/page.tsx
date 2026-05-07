@@ -72,6 +72,7 @@ export default async function Home({ params }: Props) {
           h1Line2={hero("h1Line2")}
           h1Emphasis2={hero("h1Emphasis2")}
           h1End={hero("h1End")}
+          h1Subtitle={hero("h1Subtitle")}
           portraitQuote={hero("portraitQuote")}
           portraitLocation={hero("portraitLocation")}
           kpi1Label={hero("kpi1Label")}

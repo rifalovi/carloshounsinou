@@ -13,6 +13,7 @@ type Props = {
   h1Line2: string;
   h1Emphasis2: string;
   h1End: string;
+  h1Subtitle: string;
   portraitQuote: string;
   portraitLocation: string;
   kpi1Label: string;
@@ -44,6 +45,7 @@ export default function Hero({
   h1Line2,
   h1Emphasis2,
   h1End,
+  h1Subtitle,
   portraitQuote,
   portraitLocation,
   kpi1Label,
@@ -150,27 +152,19 @@ export default function Hero({
               marginBottom: 0,
             }}
           >
-            {h1Line1}
-            <br />
-            <span>des </span>
-            <em
-              style={{
-                fontStyle: "italic",
-                fontWeight: 400,
-                color: "#B45309",
-              }}
-            >
+            {h1Line1}{" "}
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
               {h1Emphasis1}
+            </em>{" "}
+            {h1Line2}{" "}
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
+              {h1Emphasis2}
             </em>
-            <br />
-            {h1Line2}<em
-              style={{
-                fontStyle: "italic",
-                fontWeight: 400,
-                color: "#B45309",
-              }}
-            >{h1Emphasis2}</em>
             {h1End}
+            <br />
+            <span style={{ color: "rgba(10,22,40,0.55)", fontWeight: 300 }}>
+              {h1Subtitle}
+            </span>
           </motion.h1>
 
           {/* KPIs */}

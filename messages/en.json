@@ -17,11 +17,12 @@
     "eyebrowCenter": "Portfolio · MMXXVI Edition",
     "eyebrowRight": "Integrated Systems Architect",
     "tag": "Project Engineering Officer · International Organisation of La Francophonie",
-    "h1Line1": "Designing",
-    "h1Emphasis1": "systems",
-    "h1Line2": "that deliver ",
-    "h1Emphasis2": "impact",
+    "h1Line1": "From",
+    "h1Emphasis1": "logical framework",
+    "h1Line2": "to",
+    "h1Emphasis2": "source code",
     "h1End": ".",
+    "h1Subtitle": "Systems built to last.",
     "portraitQuote": "\"From logical framework to source code.\"",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Experience",
@@ -35,21 +36,21 @@
   },
   "marquee": {
     "items": [
-      "International Organisation of La Francophonie",
-      "IBF International Consulting",
       "European Union",
-      "CHU de Québec",
-      "Cap Citoyen",
-      "Municipality in West Africa",
-      "Multilateral programmes",
-      "Agence Française de Développement",
-      "GIZ German Cooperation",
-      "Swiss Development Cooperation DDC",
+      "French Development Agency",
+      "German Cooperation (GIZ)",
+      "Swiss Cooperation",
+      "Canadian Institutes of Health Research",
       "Bill & Melinda Gates Foundation",
-      "CIHR · Canadian Institutes of Health Research",
-      "Fondation Mérieux",
-      "Encapsulated generative AI",
-      "Institutional RAG"
+      "Mérieux Foundation",
+      "Augmented Monitoring & Evaluation",
+      "M&E Architecture",
+      "Steering Platforms",
+      "Data Governance",
+      "✦ Governed Generative AI",
+      "✦ Institutional RAG",
+      "✦ Document Assistants",
+      "✦ Ethical Guardrails"
     ]
   },
   "about": {
@@ -97,8 +98,8 @@
       {
         "period": "2016 — 2018",
         "title": "Statistician · Health Research",
-        "org": "CHU de Québec · Benin",
-        "description": "Statistician within the Project Coordination of CHU de Québec in Benin, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research and improvement of living conditions of vulnerable populations ('Health Equity' project).",
+        "org": "Health Research Project Coordination · Benin",
+        "description": "Statistician within a health research project coordination in Benin, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research and improvement of living conditions of vulnerable populations ('Health Equity' project).",
         "tags": ["Research", "Health", "Data"],
         "accent": "tertiary"
       },
@@ -327,7 +328,7 @@
         "label": "IV",
         "title": "No-Code tools & automation",
         "description": "Rapid deployment of business applications, process automation.",
-        "tags": ["Glide", "Airtable", "Make"]
+        "tags": ["No-code mobile", "Airtable", "Make"]
       },
       {
         "label": "V",
