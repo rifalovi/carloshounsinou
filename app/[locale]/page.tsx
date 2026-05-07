@@ -7,6 +7,7 @@ import About from "@/components/sections/About";
 import Flagship from "@/components/sections/Flagship";
 import Stats from "@/components/sections/Stats";
 import Expertise from "@/components/sections/Expertise";
+import AICapabilities from "@/components/sections/AICapabilities";
 import SecondaryRealizations from "@/components/sections/SecondaryRealizations";
 import Contact from "@/components/sections/Contact";
 
@@ -23,6 +24,7 @@ export default async function Home({ params }: Props) {
   const flagship = await getTranslations({ locale, namespace: "flagship" });
   const stats = await getTranslations({ locale, namespace: "stats" });
   const expertise = await getTranslations({ locale, namespace: "expertise" });
+  const aiCapabilities = await getTranslations({ locale, namespace: "aiCapabilities" });
   const secondaryRealizations = await getTranslations({ locale, namespace: "secondaryRealizations" });
   const contact = await getTranslations({ locale, namespace: "contact" });
   const footer = await getTranslations({ locale, namespace: "footer" });
@@ -103,6 +105,13 @@ export default async function Home({ params }: Props) {
           h2End={flagship("h2End")}
           intro={flagship("intro")}
           cards={flagship.raw("cards") as Parameters<typeof Flagship>[0]["cards"]}
+        />
+
+        <AICapabilities
+          eyebrow={aiCapabilities("eyebrow")}
+          title={aiCapabilities("title")}
+          subtitle={aiCapabilities("subtitle")}
+          cards={aiCapabilities.raw("cards") as { label: string; title: string; description: string; tags: string[] }[]}
         />
 
         <Stats
