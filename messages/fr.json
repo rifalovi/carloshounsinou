@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Carlos HOUNSINOU — Architecte de systèmes intégrés & Spécialiste S&E",
+    "title": "Carlos HOUNSINOU · Architecte de systèmes intégrés & Spécialiste S&E",
     "description": "Carlos Hounsinou, Chargé d'Ingénierie de Projet à l'OIF. Expert en suivi-évaluation et architecture de plateformes pour institutions internationales, bailleurs et organisations.",
     "keywords": "suivi-évaluation, ingénierie de projet, OIF, architecte de systèmes, consultant S&E, Carlos Hounsinou"
   },
@@ -58,7 +58,7 @@
     "p1": "Ingénieur de formation en statistiques et titulaire d'un Master en Gestion de Projet, j'ai construit une expertise rare à la croisée de trois mondes : la méthodologie du suivi-évaluation, la technique de la donnée, et la conception produit.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
-    "p2Part2": " en tant que Chargé d'Ingénierie de Projet — après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
+    "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
     "timeline": [
       {
         "period": "2024 — Aujourd'hui",
@@ -112,10 +112,10 @@
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Sept projets, sept",
+    "h2Part1": "Sept architectures, sept",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Sept projets transformationnels — du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et le secteur privé opérationnel. Chaque projet illustre ma capacité à concevoir et délivrer des systèmes intégrés, du cadrage stratégique au déploiement opérationnel.",
+    "intro": "Une sélection de sept architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et les opérations privées. Chacune témoigne d'une compétence de conception, de la stratégie au déploiement opérationnel.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -233,7 +233,7 @@
           { "label": "Voir le projet →", "type": "detail", "href": "/realisations/cap-citoyen" },
           { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
         ],
-        "capImageAlt": "Capture d'écran de l'application Cap Citoyen — accueil avec stats"
+        "capImageAlt": "Capture d'écran de l'application Cap Citoyen, écran d'accueil avec statistiques"
       },
       {
         "id": "operations-platform",
@@ -296,7 +296,7 @@
     "h2Part1": "Cinq piliers, une",
     "h2Emphasis": "même",
     "h2End": " exigence.",
-    "intro": "Du cadrage méthodologique à la mise en production logicielle. Chaque mission mobilise au moins deux de ces piliers — c'est ce qui en fait la différence.",
+    "intro": "Du cadrage méthodologique à la mise en production logicielle. Chaque mission mobilise au moins deux de ces piliers, c'est ce qui en fait la différence.",
     "feature": {
       "label": "I. Pilier principal",
       "title": "Architecture de systèmes intégrés de Suivi-Évaluation",
@@ -341,7 +341,7 @@
     "h2Part1": "Parlons de votre",
     "h2Emphasis": "projet",
     "h2End": ".",
-    "intro": "ONG, bailleur, entreprise ou institution publique : un premier échange de 30 minutes pour comprendre votre besoin et identifier les leviers d'action — sans engagement.",
+    "intro": "ONG, bailleur, entreprise ou institution publique : un premier échange de 30 minutes pour comprendre votre besoin et identifier les leviers d'action, sans engagement.",
     "email": "carlos.hounsinou@outlook.fr",
     "phone": "+33 (0) 7 58 36 78 08",
     "linkedin": "linkedin.com/in/carlos-hounsinou",
@@ -357,7 +357,7 @@
       "step3Chips": ["Suivi-évaluation", "Tableau de bord BI", "Application SaaS", "No-Code", "Formation", "Autre"],
       "step4Label": "IV.",
       "step4Question": "Décrivez brièvement votre projet",
-      "step4Placeholder": "Quelques lignes suffisent — nous approfondirons lors de l'échange.",
+      "step4Placeholder": "Quelques lignes suffisent, nous approfondirons lors de l'échange.",
       "submit": "Envoyer ma demande →",
       "success": "Merci ! Votre message a bien été envoyé. Je vous réponds sous 24 à 48 heures ouvrées.",
       "error": "Une erreur est survenue. Vous pouvez aussi me joindre directement à carlos.hounsinou@outlook.fr."
@@ -387,7 +387,7 @@
       {
         "id": "institutional-pilot",
         "metaTitle": "Plateforme de pilotage institutionnel · Carlos Hounsinou",
-        "metaDescription": "Conception d'une plateforme sécurisée de suivi-évaluation pour une organisation multilatérale francophone — architecture modulaire, conformité RGPD, multi-rôles.",
+        "metaDescription": "Conception d'une plateforme sécurisée de suivi-évaluation pour une organisation multilatérale francophone : architecture modulaire, conformité RGPD, multi-rôles.",
         "title": "Plateforme de pilotage de portefeuille programmatique",
         "subtitle": "Organisation internationale · Paris",
         "category": "Architecture institutionnelle",
@@ -400,7 +400,7 @@
           "Spécification UX orientée adoption : interfaces minimalistes, guides contextuels intégrés, formations à l'outil.",
           "Gouvernance de la donnée : référentiel d'indicateurs, cycle de vie des programmes, journal d'audit."
         ],
-        "results": "Première version validée par les instances de gouvernance, intégration en cours. Le dispositif couvre l'ensemble du cycle de pilotage — de la planification des programmes à la production de rapports d'avancement.",
+        "results": "Première version validée par les instances de gouvernance, intégration en cours. Le dispositif couvre l'ensemble du cycle de pilotage, de la planification des programmes à la production de rapports d'avancement.",
         "stackDetail": "Architecture web sécurisée · Bases de données relationnelles · Conformité RGPD · Gestion multi-rôles · Row-Level Security"
       },
       {
@@ -432,7 +432,7 @@
         "category": "Plateforme institutionnelle",
         "status": "Livré · Pilote actif",
         "context": "Une institution internationale souhaitait rendre visible sa valeur ajoutée à travers son portefeuille de projets stratégiques. Les données existaient, mais restaient enfouies dans des rapports PDF inaccessibles au grand public et aux partenaires potentiels.",
-        "challenge": "Transformer des rapports statiques en expériences web interactives tout en garantissant l'exactitude des informations présentées par l'assistant conversationnel — enjeu d'image institutionnelle majeur — et en maîtrisant le workflow éditorial pour des équipes aux compétences numériques hétérogènes.",
+        "challenge": "Transformer des rapports statiques en expériences web interactives tout en garantissant l'exactitude des informations présentées par l'assistant conversationnel, enjeu d'image institutionnelle majeur, et en maîtrisant le workflow éditorial pour des équipes aux compétences numériques hétérogènes.",
         "approach": [
           "CMS éditorial multi-rôles permettant aux équipes de créer, relire et publier des fiches projet structurées.",
           "Data storytelling : visualisations de données, indicateurs clés, timeline d'impact par projet.",
@@ -446,13 +446,13 @@
       {
         "id": "eu-platforms",
         "metaTitle": "Plateformes S&E · Projets financés UE · Carlos Hounsinou",
-        "metaDescription": "Conception et déploiement de deux plateformes web de suivi-évaluation pour des programmes financés par l'UE — standards CAD-OCDE, multi-acteurs, formation opérateurs.",
+        "metaDescription": "Conception et déploiement de deux plateformes web de suivi-évaluation pour des programmes financés par l'UE : standards CAD-OCDE, multi-acteurs, formation opérateurs.",
         "title": "Plateformes de suivi · projets financés UE",
         "subtitle": "IBF International Consulting · Belgique & Bénin",
         "category": "Mission de conseil · UE",
         "status": "Livré",
         "context": "Dans le cadre d'une mission de conseil pour IBF International Consulting, j'ai pris en charge la conception et le déploiement des outils de suivi-évaluation pour un programme de développement financé par l'Union Européenne, impliquant des partenaires en Belgique et en Afrique de l'Ouest.",
-        "challenge": "Concevoir deux plateformes distinctes répondant chacune aux besoins spécifiques de leurs utilisateurs — coordinateurs, bailleurs et partenaires de mise en œuvre — tout en garantissant leur interopérabilité et leur conformité aux standards CAD-OCDE de reporting bailleur.",
+        "challenge": "Concevoir deux plateformes distinctes répondant chacune aux besoins spécifiques de leurs utilisateurs, coordinateurs, bailleurs et partenaires de mise en œuvre, tout en garantissant leur interopérabilité et leur conformité aux standards CAD-OCDE de reporting bailleur.",
         "approach": [
           "Cadrage méthodologique : affinement du cadre logique global, définition des indicateurs et des cibles.",
           "Conception de deux plateformes web dédiées, adaptées aux niveaux de compétences des utilisateurs terrain.",
@@ -466,7 +466,7 @@
       {
         "id": "indicators-platform",
         "metaTitle": "Plateforme de pilotage territorial · Carlos Hounsinou",
-        "metaDescription": "Plateforme sécurisée de pilotage du développement territorial par les données : campagnes annuelles, certification participative, journal d'audit — Afrique de l'Ouest.",
+        "metaDescription": "Plateforme sécurisée de pilotage du développement territorial par les données : campagnes annuelles, certification participative, journal d'audit. Portée géographique : Afrique de l'Ouest.",
         "title": "Plateforme de pilotage par les indicateurs",
         "subtitle": "Gouvernance territoriale · Afrique de l'Ouest",
         "category": "Gouvernance territoriale",
@@ -487,7 +487,7 @@
       {
         "id": "cap-citoyen",
         "metaTitle": "Cap Citoyen · Application examen civique · Carlos Hounsinou",
-        "metaDescription": "SaaS EdTech pour la préparation à l'examen civique français de naturalisation — 800+ questions, coach IA, flash-cards audio, disponible sur Web et Android.",
+        "metaDescription": "SaaS EdTech pour la préparation à l'examen civique français de naturalisation : 800+ questions, coach IA, flash-cards audio, disponible sur Web et Android.",
         "title": "Cap Citoyen · Examen civique français",
         "subtitle": "cap-citoyen.fr · France",
         "category": "Produit SaaS · EdTech",
@@ -515,7 +515,7 @@
         "category": "Plateforme métier · Secteur privé",
         "status": "Livré · En production",
         "context": "Un acteur du secteur opérationnel privé gérait une flotte d'agents terrain avec des plannings complexes, des missions géolocalisées et une chaîne de facturation entièrement manuelle. La dispersion des informations entre tableaux Excel, fichiers Word et échanges informels générait des erreurs coûteuses et un time-to-invoice excessif.",
-        "challenge": "Intégrer dans une expérience cohérente le portefeuille d'agents, la géolocalisation des sites, la planification automatisée des missions, le suivi calendaire, la génération de devis et la facturation — avec un délai de livraison très court imposé par le contexte opérationnel.",
+        "challenge": "Intégrer dans une expérience cohérente le portefeuille d'agents, la géolocalisation des sites, la planification automatisée des missions, le suivi calendaire, la génération de devis et la facturation, avec un délai de livraison court imposé par le contexte opérationnel.",
         "approach": [
           "Architecture no-code accélérée pour réduire le time-to-market tout en garantissant la robustesse.",
           "Portefeuille d'agents : profils, compétences, disponibilités, zones d'intervention géolocalisées.",

@@ -96,9 +96,8 @@ export default async function RealisationDetail({ params }: Props) {
           <div style={{ maxWidth: "720px", margin: "0 auto", position: "relative", zIndex: 1 }}>
             <a
               href={`/${locale}/#flagship`}
-              style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono)", fontSize: "11px", color: "rgba(245,239,230,0.5)", textDecoration: "none", marginBottom: "48px", letterSpacing: "0.04em", transition: "color 0.2s" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#C2701F")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,239,230,0.5)")}
+              className="detail-back-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono)", fontSize: "11px", color: "rgba(245,239,230,0.5)", textDecoration: "none", marginBottom: "48px", letterSpacing: "0.04em" }}
             >
               {ui.back}
             </a>
@@ -186,6 +185,8 @@ export default async function RealisationDetail({ params }: Props) {
       />
 
       <style>{`
+        .detail-back-link { transition: color 0.2s; }
+        .detail-back-link:hover { color: #C2701F !important; }
         @media (max-width: 768px) {
           main > div:first-child { padding: 96px 24px 56px !important; }
           main > div:last-child { padding: 48px 24px 72px !important; }

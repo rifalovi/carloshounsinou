@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Carlos HOUNSINOU — Integrated Systems Architect & M&E Specialist",
+    "title": "Carlos HOUNSINOU · Integrated Systems Architect & M&E Specialist",
     "description": "Carlos Hounsinou, Project Engineering Officer at the OIF. Expert in monitoring, evaluation and platform architecture for international institutions, donors and organizations.",
     "keywords": "monitoring evaluation, project engineering, OIF, systems architect, M&E consultant, Carlos Hounsinou"
   },
@@ -58,7 +58,7 @@
     "p1": "A trained statistical engineer with a Master's in Project Management, I have built a rare expertise at the intersection of three worlds: monitoring & evaluation methodology, data engineering, and product design.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
-    "p2Part2": " as Project Engineering Officer — after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
+    "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
     "timeline": [
       {
         "period": "2024 — Today",
@@ -112,10 +112,10 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Seven projects, seven",
+    "h2Part1": "Seven architectures, seven",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "Seven transformational projects — from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and the private operational sector. Each project illustrates my ability to design and deliver integrated systems, from strategic framing to operational deployment.",
+    "intro": "A selection of seven flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and private operations. Each one demonstrates expertise in design, from strategy through to operational deployment.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -233,7 +233,7 @@
           { "label": "View project →", "type": "detail", "href": "/realisations/cap-citoyen" },
           { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
         ],
-        "capImageAlt": "Cap Citoyen app screenshot — home screen with stats"
+        "capImageAlt": "Cap Citoyen app screenshot, home screen with stats"
       },
       {
         "id": "operations-platform",
@@ -296,7 +296,7 @@
     "h2Part1": "Five pillars, one",
     "h2Emphasis": "same",
     "h2End": " standard.",
-    "intro": "From methodological framing to software production. Every mission mobilises at least two of these pillars — that is what makes the difference.",
+    "intro": "From methodological framing to software production. Every mission mobilises at least two of these pillars, and that is what makes the difference.",
     "feature": {
       "label": "I. Main pillar",
       "title": "Integrated systems architecture for Monitoring & Evaluation",
@@ -341,7 +341,7 @@
     "h2Part1": "Let's talk about your",
     "h2Emphasis": "project",
     "h2End": ".",
-    "intro": "NGO, donor, company or public institution: a first 30-minute conversation to understand your needs and identify the levers of action — no commitment.",
+    "intro": "NGO, donor, company or public institution: a first 30-minute conversation to understand your needs and identify the levers of action, no commitment.",
     "email": "carlos.hounsinou@outlook.fr",
     "phone": "+33 (0) 7 58 36 78 08",
     "linkedin": "linkedin.com/in/carlos-hounsinou",
@@ -357,7 +357,7 @@
       "step3Chips": ["Monitoring & evaluation", "BI dashboard", "SaaS application", "No-Code", "Training", "Other"],
       "step4Label": "IV.",
       "step4Question": "Briefly describe your project",
-      "step4Placeholder": "A few lines is enough — we will go deeper during the conversation.",
+      "step4Placeholder": "A few lines is enough; we will go deeper during the conversation.",
       "submit": "Send my request →",
       "success": "Thank you! Your message has been sent. I will reply within 24 to 48 working hours.",
       "error": "Something went wrong. You can also reach me directly at carlos.hounsinou@outlook.fr."
@@ -387,7 +387,7 @@
       {
         "id": "institutional-pilot",
         "metaTitle": "Institutional steering platform · Carlos Hounsinou",
-        "metaDescription": "Design of a secure monitoring & evaluation platform for a multilateral francophone organisation — modular architecture, GDPR compliance, multi-role access.",
+        "metaDescription": "Design of a secure monitoring & evaluation platform for a multilateral francophone organisation: modular architecture, GDPR compliance, multi-role access.",
         "title": "Programme portfolio steering platform",
         "subtitle": "International organisation · Paris",
         "category": "Institutional architecture",
@@ -400,7 +400,7 @@
           "Adoption-oriented UX design: minimal interfaces, contextual in-app guides, user training.",
           "Data governance: indicator registry, programme lifecycle management, complete audit trail."
         ],
-        "results": "First version validated by governance bodies, integration under way. The framework covers the full steering cycle — from programme planning to progress report generation.",
+        "results": "First version validated by governance bodies, integration under way. The framework covers the full steering cycle, from programme planning to progress report generation.",
         "stackDetail": "Secure web architecture · Relational databases · GDPR compliance · Multi-role management · Row-Level Security"
       },
       {
@@ -426,13 +426,13 @@
       {
         "id": "valorisation-platform",
         "metaTitle": "Programme portfolio valorisation platform · Carlos Hounsinou",
-        "metaDescription": "Institutional platform combining data storytelling, cartography and AI assistant to valorise a portfolio of strategic projects — RLS, anti-hallucination.",
+        "metaDescription": "Institutional platform combining data storytelling, cartography and AI assistant to valorise a portfolio of strategic projects: RLS, anti-hallucination.",
         "title": "Programme portfolio valorisation platform",
         "subtitle": "Institutional organisation · Paris",
         "category": "Institutional platform",
         "status": "Delivered · Active pilot",
         "context": "An international institution wanted to make its added value visible through its portfolio of strategic projects. The data existed but was buried in PDF reports inaccessible to the general public and potential partners.",
-        "challenge": "Transform static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant — a major institutional reputation issue — and managing the editorial workflow for teams with heterogeneous digital skills.",
+        "challenge": "Transform static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant, a major institutional reputation issue, and managing the editorial workflow for teams with heterogeneous digital skills.",
         "approach": [
           "Multi-role editorial CMS enabling teams to create, review and publish structured project pages.",
           "Data storytelling: data visualisations, key indicators, impact timeline per project.",
@@ -446,13 +446,13 @@
       {
         "id": "eu-platforms",
         "metaTitle": "M&E platforms · EU-funded projects · Carlos Hounsinou",
-        "metaDescription": "Design and deployment of two web monitoring & evaluation platforms for EU-funded programmes — OECD-DAC standards, multi-stakeholder, operator training.",
+        "metaDescription": "Design and deployment of two web monitoring & evaluation platforms for EU-funded programmes: OECD-DAC standards, multi-stakeholder, operator training.",
         "title": "Monitoring platforms · EU-funded projects",
         "subtitle": "IBF International Consulting · Belgium & Benin",
         "category": "Consulting mission · EU",
         "status": "Delivered",
         "context": "As part of a consulting mission for IBF International Consulting, I was responsible for designing and deploying the monitoring and evaluation tools for a European Union-funded development programme involving partners in Belgium and West Africa.",
-        "challenge": "Design two distinct platforms each meeting the specific needs of their users — coordinators, donors and implementing partners — while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
+        "challenge": "Design two distinct platforms each meeting the specific needs of their users, coordinators, donors and implementing partners, while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
         "approach": [
           "Methodological framing: refinement of the overall logical framework, definition of indicators and targets.",
           "Design of two dedicated web platforms adapted to the skill levels of field users.",
@@ -466,7 +466,7 @@
       {
         "id": "indicators-platform",
         "metaTitle": "Territorial steering platform · Carlos Hounsinou",
-        "metaDescription": "Secure platform for data-driven local development steering: annual campaigns, participatory certification, audit trail — West Africa.",
+        "metaDescription": "Secure platform for data-driven local development steering: annual campaigns, participatory certification, audit trail. Geographic scope: West Africa.",
         "title": "Indicator-based steering platform",
         "subtitle": "Territorial governance · West Africa",
         "category": "Territorial governance",
@@ -487,7 +487,7 @@
       {
         "id": "cap-citoyen",
         "metaTitle": "Cap Citoyen · Civic exam application · Carlos Hounsinou",
-        "metaDescription": "EdTech SaaS for preparing the French civic naturalisation exam — 800+ questions, AI coach, audio flash-cards, available on Web and Android.",
+        "metaDescription": "EdTech SaaS for preparing the French civic naturalisation exam: 800+ questions, AI coach, audio flash-cards, available on Web and Android.",
         "title": "Cap Citoyen · French civic exam",
         "subtitle": "cap-citoyen.fr · France",
         "category": "SaaS product · EdTech",
@@ -515,7 +515,7 @@
         "category": "Business platform · Private sector",
         "status": "Delivered · Live",
         "context": "A private operational sector company managed a fleet of field agents with complex schedules, geolocated missions and an entirely manual billing chain. Information scattered across Excel spreadsheets, Word files and informal exchanges was generating costly errors and excessive time-to-invoice.",
-        "challenge": "Integrate into one coherent experience the agent portfolio, site geolocation, automated mission planning, calendar tracking, quote generation and invoicing — with a very short delivery timeline imposed by the operational context.",
+        "challenge": "Integrate into one coherent experience the agent portfolio, site geolocation, automated mission planning, calendar tracking, quote generation and invoicing, with a tight delivery timeline imposed by the operational context.",
         "approach": [
           "Accelerated no-code architecture to reduce time-to-market while guaranteeing robustness.",
           "Agent portfolio: profiles, skills, availability, geolocated intervention zones.",
