@@ -6,7 +6,7 @@ type Props = { quote: string; author: string; role: string };
 
 export default function Testimonial({ quote, author, role }: Props) {
   return (
-    <section style={{ padding: "100px 48px", background: "#EDE5D6" }}>
+    <section id="testimonial" style={{ padding: "100px 48px", background: "#EDE5D6" }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

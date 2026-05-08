@@ -6,6 +6,8 @@ import { routing } from "@/i18n/routing";
 import { sourceSerif, inter, mono } from "@/app/fonts";
 import "@/app/globals.css";
 import ChatBot from "@/components/chat/ChatBot";
+import { Analytics } from "@vercel/analytics/next";
+import SectionTracker from "@/components/analytics/SectionTracker";
 
 type Props = {
   children: React.ReactNode;
@@ -69,6 +71,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
         </NextIntlClientProvider>
         <ChatBot />
+        <SectionTracker />
+        <Analytics />
       </body>
     </html>
   );
