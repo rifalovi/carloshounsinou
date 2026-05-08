@@ -16,9 +16,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const messages = await getMessages({ locale });
   const meta = (messages as { metadata: { title: string; description: string; keywords: string } }).metadata;
   return {
+    metadataBase: new URL("https://carloshounsinou.com"),
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
+    openGraph: {
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_GB",
+      url: "https://carloshounsinou.com",
+      siteName: "Carlos HOUNSINOU",
+      title: meta.title,
+      description: meta.description,
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Carlos HOUNSINOU — Stratège qui sait bâtir",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/og-image.jpg"],
+    },
   };
 }
 
