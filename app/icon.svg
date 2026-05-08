@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fond slate-deep -->
+  <rect x="0" y="0" width="32" height="32" fill="#0A1628"/>
+
+  <!-- Lettres CH centrées -->
+  <text x="15" y="21"
+        font-family="'Source Serif 4', 'Source Serif Pro', Georgia, serif"
+        font-size="14"
+        font-weight="600"
+        fill="#F5EFE6"
+        text-anchor="middle">CH</text>
+
+  <!-- Accent cuivre bas-droite (dépasse légèrement, signature du logo) -->
+  <rect x="22" y="22" width="10" height="10" fill="#B45309"/>
+</svg>
