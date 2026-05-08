@@ -41,29 +41,29 @@ const svgText = `
       Pilotage · Construction · 13 ans
     </text>
 
-    <!-- H1 line 1 -->
-    <text x="0" y="226" font-family="Georgia, 'Times New Roman', serif"
-          font-size="48" font-weight="500" fill="#0A1628">Piloter des</text>
-    <text x="0" y="278" font-family="Georgia, 'Times New Roman', serif"
+    <!-- H1 line 1: single baseline, word-level text elements -->
+    <text x="0" y="248" font-family="Georgia, 'Times New Roman', serif"
+          font-size="48" font-weight="500" fill="#0A1628">Piloter des </text>
+    <text x="232" y="248" font-family="Georgia, 'Times New Roman', serif"
           font-size="48" font-style="italic" font-weight="500" fill="#B45309">programmes.</text>
 
-    <!-- H1 line 2 -->
-    <text x="0" y="346" font-family="Georgia, 'Times New Roman', serif"
-          font-size="48" font-weight="500" fill="#0A1628">Bâtir des</text>
-    <text x="0" y="398" font-family="Georgia, 'Times New Roman', serif"
+    <!-- H1 line 2: single baseline, word-level text elements -->
+    <text x="0" y="318" font-family="Georgia, 'Times New Roman', serif"
+          font-size="48" font-weight="500" fill="#0A1628">Bâtir des </text>
+    <text x="200" y="318" font-family="Georgia, 'Times New Roman', serif"
           font-size="48" font-style="italic" font-weight="500" fill="#B45309">systèmes</text>
-    <text x="310" y="398" font-family="Georgia, 'Times New Roman', serif"
+    <text x="408" y="318" font-family="Georgia, 'Times New Roman', serif"
           font-size="48" font-weight="500" fill="#0A1628"> durables.</text>
 
     <!-- Copper rule + signature -->
-    <rect x="0" y="440" width="48" height="2" fill="#B45309" opacity="0.7"/>
-    <text x="64" y="453" font-family="'Courier New', Courier, monospace"
+    <rect x="0" y="392" width="48" height="2" fill="#B45309" opacity="0.7"/>
+    <text x="64" y="405" font-family="'Courier New', Courier, monospace"
           font-size="13" font-weight="600" fill="#0A1628" letter-spacing="3">
       STRATÈGE QUI SAIT BÂTIR
     </text>
 
     <!-- URL bottom-right -->
-    <text x="580" y="575" font-family="'Courier New', Courier, monospace"
+    <text x="580" y="565" font-family="'Courier New', Courier, monospace"
           font-size="13" fill="#475569" text-anchor="end" letter-spacing="1">
       carloshounsinou.com
     </text>
