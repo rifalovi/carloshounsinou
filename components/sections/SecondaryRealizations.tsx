@@ -48,7 +48,7 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
             {h2Part1}{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>
               {h2Emphasis}
-            </em>
+            </em>{" "}
             {h2End}
           </h2>
         </motion.div>
