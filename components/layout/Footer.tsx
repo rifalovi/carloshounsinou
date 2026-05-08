@@ -8,7 +8,6 @@ type Props = {
   brandName: string;
   copyright: string;
   linkedin: string;
-  suiviprojet: string;
   capcit: string;
 };
 
@@ -18,12 +17,10 @@ export default function Footer({
   brandName,
   copyright,
   linkedin,
-  suiviprojet,
   capcit,
 }: Props) {
   const socials = [
     { label: linkedin, href: "https://linkedin.com/in/carlos-hounsinou", abbr: "in" },
-    { label: suiviprojet, href: "https://suivi-projet.org", abbr: "sp" },
     { label: capcit, href: "https://cap-citoyen.fr", abbr: "cc" },
   ];
 

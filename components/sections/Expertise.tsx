@@ -115,14 +115,6 @@ export default function Expertise({ eyebrow, h2Part1, h2Emphasis, h2End, intro, 
               ))}
             </div>
           </div>
-          <a
-            href="https://suivi-projet.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontFamily: "var(--font-mono)", fontSize: "12px", fontWeight: 500, color: "#C2701F", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px" }}
-          >
-            {feature.cta} →
-          </a>
         </motion.div>
 
         {/* 4 small tiles */}

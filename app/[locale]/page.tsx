@@ -160,7 +160,7 @@ export default async function Home({ params }: Props) {
         brandName={footer("brandName")}
         copyright={footer("copyright")}
         linkedin={footer("linkedin")}
-        suiviprojet={footer("suiviprojet")}
+
         capcit={footer("capcit")}
       />
     </>
