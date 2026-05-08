@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { track } from "@vercel/analytics";
 
 interface Message {
   role: "user" | "assistant";
@@ -40,6 +41,11 @@ export default function ChatBot() {
   async function send() {
     const text = input.trim();
     if (!text || loading) return;
+
+    track("chatbot_question", {
+      question: text.slice(0, 100),
+      timestamp: new Date().toISOString(),
+    });
 
     const userMsg: Message = { role: "user", content: text };
     const updatedMessages = [...messages, userMsg];
