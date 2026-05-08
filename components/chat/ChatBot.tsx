@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Message {
   role: "user" | "assistant";
@@ -273,6 +275,59 @@ export default function ChatBot() {
           text-align: center;
           line-height: 1.4;
         }
+        /* Markdown rendering */
+        .md p { margin-bottom: 0.5em; }
+        .md p:last-child { margin-bottom: 0; }
+        .md strong { font-weight: 600; color: #0A1628; }
+        .md em { font-style: italic; color: #B45309; }
+        .md ul { list-style: disc; padding-left: 1.2em; margin-bottom: 0.5em; }
+        .md ol { list-style: decimal; padding-left: 1.2em; margin-bottom: 0.5em; }
+        .md li { margin-bottom: 0.2em; line-height: 1.5; }
+        .md h1, .md h2, .md h3 {
+          font-family: var(--font-serif, serif);
+          font-weight: 600;
+          color: #0A1628;
+          margin: 0.6em 0 0.3em;
+        }
+        .md h1 { font-size: 15px; }
+        .md h2 { font-size: 14px; }
+        .md h3 { font-size: 13.5px; }
+        .md table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 12px;
+          margin: 0.5em 0;
+        }
+        .md thead { background: #F5EFE6; }
+        .md th {
+          text-align: left;
+          padding: 5px 8px;
+          font-weight: 600;
+          color: #0A1628;
+          border-bottom: 1px solid rgba(10,22,40,0.15);
+        }
+        .md td {
+          padding: 5px 8px;
+          color: #1e293b;
+          border-bottom: 1px solid rgba(10,22,40,0.07);
+        }
+        .md tr:last-child td { border-bottom: none; }
+        .md code {
+          font-family: var(--font-mono, monospace);
+          font-size: 12px;
+          padding: 1px 5px;
+          border-radius: 4px;
+          background: #F5EFE6;
+          color: #B45309;
+        }
+        .md a { color: #B45309; text-decoration: underline; }
+        .md blockquote {
+          border-left: 2px solid #B45309;
+          padding-left: 10px;
+          margin: 0.4em 0;
+          font-style: italic;
+          color: #475569;
+        }
         @media (max-width: 480px) {
           .chatbot-btn { bottom: 20px; right: 16px; }
           .chatbot-modal { right: 16px; bottom: 88px; width: calc(100vw - 32px); }
@@ -316,7 +371,15 @@ export default function ChatBot() {
                 key={i}
                 className={`msg-bubble ${msg.role === "user" ? "msg-user" : "msg-assistant"}`}
               >
-                {msg.content}
+                {msg.role === "user" ? (
+                  msg.content
+                ) : (
+                  <div className="md">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {msg.content}
+                    </ReactMarkdown>
+                  </div>
+                )}
               </div>
             ))}
             {loading && (
