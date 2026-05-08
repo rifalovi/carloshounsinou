@@ -87,12 +87,14 @@ export default function Navigation({
           />
         </div>
         <span
+          className="nav-brand"
           style={{
             fontFamily: "var(--font-serif)",
             fontSize: "17px",
             fontWeight: 500,
             color: "#0A1628",
             letterSpacing: "-0.01em",
+            whiteSpace: "nowrap",
           }}
         >
           Carlos Hounsinou
@@ -214,6 +216,10 @@ export default function Navigation({
         @media (max-width: 768px) {
           nav[aria-label="Navigation principale"] { padding: 12px 16px !important; }
           .nav-status { display: none !important; }
+        }
+        @media (max-width: 640px) {
+          nav[aria-label="Navigation principale"] { gap: 12px !important; }
+          .nav-brand { font-size: 14px !important; }
         }
       `}</style>
     </nav>
