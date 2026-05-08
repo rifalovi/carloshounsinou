@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { sourceSerif, inter, mono } from "@/app/fonts";
 import "@/app/globals.css";
+import ChatBot from "@/components/chat/ChatBot";
 
 type Props = {
   children: React.ReactNode;
@@ -67,6 +68,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <ChatBot />
       </body>
     </html>
   );
