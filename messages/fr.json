@@ -58,7 +58,7 @@
     "h2Part1": "Une trajectoire de programmes",
     "h2Emphasis": "structurés",
     "h2End": ".",
-    "p1": "À l'intersection rare entre le pilotage de programmes institutionnels et l'architecture des systèmes augmentés par l'intelligence artificielle, j'aide les organisations à transformer leurs politiques publiques sans dépendre éternellement de prestataires. Treize années passées à structurer des dispositifs de planification, à coordonner des programmes multi-bailleurs et à concevoir des plateformes pour l'OIF, l'Union Européenne, la GIZ, l'AFD ou la Fondation Bill & Melinda Gates m'ont appris une vérité simple : la valeur ne se crée plus au seul niveau de la stratégie ni de la technique, mais à leur point de jonction. C'est ce point que je sais tenir, du comité de pilotage jusqu'au déploiement opérationnel.",
+    "p1": "À l'intersection rare entre le pilotage de programmes institutionnels, l'encadrement d'équipes opérationnelles et l'architecture des systèmes augmentés par l'intelligence artificielle, j'aide les organisations à transformer leurs politiques publiques sans dépendre éternellement de prestataires. Treize années passées à structurer des dispositifs, à diriger des équipes multi-pays, à former plusieurs dizaines d'opérateurs et à concevoir des plateformes pour l'OIF, l'Union Européenne, l'AFD, la GIZ ou la Fondation Bill & Melinda Gates m'ont appris une vérité simple : la valeur ne se crée plus au seul niveau de la stratégie ni de la technique, mais à leur point de jonction. C'est ce point que je sais tenir, du comité de pilotage jusqu'au déploiement opérationnel, en passant par l'encadrement direct des équipes.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
@@ -67,15 +67,15 @@
         "period": "2024 — Aujourd'hui",
         "title": "Pilotage de la modernisation S&E",
         "org": "Organisation Internationale de la Francophonie · Paris",
-        "description": "Conception d'une plateforme institutionnelle pour digitaliser le pilotage d'un portefeuille de programmes internationaux. De la spécification à la gouvernance, je structure un dispositif qui transformera la prise de décision sur le terrain.",
+        "description": "Pilotage de la modernisation des dispositifs de suivi-évaluation et supervision des équipes référentes sur plusieurs pays. Conception et déploiement d'une plateforme institutionnelle pour digitaliser le pilotage d'un portefeuille de programmes internationaux. De la spécification à la gouvernance, en encadrement direct des opérateurs.",
         "tags": ["Multilatéral", "Architecture", "S&E"],
         "accent": "primary"
       },
       {
         "period": "2021 — 2024",
-        "title": "Catalyseur de croissance · Stratégie data",
+        "title": "Direction adjointe · Stratégie data",
         "org": "Heaven Immobilier Groupe · France",
-        "description": "Mise en place du dispositif de pilotage data du groupe. Conception d'outils d'estimation et de KPIs financiers (coût, marge, rentabilité). Veille immo-tech et expansion sur de nouveaux marchés.",
+        "description": "Direction adjointe d'une équipe opérationnelle pluridisciplinaire en charge de la stratégie data du groupe et de l'atteinte des contrats d'objectifs annuels. Conception d'outils d'estimation et de KPIs financiers (coût, marge, rentabilité). Veille immo-tech et expansion sur de nouveaux marchés.",
         "tags": ["Privé", "Data", "BI"],
         "accent": "secondary"
       },
@@ -83,7 +83,7 @@
         "period": "2018 — 2021",
         "title": "Concepteur de systèmes pour bailleurs UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
-        "description": "Mise en place de deux plateformes web complètes de suivi-évaluation pour le programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé, formation des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques.",
+        "description": "Mission de conseil senior auprès du programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé. Formation et accompagnement des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques sur l'ensemble du dispositif.",
         "tags": ["UE", "Plateforme", "Conseil"],
         "accent": "primary"
       },
@@ -91,7 +91,7 @@
         "period": "2019 — 2020",
         "title": "Structuration des outils de programmation",
         "org": "OIF · Service des Représentations Extérieures · Paris",
-        "description": "Volontaire International de la Francophonie (VIF) au Service de la Coordination des Unités Hors Siège. Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022. Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique.",
+        "description": "Volontaire International de la Francophonie (VIF) au Service de la Coordination des Unités Hors Siège. Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022. Renforcement des capacités des points focaux sur l'utilisation des outils. Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique.",
         "tags": ["Multilatéral", "Outils", "Planification"],
         "accent": "tertiary"
       },
@@ -99,15 +99,15 @@
         "period": "2016 — 2018",
         "title": "Statisticien · Recherche en santé",
         "org": "Coordination de projets en santé · Bénin",
-        "description": "Statisticien au sein d'une coordination de projets de recherche en santé au Bénin, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
+        "description": "Statisticien senior au sein d'une coordination de projets de recherche en santé, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique. Formation des équipes terrain sur les protocoles de collecte et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
         "tags": ["Recherche", "Santé", "Data"],
         "accent": "tertiary"
       },
       {
         "period": "2012 — 2016",
-        "title": "Bâtisseur du suivi-évaluation territorial",
-        "org": "Administration Communale · Bénin",
-        "description": "Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils Access pour le suivi du Plan de Développement Communal (PDC) et la gestion financière.",
+        "title": "Direction de services en gouvernance locale",
+        "org": "Administration territoriale · Bénin",
+        "description": "Trois postes successifs de direction de service au sein d'une administration territoriale en Afrique de l'Ouest : Planification et Développement, Statistique et Analyse, Communication. Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils de suivi du Plan de Développement Communal et de la gestion financière. Encadrement d'équipes opérationnelles.",
         "tags": ["Public", "Territoire", "S&E"],
         "accent": "tertiary"
       }
@@ -279,19 +279,19 @@
       {
         "label": "II. Projets",
         "value": 19,
-        "description": "Projets de développement planifiés et gérés au sein de plusieurs organismes",
+        "description": "Projets de développement pilotés au sein de plusieurs organismes",
         "bar": 70
       },
       {
         "label": "III. OSC",
         "value": 57,
-        "description": "Organisations de la société civile accompagnées en planification & S&E",
+        "description": "Organisations de la société civile encadrées en planification & S&E",
         "bar": 85
       },
       {
         "label": "IV. Formations",
         "value": 39,
-        "description": "Ateliers animés dans 4 pays sur des thématiques variées",
+        "description": "Ateliers de formation senior animés dans 4 pays auprès de plusieurs dizaines de collaborateurs",
         "bar": 78
       }
     ],
@@ -332,8 +332,8 @@
       },
       {
         "label": "V",
-        "title": "Formation & renforcement de capacités",
-        "description": "Transmission par la pratique. Modules sur-mesure, coaching individuel.",
+        "title": "Direction d'équipes, formation et renforcement de capacités",
+        "description": "Direction adjointe d'équipes opérationnelles, supervision multi-pays, formation senior. Transmission par la pratique. Modules sur-mesure, coaching individuel. Plusieurs dizaines de collaborateurs formés et accompagnés.",
         "tags": ["Présentiel", "Distanciel"]
       }
     ]

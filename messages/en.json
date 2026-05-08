@@ -58,7 +58,7 @@
     "h2Part1": "A trajectory of structured",
     "h2Emphasis": "programmes",
     "h2End": ".",
-    "p1": "At the rare intersection between institutional programme piloting and the architecture of AI-augmented systems, I help organisations transform their public policies without endless dependency on vendors. Thirteen years spent structuring planning frameworks, coordinating multi-donor programmes and designing platforms for the OIF, the European Union, GIZ, AFD or the Bill & Melinda Gates Foundation have taught me a simple truth: value no longer emerges at the level of strategy or technique alone, but at their point of intersection. That is the point I know how to hold, from the steering committee through to operational deployment.",
+    "p1": "At the rare intersection between institutional programme piloting, the management of operational teams and the architecture of AI-augmented systems, I help organisations transform their public policies without endless dependency on vendors. Thirteen years spent structuring systems, leading multi-country teams, training several dozen operators and designing platforms for the OIF, the European Union, AFD, GIZ or the Bill & Melinda Gates Foundation have taught me a simple truth: value no longer emerges at the level of strategy or technique alone, but at their point of intersection. That is the point I know how to hold, from the steering committee through to operational deployment, including the direct management of teams.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
@@ -67,15 +67,15 @@
         "period": "2024 — Today",
         "title": "M&E modernisation piloting",
         "org": "Organisation Internationale de la Francophonie · Paris",
-        "description": "Designing an institutional platform to digitalise the steering of an international programme portfolio. From specification to governance, I am structuring a system that will transform decision-making in the field.",
+        "description": "Leading the modernisation of monitoring and evaluation systems and supervising référent teams across multiple countries. Designing and deploying an institutional platform to digitalise the steering of an international programme portfolio. From specification to governance, with direct management of operators.",
         "tags": ["Multilateral", "Architecture", "M&E"],
         "accent": "primary"
       },
       {
         "period": "2021 — 2024",
-        "title": "Growth Catalyst · Data Strategy",
+        "title": "Deputy Direction · Data Strategy",
         "org": "Heaven Immobilier Groupe · France",
-        "description": "Built the group's data-driven steering system. Designed estimation tools and financial KPIs (cost, margin, profitability). Market intelligence and expansion into new segments.",
+        "description": "Deputy leadership of a multidisciplinary operational team responsible for the group's data strategy and delivery of annual contractual objectives. Designed estimation tools and financial KPIs (cost, margin, profitability). Market intelligence and expansion into new segments.",
         "tags": ["Private", "Data", "BI"],
         "accent": "secondary"
       },
@@ -83,7 +83,7 @@
         "period": "2018 — 2021",
         "title": "Systems Designer for EU Donors",
         "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
-        "description": "Implementation of two complete web platforms for monitoring and evaluation under the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system, training of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants.",
+        "description": "Senior consulting assignment for the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system. Training and support of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants across the full system.",
         "tags": ["EU", "Platform", "Consulting"],
         "accent": "primary"
       },
@@ -91,7 +91,7 @@
         "period": "2019 — 2020",
         "title": "Programming tools structuring",
         "org": "OIF · External Representations Service · Paris",
-        "description": "International Volunteer of La Francophonie (VIF) at the Coordination Service for Off-Site Units. Design and deployment of indicator monitoring tools for the 2019-2022 four-year programming. Support to national structures (RESIFS) on the complete strategic planning cycle.",
+        "description": "International Volunteer of La Francophonie (VIF) at the Coordination Service for Off-Site Units. Design and deployment of indicator monitoring tools for the 2019-2022 four-year programming. Capacity building of focal points on tool usage. Support to national structures (RESIFS) on the complete strategic planning cycle.",
         "tags": ["Multilateral", "Tools", "Planning"],
         "accent": "tertiary"
       },
@@ -99,15 +99,15 @@
         "period": "2016 — 2018",
         "title": "Statistician · Health Research",
         "org": "Health Research Project Coordination · Benin",
-        "description": "Statistician within a health research project coordination in Benin, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research and improvement of living conditions of vulnerable populations ('Health Equity' project).",
+        "description": "Senior statistician within a health research project coordination, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research. Training of field teams on data collection protocols and improvement of living conditions of vulnerable populations ('Health Equity' project).",
         "tags": ["Research", "Health", "Data"],
         "accent": "tertiary"
       },
       {
         "period": "2012 — 2016",
-        "title": "Builder of Territorial M&E Systems",
-        "org": "Municipal Administration · Benin",
-        "description": "Built the monitoring system for the Decennial Education Plan. Designed Access tools for the Municipal Development Plan (PDC) monitoring and financial management.",
+        "title": "Head of Services in Local Governance",
+        "org": "Territorial Administration · Benin",
+        "description": "Three successive head-of-service positions within a territorial administration in West Africa: Planning and Development, Statistics and Analysis, Communication. Built the monitoring system for the Decennial Education Plan. Designed tools for Municipal Development Plan monitoring and financial management. Team leadership and management.",
         "tags": ["Public", "Territory", "M&E"],
         "accent": "tertiary"
       }
@@ -279,19 +279,19 @@
       {
         "label": "II. Projects",
         "value": 19,
-        "description": "Development projects planned and managed across multiple organisations",
+        "description": "Development projects piloted across multiple organisations",
         "bar": 70
       },
       {
         "label": "III. CSOs",
         "value": 57,
-        "description": "Civil society organisations supported in planning & M&E",
+        "description": "Civil society organisations supervised in planning & M&E",
         "bar": 85
       },
       {
         "label": "IV. Trainings",
         "value": 39,
-        "description": "Workshops delivered in 4 countries on various themes",
+        "description": "Senior training workshops delivered in 4 countries to several dozen collaborators",
         "bar": 78
       }
     ],
@@ -332,8 +332,8 @@
       },
       {
         "label": "V",
-        "title": "Training & capacity building",
-        "description": "Knowledge transfer through practice. Tailor-made modules, individual coaching.",
+        "title": "Team leadership, training & capacity building",
+        "description": "Deputy leadership of operational teams, multi-country supervision, senior training. Knowledge transfer through practice. Tailor-made modules, individual coaching. Several dozen collaborators trained and supported.",
         "tags": ["In-person", "Remote"]
       }
     ]
