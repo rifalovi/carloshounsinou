@@ -59,7 +59,7 @@ const svgText = `
     <rect x="0" y="392" width="48" height="2" fill="#B45309" opacity="0.7"/>
     <text x="64" y="405" font-family="'Courier New', Courier, monospace"
           font-size="13" font-weight="600" fill="#0A1628" letter-spacing="3">
-      STRATÈGE QUI SAIT BÂTIR
+      CHEF D'ORCHESTRE DE PROGRAMMES
     </text>
 
     <!-- URL bottom-right -->

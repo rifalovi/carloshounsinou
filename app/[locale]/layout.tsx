@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: "/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: "Carlos HOUNSINOU — Stratège qui sait bâtir",
+          alt: "Carlos HOUNSINOU — Chef d'orchestre de programmes",
         },
       ],
     },
