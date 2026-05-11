@@ -16,6 +16,42 @@ const INITIAL_MESSAGE: Message = {
     "Bonjour, je suis l'assistant IA développé par Carlos. Je peux répondre à vos questions sur son parcours, ses domaines d'expertise et ses réalisations. Pour échanger directement avec lui, le formulaire Contact reste à votre disposition.",
 };
 
+function extractNumberedChoices(content: string): {
+  textBefore: string;
+  choices: string[];
+  textAfter: string;
+} | null {
+  const lines = content.split("\n");
+  let firstChoiceIndex = -1;
+  let lastChoiceIndex = -1;
+  const choices: string[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const match = lines[i].match(/^(\d+)\.\s+(.+)/);
+    if (match) {
+      const choiceNumber = parseInt(match[1]);
+      if (choices.length === 0 && choiceNumber === 1) {
+        firstChoiceIndex = i;
+      }
+      if (choices.length + 1 === choiceNumber) {
+        choices.push(match[2].trim());
+        lastChoiceIndex = i;
+      }
+    } else if (choices.length > 0 && lines[i].trim() !== "") {
+      break;
+    }
+  }
+
+  if (choices.length < 2) return null;
+  if (choices.some((c) => c.length > 80)) return null;
+
+  return {
+    textBefore: lines.slice(0, firstChoiceIndex).join("\n").trim(),
+    choices,
+    textAfter: lines.slice(lastChoiceIndex + 1).join("\n").trim(),
+  };
+}
+
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
@@ -38,8 +74,7 @@ export default function ChatBot() {
     }
   }, [open]);
 
-  async function send() {
-    const text = input.trim();
+  async function sendMessage(text: string) {
     if (!text || loading) return;
 
     track("chatbot_question", {
@@ -50,7 +85,6 @@ export default function ChatBot() {
     const userMsg: Message = { role: "user", content: text };
     const updatedMessages = [...messages, userMsg];
     setMessages(updatedMessages);
-    setInput("");
     setLoading(true);
     setError(null);
 
@@ -84,11 +118,55 @@ export default function ChatBot() {
     }
   }
 
+  async function send() {
+    const text = input.trim();
+    if (!text || loading) return;
+    setInput("");
+    await sendMessage(text);
+  }
+
   function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       send();
     }
+  }
+
+  function renderAssistantContent(content: string) {
+    const parsed = extractNumberedChoices(content);
+    if (parsed) {
+      return (
+        <div className="md">
+          {parsed.textBefore && (
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {parsed.textBefore}
+            </ReactMarkdown>
+          )}
+          <div className="choice-buttons">
+            {parsed.choices.map((choice, idx) => (
+              <button
+                key={idx}
+                className="choice-button"
+                onClick={() => sendMessage(choice)}
+                disabled={loading || remaining === 0}
+              >
+                {choice}
+              </button>
+            ))}
+          </div>
+          {parsed.textAfter && (
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {parsed.textAfter}
+            </ReactMarkdown>
+          )}
+        </div>
+      );
+    }
+    return (
+      <div className="md">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      </div>
+    );
   }
 
   return (
@@ -334,6 +412,32 @@ export default function ChatBot() {
           font-style: italic;
           color: #475569;
         }
+        .choice-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin: 8px 0;
+        }
+        .choice-button {
+          background: rgba(180, 83, 9, 0.08);
+          border: 1px solid rgba(180, 83, 9, 0.25);
+          color: #B45309;
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-size: 12.5px;
+          text-align: left;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          font-family: var(--font-sans, sans-serif);
+          line-height: 1.4;
+        }
+        .choice-button:hover:not(:disabled) {
+          background: rgba(180, 83, 9, 0.15);
+          border-color: rgba(180, 83, 9, 0.45);
+          transform: translateY(-1px);
+        }
+        .choice-button:active:not(:disabled) { transform: translateY(0); }
+        .choice-button:disabled { opacity: 0.5; cursor: default; }
         @media (max-width: 480px) {
           .chatbot-btn { bottom: 20px; right: 16px; }
           .chatbot-modal { right: 16px; bottom: 88px; width: calc(100vw - 32px); }
@@ -380,11 +484,7 @@ export default function ChatBot() {
                 {msg.role === "user" ? (
                   msg.content
                 ) : (
-                  <div className="md">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {msg.content}
-                    </ReactMarkdown>
-                  </div>
+                  renderAssistantContent(msg.content)
                 )}
               </div>
             ))}
