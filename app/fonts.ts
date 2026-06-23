@@ -1,19 +1,7 @@
-import { Source_Serif_4, Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
-export const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-export const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
+// Sans et Serif : system fonts Apple (SF Pro / New York)
+// définis directement dans globals.css via --font-sans et --font-serif
 
 export const mono = JetBrains_Mono({
   subsets: ["latin"],

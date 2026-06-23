@@ -20,13 +20,13 @@
   --color-grey:          #475569;
   --color-grey-soft:     #64748B;
 
-  /* ─── Fonts — variables injectées par next/font via className sur <html> ─── */
-  /* --font-serif  → Source Serif 4  */
-  /* --font-sans   → Inter           */
-  /* --font-mono   → JetBrains Mono  */
+  /* ─── Fonts — system fonts Apple ─── */
+  /* --font-mono → JetBrains Mono (via next/font) */
 }
 
 :root {
+  --font-sans:  -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
   --line:        rgba(10, 22, 40, 0.08);
   --line-strong: rgba(10, 22, 40, 0.18);
 }

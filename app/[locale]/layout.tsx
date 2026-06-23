@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { sourceSerif, inter, mono } from "@/app/fonts";
+import { mono } from "@/app/fonts";
 import "@/app/globals.css";
 import ChatBot from "@/components/chat/ChatBot";
 import { Analytics } from "@vercel/analytics/next";
@@ -64,7 +64,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${sourceSerif.variable} ${inter.variable} ${mono.variable}`}
+      className={`${mono.variable}`}
     >
       <body>
         <NextIntlClientProvider messages={messages}>
