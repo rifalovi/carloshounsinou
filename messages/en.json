@@ -68,7 +68,11 @@
         "title": "From project engineering to M&E modernization",
         "org": "Organisation Internationale de la Francophonie · Paris",
         "description": "Piloting the modernisation of monitoring and evaluation systems and supervising référent teams across multiple countries. Design and deployment of an institutional platform to digitalise the steering of an international programme portfolio. End-to-end leadership of an institutional mapping platform for multilateral projects, including automated data extraction through artificial intelligence, in technical supervision of an external service provider and coordination of institutional compliance. From specification to governance, with direct team management.",
-        "tags": ["Multilateral", "Architecture", "M&E"],
+        "tags": [
+          "Multilateral",
+          "Architecture",
+          "M&E"
+        ],
         "accent": "primary"
       },
       {
@@ -76,7 +80,11 @@
         "title": "Deputy Direction · Data Strategy",
         "org": "Heaven Immobilier Groupe · France",
         "description": "Deputy leadership of a multidisciplinary operational team responsible for the group's data strategy and delivery of annual contractual objectives. Designed estimation tools and financial KPIs (cost, margin, profitability). Market intelligence and expansion into new segments.",
-        "tags": ["Private", "Data", "BI"],
+        "tags": [
+          "Private",
+          "Data",
+          "BI"
+        ],
         "accent": "secondary"
       },
       {
@@ -84,7 +92,11 @@
         "title": "Systems Designer for EU Donors",
         "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
         "description": "Senior consulting assignment for the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system. Training and support of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants across the full system.",
-        "tags": ["EU", "Platform", "Consulting"],
+        "tags": [
+          "EU",
+          "Platform",
+          "Consulting"
+        ],
         "accent": "primary"
       },
       {
@@ -92,7 +104,11 @@
         "title": "Programming tools structuring",
         "org": "OIF · External Representations Service · Paris",
         "description": "International Volunteer of La Francophonie (VIF) at the Coordination Service for Off-Site Units. Design and deployment of indicator monitoring tools for the 2019-2022 four-year programming. Capacity building of focal points on tool usage. Support to national structures (RESIFS) on the complete strategic planning cycle.",
-        "tags": ["Multilateral", "Tools", "Planning"],
+        "tags": [
+          "Multilateral",
+          "Tools",
+          "Planning"
+        ],
         "accent": "tertiary"
       },
       {
@@ -100,7 +116,11 @@
         "title": "Statistician · Health Research",
         "org": "Health Research Project Coordination · Benin",
         "description": "Senior statistician within a health research project coordination, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research. Training of field teams on data collection protocols and improvement of living conditions of vulnerable populations ('Health Equity' project).",
-        "tags": ["Research", "Health", "Data"],
+        "tags": [
+          "Research",
+          "Health",
+          "Data"
+        ],
         "accent": "tertiary"
       },
       {
@@ -108,17 +128,21 @@
         "title": "Head of Services in Local Governance",
         "org": "Territorial Administration · Benin",
         "description": "Three successive head-of-service positions within a territorial administration in West Africa: Planning and Development, Statistics and Analysis, Communication. Built the monitoring system for the Decennial Education Plan. Designed tools for Municipal Development Plan monitoring and financial management. Team leadership and management.",
-        "tags": ["Public", "Territory", "M&E"],
+        "tags": [
+          "Public",
+          "Territory",
+          "M&E"
+        ],
         "accent": "tertiary"
       }
     ]
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Seven architectures, seven",
+    "h2Part1": "Eight architectures, eight",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "A selection of seven flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and private operations. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
+    "intro": "A selection of eight flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and private operations. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -131,14 +155,37 @@
         "statusType": "dev",
         "description": "Design and specification of a secure web platform for monitoring & evaluation of an international programme portfolio, deployed for a multilateral francophone organisation.",
         "specs": [
-          { "label": "Scope", "value": "International programmes" },
-          { "label": "Approach", "value": "Secure modular architecture" },
-          { "label": "Compliance", "value": "GDPR · Multi-role security" },
-          { "label": "Status", "value": "In development" }
+          {
+            "label": "Scope",
+            "value": "International programmes"
+          },
+          {
+            "label": "Approach",
+            "value": "Secure modular architecture"
+          },
+          {
+            "label": "Compliance",
+            "value": "GDPR · Multi-role security"
+          },
+          {
+            "label": "Status",
+            "value": "In development"
+          }
         ],
         "hasAI": true,
-        "stack": ["Web architecture", "Databases", "GDPR compliance", "Multi-role security"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/institutional-pilot" }]
+        "stack": [
+          "Web architecture",
+          "Databases",
+          "GDPR compliance",
+          "Multi-role security"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/institutional-pilot"
+          }
+        ]
       },
       {
         "id": "incubation-platform",
@@ -151,14 +198,38 @@
         "statusType": "live",
         "description": "Design and delivery of a comprehensive business platform for the development project lifecycle: training in results-based management standards, guided incubation, SMART indicators, performance measurement, mixed analysis and a conversational assistant based on the institutional knowledge base.",
         "specs": [
-          { "label": "Architecture", "value": "8 modules · 50+ API endpoints" },
-          { "label": "Framework", "value": "RBM · DAC/OECD · SMART indicators" },
-          { "label": "Encapsulated AI", "value": "Documentary RAG · Vision · quotas" },
-          { "label": "Security", "value": "Multi-role RLS · audit · alerts" }
+          {
+            "label": "Architecture",
+            "value": "8 modules · 50+ API endpoints"
+          },
+          {
+            "label": "Framework",
+            "value": "RBM · DAC/OECD · SMART indicators"
+          },
+          {
+            "label": "Encapsulated AI",
+            "value": "Documentary RAG · Vision · quotas"
+          },
+          {
+            "label": "Security",
+            "value": "Multi-role RLS · audit · alerts"
+          }
         ],
         "hasAI": true,
-        "stack": ["Full-stack architecture", "Encapsulated AI", "Vector base", "Multi-role workflow", "Automated reporting"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/incubation-platform" }]
+        "stack": [
+          "Full-stack architecture",
+          "Encapsulated AI",
+          "Vector base",
+          "Multi-role workflow",
+          "Automated reporting"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/incubation-platform"
+          }
+        ]
       },
       {
         "id": "valorisation-platform",
@@ -171,14 +242,38 @@
         "statusType": "live",
         "description": "Design and delivery of an institutional web platform for the public valorisation of a portfolio of strategic projects. Architecture combining data storytelling project sheets, analytical dashboard, map exploration and a conversational assistant powered by semantic search.",
         "specs": [
-          { "label": "Architecture", "value": "Full-stack · vector search" },
-          { "label": "Framework", "value": "International institutional standards" },
-          { "label": "Security", "value": "Multi-role RLS · anti-hallucination" },
-          { "label": "Status", "value": "Delivered · Live pilot" }
+          {
+            "label": "Architecture",
+            "value": "Full-stack · vector search"
+          },
+          {
+            "label": "Framework",
+            "value": "International institutional standards"
+          },
+          {
+            "label": "Security",
+            "value": "Multi-role RLS · anti-hallucination"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered · Live pilot"
+          }
         ],
         "hasAI": true,
-        "stack": ["Full-stack architecture", "Vector base", "Encapsulated AI", "Web cartography", "Multi-role editorial workflow"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/valorisation-platform" }]
+        "stack": [
+          "Full-stack architecture",
+          "Vector base",
+          "Encapsulated AI",
+          "Web cartography",
+          "Multi-role editorial workflow"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/valorisation-platform"
+          }
+        ]
       },
       {
         "id": "eu-platforms",
@@ -191,13 +286,36 @@
         "statusType": "done",
         "description": "Consulting mission for IBF International Consulting: design and implementation of two web platforms dedicated to monitoring & evaluation of European Union-funded projects. Steering tools for coordinators, donors and implementing partners.",
         "specs": [
-          { "label": "Donor", "value": "European Union" },
-          { "label": "Platforms", "value": "2 dedicated tools" },
-          { "label": "Framework", "value": "OECD-DAC standards" },
-          { "label": "Status", "value": "Delivered · Adopted" }
+          {
+            "label": "Donor",
+            "value": "European Union"
+          },
+          {
+            "label": "Platforms",
+            "value": "2 dedicated tools"
+          },
+          {
+            "label": "Framework",
+            "value": "OECD-DAC standards"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered · Adopted"
+          }
         ],
-        "stack": ["Web architecture", "Donor reporting", "Multi-role", "OECD-DAC"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/eu-platforms" }]
+        "stack": [
+          "Web architecture",
+          "Donor reporting",
+          "Multi-role",
+          "OECD-DAC"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/eu-platforms"
+          }
+        ]
       },
       {
         "id": "indicators-platform",
@@ -210,13 +328,89 @@
         "statusType": "dev",
         "description": "Design and development of a secure web platform for data-driven local development steering. Rigorous workflow from collection to publication: annual campaigns, automated quality controls, participatory certification by sectoral focal points, and complete audit trail.",
         "specs": [
-          { "label": "Scale", "value": "Territory and sub-divisions" },
-          { "label": "Framework", "value": "Local Development Plan" },
-          { "label": "Profiles", "value": "3 roles (Admin / Editor / Reader)" },
-          { "label": "Status", "value": "In development" }
+          {
+            "label": "Scale",
+            "value": "Territory and sub-divisions"
+          },
+          {
+            "label": "Framework",
+            "value": "Local Development Plan"
+          },
+          {
+            "label": "Profiles",
+            "value": "3 roles (Admin / Editor / Reader)"
+          },
+          {
+            "label": "Status",
+            "value": "In development"
+          }
         ],
-        "stack": ["Secure web architecture", "Indicator framework", "Certification workflow", "Audit trail", "Multi-role"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/indicators-platform" }]
+        "stack": [
+          "Secure web architecture",
+          "Indicator framework",
+          "Certification workflow",
+          "Audit trail",
+          "Multi-role"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/indicators-platform"
+          }
+        ]
+      },
+      {
+        "id": "cevelab",
+        "visual": "cevelab",
+        "category": "Augmented employability platform",
+        "role": "Personal initiative for francophone inclusion",
+        "title": "CeveLab",
+        "subtitle": "cevelab.com · France & West Africa",
+        "status": "In production",
+        "statusType": "live",
+        "description": "Bilingual (FR/EN) web and mobile platform designed to democratize access to professional application tools. 75% of CVs are filtered out by automated systems before reaching a human recruiter: CeveLab generates ATS-optimized CVs, targeted cover letters and provides job matching across 850,000+ aggregated offers in 30+ countries. Available in France and five West African countries (Benin, Ivory Coast, Senegal, Togo, Cameroon) with Mobile Money integration for financial inclusion. Structured legal framework for user data security: full GDPR compliance, EU hosting, PCI-DSS. No subscription, pay-per-use only.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Next.js 14 · Supabase · Capacitor 8"
+          },
+          {
+            "label": "Curated AI",
+            "value": "Claude Sonnet 4.6 + Haiku 4.5 voice"
+          },
+          {
+            "label": "Platforms",
+            "value": "Web · iOS · Android · PWA"
+          },
+          {
+            "label": "Countries served",
+            "value": "France + 5 West African countries"
+          },
+          {
+            "label": "Compliance",
+            "value": "GDPR · PCI-DSS · INPI registered trademark"
+          },
+          {
+            "label": "Status",
+            "value": "In production"
+          }
+        ],
+        "hasAI": true,
+        "stack": [
+          "Full-stack architecture",
+          "Curated generative AI",
+          "Native multi-platform",
+          "Francophone inclusion",
+          "Multi-currency (EUR / XOF)"
+        ],
+        "actions": [
+          {
+            "label": "cevelab.com ↗",
+            "type": "external",
+            "href": "https://cevelab.com"
+          }
+        ]
       },
       {
         "id": "cap-citoyen",
@@ -229,16 +423,43 @@
         "statusType": "live",
         "description": "Web and mobile platform for preparing the French civic naturalisation exam, made mandatory in January 2026. Complete design: thematic learning paths, flashcards mode, audio content, exam simulation and peer community. Integrated AI Coach (Anthropic API and GPT-4o-mini).",
         "specs": [
-          { "label": "Target market", "value": "100,000 / year (naturalisations)" },
-          { "label": "Content", "value": "800+ questions, 100+ audios, 400 flashcards" },
-          { "label": "Platforms", "value": "Web · Android · PWA · iOS pending" },
-          { "label": "Status", "value": "Live · Google Play" }
+          {
+            "label": "Target market",
+            "value": "100,000 / year (naturalisations)"
+          },
+          {
+            "label": "Content",
+            "value": "800+ questions, 100+ audios, 400 flashcards"
+          },
+          {
+            "label": "Platforms",
+            "value": "Web · Android · PWA · iOS pending"
+          },
+          {
+            "label": "Status",
+            "value": "Live · Google Play"
+          }
         ],
         "hasAI": true,
-        "stack": ["Next.js", "Anthropic API", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
+        "stack": [
+          "Next.js",
+          "Anthropic API",
+          "GPT-4o-mini",
+          "ElevenLabs",
+          "Stripe",
+          "PWA"
+        ],
         "actions": [
-          { "label": "View project →", "type": "detail", "href": "/realisations/cap-citoyen" },
-          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
+          {
+            "label": "View project →",
+            "type": "detail",
+            "href": "/realisations/cap-citoyen"
+          },
+          {
+            "label": "cap-citoyen.fr",
+            "type": "external",
+            "href": "https://cap-citoyen.fr"
+          }
         ],
         "capImageAlt": "Cap Citoyen app screenshot, home screen with stats"
       },
@@ -253,13 +474,37 @@
         "statusType": "live",
         "description": "Design and deployment of a comprehensive business platform for field operations steering: agent portfolio, geographic referencing, automated scheduling, calendar tracking, quote and invoice generation. No-code accelerated approach for reduced time-to-market.",
         "specs": [
-          { "label": "Architecture", "value": "Responsive web · Mobile application" },
-          { "label": "Features", "value": "Portfolio · Assignment · Dashboard · Calendar" },
-          { "label": "Approach", "value": "Accelerated no-code · API interoperability" },
-          { "label": "Status", "value": "Delivered · In production" }
+          {
+            "label": "Architecture",
+            "value": "Responsive web · Mobile application"
+          },
+          {
+            "label": "Features",
+            "value": "Portfolio · Assignment · Dashboard · Calendar"
+          },
+          {
+            "label": "Approach",
+            "value": "Accelerated no-code · API interoperability"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered · In production"
+          }
         ],
-        "stack": ["No-code platform", "Third-party APIs", "Web cartography", "Automated workflow", "Mobile application"],
-        "actions": [{ "label": "Learn more →", "type": "detail", "href": "/realisations/operations-platform" }]
+        "stack": [
+          "No-code platform",
+          "Third-party APIs",
+          "Web cartography",
+          "Automated workflow",
+          "Mobile application"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/operations-platform"
+          }
+        ]
       }
     ]
   },
@@ -308,7 +553,14 @@
       "label": "I. Main pillar",
       "title": "Integrated systems architecture for Monitoring & Evaluation",
       "description": "Design of complete platforms aligned with Results-Based Management. From logical framework to technical specifications, including data governance and security.",
-      "tags": ["RBM", "OECD-DAC", "Logframe", "Theory of Change", "Databases", "Governance"],
+      "tags": [
+        "RBM",
+        "OECD-DAC",
+        "Logframe",
+        "Theory of Change",
+        "Databases",
+        "Governance"
+      ],
       "cta": "See services →"
     },
     "tiles": [
@@ -316,25 +568,40 @@
         "label": "II",
         "title": "Data analytics & Business Intelligence",
         "description": "Advanced statistical analysis, dashboards, data valorisation.",
-        "tags": ["Power BI", "SPSS", "R"]
+        "tags": [
+          "Power BI",
+          "SPSS",
+          "R"
+        ]
       },
       {
         "label": "III",
         "title": "SaaS solutions & digital products",
         "description": "Design and launch of web/mobile platforms, AI integration.",
-        "tags": ["Next.js", "Anthropic API", "GPT-4"]
+        "tags": [
+          "Next.js",
+          "Anthropic API",
+          "GPT-4"
+        ]
       },
       {
         "label": "IV",
         "title": "No-Code tools & automation",
         "description": "Rapid deployment of business applications, process automation.",
-        "tags": ["No-code mobile", "Airtable", "Make"]
+        "tags": [
+          "No-code mobile",
+          "Airtable",
+          "Make"
+        ]
       },
       {
         "label": "V",
         "title": "Team leadership, training & capacity building",
         "description": "Deputy leadership of operational teams, multi-country supervision, senior training. Knowledge transfer through practice. Tailor-made modules, individual coaching. Several dozen collaborators trained and supported.",
-        "tags": ["In-person", "Remote"]
+        "tags": [
+          "In-person",
+          "Remote"
+        ]
       }
     ]
   },
@@ -347,25 +614,41 @@
         "label": "DOCUMENTARY RAG",
         "title": "Semantic search on institutional knowledge bases",
         "description": "Multilingual vector bases optimised for French, high-quality embeddings, systematic source citation.",
-        "tags": ["Voyage AI", "Embeddings", "pgvector"]
+        "tags": [
+          "Voyage AI",
+          "Embeddings",
+          "pgvector"
+        ]
       },
       {
         "label": "CONVERSATIONAL ASSISTANTS",
         "title": "Coaches and copilots integrated into business workflows",
         "description": "Real-time streaming, conversational memory, multimodal upload (text, images, documents), contextual responses aligned to the project cycle.",
-        "tags": ["Claude API", "Vision", "Streaming"]
+        "tags": [
+          "Claude API",
+          "Vision",
+          "Streaming"
+        ]
       },
       {
         "label": "GUIDED GENERATION",
         "title": "Indicators, questionnaires, analyses generated",
         "description": "Assisted production of SMART indicators, survey questionnaires, and analytical notes with systematic human validation.",
-        "tags": ["LLM", "Workflow", "Validation"]
+        "tags": [
+          "LLM",
+          "Workflow",
+          "Validation"
+        ]
       },
       {
         "label": "ETHICAL SAFEGUARDS",
         "title": "Anti-hallucination, quotas, controlled refusal",
         "description": "Mandatory source citation, explicit refusal of off-topic queries, per-role token quotas, full API call audit, institutional compliance.",
-        "tags": ["Anti-hallucination", "Quotas", "Audit"]
+        "tags": [
+          "Anti-hallucination",
+          "Quotas",
+          "Audit"
+        ]
       }
     ]
   },
@@ -380,42 +663,72 @@
         "eyebrow": "Electoral Statistics",
         "title": "Mapping Voting Behaviour in Benin",
         "description": "Statistical analysis of communal electoral results to identify territorial dynamics and socio-demographic correlations.",
-        "tags": ["R", "GIS", "Statistics", "Governance"]
+        "tags": [
+          "R",
+          "GIS",
+          "Statistics",
+          "Governance"
+        ]
       },
       {
         "id": "health-mapping",
         "eyebrow": "Health Mapping",
         "title": "Rural Health Coverage Analysis",
         "description": "Geolocation system for health infrastructure and analysis of medical deserts to guide resource allocation policies.",
-        "tags": ["QGIS", "ODK", "Public Health", "NGO"]
+        "tags": [
+          "QGIS",
+          "ODK",
+          "Public Health",
+          "NGO"
+        ]
       },
       {
         "id": "padlaf-women",
         "eyebrow": "Economic Empowerment",
         "title": "PADLAF Women Programme M&E Framework",
         "description": "Results measurement framework for a rural women's economic empowerment programme under a bilateral European funding arrangement.",
-        "tags": ["M&E", "Gender", "EU", "Rural Development"]
+        "tags": [
+          "M&E",
+          "Gender",
+          "EU",
+          "Rural Development"
+        ]
       },
       {
         "id": "communal-budgets",
         "eyebrow": "Local Public Finance",
         "title": "Communal Budget Dashboard",
         "description": "Visualisation and comparison platform for Beninese municipal budgets, enabling elected officials and civil society to track budget execution.",
-        "tags": ["Power BI", "Public Finance", "Open Data", "Decentralisation"]
+        "tags": [
+          "Power BI",
+          "Public Finance",
+          "Open Data",
+          "Decentralisation"
+        ]
       },
       {
         "id": "territorial-pcd",
         "eyebrow": "Territorial Planning",
         "title": "Communal Development Plans — Participatory Diagnosis",
         "description": "Data collection and analysis framework for development plan diagnostics across ten municipalities.",
-        "tags": ["ODK", "Citizen Participation", "Planning", "Decentralisation"]
+        "tags": [
+          "ODK",
+          "Citizen Participation",
+          "Planning",
+          "Decentralisation"
+        ]
       },
       {
         "id": "health-equity",
         "eyebrow": "Health Equity",
         "title": "Composite Healthcare Access Index",
         "description": "Development of a multidimensional index measuring equitable access to primary healthcare in rural settings, integrating distance, cost, and availability.",
-        "tags": ["Python", "Statistics", "Public Health", "Research"]
+        "tags": [
+          "Python",
+          "Statistics",
+          "Public Health",
+          "Research"
+        ]
       }
     ]
   },
@@ -437,7 +750,14 @@
       "step2Placeholder": "you@organisation.org",
       "step3Label": "III.",
       "step3Question": "What would you like to discuss?",
-      "step3Chips": ["Monitoring & evaluation", "BI dashboard", "SaaS application", "No-Code", "Training", "Other"],
+      "step3Chips": [
+        "Monitoring & evaluation",
+        "BI dashboard",
+        "SaaS application",
+        "No-Code",
+        "Training",
+        "Other"
+      ],
       "step4Label": "IV.",
       "step4Question": "Briefly describe your project",
       "step4Placeholder": "A few lines is enough; we will go deeper during the conversation.",

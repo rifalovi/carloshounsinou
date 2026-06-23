@@ -14,7 +14,7 @@ type Action = {
 };
 
 type Props = {
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab";
   badge: string;
   badgeType: "dev" | "live" | "done";
   hasAI?: boolean;
@@ -376,6 +376,75 @@ function OperationsVisual() {
   );
 }
 
+function CevelabVisual() {
+  const jobs = [
+    { y: 28, score: "95%", barW: 58, active: true },
+    { y: 58, score: "87%", barW: 46, active: false },
+    { y: 88, score: "71%", barW: 34, active: false },
+  ];
+  return (
+    <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", maxWidth: "300px", height: "auto", opacity: 0.85 }}>
+      {/* Title */}
+      <text x="150" y="14" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6.5"
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">CAREER SUITE · IA ENCADRÉE</text>
+      <line x1="16" y1="20" x2="284" y2="20" stroke={C_SOFT} strokeWidth="0.8"/>
+      {/* CV Panel */}
+      <rect x="16" y="28" width="88" height="110" fill="rgba(245,239,230,0.05)"
+        stroke="rgba(245,239,230,0.2)" strokeWidth="0.8" rx="2"/>
+      <text x="60" y="40" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6"
+        fill={C_SOFT} letterSpacing="0.07em" fontWeight="500">CV OPTIMISÉ</text>
+      <rect x="24" y="46" width="72" height="4" fill="rgba(245,239,230,0.28)" rx="1"/>
+      <rect x="24" y="54" width="56" height="3" fill="rgba(245,239,230,0.14)" rx="1"/>
+      <rect x="24" y="61" width="64" height="3" fill="rgba(245,239,230,0.12)" rx="1"/>
+      <rect x="24" y="68" width="48" height="3" fill="rgba(245,239,230,0.10)" rx="1"/>
+      <text x="24" y="82" fontFamily="JetBrains Mono" fontSize="5.5"
+        fill="rgba(245,239,230,0.4)">Score ATS</text>
+      <rect x="24" y="86" width="72" height="3" fill="rgba(245,239,230,0.08)" rx="1"/>
+      <rect x="24" y="86" width="66" height="3" fill={COPPER} rx="1"/>
+      <text x="52" y="112" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="22"
+        fill={CREAM} fontWeight="300">92</text>
+      <text x="70" y="112" fontFamily="JetBrains Mono" fontSize="7" fill={C_SOFT}>/100</text>
+      <text x="60" y="126" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5"
+        fill="rgba(245,239,230,0.3)">Formulaire · Vocal</text>
+      <text x="60" y="133" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5"
+        fill="rgba(245,239,230,0.3)">Import · Coach IA</text>
+      {/* AI matching circle */}
+      <circle cx="148" cy="80" r="16" fill="rgba(180,83,9,0.09)"
+        stroke="rgba(194,112,31,0.4)" strokeWidth="1"/>
+      <text x="148" y="77" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6"
+        fill="rgba(245,239,230,0.5)" letterSpacing="0.05em">IA</text>
+      <text x="148" y="86" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="6"
+        fill="rgba(245,239,230,0.5)">match</text>
+      <line x1="104" y1="80" x2="132" y2="80" stroke={C_SOFT} strokeWidth="0.8"/>
+      <line x1="164" y1="80" x2="196" y2="80" stroke={C_SOFT} strokeWidth="0.8"/>
+      {/* Job match cards */}
+      {jobs.map(({ y, score, barW, active }) => (
+        <g key={y}>
+          <rect x="196" y={y} width="88" height="24"
+            fill="rgba(245,239,230,0.04)"
+            stroke={active ? "rgba(194,112,31,0.5)" : "rgba(245,239,230,0.12)"}
+            strokeWidth="0.6" rx="2"/>
+          <rect x="202" y={y + 7} width={barW} height="3"
+            fill="rgba(245,239,230,0.18)" rx="1"/>
+          <rect x="202" y={y + 14} width={barW - 12} height="2.5"
+            fill="rgba(245,239,230,0.1)" rx="1"/>
+          <text x="278" y={y + 16} textAnchor="end" fontFamily="JetBrains Mono"
+            fontSize="6" fill={active ? COPPER : "rgba(245,239,230,0.3)"}>{score}</text>
+        </g>
+      ))}
+      <text x="240" y="128" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5.5"
+        fill="rgba(245,239,230,0.35)">850K+ offres · 30 pays</text>
+      {/* Bottom */}
+      <line x1="16" y1="148" x2="284" y2="148" stroke="rgba(194,112,31,0.2)" strokeWidth="0.7"/>
+      <text x="150" y="162" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5.5"
+        fill={COPPER} opacity="0.65" letterSpacing="0.06em">FRANCE · BÉNIN · CDI · SN · TG · CM</text>
+      <text x="150" y="174" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="5"
+        fill="rgba(245,239,230,0.3)">Orange Money · MTN · Wave · Stripe</text>
+    </svg>
+  );
+}
+
 /* ── visual config ── */
 const visualBg: Record<string, string> = {
   oif:          "linear-gradient(135deg, #060F1C 0%, #0A1628 100%)",
@@ -385,6 +454,7 @@ const visualBg: Record<string, string> = {
   gov:          "linear-gradient(135deg, #0A1628 0%, #1A1410 60%, #0C0A06 100%)",
   cap:          "linear-gradient(135deg, #0A1628 0%, #1A2537 60%, #060F1C 100%)",
   operations:   "linear-gradient(135deg, #0A1628 0%, #0F1A08 55%, #060F1C 100%)",
+  cevelab:      "linear-gradient(135deg, #060F1C 0%, #0A1A20 55%, #081520 100%)",
 };
 
 const badgeColors: Record<string, string> = {
@@ -489,6 +559,7 @@ export default function FlagshipCard({
         {visual === "gov" && <GovVisual />}
         {visual === "cap" && <CapVisual alt={capImageAlt} />}
         {visual === "operations" && <OperationsVisual />}
+        {visual === "cevelab" && <CevelabVisual />}
       </div>
 
       {/* Content */}

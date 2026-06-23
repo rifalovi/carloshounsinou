@@ -68,7 +68,11 @@
         "title": "De l'ingénierie des projets à la modernisation des S&E",
         "org": "Organisation Internationale de la Francophonie · Paris",
         "description": "Pilotage de la modernisation des dispositifs de suivi-évaluation et supervision des équipes référentes sur plusieurs pays. Conception et déploiement d'une plateforme institutionnelle pour digitaliser le pilotage d'un portefeuille de programmes internationaux. Pilotage de bout en bout d'une plateforme institutionnelle de cartographie des projets multilatéraux, intégrant une extraction automatique de données par intelligence artificielle, en supervision technique d'un prestataire externe et coordination de la conformité institutionnelle. De la spécification à la gouvernance, en encadrement direct des opérateurs.",
-        "tags": ["Multilatéral", "Architecture", "S&E"],
+        "tags": [
+          "Multilatéral",
+          "Architecture",
+          "S&E"
+        ],
         "accent": "primary"
       },
       {
@@ -76,7 +80,11 @@
         "title": "Direction adjointe · Stratégie data",
         "org": "Heaven Immobilier Groupe · France",
         "description": "Direction adjointe d'une équipe opérationnelle pluridisciplinaire en charge de la stratégie data du groupe et de l'atteinte des contrats d'objectifs annuels. Conception d'outils d'estimation et de KPIs financiers (coût, marge, rentabilité). Veille immo-tech et expansion sur de nouveaux marchés.",
-        "tags": ["Privé", "Data", "BI"],
+        "tags": [
+          "Privé",
+          "Data",
+          "BI"
+        ],
         "accent": "secondary"
       },
       {
@@ -84,7 +92,11 @@
         "title": "Concepteur de systèmes pour bailleurs UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
         "description": "Mission de conseil senior auprès du programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé. Formation et accompagnement des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques sur l'ensemble du dispositif.",
-        "tags": ["UE", "Plateforme", "Conseil"],
+        "tags": [
+          "UE",
+          "Plateforme",
+          "Conseil"
+        ],
         "accent": "primary"
       },
       {
@@ -92,7 +104,11 @@
         "title": "Structuration des outils de programmation",
         "org": "OIF · Service des Représentations Extérieures · Paris",
         "description": "Volontaire International de la Francophonie (VIF) au Service de la Coordination des Unités Hors Siège. Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022. Renforcement des capacités des points focaux sur l'utilisation des outils. Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique.",
-        "tags": ["Multilatéral", "Outils", "Planification"],
+        "tags": [
+          "Multilatéral",
+          "Outils",
+          "Planification"
+        ],
         "accent": "tertiary"
       },
       {
@@ -100,7 +116,11 @@
         "title": "Statisticien · Recherche en santé",
         "org": "Coordination de projets en santé · Bénin",
         "description": "Statisticien senior au sein d'une coordination de projets de recherche en santé, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique. Formation des équipes terrain sur les protocoles de collecte et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
-        "tags": ["Recherche", "Santé", "Data"],
+        "tags": [
+          "Recherche",
+          "Santé",
+          "Data"
+        ],
         "accent": "tertiary"
       },
       {
@@ -108,17 +128,21 @@
         "title": "Direction de services en gouvernance locale",
         "org": "Administration territoriale · Bénin",
         "description": "Trois postes successifs de direction de service au sein d'une administration territoriale en Afrique de l'Ouest : Planification et Développement, Statistique et Analyse, Communication. Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils de suivi du Plan de Développement Communal et de la gestion financière. Encadrement d'équipes opérationnelles.",
-        "tags": ["Public", "Territoire", "S&E"],
+        "tags": [
+          "Public",
+          "Territoire",
+          "S&E"
+        ],
         "accent": "tertiary"
       }
     ]
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Sept architectures, sept",
+    "h2Part1": "Huit architectures, huit",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Une sélection de sept architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et les opérations privées. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
+    "intro": "Une sélection de huit architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et les opérations privées. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -131,14 +155,37 @@
         "statusType": "dev",
         "description": "Conception et spécification d'une plateforme web sécurisée pour le suivi-évaluation d'un portefeuille de programmes internationaux, déployée auprès d'une organisation multilatérale francophone.",
         "specs": [
-          { "label": "Périmètre", "value": "Programmes internationaux" },
-          { "label": "Approche", "value": "Architecture modulaire sécurisée" },
-          { "label": "Conformité", "value": "RGPD · Sécurité multi-rôles" },
-          { "label": "Statut", "value": "En développement" }
+          {
+            "label": "Périmètre",
+            "value": "Programmes internationaux"
+          },
+          {
+            "label": "Approche",
+            "value": "Architecture modulaire sécurisée"
+          },
+          {
+            "label": "Conformité",
+            "value": "RGPD · Sécurité multi-rôles"
+          },
+          {
+            "label": "Statut",
+            "value": "En développement"
+          }
         ],
         "hasAI": true,
-        "stack": ["Architecture web", "Bases de données", "Conformité RGPD", "Sécurité multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/institutional-pilot" }]
+        "stack": [
+          "Architecture web",
+          "Bases de données",
+          "Conformité RGPD",
+          "Sécurité multi-rôles"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/institutional-pilot"
+          }
+        ]
       },
       {
         "id": "incubation-platform",
@@ -151,14 +198,38 @@
         "statusType": "live",
         "description": "Conception et livraison d'une plateforme métier complète pour le cycle de vie des projets de développement : formation aux standards GAR, incubation guidée, indicateurs SMART, mesure de rendement, analyse mixte et assistant conversationnel basé sur la base documentaire institutionnelle.",
         "specs": [
-          { "label": "Architecture", "value": "8 modules · 50+ endpoints API" },
-          { "label": "Cadre", "value": "GAR · CAD/OCDE · indicateurs SMART" },
-          { "label": "IA encadrée", "value": "RAG documentaire · Vision · quotas" },
-          { "label": "Sécurité", "value": "RLS multi-rôles · audit · alertes" }
+          {
+            "label": "Architecture",
+            "value": "8 modules · 50+ endpoints API"
+          },
+          {
+            "label": "Cadre",
+            "value": "GAR · CAD/OCDE · indicateurs SMART"
+          },
+          {
+            "label": "IA encadrée",
+            "value": "RAG documentaire · Vision · quotas"
+          },
+          {
+            "label": "Sécurité",
+            "value": "RLS multi-rôles · audit · alertes"
+          }
         ],
         "hasAI": true,
-        "stack": ["Architecture full-stack", "IA générative encadrée", "Base vectorielle", "Workflow multi-rôles", "Reporting automatisé"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/incubation-platform" }]
+        "stack": [
+          "Architecture full-stack",
+          "IA générative encadrée",
+          "Base vectorielle",
+          "Workflow multi-rôles",
+          "Reporting automatisé"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/incubation-platform"
+          }
+        ]
       },
       {
         "id": "valorisation-platform",
@@ -171,14 +242,38 @@
         "statusType": "live",
         "description": "Conception et livraison d'une plateforme web institutionnelle pour la valorisation publique d'un portefeuille de projets stratégiques. Architecture combinant fiches projet en data storytelling, dashboard analytique, exploration cartographique et assistant conversationnel basé sur la recherche sémantique.",
         "specs": [
-          { "label": "Architecture", "value": "Full-stack · recherche vectorielle" },
-          { "label": "Cadre", "value": "Exigences institutionnelles internationales" },
-          { "label": "Sécurité", "value": "RLS multi-rôles · anti-hallucination" },
-          { "label": "Statut", "value": "Livré · Pilote en production" }
+          {
+            "label": "Architecture",
+            "value": "Full-stack · recherche vectorielle"
+          },
+          {
+            "label": "Cadre",
+            "value": "Exigences institutionnelles internationales"
+          },
+          {
+            "label": "Sécurité",
+            "value": "RLS multi-rôles · anti-hallucination"
+          },
+          {
+            "label": "Statut",
+            "value": "Livré · Pilote en production"
+          }
         ],
         "hasAI": true,
-        "stack": ["Architecture full-stack", "Base vectorielle", "IA générative encadrée", "Cartographie web", "Workflow éditorial multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/valorisation-platform" }]
+        "stack": [
+          "Architecture full-stack",
+          "Base vectorielle",
+          "IA générative encadrée",
+          "Cartographie web",
+          "Workflow éditorial multi-rôles"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/valorisation-platform"
+          }
+        ]
       },
       {
         "id": "eu-platforms",
@@ -191,13 +286,36 @@
         "statusType": "done",
         "description": "Mission de conseil pour le compte d'IBF International Consulting : conception et mise en place de deux plateformes web dédiées au suivi-évaluation de projets financés par l'Union Européenne. Outils de pilotage destinés aux coordonnateurs, bailleurs et partenaires de mise en œuvre.",
         "specs": [
-          { "label": "Bailleur", "value": "Union Européenne" },
-          { "label": "Plateformes", "value": "2 outils dédiés" },
-          { "label": "Cadre", "value": "Standards CAD-OCDE" },
-          { "label": "Statut", "value": "Livré · Adopté" }
+          {
+            "label": "Bailleur",
+            "value": "Union Européenne"
+          },
+          {
+            "label": "Plateformes",
+            "value": "2 outils dédiés"
+          },
+          {
+            "label": "Cadre",
+            "value": "Standards CAD-OCDE"
+          },
+          {
+            "label": "Statut",
+            "value": "Livré · Adopté"
+          }
         ],
-        "stack": ["Architecture web", "Reporting bailleur", "Multi-rôles", "CAD-OCDE"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/eu-platforms" }]
+        "stack": [
+          "Architecture web",
+          "Reporting bailleur",
+          "Multi-rôles",
+          "CAD-OCDE"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/eu-platforms"
+          }
+        ]
       },
       {
         "id": "indicators-platform",
@@ -210,13 +328,89 @@
         "statusType": "dev",
         "description": "Conception et développement d'une plateforme web sécurisée pour le pilotage du développement territorial par les données. Workflow rigoureux de la collecte à la publication : campagnes annuelles, contrôles qualité automatiques, certification participative par les points focaux sectoriels et journal d'audit complet.",
         "specs": [
-          { "label": "Échelle", "value": "Territoire et subdivisions" },
-          { "label": "Cadre", "value": "Plan de Développement local" },
-          { "label": "Profils", "value": "3 rôles (Admin / Éditeur / Lecteur)" },
-          { "label": "Statut", "value": "En développement" }
+          {
+            "label": "Échelle",
+            "value": "Territoire et subdivisions"
+          },
+          {
+            "label": "Cadre",
+            "value": "Plan de Développement local"
+          },
+          {
+            "label": "Profils",
+            "value": "3 rôles (Admin / Éditeur / Lecteur)"
+          },
+          {
+            "label": "Statut",
+            "value": "En développement"
+          }
         ],
-        "stack": ["Architecture web sécurisée", "Référentiel d'indicateurs", "Workflow de certification", "Journal d'audit", "Multi-rôles"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/indicators-platform" }]
+        "stack": [
+          "Architecture web sécurisée",
+          "Référentiel d'indicateurs",
+          "Workflow de certification",
+          "Journal d'audit",
+          "Multi-rôles"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/indicators-platform"
+          }
+        ]
+      },
+      {
+        "id": "cevelab",
+        "visual": "cevelab",
+        "category": "Plateforme d'employabilité augmentée",
+        "role": "Initiative personnelle d'inclusion francophone",
+        "title": "CeveLab",
+        "subtitle": "cevelab.com · France & Afrique de l'Ouest",
+        "status": "En production",
+        "statusType": "live",
+        "description": "Plateforme web et mobile bilingue conçue pour démocratiser l'accès aux outils de candidature professionnels. 75% des CV sont écartés par les filtres automatisés avant d'être lus par un humain : CeveLab génère des CV optimisés ATS, des lettres de motivation ciblées et propose un matching parmi 850 000+ offres agrégées sur 30+ pays. Disponible en France et dans cinq pays d'Afrique de l'Ouest (Bénin, Côte d'Ivoire, Sénégal, Togo, Cameroun) avec Mobile Money intégré pour l'inclusion financière. Cadre juridique structuré pour la sécurité des utilisateurs : conformité RGPD, hébergement UE, PCI-DSS. Sans abonnement, paiement uniquement à la génération.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Next.js 14 · Supabase · Capacitor 8"
+          },
+          {
+            "label": "IA encadrée",
+            "value": "Claude Sonnet 4.6 + Haiku 4.5 vocal"
+          },
+          {
+            "label": "Plateformes",
+            "value": "Web · iOS · Android · PWA"
+          },
+          {
+            "label": "Pays desservis",
+            "value": "France + 5 pays Afrique de l'Ouest"
+          },
+          {
+            "label": "Conformité",
+            "value": "RGPD · PCI-DSS · marque déposée INPI"
+          },
+          {
+            "label": "Statut",
+            "value": "En production"
+          }
+        ],
+        "hasAI": true,
+        "stack": [
+          "Architecture full-stack",
+          "IA générative encadrée",
+          "Multi-plateformes natives",
+          "Inclusion francophone",
+          "Multi-devise (EUR / FCFA)"
+        ],
+        "actions": [
+          {
+            "label": "cevelab.com ↗",
+            "type": "external",
+            "href": "https://cevelab.com"
+          }
+        ]
       },
       {
         "id": "cap-citoyen",
@@ -229,16 +423,43 @@
         "statusType": "live",
         "description": "Plateforme web et mobile pour la préparation à l'examen civique de naturalisation, devenu obligatoire en janvier 2026. Conception complète : parcours par thèmes, mode flash-cards, contenus audio, simulation d'examen et communauté d'entraide. Coach IA intégré (API Anthropic et GPT-4o-mini).",
         "specs": [
-          { "label": "Marché ciblé", "value": "100 000 / an (naturalisations)" },
-          { "label": "Contenu", "value": "800+ questions, 100+ audios, 400 flash-cards" },
-          { "label": "Plateformes", "value": "Web · Android · PWA · iOS en validation" },
-          { "label": "Statut", "value": "Live · Google Play" }
+          {
+            "label": "Marché ciblé",
+            "value": "100 000 / an (naturalisations)"
+          },
+          {
+            "label": "Contenu",
+            "value": "800+ questions, 100+ audios, 400 flash-cards"
+          },
+          {
+            "label": "Plateformes",
+            "value": "Web · Android · PWA · iOS en validation"
+          },
+          {
+            "label": "Statut",
+            "value": "Live · Google Play"
+          }
         ],
         "hasAI": true,
-        "stack": ["Next.js", "API Anthropic", "GPT-4o-mini", "ElevenLabs", "Stripe", "PWA"],
+        "stack": [
+          "Next.js",
+          "API Anthropic",
+          "GPT-4o-mini",
+          "ElevenLabs",
+          "Stripe",
+          "PWA"
+        ],
         "actions": [
-          { "label": "Voir le projet →", "type": "detail", "href": "/realisations/cap-citoyen" },
-          { "label": "cap-citoyen.fr", "type": "external", "href": "https://cap-citoyen.fr" }
+          {
+            "label": "Voir le projet →",
+            "type": "detail",
+            "href": "/realisations/cap-citoyen"
+          },
+          {
+            "label": "cap-citoyen.fr",
+            "type": "external",
+            "href": "https://cap-citoyen.fr"
+          }
         ],
         "capImageAlt": "Capture d'écran de l'application Cap Citoyen, écran d'accueil avec statistiques"
       },
@@ -253,13 +474,37 @@
         "statusType": "live",
         "description": "Conception et déploiement d'une plateforme métier complète pour le pilotage des opérations terrain : portefeuille d'agents, référencement géographique, planification automatisée, suivi calendaire, génération de devis et facturation. Approche no-code accélérée pour un time-to-market réduit.",
         "specs": [
-          { "label": "Architecture", "value": "Web responsive · Application mobile" },
-          { "label": "Fonctionnalités", "value": "Portefeuille · Affectation · Tableau de bord · Calendrier" },
-          { "label": "Approche", "value": "No-code accéléré · Inter-opérabilité API" },
-          { "label": "Statut", "value": "Livré · En production" }
+          {
+            "label": "Architecture",
+            "value": "Web responsive · Application mobile"
+          },
+          {
+            "label": "Fonctionnalités",
+            "value": "Portefeuille · Affectation · Tableau de bord · Calendrier"
+          },
+          {
+            "label": "Approche",
+            "value": "No-code accéléré · Inter-opérabilité API"
+          },
+          {
+            "label": "Statut",
+            "value": "Livré · En production"
+          }
         ],
-        "stack": ["Plateforme no-code", "APIs tierces", "Cartographie web", "Workflow automatisé", "Application mobile"],
-        "actions": [{ "label": "En savoir plus →", "type": "detail", "href": "/realisations/operations-platform" }]
+        "stack": [
+          "Plateforme no-code",
+          "APIs tierces",
+          "Cartographie web",
+          "Workflow automatisé",
+          "Application mobile"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/operations-platform"
+          }
+        ]
       }
     ]
   },
@@ -308,7 +553,14 @@
       "label": "I. Pilier principal",
       "title": "Architecture de systèmes intégrés de Suivi-Évaluation",
       "description": "Conception de plateformes complètes alignées sur la Gestion Axée Résultats. Du cadre logique aux spécifications techniques, jusqu'à la gouvernance et la sécurité des données.",
-      "tags": ["GAR", "CAD-OCDE", "Cadre logique", "Théorie du changement", "Bases de données", "Gouvernance"],
+      "tags": [
+        "GAR",
+        "CAD-OCDE",
+        "Cadre logique",
+        "Théorie du changement",
+        "Bases de données",
+        "Gouvernance"
+      ],
       "cta": "Voir les services →"
     },
     "tiles": [
@@ -316,25 +568,40 @@
         "label": "II",
         "title": "Data analytics & Business Intelligence",
         "description": "Analyse statistique avancée, tableaux de bord, valorisation de la donnée.",
-        "tags": ["Power BI", "SPSS", "R"]
+        "tags": [
+          "Power BI",
+          "SPSS",
+          "R"
+        ]
       },
       {
         "label": "III",
         "title": "Solutions SaaS & produits digitaux",
         "description": "Conception et lancement de plateformes web/mobiles, intégration IA.",
-        "tags": ["Next.js", "API Anthropic", "GPT-4"]
+        "tags": [
+          "Next.js",
+          "API Anthropic",
+          "GPT-4"
+        ]
       },
       {
         "label": "IV",
         "title": "Outils No-Code & automatisation",
         "description": "Déploiement rapide d'applications métiers, automatisation de processus.",
-        "tags": ["No-code mobile", "Airtable", "Make"]
+        "tags": [
+          "No-code mobile",
+          "Airtable",
+          "Make"
+        ]
       },
       {
         "label": "V",
         "title": "Direction d'équipes, formation et renforcement de capacités",
         "description": "Direction adjointe d'équipes opérationnelles, supervision multi-pays, formation senior. Transmission par la pratique. Modules sur-mesure, coaching individuel. Plusieurs dizaines de collaborateurs formés et accompagnés.",
-        "tags": ["Présentiel", "Distanciel"]
+        "tags": [
+          "Présentiel",
+          "Distanciel"
+        ]
       }
     ]
   },
@@ -347,25 +614,41 @@
         "label": "RAG DOCUMENTAIRE",
         "title": "Recherche sémantique sur bases institutionnelles",
         "description": "Bases vectorielles multilingues optimisées pour le français, embeddings de haute qualité, citation systématique des sources.",
-        "tags": ["Voyage AI", "Embeddings", "pgvector"]
+        "tags": [
+          "Voyage AI",
+          "Embeddings",
+          "pgvector"
+        ]
       },
       {
         "label": "ASSISTANTS CONVERSATIONNELS",
         "title": "Coachs et copilotes intégrés aux flux métier",
         "description": "Streaming temps réel, mémoire conversationnelle, upload multimodal (texte, images, documents), réponses contextuelles au cycle de projet.",
-        "tags": ["Claude API", "Vision", "Streaming"]
+        "tags": [
+          "Claude API",
+          "Vision",
+          "Streaming"
+        ]
       },
       {
         "label": "GÉNÉRATION ENCADRÉE",
         "title": "Indicateurs, questionnaires, analyses générés",
         "description": "Production assistée d'indicateurs SMART, de questionnaires d'enquête, et de notes analytiques avec validation humaine systématique.",
-        "tags": ["LLM", "Workflow", "Validation"]
+        "tags": [
+          "LLM",
+          "Workflow",
+          "Validation"
+        ]
       },
       {
         "label": "GARDE-FOUS ÉTHIQUES",
         "title": "Anti-hallucination, quotas, refus contrôlé",
         "description": "Citation obligatoire des sources, refus explicite du hors-sujet, quotas tokens par rôle, audit complet des appels API, conformité institutionnelle.",
-        "tags": ["Anti-hallucination", "Quotas", "Audit"]
+        "tags": [
+          "Anti-hallucination",
+          "Quotas",
+          "Audit"
+        ]
       }
     ]
   },
@@ -380,42 +663,72 @@
         "eyebrow": "Statistiques électorales",
         "title": "Cartographie des comportements de vote au Bénin",
         "description": "Analyse statistique des résultats électoraux communaux pour identifier les dynamiques territoriales et les corrélations socio-démographiques.",
-        "tags": ["R", "SIG", "Statistiques", "Gouvernance"]
+        "tags": [
+          "R",
+          "SIG",
+          "Statistiques",
+          "Gouvernance"
+        ]
       },
       {
         "id": "health-mapping",
         "eyebrow": "Cartographie sanitaire",
         "title": "Couverture sanitaire des zones rurales",
         "description": "Système de géolocalisation des infrastructures de santé et analyse des déserts médicaux pour orienter les politiques d'allocation des ressources.",
-        "tags": ["QGIS", "ODK", "Santé publique", "ONG"]
+        "tags": [
+          "QGIS",
+          "ODK",
+          "Santé publique",
+          "ONG"
+        ]
       },
       {
         "id": "padlaf-women",
         "eyebrow": "Autonomisation économique",
         "title": "Suivi-évaluation du programme PADLAF Femmes",
         "description": "Cadre de mesure des résultats pour un programme d'autonomisation économique des femmes rurales dans le cadre d'un financement bilatéral européen.",
-        "tags": ["Suivi-évaluation", "Genre", "UE", "Développement rural"]
+        "tags": [
+          "Suivi-évaluation",
+          "Genre",
+          "UE",
+          "Développement rural"
+        ]
       },
       {
         "id": "communal-budgets",
         "eyebrow": "Finance publique locale",
         "title": "Tableau de bord des budgets communaux",
         "description": "Plateforme de visualisation et de comparaison des budgets des communes béninoises, permettant aux élus et à la société civile de suivre l'exécution budgétaire.",
-        "tags": ["Power BI", "Finances publiques", "Open data", "Décentralisation"]
+        "tags": [
+          "Power BI",
+          "Finances publiques",
+          "Open data",
+          "Décentralisation"
+        ]
       },
       {
         "id": "territorial-pcd",
         "eyebrow": "Planification territoriale",
         "title": "Plans communaux de développement — Diagnostic participatif",
         "description": "Dispositif de collecte et d'analyse des données de diagnostic pour l'élaboration des plans communaux de développement dans dix communes.",
-        "tags": ["ODK", "Participation citoyenne", "Planification", "Décentralisation"]
+        "tags": [
+          "ODK",
+          "Participation citoyenne",
+          "Planification",
+          "Décentralisation"
+        ]
       },
       {
         "id": "health-equity",
         "eyebrow": "Équité en santé",
         "title": "Indice composite d'accès aux soins",
         "description": "Développement d'un indice multidimensionnel mesurant l'équité d'accès aux soins de santé primaires en milieu rural, intégrant distance, coût et disponibilité.",
-        "tags": ["Python", "Statistiques", "Santé publique", "Recherche"]
+        "tags": [
+          "Python",
+          "Statistiques",
+          "Santé publique",
+          "Recherche"
+        ]
       }
     ]
   },
@@ -437,7 +750,14 @@
       "step2Placeholder": "vous@organisation.org",
       "step3Label": "III.",
       "step3Question": "Sur quel sujet souhaitez-vous échanger ?",
-      "step3Chips": ["Suivi-évaluation", "Tableau de bord BI", "Application SaaS", "No-Code", "Formation", "Autre"],
+      "step3Chips": [
+        "Suivi-évaluation",
+        "Tableau de bord BI",
+        "Application SaaS",
+        "No-Code",
+        "Formation",
+        "Autre"
+      ],
       "step4Label": "IV.",
       "step4Question": "Décrivez brièvement votre projet",
       "step4Placeholder": "Quelques lignes suffisent, nous approfondirons lors de l'échange.",

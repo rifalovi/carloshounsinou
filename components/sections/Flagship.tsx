@@ -10,7 +10,7 @@ type Action = { label: string; type: "contact" | "external" | "store" | "detail"
 
 export type CardData = {
   id: string;
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab";
   hasAI?: boolean;
   category: string;
   role: string;
