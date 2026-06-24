@@ -37,6 +37,7 @@ const VALID_SLUGS = [
   "valorisation-platform",
   "eu-platforms",
   "indicators-platform",
+  "cevelab",
   "cap-citoyen",
   "operations-platform",
 ] as const;

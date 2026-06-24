@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Design System · Force tranquille · carloshounsinou.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --slate:#0A1628;--slate-deep:#060F1C;--slate-mid:#1A2537;--slate-light:#475569;
+  --copper:#B45309;--copper-soft:#C2701F;--copper-pale:#FEF3E7;
+  --gold:#A88B4A;--gold-soft:#C9AE7A;--gold-deep:#816A37;
+  --cream:#F5EFE6;--cream-soft:#EDE5D6;--bone:#E5DAC4;
+  --ink:#080E18;--ink-soft:#1F2937;--grey:#64748B;
+  --success:#10B981;
+  --line:rgba(10,22,40,0.08);--line-strong:rgba(10,22,40,0.18);
+  --serif:'Source Serif 4',Georgia,serif;
+  --sans:'Inter','Helvetica Neue',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+body{font-family:var(--sans);background:#fff;color:var(--ink);line-height:1.6}
+::selection{background:var(--copper);color:var(--cream)}
+
+/* HEADER */
+.ds-header{background:var(--slate);padding:32px 48px 0;position:sticky;top:0;z-index:100}
+.ds-brand{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.ds-logo{width:28px;height:28px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:500;color:var(--slate);position:relative;flex-shrink:0}
+.ds-logo::after{content:'';position:absolute;bottom:-2px;right:-2px;width:8px;height:8px;background:var(--copper)}
+.ds-brand-name{font-family:var(--mono);font-size:10px;color:rgba(245,239,230,0.5);letter-spacing:.12em;text-transform:uppercase}
+.ds-title{font-family:var(--serif);font-weight:300;font-size:34px;color:var(--cream);letter-spacing:-.02em;line-height:1.1;margin-bottom:4px}
+.ds-title em{color:var(--copper);font-style:italic}
+.ds-subtitle{font-family:var(--mono);font-size:11px;color:rgba(245,239,230,0.4);letter-spacing:.04em}
+
+/* TABS */
+.ds-tabs{display:flex;gap:0;margin-top:24px}
+.ds-tab{padding:12px 24px;background:none;border:none;border-bottom:2px solid transparent;color:rgba(245,239,230,0.4);font-family:var(--mono);font-size:11px;letter-spacing:.04em;cursor:pointer;text-transform:uppercase;transition:all .2s;font-weight:400}
+.ds-tab.active{color:var(--cream);border-bottom-color:var(--copper);font-weight:600}
+.ds-tab:hover:not(.active){color:rgba(245,239,230,0.7)}
+
+/* CONTENT */
+.ds-content{padding:40px 48px 80px;max-width:1100px;margin:0 auto}
+.ds-pane{display:none}.ds-pane.active{display:flex;flex-direction:column;gap:40px}
+
+/* SECTION HEAD */
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sh::before{content:'';width:24px;height:1px;background:var(--copper);flex-shrink:0}
+.sh-text{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--copper);text-transform:uppercase;letter-spacing:.08em}
+
+/* COLOR SWATCHES */
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.swatch{border-radius:8px;overflow:hidden;border:1px solid rgba(10,22,40,0.1)}
+.swatch-color{height:64px;display:flex;align-items:flex-end;padding:8px 12px}
+.swatch-hex{font-family:var(--mono);font-size:11px;opacity:.85}
+.swatch-info{padding:10px 12px;background:#fff}
+.swatch-name{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px}
+.swatch-token{font-family:var(--mono);font-size:10px;color:var(--copper);margin-bottom:4px}
+.swatch-usage{font-size:11px;color:var(--grey);line-height:1.4}
+
+/* LINE TOKENS */
+.line-grid{display:flex;gap:16px}
+.line-card{flex:1;padding:16px;background:var(--cream);border-radius:8px;border:1px solid var(--line)}
+.line-bar{height:2px;border-radius:2px;margin-bottom:12px}
+.line-label{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--slate)}
+.line-val{font-family:var(--mono);font-size:10px;color:var(--copper)}
+.line-desc{font-size:11px;color:var(--grey);margin-top:4px}
+
+/* FONT CARDS */
+.font-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.font-card{padding:20px;background:var(--cream);border-radius:8px;border:1px solid var(--line)}
+.font-var{font-family:var(--mono);font-size:10px;color:var(--copper);font-weight:600;margin-bottom:8px}
+.font-sample{font-size:18px;color:var(--slate);margin-bottom:12px;line-height:1.3}
+.font-name{font-size:13px;font-weight:600;color:var(--slate);margin-bottom:4px}
+.font-role{font-size:11px;color:var(--grey)}
+.font-meta{font-family:var(--mono);font-size:10px;color:var(--grey);margin-top:6px}
+
+/* TYPE SCALE */
+.type-scale{background:var(--cream);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.type-row{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(10,22,40,.07)}
+.type-row:last-child{border-bottom:none}
+.type-meta{font-family:var(--mono)}
+.type-role{font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px}
+.type-size{font-size:10px;color:var(--copper)}
+.type-tracking{font-size:10px;color:var(--grey)}
+
+/* COMPONENT CARDS */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.comp-card{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.comp-demo{padding:20px 24px;min-height:80px;display:flex;align-items:center}
+.comp-demo.dark{background:var(--slate)}
+.comp-demo.cream{background:var(--cream)}
+.comp-meta{padding:10px 16px;background:#fff;border-top:1px solid rgba(10,22,40,.07)}
+.comp-label{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--slate);margin-bottom:2px}
+.comp-token{font-family:var(--mono);font-size:10px;color:var(--grey)}
+
+/* BUTTONS */
+.btn-primary{background:var(--slate);color:var(--cream);padding:16px 24px;border:none;border-radius:100px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:12px;transition:all .3s}
+.btn-primary:hover{background:var(--copper);transform:translateY(-2px)}
+.btn-arrow{width:24px;height:24px;background:var(--cream);color:var(--slate);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.btn-ghost{background:none;border:none;font-family:var(--mono);font-size:13px;color:var(--ink-soft);cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:10px;transition:color .3s}
+.btn-ghost:hover{color:var(--copper)}
+.btn-ghost-circle{width:24px;height:24px;border:1px solid var(--line-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+.btn-nav{background:var(--slate);color:var(--cream);padding:11px 20px;border:none;border-radius:100px;font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;transition:background .3s}
+.btn-nav:hover{background:var(--copper)}
+
+/* BADGES */
+.badge-product{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:100px;font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(180,83,9,.10);color:var(--copper);border:1px solid rgba(180,83,9,.30)}
+.badge-ai{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:100px;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.badge-ai.default{background:rgba(180,83,9,.12);color:var(--copper);border:1px solid rgba(180,83,9,.35)}
+.badge-ai.subtle{background:rgba(245,239,230,.08);color:rgba(245,239,230,.85);border:1px solid rgba(245,239,230,.2)}
+.badge-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;background:var(--bone);border-radius:100px;font-size:12px;font-weight:500;color:var(--ink-soft)}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--copper);flex-shrink:0}
+.badge-stack{display:flex;flex-wrap:wrap;gap:8px}
+.badge-stack span{font-family:var(--mono);font-size:11px;padding:5px 12px;border:1px solid var(--line-strong);border-radius:100px;color:var(--ink-soft);font-weight:500}
+
+/* SECTION LABEL */
+.section-label{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+.section-label::before{content:'';width:24px;height:1px;display:inline-block;flex-shrink:0}
+.section-label.default{color:var(--copper)}.section-label.default::before{background:var(--copper)}
+.section-label.light{color:var(--copper-soft)}.section-label.light::before{background:var(--copper-soft)}
+
+/* STATUS DOT */
+.status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--grey)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--success);flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}50%{box-shadow:0 0 0 5px rgba(16,185,129,0)}}
+
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:16px;border-top:1px solid var(--line);width:100%}
+.kpi-num{font-family:var(--mono);font-size:11px;color:var(--copper);margin-bottom:8px;font-weight:500}
+.kpi-label{font-size:13px;color:var(--grey);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;font-family:var(--mono)}
+.kpi-value{font-size:15px;color:var(--slate);font-weight:500}
+
+/* SIGNATURE */
+.signature-wrap{display:flex;align-items:center;gap:16px}
+.signature-dash{height:2px;width:48px;background:rgba(180,83,9,.7);flex-shrink:0;display:inline-block}
+.signature-text{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.2em;color:rgba(6,15,28,.8)}
+
+/* ORNAMENT */
+.ornament{display:flex;align-items:center;gap:16px;color:var(--gold);font-size:20px;width:100%;padding:8px 0}
+.ornament-line{flex:1;height:1px;max-width:120px}
+.ornament-glyph{font-family:var(--serif);font-style:italic}
+
+/* CHOICE BUTTONS */
+.choices{display:flex;flex-direction:column;gap:6px;width:100%}
+.choice-btn{background:rgba(180,83,9,.08);border:1px solid rgba(180,83,9,.25);color:var(--copper);padding:8px 12px;border-radius:8px;font-size:12.5px;text-align:left;cursor:pointer;transition:all .15s;font-family:var(--sans);line-height:1.4;width:100%}
+.choice-btn:hover{background:rgba(180,83,9,.15);border-color:rgba(180,83,9,.45);transform:translateY(-1px)}
+
+/* LAYOUT TABLE */
+.layout-table{display:flex;flex-direction:column;gap:8px}
+.layout-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--cream);border-radius:8px;border:1px solid var(--line)}
+.layout-key{font-family:var(--mono);font-size:12px;color:var(--grey)}
+.layout-val{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--copper)}
+
+/* SECTION ORDER */
+.section-order{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.section-row{padding:10px 20px;display:flex;justify-content:space-between;align-items:center}
+.section-row:not(:last-child){border-bottom:1px solid rgba(0,0,0,.05)}
+.section-row.cream-bg{background:var(--cream);color:var(--slate)}
+.section-row.dark-bg{background:var(--slate);color:var(--cream)}
+.section-row.deep-bg{background:var(--slate-deep);color:var(--cream)}
+.section-row-name{font-family:var(--mono);font-size:11px;font-weight:600}
+.section-row-label{font-family:var(--mono);font-size:10px;opacity:.6}
+
+/* MOTION CARDS */
+.motion-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.motion-card{padding:16px;background:var(--cream);border-radius:8px;border:1px solid var(--line)}
+.motion-name{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--slate);margin-bottom:4px}
+.motion-desc{font-size:12px;color:var(--ink-soft);margin-bottom:6px}
+.motion-spec{font-family:var(--mono);font-size:10px;color:var(--copper);margin-bottom:6px;line-height:1.6;white-space:pre-line}
+.motion-usage{font-family:var(--mono);font-size:10px;color:var(--grey)}
+
+/* ARCH ROWS */
+.arch-list{display:flex;flex-direction:column;gap:8px}
+.arch-row{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:12px 16px;background:var(--cream);border-radius:8px;border:1px solid var(--line);align-items:center}
+.arch-rule{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--copper)}
+.arch-desc{font-size:12px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<div class="ds-header">
+  <div class="ds-brand">
+    <div class="ds-logo">CH</div>
+    <span class="ds-brand-name">carloshounsinou.com</span>
+  </div>
+  <h1 class="ds-title">Design System · <em>Force tranquille</em></h1>
+  <p class="ds-subtitle">Tokens · Typographie · Composants · Layout</p>
+  <div class="ds-tabs">
+    <button class="ds-tab active" onclick="switchTab(0)">Couleurs</button>
+    <button class="ds-tab" onclick="switchTab(1)">Typographie</button>
+    <button class="ds-tab" onclick="switchTab(2)">Composants</button>
+    <button class="ds-tab" onclick="switchTab(3)">Layout & Motion</button>
+  </div>
+</div>
+
+<div class="ds-content">
+
+  <!-- COULEURS -->
+  <div class="ds-pane active" id="pane-0">
+
+    <div>
+      <div class="sh"><span class="sh-text">Lignes & séparateurs</span></div>
+      <div class="line-grid">
+        <div class="line-card">
+          <div class="line-bar" style="background:rgba(10,22,40,0.08)"></div>
+          <div class="line-label">--line</div>
+          <div class="line-val">rgba(10,22,40,0.08)</div>
+          <div class="line-desc">Séparateur subtle — sections, tableaux</div>
+        </div>
+        <div class="line-card">
+          <div class="line-bar" style="background:rgba(10,22,40,0.18)"></div>
+          <div class="line-label">--line-strong</div>
+          <div class="line-val">rgba(10,22,40,0.18)</div>
+          <div class="line-desc">Séparateur fort — borders, tags</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Slate</span></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#0A1628"><span class="swatch-hex" style="color:#F5EFE6">#0A1628</span></div><div class="swatch-info"><div class="swatch-name">Slate</div><div class="swatch-token">--color-slate</div><div class="swatch-usage">Fond sombre principal, textes forts</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#060F1C"><span class="swatch-hex" style="color:#F5EFE6">#060F1C</span></div><div class="swatch-info"><div class="swatch-name">Slate Deep</div><div class="swatch-token">--color-slate-deep</div><div class="swatch-usage">Hero dark, footer</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1A2537"><span class="swatch-hex" style="color:#F5EFE6">#1A2537</span></div><div class="swatch-info"><div class="swatch-name">Slate Mid</div><div class="swatch-token">--color-slate-mid</div><div class="swatch-usage">Sections dark mid</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#475569"><span class="swatch-hex" style="color:#F5EFE6">#475569</span></div><div class="swatch-info"><div class="swatch-name">Slate Light</div><div class="swatch-token">--color-slate-light</div><div class="swatch-usage">Textes secondaires, métadonnées</div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Copper — Accent principal</span></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#B45309"><span class="swatch-hex" style="color:#F5EFE6">#B45309</span></div><div class="swatch-info"><div class="swatch-name">Copper</div><div class="swatch-token">--color-copper</div><div class="swatch-usage">Accent principal, CTA, labels, emphasis</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#C2701F"><span class="swatch-hex" style="color:#F5EFE6">#C2701F</span></div><div class="swatch-info"><div class="swatch-name">Copper Soft</div><div class="swatch-token">--color-copper-soft</div><div class="swatch-usage">Variante claire sur fonds sombres</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FEF3E7"><span class="swatch-hex" style="color:#0A1628">#FEF3E7</span></div><div class="swatch-info"><div class="swatch-name">Copper Pale</div><div class="swatch-token">--color-copper-pale</div><div class="swatch-usage">Fond cuivre très léger</div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Gold — Ornements</span></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#A88B4A"><span class="swatch-hex" style="color:#F5EFE6">#A88B4A</span></div><div class="swatch-info"><div class="swatch-name">Gold</div><div class="swatch-token">--color-gold</div><div class="swatch-usage">Ornements, séparateurs ❦</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#C9AE7A"><span class="swatch-hex" style="color:#0A1628">#C9AE7A</span></div><div class="swatch-info"><div class="swatch-name">Gold Soft</div><div class="swatch-token">--color-gold-soft</div><div class="swatch-usage">Gold clair</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#816A37"><span class="swatch-hex" style="color:#F5EFE6">#816A37</span></div><div class="swatch-info"><div class="swatch-name">Gold Deep</div><div class="swatch-token">--color-gold-deep</div><div class="swatch-usage">Gold profond</div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Cream / Bone — Fonds clairs</span></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#F5EFE6"><span class="swatch-hex" style="color:#0A1628">#F5EFE6</span></div><div class="swatch-info"><div class="swatch-name">Cream</div><div class="swatch-token">--color-cream</div><div class="swatch-usage">Fond principal du site</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#EDE5D6"><span class="swatch-hex" style="color:#0A1628">#EDE5D6</span></div><div class="swatch-info"><div class="swatch-name">Cream Soft</div><div class="swatch-token">--color-cream-soft</div><div class="swatch-usage">Fond alternatif sections claires</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#E5DAC4"><span class="swatch-hex" style="color:#0A1628">#E5DAC4</span></div><div class="swatch-info"><div class="swatch-name">Bone</div><div class="swatch-token">--color-bone</div><div class="swatch-usage">Pills, encarts, tags, tiles portrait</div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Ink / Grey — Textes</span></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="swatch-color" style="background:#080E18"><span class="swatch-hex" style="color:#F5EFE6">#080E18</span></div><div class="swatch-info"><div class="swatch-name">Ink</div><div class="swatch-token">--color-ink</div><div class="swatch-usage">Corps de texte principal</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1F2937"><span class="swatch-hex" style="color:#F5EFE6">#1F2937</span></div><div class="swatch-info"><div class="swatch-name">Ink Soft</div><div class="swatch-token">--color-ink-soft</div><div class="swatch-usage">Texte secondaire, nav links</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#64748B"><span class="swatch-hex" style="color:#F5EFE6">#64748B</span></div><div class="swatch-info"><div class="swatch-name">Grey Soft</div><div class="swatch-token">--color-grey-soft</div><div class="swatch-usage">Placeholders, métadonnées</div></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#10B981"><span class="swatch-hex" style="color:#fff">#10B981</span></div><div class="swatch-info"><div class="swatch-name">Success</div><div class="swatch-token">—</div><div class="swatch-usage">Dot disponibilité uniquement</div></div></div>
+      </div>
+    </div>
+
+  </div><!-- /pane-0 -->
+
+  <!-- TYPOGRAPHIE -->
+  <div class="ds-pane" id="pane-1">
+
+    <div>
+      <div class="sh"><span class="sh-text">Familles de polices</span></div>
+      <div class="font-grid">
+        <div class="font-card">
+          <div class="font-var">--font-serif</div>
+          <div class="font-sample" style="font-family:'Source Serif 4',Georgia,serif;font-weight:300">Piloter des <em style="color:#B45309">programmes.</em></div>
+          <div class="font-name">Source Serif 4</div>
+          <div class="font-role">Titres, headings, emphases italiques</div>
+          <div class="font-meta">300 · 400 · 500 · 600 · Normal + Italic</div>
+        </div>
+        <div class="font-card">
+          <div class="font-var">--font-sans</div>
+          <div class="font-sample" style="font-family:'Inter',sans-serif">Treize années de pilotage institutionnel.</div>
+          <div class="font-name">Inter</div>
+          <div class="font-role">Corps, navigation, labels, UI</div>
+          <div class="font-meta">300 · 400 · 500 · 600 · 700</div>
+        </div>
+        <div class="font-card">
+          <div class="font-var">--font-mono</div>
+          <div class="font-sample" style="font-family:'JetBrains Mono',monospace;letter-spacing:.06em;font-size:15px">TRAJECTOIRE · 13 ANS</div>
+          <div class="font-name">JetBrains Mono</div>
+          <div class="font-role">Labels, tags, KPIs, signatures, indices</div>
+          <div class="font-meta">400 · 500</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Échelle typographique</span></div>
+      <div class="type-scale">
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">H1 Hero</div><div class="type-size">clamp(26px, 6vw, 80px)</div><div class="type-tracking">tracking −0.035em</div></div>
+          <div style="font-family:'Source Serif 4',serif;font-weight:300;font-size:32px;letter-spacing:-.035em;color:#0A1628;line-height:1.05">Bâtir des <em style="color:#B45309">systèmes</em> durables.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">H2 Section</div><div class="type-size">~52px · Serif 300</div><div class="type-tracking">tracking −0.025em</div></div>
+          <div style="font-family:'Source Serif 4',serif;font-weight:300;font-size:24px;letter-spacing:-.02em;color:#0A1628">Une trajectoire de programmes <em style="color:#B45309">structurés</em>.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">Signature Mono</div><div class="type-size">14px · Mono uppercase</div><div class="type-tracking">tracking 0.20em</div></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(6,15,28,.8);text-transform:uppercase">VOTRE CHEF D'ORCHESTRE DE PROGRAMMES</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">Section Label</div><div class="type-size">12px · Mono 500</div><div class="type-tracking">tracking 0.06em</div></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.06em;color:#B45309;text-transform:uppercase">TRAJECTOIRE</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">Corps de texte</div><div class="type-size">16px · Sans 400</div><div class="type-tracking">line-height 1.7</div></div>
+          <div style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:#080E18">À l'intersection rare entre le pilotage de programmes institutionnels, l'encadrement d'équipes opérationnelles et l'architecture des systèmes augmentés par l'IA.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">Tag / Pill</div><div class="type-size">12px · Sans 500</div><div class="type-tracking">tracking normal</div></div>
+          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:12px;color:#1F2937">Pilotage de programmes · Construction · 13 ans</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-role">KPI Label Mono</div><div class="type-size">11px · Mono 500</div><div class="type-tracking">tracking 0.04em</div></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.04em;color:#B45309">— 01 · I. EXPÉRIENCE</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /pane-1 -->
+
+  <!-- COMPOSANTS -->
+  <div class="ds-pane" id="pane-2">
+
+    <div>
+      <div class="sh"><span class="sh-text">Logo mark</span></div>
+      <div class="comp-card" style="max-width:480px">
+        <div class="comp-demo cream" style="gap:20px">
+          <div style="width:36px;height:36px;background:#0A1628;display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;color:#F5EFE6;font-size:16px;font-weight:500;position:relative;flex-shrink:0">
+            CH<span style="position:absolute;bottom:-3px;right:-3px;width:12px;height:12px;background:#B45309"></span>
+          </div>
+          <span style="font-family:'Source Serif 4',serif;font-size:17px;font-weight:500;color:#0A1628;letter-spacing:-.01em">Carlos Hounsinou</span>
+        </div>
+        <div class="comp-meta"><div class="comp-label">Logo mark</div><div class="comp-token">36×36 Slate · CH Serif Cream · accent Copper 12×12 bottom-right</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Boutons & interactions</span></div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <button class="btn-primary">Discuter d'un projet<span class="btn-arrow">→</span></button>
+          </div>
+          <div class="comp-meta"><div class="comp-label">CTA Primary</div><div class="comp-token">pill radius:100px · Slate→Copper hover · arrow circle</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <button class="btn-ghost"><span class="btn-ghost-circle">↓</span>Voir mes réalisations</button>
+          </div>
+          <div class="comp-meta"><div class="comp-label">CTA Ghost</div><div class="comp-token">no bg · Mono font · cercle border ↓</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <button class="btn-nav">Échanger →</button>
+          </div>
+          <div class="comp-meta"><div class="comp-label">Nav CTA (compact)</div><div class="comp-token">pill 13px · gap 8px · transition bg 0.3s</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <div class="choices">
+              <button class="choice-btn">Son parcours professionnel</button>
+              <button class="choice-btn">Ses domaines d'expertise</button>
+              <button class="choice-btn">Ses réalisations majeures</button>
+            </div>
+          </div>
+          <div class="comp-meta"><div class="comp-label">Choice Button — chatbot</div><div class="comp-token">copper 8% bg · border 25% · hover translateY(−1px)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Badges & Pills</span></div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-demo cream"><span class="badge-product"><span style="font-size:8px">◆</span>SaaS</span></div>
+          <div class="comp-meta"><div class="comp-label">ProductBadge</div><div class="comp-token">pill · copper 10% bg · ◆ prefix · Mono uppercase</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream" style="gap:12px">
+            <span class="badge-ai default"><span>✦</span><span>IA</span></span>
+            <span style="font-family:monospace;font-size:10px;color:#475569">Default</span>
+          </div>
+          <div class="comp-meta"><div class="comp-label">AIBadge — Default</div><div class="comp-token">copper scheme · ✦ prefix</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo dark" style="gap:12px">
+            <span class="badge-ai subtle"><span>✦</span><span>IA</span></span>
+            <span style="font-family:monospace;font-size:10px;color:rgba(245,239,230,0.4)">Subtle</span>
+          </div>
+          <div class="comp-meta"><div class="comp-label">AIBadge — Subtle</div><div class="comp-token">cream on dark · pour sections sombres</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <div class="badge-tag"><span class="badge-dot"></span>Pilotage de programmes · Construction · 13 ans</div>
+          </div>
+          <div class="comp-meta"><div class="comp-label">Tag Pill — Hero</div><div class="comp-token">Bone bg · copper dot 6px · Sans 12px 500</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <div class="badge-stack"><span>Next.js</span><span>Supabase</span><span>TypeScript</span><span>IA</span></div>
+          </div>
+          <div class="comp-meta"><div class="comp-label">Stack Tag</div><div class="comp-token">border line-strong · pill 100px · Mono 11px</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo cream">
+            <div class="status"><span class="status-dot"></span>Disponible — Paris</div>
+          </div>
+          <div class="comp-meta"><div class="comp-label">Status Dot</div><div class="comp-token">#10B981 · animation pulse 2s infinite</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Section labels</span></div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-demo cream"><span class="section-label default">Trajectoire</span></div>
+          <div class="comp-meta"><div class="comp-label">SectionLabel — Default</div><div class="comp-token">tiret 24px #B45309 + Mono uppercase · fond clair</div></div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-demo dark"><span class="section-label light">Réalisations</span></div>
+          <div class="comp-meta"><div class="comp-label">SectionLabel — Light</div><div class="comp-token">Copper Soft #C2701F · pour fonds sombres</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Bloc KPI</span></div>
+      <div class="comp-card">
+        <div class="comp-demo cream">
+          <div class="kpi-grid">
+            <div><div class="kpi-num">— 01</div><div class="kpi-label">I. Expérience</div><div class="kpi-value">13 années</div></div>
+            <div><div class="kpi-num">— 02</div><div class="kpi-label">II. Périmètre</div><div class="kpi-value">4 pays · 3 continents</div></div>
+            <div><div class="kpi-num">— 03</div><div class="kpi-label">III. Réalisations</div><div class="kpi-value">3 plateformes majeures</div></div>
+          </div>
+        </div>
+        <div class="comp-meta"><div class="comp-label">KPI Block</div><div class="comp-token">Mono index — label uppercase — valeur Sans 500</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Ornement séparateur</span></div>
+      <div class="comp-card">
+        <div class="comp-demo cream">
+          <div class="ornament">
+            <span class="ornament-line" style="background:linear-gradient(90deg,transparent,#A88B4A)"></span>
+            <span class="ornament-glyph">❦</span>
+            <span class="ornament-line" style="background:linear-gradient(90deg,#A88B4A,transparent)"></span>
+          </div>
+        </div>
+        <div class="comp-meta"><div class="comp-label">Ornament</div><div class="comp-token">❦ Source Serif 4 italic · Gold #A88B4A · lignes dégradées</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Signature hero</span></div>
+      <div class="comp-card">
+        <div class="comp-demo cream">
+          <div class="signature-wrap">
+            <span class="signature-dash"></span>
+            <p class="signature-text">VOTRE CHEF D'ORCHESTRE DE PROGRAMMES</p>
+          </div>
+        </div>
+        <div class="comp-meta"><div class="comp-label">Signature</div><div class="comp-token">tiret copper 48px · Mono uppercase · tracking 0.2em</div></div>
+      </div>
+    </div>
+
+  </div><!-- /pane-2 -->
+
+  <!-- LAYOUT & MOTION -->
+  <div class="ds-pane" id="pane-3">
+
+    <div>
+      <div class="sh"><span class="sh-text">Espacement des sections</span></div>
+      <div class="layout-table">
+        <div class="layout-row"><span class="layout-key">Section padding — desktop</span><span class="layout-val">72–100px 48px</span></div>
+        <div class="layout-row"><span class="layout-key">Section padding — mobile</span><span class="layout-val">48px 24px</span></div>
+        <div class="layout-row"><span class="layout-key">Content max-width (pages détail)</span><span class="layout-val">720px</span></div>
+        <div class="layout-row"><span class="layout-key">Nav padding — repos</span><span class="layout-val">24px 48px</span></div>
+        <div class="layout-row"><span class="layout-key">Nav padding — scrollé (>30px)</span><span class="layout-val">14px 48px</span></div>
+        <div class="layout-row"><span class="layout-key">Hero grid</span><span class="layout-val">7fr 5fr</span></div>
+        <div class="layout-row"><span class="layout-key">Portrait modulaire grid</span><span class="layout-val">2fr 1fr / 1fr 1fr</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Alternance des sections (fond)</span></div>
+      <div class="section-order">
+        <div class="section-row cream-bg"><span class="section-row-name">01. Hero</span><span class="section-row-label">Cream #F5EFE6</span></div>
+        <div class="section-row dark-bg"><span class="section-row-name">02. TrustMarquee</span><span class="section-row-label">Slate #0A1628</span></div>
+        <div class="section-row cream-bg"><span class="section-row-name">03. About</span><span class="section-row-label">Cream #F5EFE6</span></div>
+        <div class="section-row deep-bg"><span class="section-row-name">04. Flagship</span><span class="section-row-label">Slate Deep #060F1C</span></div>
+        <div class="section-row dark-bg"><span class="section-row-name">05. AICapabilities</span><span class="section-row-label">Slate #0A1628</span></div>
+        <div class="section-row cream-bg"><span class="section-row-name">06. Stats</span><span class="section-row-label">Cream #F5EFE6</span></div>
+        <div class="section-row cream-bg"><span class="section-row-name">07. Expertise</span><span class="section-row-label">Cream #F5EFE6</span></div>
+        <div class="section-row deep-bg"><span class="section-row-name">08. SecondaryRealizations</span><span class="section-row-label">Slate Deep #060F1C</span></div>
+        <div class="section-row cream-bg"><span class="section-row-name">09. Contact</span><span class="section-row-label">Cream #F5EFE6</span></div>
+        <div class="section-row deep-bg"><span class="section-row-name">10. Footer</span><span class="section-row-label">Slate Deep #060F1C</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Animations & Motion</span></div>
+      <div class="motion-grid">
+        <div class="motion-card"><div class="motion-name">fadeUp</div><div class="motion-desc">Apparition entrée de page</div><div class="motion-spec">opacity 0→1 · y 20→0
+0.7s easeOut · stagger 0.12s</div><div class="motion-usage">Usages : Hero, KPIs, grilles</div></div>
+        <div class="motion-card"><div class="motion-name">Nav glassmorphism</div><div class="motion-desc">Navigation au scroll &gt;30px</div><div class="motion-spec">transparent → rgba(245,239,230,0.85)
+backdrop blur(24px) · padding 24→14px</div><div class="motion-usage">Usages : Navigation fixe</div></div>
+        <div class="motion-card"><div class="motion-name">navPulse</div><div class="motion-desc">Dot disponibilité</div><div class="motion-spec">box-shadow glow #10B981
+2s ease-in-out infinite</div><div class="motion-usage">Usages : Status dot nav</div></div>
+        <div class="motion-card"><div class="motion-name">slideUp</div><div class="motion-desc">Ouverture chatbot</div><div class="motion-spec">opacity 0→1 · translateY 16px→0
+0.2s ease</div><div class="motion-usage">Usages : Modal chatbot flottant</div></div>
+        <div class="motion-card"><div class="motion-name">Bounce (typing)</div><div class="motion-desc">Indicateur frappe IA</div><div class="motion-spec">translateY 0→−5px→0 · 1.2s
+stagger 0.2s entre 3 dots</div><div class="motion-usage">Usages : Chatbot — réponse en cours</div></div>
+        <div class="motion-card"><div class="motion-name">CTA hover</div><div class="motion-desc">Bouton primaire</div><div class="motion-spec">bg Slate→Copper
+translateY −2px · 0.3s</div><div class="motion-usage">Usages : Tous CTAs primaires</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sh"><span class="sh-text">Architecture de styles</span></div>
+      <div class="arch-list">
+        <div class="arch-row"><span class="arch-rule">style={{}}</span><span class="arch-desc">Source de vérité — tous les styles composant en inline React</span></div>
+        <div class="arch-row"><span class="arch-rule">&lt;style&gt; tag</span><span class="arch-desc">Uniquement @media queries et @keyframes dans chaque composant</span></div>
+        <div class="arch-row"><span class="arch-rule">globals.css</span><span class="arch-desc">Custom properties CSS uniquement — tokens, --line, body defaults</span></div>
+        <div class="arch-row"><span class="arch-rule">Zero Tailwind</span><span class="arch-desc">Aucune classe Tailwind dans les composants (tokens seulement dans globals)</span></div>
+        <div class="arch-row"><span class="arch-rule">::selection</span><span class="arch-desc">background: #B45309 · color: #F5EFE6</span></div>
+        <div class="arch-row"><span class="arch-rule">text-wrap: balance</span><span class="arch-desc">Appliqué sur .hero-h1 pour équilibrer les grands titres</span></div>
+        <div class="arch-row"><span class="arch-rule">prose-justify</span><span class="arch-desc">text-align:justify + hyphens:auto pour corps de texte longs</span></div>
+      </div>
+    </div>
+
+  </div><!-- /pane-3 -->
+
+</div><!-- /ds-content -->
+
+<script>
+function switchTab(index) {
+  document.querySelectorAll('.ds-tab').forEach((t,i) => t.classList.toggle('active', i===index));
+  document.querySelectorAll('.ds-pane').forEach((p,i) => p.classList.toggle('active', i===index));
+}
+</script>
+</body>
+</html>

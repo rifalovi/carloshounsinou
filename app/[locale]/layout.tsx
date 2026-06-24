@@ -61,11 +61,41 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages({ locale });
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Hounsinou",
+    "url": "https://carloshounsinou.com",
+    "jobTitle": locale === "fr"
+      ? "Chargé d'Ingénierie de Projet · Expert Suivi-Évaluation"
+      : "Project Engineering Officer · M&E Expert",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Organisation Internationale de la Francophonie",
+      "url": "https://francophonie.org",
+    },
+    "sameAs": ["https://www.linkedin.com/in/carloshounsinou"],
+    "description": locale === "fr"
+      ? "Carlos Hounsinou — expert chevronné du Suivi-Évaluation, de la planification stratégique et de la gestion de programmes de développement. 13 ans d'expérience pour l'OIF, l'UE, l'AFD, la GIZ, la Fondation Bill & Melinda Gates."
+      : "Carlos Hounsinou — seasoned expert in Monitoring & Evaluation, strategic planning and development programme management. 13 years for OIF, EU, AFD, GIZ, Bill & Melinda Gates Foundation.",
+    "knowsAbout": [
+      "Suivi-Évaluation", "Monitoring and Evaluation", "Gestion de programmes",
+      "Programme management", "Architecture systèmes augmentés IA",
+      "Planification stratégique", "Strategic planning",
+    ],
+  };
+
   return (
     <html
       lang={locale}
       className={`${mono.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

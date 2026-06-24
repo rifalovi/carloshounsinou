@@ -240,6 +240,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
         <div
           role="tablist"
           aria-label="Navigation par projet"
+          className="flagship-dots"
           style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "8px" }}
         >
           {cards.map((card, i) => (
@@ -290,9 +291,20 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
         }
 
         @media (max-width: 767px) {
-          .flagship-card-wrapper { width: 86vw; }
+          /* Vertical stack on mobile — no horizontal scroll */
+          .flagship-track {
+            flex-direction: column !important;
+            overflow-x: hidden !important;
+            scroll-snap-type: none !important;
+            padding: 8px 20px 24px !important;
+            gap: 16px !important;
+          }
+          .flagship-card-wrapper {
+            width: 100% !important;
+            scroll-snap-align: none !important;
+          }
           .flagship-nav-btn { display: none !important; }
-          .flagship-track { padding: 8px 16px 24px !important; }
+          .flagship-dots { display: none !important; }
           #realisations { padding: 80px 0 !important; }
           .flagship-header { padding: 0 24px !important; }
           .flagship-header-inner {

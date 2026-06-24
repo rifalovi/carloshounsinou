@@ -406,6 +406,11 @@
         ],
         "actions": [
           {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/cevelab"
+          },
+          {
             "label": "cevelab.com ↗",
             "type": "external",
             "href": "https://cevelab.com"
@@ -930,6 +935,27 @@
         ],
         "results": "Plateforme déployée en production et adoptée par les équipes terrain dès la première semaine. Le time-to-invoice a été réduit de plus de 60 %. Les erreurs d'affectation ont quasiment disparu grâce aux contrôles automatiques de disponibilité.",
         "stackDetail": "Plateforme no-code · APIs tierces · Cartographie web · Workflow automatisé · Application mobile · Génération de documents"
+      },
+      {
+        "id": "cevelab",
+        "metaTitle": "CeveLab · Plateforme d'employabilité augmentée · Carlos Hounsinou",
+        "metaDescription": "CeveLab, initiative personnelle de Carlos Hounsinou pour démocratiser l'accès aux outils de candidature professionnels en France et en Afrique de l'Ouest. CV optimisé ATS, lettres de motivation ciblées, matching d'offres 850 000+.",
+        "title": "CeveLab · Suite carrière propulsée par l'IA",
+        "subtitle": "cevelab.com · France & Afrique de l'Ouest",
+        "category": "Plateforme d'employabilité augmentée",
+        "status": "En production",
+        "context": "75% des CV sont écartés par les filtres automatisés (ATS) avant d'être lus par un humain. Ce constat touche plus durement les candidats francophones d'Afrique de l'Ouest, pour qui les outils professionnels restent souvent hors de portée financièrement ou linguistiquement. CeveLab répond à ce double constat : démocratiser l'accès aux outils de candidature et les rendre accessibles financièrement, y compris par Mobile Money, pour des marchés où les solutions bancaires classiques restent limitées.",
+        "challenge": "Concevoir une plateforme full-stack bilingue (FR/EN), déployée simultanément sur le web, iOS et Android, intégrant plusieurs méthodes de création de CV et des capacités IA encadrées pour la génération et le coaching, tout en garantissant la conformité RGPD complète et l'accessibilité financière pour des marchés aux infrastructures de paiement hétérogènes.",
+        "approach": [
+          "Architecture full-stack Next.js 14 + Supabase avec application mobile native via Capacitor 8, un seul code source pour web, iOS et Android.",
+          "Quatre méthodes de création de CV : formulaire guidé 6 étapes, coach IA méthode STAR, entretien vocal (transcription Whisper), import et amélioration de document existant (PDF/Word).",
+          "IA encadrée Anthropic Claude : Sonnet 4.6 pour la génération de contenu et l'optimisation ATS, Haiku 4.5 pour le coach vocal en temps réel.",
+          "Score ATS temps réel avec recommandations contextuelles, matching d'offres parmi 850 000+ annonces agrégées sur 30+ pays, bilan de reconversion institutionnel (référentiel ROME / France Travail).",
+          "Double intégration paiement : Stripe (carte bancaire, France/Europe) + FedaPay (Mobile Money Afrique de l'Ouest : Orange Money, MTN, Wave) pour l'inclusion financière.",
+          "Cadre juridique structuré pour la sécurité des utilisateurs : conformité RGPD, hébergement UE (Irlande), PCI-DSS, marque déposée INPI."
+        ],
+        "results": "Plateforme en production dans 6 pays (France, Bénin, Côte d'Ivoire, Sénégal, Togo, Cameroun). 26 templates professionnels avec auto-compactage 1 page. Paiement sans abonnement, uniquement à la génération, à partir de 2,90€ / 1 900 FCFA selon le marché.",
+        "stackDetail": "Next.js 14 · React 18 · TypeScript · Supabase · Capacitor 8 · Claude Sonnet 4.6 · Claude Haiku 4.5 · Stripe · FedaPay · Puppeteer · next-intl · Sentry"
       }
     ]
   },
