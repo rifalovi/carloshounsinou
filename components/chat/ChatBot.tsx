@@ -82,14 +82,14 @@ export default function ChatBot() {
       timestamp: new Date().toISOString(),
     });
 
+    const prevMessages = messages;
     const userMsg: Message = { role: "user", content: text };
-    const updatedMessages = [...messages, userMsg];
-    setMessages(updatedMessages);
+    setMessages([...prevMessages, userMsg]);
     setLoading(true);
     setError(null);
 
     try {
-      const apiMessages = updatedMessages
+      const apiMessages = [...prevMessages, userMsg]
         .filter((m) => m !== INITIAL_MESSAGE)
         .map((m) => ({ role: m.role, content: m.content }));
 
@@ -102,16 +102,24 @@ export default function ChatBot() {
       const data = await res.json();
 
       if (!res.ok) {
+        // On retire le tour en échec de l'historique pour éviter deux messages
+        // "user" consécutifs (rejetés par l'API) et on rend la question à
+        // l'utilisateur pour un nouvel essai immédiat.
+        setMessages(prevMessages);
+        setInput(text);
         setError(data.error || "Une erreur est survenue.");
         if (data.rateLimited) setRemaining(0);
       } else {
-        setMessages((prev) => [
-          ...prev,
+        setMessages([
+          ...prevMessages,
+          userMsg,
           { role: "assistant", content: data.message },
         ]);
         if (typeof data.remaining === "number") setRemaining(data.remaining);
       }
     } catch {
+      setMessages(prevMessages);
+      setInput(text);
       setError("Impossible de contacter le service. Veuillez réessayer.");
     } finally {
       setLoading(false);
