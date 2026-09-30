@@ -51,4 +51,7 @@ PROMPTS.md
 # Carlos - exclusions confidentielles
 i18n/Kit_Claude_Code_*
 *.zip
-.claude/
+# On ignore .claude/ (réglages locaux) SAUF les compétences partagées et versionnées
+.claude/*
+!.claude/skills/
+!.claude/skills/**

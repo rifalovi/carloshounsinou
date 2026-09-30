@@ -1,0 +1,748 @@
+<title>Architecture Les Déterminés</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+  :root{
+    --bg:#eff3fa; --card:#ffffff; --panel:#f3f7fd; --fg:#14243a; --muted:#5c6c82;
+    --line:#d7e1f0; --blue:#2f6bd6; --blue2:#5a93ee; --gold:#c9922e; --gold2:#e7b955;
+    --green:#1c9c66; --green2:#38c184; --live:#0e9aa0; --live2:#28b9bf;
+    --rel:#3f7fd6; --ink:#0c1a2e; --sh:rgba(14,27,46,.13); --halo:#ffffff;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0a1424; --card:#122236; --panel:#14283f; --fg:#e9f0fa; --muted:#9fb4cd;
+    --line:#264160; --blue:#5a93ee; --blue2:#7cabf5; --ink:#eaf1fb;
+    --sh:rgba(0,0,0,.45); --halo:#122236; color-scheme:dark; }}
+  :root[data-theme="dark"]{--bg:#0a1424; --card:#122236; --panel:#14283f; --fg:#e9f0fa;
+    --muted:#9fb4cd; --line:#264160; --blue:#5a93ee; --blue2:#7cabf5; --ink:#eaf1fb;
+    --sh:rgba(0,0,0,.45); --halo:#122236; color-scheme:dark;}
+
+  body{background:
+    radial-gradient(1100px 460px at 88% -8%, color-mix(in srgb,var(--blue) 12%,transparent), transparent 60%),
+    radial-gradient(900px 420px at -6% 4%, color-mix(in srgb,var(--gold) 12%,transparent), transparent 55%),
+    var(--bg);
+    color:var(--fg);font-family:"Manrope","Helvetica Neue",Arial,sans-serif}
+  .wrap{max-width:1280px;margin:0 auto;padding-block:24px 40px;padding-inline:16px}
+
+  .masthead{position:relative;padding:6px 0 2px;margin-bottom:2px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--blue);margin:0 0 6px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .masthead h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(24px,3.6vw,36px);
+    line-height:1.05;margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance;color:var(--fg)}
+  .masthead p{margin:0;max-width:76ch;font-size:14px;line-height:1.55;color:var(--muted)}
+  .tglt{position:absolute;top:0;right:0;width:38px;height:38px;border:1px solid var(--line);
+    background:var(--card);border-radius:10px;display:grid;place-items:center;cursor:pointer;color:var(--muted);
+    box-shadow:0 1px 2px var(--sh)}
+
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 16px}
+  .tab{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--fg);
+    font:inherit;font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:999px;cursor:pointer;
+    box-shadow:0 1px 2px var(--sh)}
+  .tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border-color:transparent;
+    box-shadow:0 6px 16px -6px color-mix(in srgb,var(--blue) 70%,transparent)}
+  .tab:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+  figure{margin:0}
+  h2{font-size:20px;margin:0 0 3px;letter-spacing:-.01em}
+  .cap0{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:78ch;line-height:1.5}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);
+    box-shadow:0 10px 30px -18px var(--sh);padding:8px}
+  svg{display:block;min-width:1000px;width:100%;height:auto;color:var(--fg)}
+  figcaption{color:var(--muted);font-size:13.5px;margin-top:12px;line-height:1.55;max-width:86ch}
+
+  .card{fill:var(--card);stroke:var(--line);stroke-width:1.2;filter:drop-shadow(0 2px 3px var(--sh))}
+  .panel{fill:var(--panel);stroke:var(--line);stroke-width:1}
+  .box{fill:color-mix(in srgb,var(--gold) 5%,transparent);stroke:var(--gold);stroke-width:1.8}
+  .hdr{fill:url(#gBlue)} .hdrv{fill:url(#gLive)} .hdrg{fill:url(#gGreen)}
+  .htxt{fill:#fff;font-weight:700}
+  .t{fill:var(--fg);font-weight:700} .m{fill:var(--muted)} .i{fill:var(--fg)}
+  .flow{stroke:var(--muted);stroke-width:1.8;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .live{stroke:var(--live);stroke-width:2;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .dash{stroke:var(--muted);stroke-width:1.6;fill:none;stroke-dasharray:1 6;stroke-linecap:round}
+  .rel{stroke:var(--rel);stroke-width:1.7;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  .lbl{fill:var(--muted);font-style:italic;paint-order:stroke;stroke:var(--halo);stroke-width:3.4px;stroke-linejoin:round}
+  .badge{fill:url(#gGreen);stroke:var(--card);stroke-width:1.5}
+  .btxt{fill:#fff;font-weight:800}
+  text{font-family:"Manrope","Helvetica Neue",Arial,sans-serif}
+
+  .legend{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:14px;font-size:13px}
+  .legend span{display:inline-flex;align-items:center;gap:7px;color:var(--fg)}
+  .key{width:22px;border-top-width:3px;border-top-style:solid;display:inline-block}
+  .sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .bgold{fill:url(#gGold);stroke:var(--card);stroke-width:1.5}
+
+  .desc{margin-top:26px}
+  .desc h3{font-size:16px;margin:0 0 12px;color:var(--blue);display:flex;align-items:center;gap:9px}
+  .desc h3::before{content:"";width:26px;height:2px;background:var(--gold);border-radius:2px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;gap:2px 30px}
+  @media (max-width:820px){.rows{grid-template-columns:1fr}}
+  .row{display:grid;grid-template-columns:40px 1fr;gap:13px;padding:11px 4px;border-top:1px solid var(--line);align-items:start}
+  .num{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));
+    color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;
+    font-variant-numeric:tabular-nums;box-shadow:0 3px 8px -3px color-mix(in srgb,var(--green) 80%,transparent)}
+  .rtxt{font-size:13.4px;line-height:1.5;min-width:0}
+  .rtxt b{color:var(--fg)} .emo{margin-right:2px}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media (max-width:820px){.two{grid-template-columns:1fr}}
+  .mini h4{font-size:13.5px;margin:0 0 8px;color:var(--blue);display:flex;align-items:center;gap:8px}
+  .qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px;margin-top:20px}
+  .qcard{position:relative;border:1px solid var(--line);border-radius:16px;background:var(--card);
+    padding:16px 16px 15px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 24px -16px var(--sh);overflow:hidden}
+  .qcard::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--blue),var(--blue2))}
+  .qhead{display:flex;align-items:center;gap:11px}
+  .qico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;flex:none;
+    background:linear-gradient(135deg,color-mix(in srgb,var(--blue) 18%,transparent),color-mix(in srgb,var(--blue) 6%,transparent));
+    border:1px solid color-mix(in srgb,var(--blue) 22%,transparent)}
+  .qtitle{font-weight:800;font-size:14.5px}
+  .qq{font-size:13px;color:var(--muted);font-style:italic}
+  .qans{font-size:13.4px;line-height:1.52}
+  .qans b{color:var(--fg)} .qans code{font-family:ui-monospace,Menlo,monospace;font-size:12px;
+    background:color-mix(in srgb,var(--blue) 12%,transparent);padding:1px 5px;border-radius:5px}
+  .ok{align-self:flex-start;margin-top:auto;font-size:11.5px;font-weight:800;color:#fff;
+    background:linear-gradient(135deg,var(--green),var(--green2));border-radius:999px;padding:4px 11px}
+
+  .role{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;
+    background:var(--card);padding:12px 14px;margin-bottom:18px;box-shadow:0 6px 18px -14px var(--sh)}
+  .role .rico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:23px;flex:none;
+    background:linear-gradient(135deg,color-mix(in srgb,var(--blue) 20%,transparent),color-mix(in srgb,var(--blue) 6%,transparent));
+    border:1px solid color-mix(in srgb,var(--blue) 24%,transparent)}
+  .role.alt .rico{background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 26%,transparent),color-mix(in srgb,var(--gold) 8%,transparent));
+    border-color:color-mix(in srgb,var(--gold) 32%,transparent)}
+  .role h4{margin:0;font-size:15.5px} .role p{margin:3px 0 0;font-size:12.5px;color:var(--muted)}
+  .steps{position:relative;margin-left:16px;border-left:2px solid var(--line);padding-left:26px;
+    display:flex;flex-direction:column;gap:15px}
+  .step{position:relative}
+  .step .n{position:absolute;left:-41px;top:-2px;width:28px;height:28px;border-radius:50%;
+    background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:800;font-size:13px;
+    display:flex;align-items:center;justify-content:center;border:2px solid var(--card);
+    box-shadow:0 3px 8px -3px color-mix(in srgb,var(--blue) 70%,transparent);font-variant-numeric:tabular-nums}
+  .step.alt .n{background:linear-gradient(135deg,var(--gold),var(--gold2));box-shadow:0 3px 8px -3px color-mix(in srgb,var(--gold) 70%,transparent)}
+  .step h5{margin:0 0 2px;font-size:13.8px} .step h5 .em{margin-right:5px}
+  .step p{margin:0;font-size:12.8px;color:var(--muted);line-height:1.45}
+</style>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <marker id="mArrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="var(--muted)"/></marker>
+    <marker id="mLive" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="var(--live)"/></marker>
+    <marker id="mRel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="var(--rel)"/></marker>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--blue2)"/><stop offset="1" stop-color="var(--blue)"/></linearGradient>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--green2)"/><stop offset="1" stop-color="var(--green)"/></linearGradient>
+    <linearGradient id="gLive" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--live2)"/><stop offset="1" stop-color="var(--live)"/></linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--gold2)"/><stop offset="1" stop-color="var(--gold)"/></linearGradient>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="masthead">
+    <button class="tglt" id="theme" aria-label="Basculer le thème">◐</button>
+    <p class="eyebrow"><span class="dot"></span> Architecture de la plateforme</p>
+    <h1>Les Déterminés</h1>
+    <p>Adhésion, discipolat, territoire, contenus et supervision — une plateforme fiable, sécurisée, conforme au RGPD et duplicable à 75 familles d'impact.</p>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Schémas">
+    <button class="tab" role="tab" id="t-fonc" aria-controls="p-fonc" aria-selected="true">🧭 Fonctionnelle</button>
+    <button class="tab" role="tab" id="t-parc" aria-controls="p-parc" aria-selected="false">🚶 Parcours</button>
+    <button class="tab" role="tab" id="t-tech" aria-controls="p-tech" aria-selected="false">🛠️ Technique</button>
+    <button class="tab" role="tab" id="t-data" aria-controls="p-data" aria-selected="false">🗃️ Modèle de données</button>
+    <button class="tab" role="tab" id="t-qa" aria-controls="p-qa" aria-selected="false">🛡️ Garanties &amp; réponses</button>
+  </div>
+
+  <!-- ============ FONCTIONNEL ============ -->
+  <section id="p-fonc" role="tabpanel" aria-labelledby="t-fonc">
+    <h2>Parcours communautaire de bout en bout</h2>
+    <p class="cap0">De la structure définie par l'administration jusqu'à la restitution, en passant par l'adhésion, l'encadrement et les contenus. Chaque bloc décrit une fonctionnalité ; les flèches montrent le flux.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1200 620" role="img" aria-label="Flux fonctionnel de la plateforme Les Déterminés : acteurs, back-office, plateforme, vitrine publique et restitution, reliés par des flèches.">
+          <!-- Amont : acteurs & sources -->
+          <rect class="card" x="24" y="40" width="200" height="58" rx="11"/>
+          <text class="t" x="40" y="64" font-size="12.5">👑 Chef de famille / Admins</text>
+          <text class="m" x="40" y="82" font-size="10.5">définissent la structure</text>
+          <circle class="badge" cx="24" cy="40" r="11"/><text class="btxt" x="24" y="44.5" font-size="11.5" text-anchor="middle">1</text>
+
+          <rect class="card" x="24" y="118" width="200" height="126" rx="11"/>
+          <text class="t" x="40" y="141" font-size="12.5">🗄️ Sources &amp; référentiels</text>
+          <text class="i" x="40" y="164" font-size="11">📍 Villes &amp; secteurs (INSEE)</text>
+          <text class="i" x="40" y="185" font-size="11">⛪ Églises · 🗓️ programmes</text>
+          <text class="i" x="40" y="206" font-size="11">🔑 Rôles &amp; permissions</text>
+          <text class="i" x="40" y="227" font-size="11">👤 Membres &amp; casquettes</text>
+          <circle class="badge" cx="24" cy="118" r="11"/><text class="btxt" x="24" y="122.5" font-size="11.5" text-anchor="middle">2</text>
+
+          <rect class="card" x="24" y="392" width="200" height="60" rx="11"/>
+          <text class="t" x="40" y="416" font-size="12">🧑‍🏫 Encadrement (FDD &amp; Pilotes)</text>
+          <text class="m" x="40" y="434" font-size="10.5">présence · suivi de parcours</text>
+          <circle class="badge" cx="24" cy="392" r="11"/><text class="btxt" x="24" y="396.5" font-size="11.5" text-anchor="middle">10</text>
+
+          <rect class="card" x="24" y="474" width="200" height="58" rx="11"/>
+          <text class="t" x="40" y="498" font-size="12">🛰️ Tâches planifiées</text>
+          <text class="m" x="40" y="516" font-size="10.5">rappels · escalades · sauvegardes</text>
+          <circle class="badge" cx="24" cy="474" r="11"/><text class="btxt" x="24" y="478.5" font-size="11.5" text-anchor="middle">15</text>
+
+          <!-- Back-office -->
+          <rect class="card" x="264" y="40" width="200" height="204" rx="11"/>
+          <rect class="hdr" x="264" y="40" width="200" height="26" rx="11"/><rect class="hdr" x="264" y="54" width="200" height="12"/>
+          <text class="htxt" x="278" y="58" font-size="12.5">🧩 Back-office</text>
+          <text class="m" x="278" y="84" font-size="10.5">Paramétrage du modèle</text>
+          <text class="i" x="278" y="107" font-size="11">👥 Groupes &amp; pôles</text>
+          <text class="i" x="278" y="128" font-size="11">🏠 Familles d'Impact</text>
+          <text class="i" x="278" y="149" font-size="11">🗺️ Territoire</text>
+          <text class="i" x="278" y="170" font-size="11">📝 PageContenu (vitrine)</text>
+          <text class="i" x="278" y="191" font-size="11">📋 Campagnes d'évaluation</text>
+          <text class="i" x="278" y="212" font-size="11">🗓️ Agenda · 🎨 rôles</text>
+          <circle class="badge" cx="264" cy="40" r="11"/><text class="btxt" x="264" y="44.5" font-size="11.5" text-anchor="middle">3</text>
+
+          <rect class="card" x="264" y="392" width="200" height="104" rx="11"/>
+          <rect class="hdr" x="264" y="392" width="200" height="24" rx="11"/><rect class="hdr" x="264" y="406" width="200" height="10"/>
+          <text class="htxt" x="278" y="409" font-size="12">📊 Espace d'encadrement</text>
+          <text class="i" x="278" y="436" font-size="11">🧑‍🎓 Mes disciples</text>
+          <text class="i" x="278" y="457" font-size="11">🗒️ Pointage &amp; présence</text>
+          <text class="i" x="278" y="478" font-size="11">🧭 Suivi de parcours</text>
+
+          <!-- Plateforme -->
+          <rect class="box" x="500" y="28" width="430" height="470" rx="14"/>
+          <text class="t" x="518" y="50" font-size="13.5" fill="var(--blue)">🏛️ Plateforme Les Déterminés</text>
+
+          <rect class="panel" x="516" y="64" width="256" height="126" rx="10"/>
+          <text class="t" x="530" y="87" font-size="12.5">🏛️ Espace membre adaptatif</text>
+          <rect x="530" y="99" width="10" height="10" rx="2" fill="var(--blue)"/><text class="i" x="547" y="108" font-size="11">Membre actif</text>
+          <rect x="530" y="119" width="10" height="10" rx="2" fill="var(--live)"/><text class="i" x="547" y="128" font-size="11">Faiseur de disciple</text>
+          <rect x="530" y="139" width="10" height="10" rx="2" fill="var(--green)"/><text class="i" x="547" y="148" font-size="11">Pilote</text>
+          <text class="i" x="530" y="169" font-size="11">🛡️ Admin · 🔒 vue selon le rôle (RLS)</text>
+          <circle class="badge" cx="516" cy="64" r="11"/><text class="btxt" x="516" y="68.5" font-size="11.5" text-anchor="middle">5</text>
+
+          <rect class="panel" x="784" y="64" width="130" height="126" rx="10"/>
+          <text class="i" x="796" y="88" font-size="10.5">🔔 Notifications</text>
+          <text class="i" x="796" y="111" font-size="10.5">🔒 Sécurité (RLS)</text>
+          <text class="i" x="796" y="134" font-size="10.5">🧾 Journal / audit</text>
+          <text class="i" x="796" y="157" font-size="10.5">🧩 Casquettes</text>
+          <text class="i" x="796" y="180" font-size="10.5">✉️ Contacts</text>
+
+          <rect class="panel" x="516" y="212" width="192" height="140" rx="10"/>
+          <rect class="hdr" x="516" y="212" width="192" height="24" rx="10"/><rect class="hdr" x="516" y="226" width="192" height="10"/>
+          <text class="htxt" x="528" y="229" font-size="11.5">📁 Vie de famille</text>
+          <text class="i" x="528" y="256" font-size="11">💬 Témoignages</text>
+          <text class="i" x="528" y="277" font-size="11">🗣️ Forums · ▶️ rediffusions</text>
+          <text class="i" x="528" y="298" font-size="11">🗓️ Agenda de la semaine</text>
+          <text class="i" x="528" y="319" font-size="11">🚨 SOS / accompagnement</text>
+          <text class="i" x="528" y="340" font-size="11">✉️ Messagerie · 🚗 covoiturage</text>
+          <circle class="badge" cx="516" cy="212" r="11"/><text class="btxt" x="516" y="216.5" font-size="11.5" text-anchor="middle">12</text>
+
+          <rect class="panel" x="722" y="212" width="192" height="140" rx="10"/>
+          <rect class="hdr" x="722" y="212" width="192" height="24" rx="10"/><rect class="hdr" x="722" y="226" width="192" height="10"/>
+          <text class="htxt" x="734" y="229" font-size="11.5">📁 Discipolat &amp; Territoire</text>
+          <text class="i" x="734" y="256" font-size="11">👥 Groupes &amp; disciples</text>
+          <text class="i" x="734" y="277" font-size="11">🗒️ Présence &amp; pointage</text>
+          <text class="i" x="734" y="298" font-size="11">🗺️ Cartographie (membres/FI)</text>
+          <text class="i" x="734" y="319" font-size="11">🎯 Analyse Qualité × Quantité</text>
+          <text class="i" x="734" y="340" font-size="11">📊 Évaluation 360°</text>
+
+          <rect class="panel" x="516" y="376" width="398" height="106" rx="10"/>
+          <rect class="hdrv" x="516" y="376" width="398" height="24" rx="10"/><rect class="hdrv" x="516" y="390" width="398" height="10"/>
+          <text class="htxt" x="528" y="393" font-size="12">♻️ Réutilisation &amp; analyse</text>
+          <text class="i" x="528" y="420" font-size="11">📊 Évaluations 360° agrégées · complétude par FDD</text>
+          <text class="i" x="528" y="441" font-size="11">🎯 Analyse territoriale (Qualité × Quantité)</text>
+          <text class="i" x="528" y="462" font-size="11">📄 Rapports mensuels &amp; rapport global · statistiques</text>
+          <circle class="badge" cx="516" cy="376" r="11"/><text class="btxt" x="516" y="380.5" font-size="11.5" text-anchor="middle">14</text>
+
+          <!-- Public -->
+          <rect class="card" x="966" y="64" width="210" height="196" rx="11"/>
+          <rect class="hdr" x="966" y="64" width="210" height="26" rx="11"/><rect class="hdr" x="966" y="78" width="210" height="12"/>
+          <text class="htxt" x="980" y="82" font-size="12.5">🌐 Vitrine publique &amp; Hub</text>
+          <text class="i" x="980" y="110" font-size="11">🏠 Accueil bilingue (FR/EN)</text>
+          <text class="i" x="980" y="131" font-size="11">🗓️ Agenda · 📅 programmes</text>
+          <text class="i" x="980" y="152" font-size="11">💬 Témoignages publiés</text>
+          <text class="i" x="980" y="173" font-size="11">🗺️ Cartographie · 📊 statistiques</text>
+          <text class="i" x="980" y="194" font-size="11">🖼️ Vision / Chef de famille</text>
+          <text class="i" x="980" y="215" font-size="11">🔎 Recherche &amp; filtres</text>
+          <text class="i" x="980" y="236" font-size="11">🌍 Accès public (visiteur)</text>
+          <circle class="badge" cx="966" cy="64" r="11"/><text class="btxt" x="966" y="68.5" font-size="11.5" text-anchor="middle">6</text>
+
+          <rect class="card" x="966" y="292" width="210" height="76" rx="11"/>
+          <text class="t" x="980" y="316" font-size="12.5">🔎 Visiteur → 🔑 Inscription</text>
+          <text class="m" x="980" y="336" font-size="10.5">consentement RGPD horodaté</text>
+          <text class="m" x="980" y="354" font-size="10.5">validation par un admin</text>
+          <circle class="badge" cx="966" cy="292" r="11"/><text class="btxt" x="966" y="296.5" font-size="11.5" text-anchor="middle">7</text>
+
+          <rect class="card" x="966" y="410" width="210" height="72" rx="11"/>
+          <rect class="hdrg" x="966" y="410" width="210" height="24" rx="11"/><rect class="hdrg" x="966" y="424" width="210" height="10"/>
+          <text class="htxt" x="980" y="427" font-size="12">🛡️ Supervision — Super-admin</text>
+          <text class="m" x="980" y="454" font-size="10.5">rôles · journaux d'audit</text>
+          <text class="m" x="980" y="472" font-size="10.5">validations · qualité des données</text>
+          <circle class="badge" cx="966" cy="410" r="11"/><text class="btxt" x="966" y="414.5" font-size="11.5" text-anchor="middle">16</text>
+
+          <!-- Restitution -->
+          <rect class="card" x="500" y="546" width="150" height="56" rx="11"/>
+          <text class="t" x="514" y="570" font-size="11.5">📱 Espace membre</text>
+          <text class="m" x="514" y="588" font-size="10">web + PWA</text>
+          <rect class="card" x="673" y="546" width="150" height="56" rx="11"/>
+          <text class="t" x="687" y="570" font-size="11.5">📧 Emails</text>
+          <text class="m" x="687" y="588" font-size="10">rappels · agenda</text>
+          <rect class="card" x="846" y="546" width="150" height="56" rx="11"/>
+          <text class="t" x="860" y="570" font-size="11.5">📄 Rapports PDF</text>
+          <text class="m" x="860" y="588" font-size="10">éval · mensuels</text>
+          <rect class="card" x="1019" y="546" width="150" height="56" rx="11"/>
+          <text class="t" x="1033" y="570" font-size="11.5">🗺️ Cartes &amp; TBd</text>
+          <text class="m" x="1033" y="588" font-size="10">territoire · Q×Q</text>
+
+          <!-- Flèches -->
+          <path class="flow" marker-end="url(#mArrow)" d="M224,66 H264"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M224,150 H244 V120 H264"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M464,110 H484 V120 H516"/>
+          <circle class="badge" cx="484" cy="120" r="11"/><text class="btxt" x="484" y="124.5" font-size="11.5" text-anchor="middle">4</text>
+          <text class="lbl" x="466" y="104" font-size="10">ouvre l'espace</text>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M914,120 H966"/>
+          <text class="lbl" x="924" y="114" font-size="10">publie</text>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M1071,260 V292"/>
+          <circle class="badge" cx="1071" cy="276" r="11"/><text class="btxt" x="1071" y="280.5" font-size="11.5" text-anchor="middle">8</text>
+          <text class="lbl" x="1083" y="280" font-size="10">s'inscrit</text>
+          <path class="flow" marker-end="url(#mArrow)" d="M966,318 V318 H944 V150 H930"/>
+          <circle class="badge" cx="944" cy="240" r="11"/><text class="btxt" x="944" y="244.5" font-size="11.5" text-anchor="middle">9</text>
+          <text class="lbl" x="900" y="300" font-size="10">validé → rejoint</text>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M566,190 V212"/>
+          <circle class="badge" cx="566" cy="201" r="11"/><text class="btxt" x="566" y="205.5" font-size="11.5" text-anchor="middle">11</text>
+          <text class="lbl" x="576" y="205" font-size="10">contribue</text>
+          <path class="live" marker-end="url(#mLive)" d="M690,190 V201 H812 V212"/>
+          <circle class="badge" cx="748" cy="201" r="11"/><text class="btxt" x="748" y="205.5" font-size="11.5" text-anchor="middle">13</text>
+          <text class="lbl" x="758" y="197" font-size="10">notifie (temps réel)</text>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M612,352 V376"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M818,352 V376"/>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M464,414 H484 V430 H516"/>
+          <text class="lbl" x="360" y="408" font-size="10">présence · suivi</text>
+
+          <path class="dash" marker-end="url(#mArrow)" d="M224,500 H482 V430 H516"/>
+          <text class="lbl" x="300" y="494" font-size="10">rappels J-1 · escalades</text>
+
+          <path class="dash" marker-end="url(#mArrow)" d="M966,436 H932"/>
+          <text class="lbl" x="905" y="430" font-size="10">supervise</text>
+
+          <path class="flow" d="M715,482 V520"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M715,520 H575 V546"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M715,520 H748 V546"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M715,520 H921 V546"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M715,520 H1094 V546"/>
+          <text class="lbl" x="600" y="514" font-size="10">restitution</text>
+        </svg>
+      </div>
+      <div class="legend">
+        <span><i class="key" style="border-top-color:var(--muted)"></i> Flux / publication</span>
+        <span><i class="key" style="border-top-color:var(--live)"></i> Temps réel (notifications)</span>
+        <span><i class="key" style="border-top-color:var(--muted);border-top-style:dotted"></i> Automatisation / contrôle</span>
+        <span><i class="sw" style="background:var(--blue)"></i> Membre</span>
+        <span><i class="sw" style="background:var(--live)"></i> Faiseur de disciple</span>
+        <span><i class="sw" style="background:var(--green)"></i> Pilote</span>
+      </div>
+
+      <div class="desc">
+        <h3>Descriptif des étapes</h3>
+        <div class="rows">
+          <div class="row"><div class="num">1</div><div class="rtxt"><span class="emo">👑</span> Le <b>chef de famille et les admins</b> définissent la structure : rôles, pôles, groupes et maillage territorial.</div></div>
+          <div class="row"><div class="num">2</div><div class="rtxt"><span class="emo">🗄️</span> <b>Sources &amp; référentiels</b> : villes (population INSEE), églises, programmes, rôles, membres.</div></div>
+          <div class="row"><div class="num">3</div><div class="rtxt"><span class="emo">🧩</span> Le <b>back-office</b> construit le modèle : groupes, pôles, Familles d'Impact, territoire, PageContenu, campagnes, agenda.</div></div>
+          <div class="row"><div class="num">4</div><div class="rtxt"><span class="emo">📤</span> La configuration <b>ouvre l'espace membre</b>, adapté au profil de chacun.</div></div>
+          <div class="row"><div class="num">5</div><div class="rtxt"><span class="emo">🏛️</span> L'<b>espace membre adaptatif</b> montre le bon contenu selon le rôle ; la sécurité est appliquée <b>en base (RLS)</b>.</div></div>
+          <div class="row"><div class="num">6</div><div class="rtxt"><span class="emo">🌐</span> La <b>vitrine &amp; le hub</b> exposent le public : accueil bilingue, agenda, témoignages, cartographie, stats.</div></div>
+          <div class="row"><div class="num">7</div><div class="rtxt"><span class="emo">🔎</span> Un <b>visiteur</b> découvre la vitrine et souhaite rejoindre.</div></div>
+          <div class="row"><div class="num">8</div><div class="rtxt"><span class="emo">🔑</span> Il <b>s'inscrit</b> avec consentement <b>RGPD horodaté</b>.</div></div>
+          <div class="row"><div class="num">9</div><div class="rtxt"><span class="emo">🔗</span> Après <b>validation admin</b>, il est rattaché à un groupe / une FI et rejoint son espace.</div></div>
+          <div class="row"><div class="num">10</div><div class="rtxt"><span class="emo">🧑‍🏫</span> L'<b>encadrement</b> (FDD &amp; pilotes) assure présence et suivi ; ces données nourrissent l'analyse.</div></div>
+          <div class="row"><div class="num">11</div><div class="rtxt"><span class="emo">📥</span> Le membre <b>contribue</b> : présence, témoignage, SOS, messagerie.</div></div>
+          <div class="row"><div class="num">12</div><div class="rtxt"><span class="emo">📁</span> Deux <b>espaces dédiés</b> : « Vie de famille » et « Discipolat &amp; Territoire ».</div></div>
+          <div class="row"><div class="num">13</div><div class="rtxt"><span class="emo">♾️</span> Une publication <b>notifie tous les membres</b> en temps réel (email + cloche).</div></div>
+          <div class="row"><div class="num">14</div><div class="rtxt"><span class="emo">♻️</span> Les données sont <b>réutilisées</b> : évaluations 360°, analyse territoriale (Q×Q), rapports.</div></div>
+          <div class="row"><div class="num">15</div><div class="rtxt"><span class="emo">🛰️</span> Des <b>tâches planifiées</b> automatisent : rappels J-1 (18h), escalades SOS, sauvegardes.</div></div>
+          <div class="row"><div class="num">16</div><div class="rtxt"><span class="emo">🛡️</span> Le <b>super-admin supervise</b> : rôles, audit, qualité des données.</div></div>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ============ PARCOURS (diagrammes) ============ -->
+  <section id="p-parc" role="tabpanel" aria-labelledby="t-parc" hidden>
+    <h2>Parcours types</h2>
+    <p class="cap0">Deux cheminements de bout en bout, en diagramme : celui d'un <b>administrateur</b> qui fait vivre la communauté, et celui d'un <b>utilisateur</b>, de la découverte de la vitrine à sa vie de membre. Suivre les flèches (1 → 8).</p>
+
+    <div class="role"><span class="rico">🛡️</span><div><h4>Parcours classique — Admin</h4><p>Chef de famille / administrateur · entrée par la connexion à son espace</p></div></div>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1160 330" role="img" aria-label="Parcours administrateur en huit étapes : connexion, validation, affectation, rôles, vitrine et agenda, évaluation, pilotage, supervision.">
+          <!-- Rangée 1 -->
+          <rect class="card" x="24" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="42" y="60" font-size="12.5">🔑 Connexion</text>
+          <text class="m" x="42" y="82" font-size="10.8">Accède à son espace ;</text>
+          <text class="m" x="42" y="100" font-size="10.8">menu adapté au rôle admin.</text>
+          <circle cx="24" cy="30" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="24" y="34.5" font-size="12" text-anchor="middle">1</text>
+
+          <rect class="card" x="309" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="327" y="60" font-size="12.5">✅ File de validation</text>
+          <text class="m" x="327" y="82" font-size="10.8">Vérifie les nouvelles</text>
+          <text class="m" x="327" y="100" font-size="10.8">inscriptions, valide (ou refuse).</text>
+          <circle cx="309" cy="30" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="309" y="34.5" font-size="12" text-anchor="middle">2</text>
+
+          <rect class="card" x="594" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="612" y="60" font-size="12.5">🔗 Affectation</text>
+          <text class="m" x="612" y="82" font-size="10.8">Rattache à un groupe</text>
+          <text class="m" x="612" y="100" font-size="10.8">et/ou une Famille d'Impact.</text>
+          <circle cx="594" cy="30" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="594" y="34.5" font-size="12" text-anchor="middle">3</text>
+
+          <rect class="card" x="879" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="897" y="60" font-size="12.5">🎨 Rôles &amp; casquettes</text>
+          <text class="m" x="897" y="82" font-size="10.8">Attribue rôles &amp; permissions</text>
+          <text class="m" x="897" y="100" font-size="10.8">(FDD, pilote, responsable…).</text>
+          <circle cx="879" cy="30" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="879" y="34.5" font-size="12" text-anchor="middle">4</text>
+
+          <!-- Rangée 2 -->
+          <rect class="card" x="879" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="897" y="224" font-size="12.5">📝 Vitrine &amp; agenda</text>
+          <text class="m" x="897" y="246" font-size="10.8">Édite les pages, publie</text>
+          <text class="m" x="897" y="264" font-size="10.8">l'agenda (email auto aux membres).</text>
+          <circle cx="879" cy="194" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="879" y="198.5" font-size="12" text-anchor="middle">5</text>
+
+          <rect class="card" x="594" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="612" y="224" font-size="12.5">📋 Évaluation 360°</text>
+          <text class="m" x="612" y="246" font-size="10.8">Lance une campagne,</text>
+          <text class="m" x="612" y="264" font-size="10.8">suit la complétude (par FDD).</text>
+          <circle cx="594" cy="194" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="594" y="198.5" font-size="12" text-anchor="middle">6</text>
+
+          <rect class="card" x="309" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="327" y="224" font-size="12.5">📊 Pilotage</text>
+          <text class="m" x="327" y="246" font-size="10.8">Rapports, statistiques,</text>
+          <text class="m" x="327" y="264" font-size="10.8">analyse territoriale, carte.</text>
+          <circle cx="309" cy="194" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="309" y="198.5" font-size="12" text-anchor="middle">7</text>
+
+          <rect class="card" x="24" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="42" y="224" font-size="12.5">🛡️ Supervision</text>
+          <text class="m" x="42" y="246" font-size="10.8">Audit, qualité des données,</text>
+          <text class="m" x="42" y="264" font-size="10.8">alertes SOS &amp; incidents.</text>
+          <circle cx="24" cy="194" r="13" fill="url(#gBlue)" stroke="var(--card)" stroke-width="1.5"/><text class="btxt" x="24" y="198.5" font-size="12" text-anchor="middle">8</text>
+
+          <!-- Flèches -->
+          <path class="flow" marker-end="url(#mArrow)" d="M274,78 H309"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M559,78 H594"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M844,78 H879"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M1004,126 V194"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M879,242 H844"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M594,242 H559"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M309,242 H274"/>
+        </svg>
+      </div>
+    </figure>
+
+    <div class="role alt" style="margin-top:26px"><span class="rico">🙋</span><div><h4>Parcours classique — Utilisateur</h4><p>Visiteur → membre · entrée par la vitrine publique</p></div></div>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1160 330" role="img" aria-label="Parcours utilisateur en huit étapes : découverte, inscription, attente, accès, rattachement, participation, contribution, vie connectée.">
+          <!-- Rangée 1 -->
+          <rect class="card" x="24" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="42" y="60" font-size="12.5">🌐 Découverte</text>
+          <text class="m" x="42" y="82" font-size="10.8">Visite la vitrine bilingue :</text>
+          <text class="m" x="42" y="100" font-size="10.8">accueil, agenda, témoignages.</text>
+          <circle class="bgold" cx="24" cy="30" r="13"/><text class="btxt" x="24" y="34.5" font-size="12" text-anchor="middle">1</text>
+
+          <rect class="card" x="309" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="327" y="60" font-size="12.5">🙋 Rejoindre la famille</text>
+          <text class="m" x="327" y="82" font-size="10.8">Formulaire d'inscription</text>
+          <text class="m" x="327" y="100" font-size="10.8">+ consentement RGPD.</text>
+          <circle class="bgold" cx="309" cy="30" r="13"/><text class="btxt" x="309" y="34.5" font-size="12" text-anchor="middle">2</text>
+
+          <rect class="card" x="594" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="612" y="60" font-size="12.5">⏳ Compte en attente</text>
+          <text class="m" x="612" y="82" font-size="10.8">Statut « en attente »,</text>
+          <text class="m" x="612" y="100" font-size="10.8">accès limité.</text>
+          <circle class="bgold" cx="594" cy="30" r="13"/><text class="btxt" x="594" y="34.5" font-size="12" text-anchor="middle">3</text>
+
+          <rect class="card" x="879" y="30" width="250" height="96" rx="12"/>
+          <text class="t" x="897" y="60" font-size="12.5">🚪 Accès à l'espace</text>
+          <text class="m" x="897" y="82" font-size="10.8">Une fois validé, entre dans</text>
+          <text class="m" x="897" y="100" font-size="10.8">son espace membre adaptatif.</text>
+          <circle class="bgold" cx="879" cy="30" r="13"/><text class="btxt" x="879" y="34.5" font-size="12" text-anchor="middle">4</text>
+
+          <!-- Rangée 2 -->
+          <rect class="card" x="879" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="897" y="224" font-size="12.5">👥 Rattachement</text>
+          <text class="m" x="897" y="246" font-size="10.8">Rejoint son groupe / sa FI</text>
+          <text class="m" x="897" y="264" font-size="10.8">et son faiseur de disciple.</text>
+          <circle class="bgold" cx="879" cy="194" r="13"/><text class="btxt" x="879" y="198.5" font-size="12" text-anchor="middle">5</text>
+
+          <rect class="card" x="594" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="612" y="224" font-size="12.5">🗓️ Participation</text>
+          <text class="m" x="612" y="246" font-size="10.8">Agenda, pointage de présence,</text>
+          <text class="m" x="612" y="264" font-size="10.8">com'frat.</text>
+          <circle class="bgold" cx="594" cy="194" r="13"/><text class="btxt" x="594" y="198.5" font-size="12" text-anchor="middle">6</text>
+
+          <rect class="card" x="309" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="327" y="224" font-size="12.5">💬 Contribution</text>
+          <text class="m" x="327" y="246" font-size="10.8">Témoignages, forums,</text>
+          <text class="m" x="327" y="264" font-size="10.8">messagerie, SOS.</text>
+          <circle class="bgold" cx="309" cy="194" r="13"/><text class="btxt" x="309" y="198.5" font-size="12" text-anchor="middle">7</text>
+
+          <rect class="card" x="24" y="194" width="250" height="96" rx="12"/>
+          <text class="t" x="42" y="224" font-size="12.5">🔔 Vie connectée</text>
+          <text class="m" x="42" y="246" font-size="10.8">Notifications, rappels J-1,</text>
+          <text class="m" x="42" y="264" font-size="10.8">rediffusions, agenda hebdo.</text>
+          <circle class="bgold" cx="24" cy="194" r="13"/><text class="btxt" x="24" y="198.5" font-size="12" text-anchor="middle">8</text>
+
+          <!-- Flèches -->
+          <path class="flow" marker-end="url(#mArrow)" d="M274,78 H309"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M559,78 H594"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M844,78 H879"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M1004,126 V194"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M879,242 H844"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M594,242 H559"/>
+          <path class="flow" marker-end="url(#mArrow)" d="M309,242 H274"/>
+        </svg>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ============ TECHNIQUE (épuré) ============ -->
+  <section id="p-tech" role="tabpanel" aria-labelledby="t-tech" hidden>
+    <h2>Environnement technique</h2>
+    <p class="cap0">Next.js sur Vercel (Europe), Supabase (Auth / PostgreSQL + RLS / Storage) en UE, services intégrés. Chiffré de bout en bout. Détails en légende.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1160 440" role="img" aria-label="Le navigateur charge Next.js sur Vercel ; les Server Actions accèdent à Supabase avec le JWT ; la RLS applique les droits ; services et tâches planifiées.">
+          <rect class="card" x="24" y="160" width="200" height="110" rx="12"/>
+          <rect class="hdr" x="24" y="160" width="200" height="26" rx="12"/><rect class="hdr" x="24" y="174" width="200" height="12"/>
+          <text class="htxt" x="38" y="178" font-size="12.5">🌍 Utilisateur</text>
+          <text class="i" x="38" y="206" font-size="11.5">🖥️ Navigateur + mobile (PWA)</text>
+          <text class="i" x="38" y="228" font-size="11.5">🌐 Vitrine + espace membre</text>
+          <text class="m" x="38" y="252" font-size="10.5">FR / EN · thème clair-sombre</text>
+
+          <rect class="box" x="284" y="60" width="440" height="320" rx="14"/>
+          <text class="t" x="304" y="84" font-size="13.5" fill="var(--blue)">▲ Vercel — Europe (Dublin)</text>
+
+          <rect class="panel" x="306" y="100" width="396" height="120" rx="10"/>
+          <text class="t" x="322" y="124" font-size="12.5">⚛️ Next.js (App Router)</text>
+          <text class="i" x="322" y="149" font-size="11.5">🖥️ SSR · ⚙️ Server Actions · 🔌 Route Handlers</text>
+          <text class="i" x="322" y="172" font-size="11.5">🚦 Middleware — session Supabase</text>
+          <text class="i" x="322" y="195" font-size="11.5">🔐 Gardes (rôle) + validation Zod · 🌍 CDN Edge</text>
+
+          <rect class="panel" x="306" y="240" width="396" height="120" rx="10"/>
+          <rect class="hdrv" x="306" y="240" width="396" height="24" rx="10"/><rect class="hdrv" x="306" y="254" width="396" height="10"/>
+          <text class="htxt" x="322" y="257" font-size="12">⏱️ Tâches planifiées (cron)</text>
+          <text class="i" x="322" y="284" font-size="11.5">🔔 Rappels pointage J-1 (18h) · 🚨 escalades SOS</text>
+          <text class="i" x="322" y="307" font-size="11.5">🗓️ Rappels parcours · 📊 rapport mensuel</text>
+          <text class="i" x="322" y="330" font-size="11.5">💾 Sauvegarde hebdomadaire</text>
+
+          <rect class="card" x="792" y="90" width="344" height="150" rx="12"/>
+          <rect class="hdrg" x="792" y="90" width="344" height="28" rx="12"/><rect class="hdrg" x="792" y="106" width="344" height="12"/>
+          <text class="htxt" x="806" y="109" font-size="12.5">🟢 Supabase — Union Européenne</text>
+          <text class="i" x="806" y="140" font-size="11.5">🔑 Auth (JWT, rôles) · 🗃️ PostgreSQL — RLS</text>
+          <text class="i" x="806" y="164" font-size="11.5">📦 Storage · 🔁 temps réel</text>
+          <text class="i" x="806" y="188" font-size="11.5">🧱 Migrations SQL versionnées</text>
+          <text class="m" x="806" y="216" font-size="10.5">🔒 Chiffré en transit &amp; au repos · 💾 sauvegardes UE</text>
+
+          <rect class="card" x="792" y="266" width="344" height="94" rx="12"/>
+          <rect class="hdr" x="792" y="266" width="344" height="26" rx="12"/><rect class="hdr" x="792" y="280" width="344" height="12"/>
+          <text class="htxt" x="806" y="284" font-size="12.5">🔗 Services intégrés</text>
+          <text class="i" x="806" y="314" font-size="11.5">✉️ Resend · 🎬 Bunny · 📍 API Adresse / INSEE</text>
+          <text class="m" x="806" y="338" font-size="10.5">appelés côté serveur uniquement</text>
+
+          <path class="flow" marker-end="url(#mArrow)" d="M224,215 H284"/><text class="lbl" x="230" y="207" font-size="10.5">HTTPS / TLS</text>
+          <path class="flow" marker-end="url(#mArrow)" d="M724,160 H792"/><text class="lbl" x="726" y="152" font-size="10.5">JWT → RLS</text>
+          <path class="flow" marker-end="url(#mArrow)" d="M724,300 H760 V313 H792"/><text class="lbl" x="726" y="294" font-size="10.5">emails · médias · géo</text>
+        </svg>
+      </div>
+      <figcaption>Le navigateur exécute <b>Next.js</b> sur <b>Vercel (Dublin, UE)</b>. Les <b>Server Actions</b> et route handlers accèdent à <b>Supabase</b> (UE) avec le <b>JWT</b> de l'utilisateur : la <b>RLS</b> applique les droits en base. Le <b>Storage</b> héberge médias et flyers. Tâches planifiées et services (Resend, Bunny, API Adresse/INSEE) tournent côté serveur, chiffrés en transit et au repos.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ DONNÉES (allégé) ============ -->
+  <section id="p-data" role="tabpanel" aria-labelledby="t-data" hidden>
+    <h2>Modèle de données</h2>
+    <p class="cap0">La table <b>membres</b> au centre, reliée au discipolat, au territoire, aux contenus, à l'évaluation et à la présence. Isolation multi-communauté par RLS.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1160 600" role="img" aria-label="La table membres reliée aux groupes, pôles, familles d'impact, présences, contenus, évaluations, tables transverses et communautes.">
+          <rect class="card" x="470" y="258" width="220" height="96" rx="12"/>
+          <rect class="hdrv" x="470" y="258" width="220" height="24" rx="12"/><rect class="hdrv" x="470" y="272" width="220" height="10"/>
+          <text class="htxt" x="484" y="275" font-size="12.5">👤 membres</text>
+          <text class="i" x="484" y="302" font-size="11">rôle · statut · langue · consentement</text>
+          <text class="i" x="484" y="324" font-size="11">groupe_id · famille_impact_id</text>
+          <text class="i" x="484" y="344" font-size="11">pole_id · communaute_id</text>
+
+          <rect class="card" x="40" y="60" width="220" height="60" rx="11"/>
+          <text class="t" x="54" y="86" font-size="12">👥 groupes</text>
+          <text class="m" x="54" y="105" font-size="10.5">responsable_id → membres (FDD)</text>
+          <rect class="card" x="40" y="150" width="220" height="56" rx="11"/>
+          <text class="t" x="54" y="176" font-size="12">🏛️ poles</text>
+          <text class="m" x="54" y="194" font-size="10.5">responsable_id → membres</text>
+          <path class="rel" marker-end="url(#mRel)" d="M260,90 H360 V292 H470"/><text class="lbl" x="304" y="286" font-size="10">groupe_id</text>
+          <path class="rel" marker-end="url(#mRel)" d="M260,178 H340 V310 H470"/><text class="lbl" x="304" y="304" font-size="10">pole_id</text>
+
+          <rect class="card" x="40" y="264" width="220" height="88" rx="11"/>
+          <rect class="hdr" x="40" y="264" width="220" height="22" rx="11"/><rect class="hdr" x="40" y="277" width="220" height="9"/>
+          <text class="htxt" x="54" y="281" font-size="11.5">🗺️ Territoire</text>
+          <text class="i" x="54" y="306" font-size="10.5">secteurs · villes (INSEE) · églises</text>
+          <text class="i" x="54" y="327" font-size="10.5">familles_impact (adresse · lat/lng)</text>
+          <text class="m" x="54" y="346" font-size="10.5">pilote_id → membres</text>
+          <path class="rel" marker-end="url(#mRel)" d="M260,320 H400 V330 H470"/><text class="lbl" x="304" y="324" font-size="10">famille_impact_id</text>
+
+          <rect class="card" x="40" y="420" width="220" height="80" rx="11"/>
+          <text class="t" x="54" y="446" font-size="12">🗒️ Présence</text>
+          <text class="m" x="54" y="466" font-size="10.5">programmes → occurrences</text>
+          <text class="m" x="54" y="485" font-size="10.5">presences (membre · occurrence · statut)</text>
+          <path class="rel" marker-end="url(#mRel)" d="M260,460 H420 V344 H470"/><text class="lbl" x="304" y="338" font-size="10">membre_id</text>
+
+          <rect class="card" x="900" y="60" width="230" height="82" rx="11"/>
+          <text class="t" x="914" y="86" font-size="12">💬 Contenus</text>
+          <text class="m" x="914" y="106" font-size="10.5">temoignages (membre · format)</text>
+          <text class="m" x="914" y="125" font-size="10.5">forums · rediffusions · likes</text>
+          <path class="rel" marker-end="url(#mRel)" d="M900,100 H810 V300 H690"/><text class="lbl" x="720" y="294" font-size="10">membre_id (auteur)</text>
+
+          <rect class="card" x="900" y="166" width="230" height="56" rx="11"/>
+          <text class="t" x="914" y="192" font-size="12">🗓️ agendas_semaine</text>
+          <text class="m" x="914" y="210" font-size="10.5">→ agenda_evenements (flyer · date)</text>
+
+          <rect class="card" x="900" y="266" width="230" height="80" rx="11"/>
+          <text class="t" x="914" y="292" font-size="12">📊 Évaluation 360°</text>
+          <text class="m" x="914" y="312" font-size="10.5">campagnes · questions dynamiques</text>
+          <text class="m" x="914" y="331" font-size="10.5">evaluations (évaluateur · cible)</text>
+          <path class="rel" marker-end="url(#mRel)" d="M900,306 H800 V320 H690"/><text class="lbl" x="720" y="314" font-size="10">évaluateur · cible</text>
+
+          <rect class="card" x="900" y="392" width="230" height="80" rx="11"/>
+          <text class="t" x="914" y="418" font-size="12">🔔 Transverse</text>
+          <text class="m" x="914" y="438" font-size="10.5">notifications · messagerie · SOS</text>
+          <text class="m" x="914" y="457" font-size="10.5">journaux_audit · covoiturage</text>
+          <path class="rel" marker-end="url(#mRel)" d="M900,432 H780 V336 H690"/><text class="lbl" x="720" y="330" font-size="10">membre_id</text>
+
+          <rect class="card" x="470" y="150" width="220" height="64" rx="11"/>
+          <rect class="hdrg" x="470" y="150" width="220" height="22" rx="11"/><rect class="hdrg" x="470" y="163" width="220" height="9"/>
+          <text class="htxt" x="484" y="167" font-size="11.5">🏘️ communautes (multi-tenant)</text>
+          <text class="m" x="484" y="192" font-size="10.5">id · slug · nom · statut</text>
+          <text class="m" x="484" y="208" font-size="10.5">isolation par RLS</text>
+          <path class="rel" marker-end="url(#mRel)" d="M580,214 V258"/><text class="lbl" x="588" y="240" font-size="10">communaute_id</text>
+        </svg>
+      </div>
+      <figcaption>Chaque flèche est une clé étrangère vers <b>membres</b> : <b>groupes</b> (via <b>responsable_id</b> = faiseur de disciple), <b>pôles</b>, <b>territoire</b> (familles_impact / pilote), <b>présence</b>, <b>contenus</b>, <b>évaluation 360°</b> et tables <b>transverses</b>. La table <b>communautes</b> prépare l'isolation multi-communauté (RLS).</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ GARANTIES ============ -->
+  <section id="p-qa" role="tabpanel" aria-labelledby="t-qa" hidden>
+    <h2>Garanties &amp; réponses aux questions</h2>
+    <p class="cap0">Les questions que posent les partenaires — et le mécanisme concret qui y répond. Chaque inquiétude est adressée par un choix d'architecture, pas par une promesse.</p>
+
+    <div class="two">
+      <figure class="mini">
+        <h4>🧬 Duplicabilité : 75 familles, données cloisonnées</h4>
+        <div class="scroll">
+          <svg viewBox="0 0 560 300" role="img" aria-label="Chaque communauté interroge une base PostgreSQL unique ; la RLS filtre par communaute_id ; chaque famille ne voit que ses données.">
+            <rect class="card" x="16" y="40" width="150" height="46" rx="9"/><text class="t" x="30" y="62" font-size="11.5">🏘️ Famille A</text><text class="m" x="30" y="78" font-size="10">/c/famille-a</text>
+            <rect class="card" x="16" y="128" width="150" height="46" rx="9"/><text class="t" x="30" y="150" font-size="11.5">🏘️ Famille B</text><text class="m" x="30" y="166" font-size="10">/c/famille-b</text>
+            <rect class="card" x="16" y="216" width="150" height="46" rx="9"/><text class="t" x="30" y="238" font-size="11.5">🏘️ … 75 familles</text><text class="m" x="30" y="254" font-size="10">/c/{slug}</text>
+
+            <rect class="panel" x="228" y="108" width="104" height="86" rx="11"/>
+            <rect class="hdrg" x="228" y="108" width="104" height="22" rx="11"/><rect class="hdrg" x="228" y="121" width="104" height="9"/>
+            <text class="htxt" x="242" y="125" font-size="11">🔒 RLS</text>
+            <text class="m" x="242" y="152" font-size="10">filtre par</text>
+            <text class="i" x="242" y="169" font-size="10.5">communaute_id</text>
+
+            <rect class="card" x="392" y="96" width="152" height="110" rx="12"/>
+            <rect class="hdr" x="392" y="96" width="152" height="24" rx="12"/><rect class="hdr" x="392" y="110" width="152" height="10"/>
+            <text class="htxt" x="406" y="113" font-size="11.5">🗃️ PostgreSQL</text>
+            <text class="m" x="406" y="142" font-size="10.5">une base partagée</text>
+            <text class="i" x="406" y="164" font-size="10.5">chaque ligne porte</text>
+            <text class="i" x="406" y="182" font-size="10.5">sa communaute_id</text>
+
+            <path class="flow" marker-end="url(#mArrow)" d="M166,63 H200 V150 H228"/>
+            <path class="flow" marker-end="url(#mArrow)" d="M166,151 H228"/>
+            <path class="flow" marker-end="url(#mArrow)" d="M166,239 H200 V152 H228"/>
+            <path class="rel" marker-end="url(#mRel)" d="M332,151 H392"/>
+          </svg>
+        </div>
+        <figcaption>Une <b>seule base</b> sert les 75 communautés ; la <b>RLS</b> filtre chaque requête par <code>communaute_id</code> : une famille ne lit jamais les données d'une autre. Créer une communauté = une ligne + un <code>slug</code>.</figcaption>
+      </figure>
+
+      <figure class="mini">
+        <h4>⚡ Montée en charge : 1000+ connexions simultanées</h4>
+        <div class="scroll">
+          <svg viewBox="0 0 560 300" role="img" aria-label="Les visiteurs passent par le CDN Edge en cache et par des fonctions serverless auto-scalées, qui accèdent à PostgreSQL via un pooler.">
+            <rect class="card" x="16" y="118" width="120" height="64" rx="9"/><text class="t" x="30" y="146" font-size="11.5">👥 1000+</text><text class="m" x="30" y="164" font-size="10">visiteurs / membres</text>
+
+            <rect class="panel" x="176" y="40" width="150" height="70" rx="11"/>
+            <rect class="hdr" x="176" y="40" width="150" height="22" rx="11"/><rect class="hdr" x="176" y="53" width="150" height="9"/>
+            <text class="htxt" x="190" y="57" font-size="11">🌍 CDN Edge</text>
+            <text class="m" x="190" y="84" font-size="10">vitrine en cache</text>
+
+            <rect class="panel" x="176" y="190" width="150" height="72" rx="11"/>
+            <rect class="hdr" x="176" y="190" width="150" height="22" rx="11"/><rect class="hdr" x="176" y="203" width="150" height="9"/>
+            <text class="htxt" x="190" y="207" font-size="11">⚙️ Serverless</text>
+            <text class="m" x="190" y="234" font-size="10">auto-scaling</text>
+            <text class="m" x="190" y="251" font-size="10">à la demande</text>
+
+            <rect class="card" x="372" y="120" width="80" height="60" rx="9"/>
+            <text class="t" x="386" y="146" font-size="11">🔀 Pooler</text>
+            <text class="m" x="386" y="164" font-size="9.5">connexions</text>
+
+            <rect class="card" x="470" y="118" width="76" height="64" rx="9"/>
+            <text class="t" x="484" y="146" font-size="11">🗃️ DB</text>
+            <text class="m" x="484" y="164" font-size="9.5">PostgreSQL</text>
+
+            <path class="flow" marker-end="url(#mArrow)" d="M136,138 H160 V75 H176"/>
+            <path class="flow" marker-end="url(#mArrow)" d="M136,162 H160 V225 H176"/>
+            <path class="flow" marker-end="url(#mArrow)" d="M326,225 H349 V150 H372"/>
+            <path class="rel" marker-end="url(#mRel)" d="M452,150 H470"/>
+          </svg>
+        </div>
+        <figcaption>La <b>vitrine</b> est servie par le <b>CDN Edge</b> (cache, sans requête base). Les actions dynamiques passent par des <b>fonctions serverless</b> auto-scalées, et un <b>pooler</b> protège la base. La capacité suit la demande.</figcaption>
+      </figure>
+    </div>
+
+    <div class="qa">
+      <div class="qcard">
+        <div class="qhead"><span class="qico">🛡️</span><span class="qtitle">Fiabilité &amp; robustesse</span></div>
+        <p class="qq">« Et si la plateforme tombe ou perd des données ? »</p>
+        <p class="qans">Infrastructure <b>managée</b> (Vercel + Supabase), redondance, <b>sauvegardes automatiques</b>, monitoring. Tâches critiques <b>idempotentes</b> ; base gérée par <b>migrations versionnées</b>.</p>
+        <span class="ok">✓ Couvert</span>
+      </div>
+      <div class="qcard">
+        <div class="qhead"><span class="qico">🔒</span><span class="qtitle">Sécurité des données</span></div>
+        <p class="qq">« Qui peut voir quoi ? Est-ce vraiment protégé ? »</p>
+        <p class="qans">La sécurité vit <b>dans la base (RLS)</b> : impossible de contourner l'interface. <b>Auth JWT</b>, <b>moindre privilège</b>, <b>chiffrement TLS + au repos</b>, secrets hors du code.</p>
+        <span class="ok">✓ Couvert</span>
+      </div>
+      <div class="qcard">
+        <div class="qhead"><span class="qico">📜</span><span class="qtitle">Conformité RGPD</span></div>
+        <p class="qq">« Les membres gardent-ils le contrôle de leurs données ? »</p>
+        <p class="qans"><b>Consentement horodaté</b>, page de confidentialité, <b>journaux d'audit</b>. Anonymisation plutôt que suppression en cascade. <b>DPO</b> ICC. Données <b>en UE</b>.</p>
+        <span class="ok">✓ Couvert</span>
+      </div>
+      <div class="qcard">
+        <div class="qhead"><span class="qico">⚡</span><span class="qtitle">Montée en charge</span></div>
+        <p class="qq">« Tiendra-t-elle 1000+ connexions ? »</p>
+        <p class="qans"><b>CDN Edge</b> (cache), logique <b>serverless auto-scalé</b>, base protégée par un <b>pooler</b>. Capacité qui suit la demande (voir schéma).</p>
+        <span class="ok">✓ Couvert</span>
+      </div>
+      <div class="qcard">
+        <div class="qhead"><span class="qico">🧬</span><span class="qtitle">Duplicabilité (75 familles)</span></div>
+        <p class="qq">« Peut-on la reproduire pour d'autres communautés ? »</p>
+        <p class="qans"><b>Multi-communauté</b> : une base + <code>communaute_id</code> + <b>RLS</b>. Chaque communauté a son <code>/c/{slug}</code> ; création depuis une <b>console</b> réservée.</p>
+        <span class="ok">✓ Conçu pour</span>
+      </div>
+      <div class="qcard">
+        <div class="qhead"><span class="qico">🇪🇺</span><span class="qtitle">Hébergement UE</span></div>
+        <p class="qq">« Où sont stockées les données ? »</p>
+        <p class="qans"><b>Vercel — Dublin</b> et base <b>Supabase région UE</b>. Les données ne quittent pas l'UE. <span class="m">(À reconfirmer dans le tableau de bord Supabase.)</span></p>
+        <span class="ok">✓ Couvert</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');var p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t);});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();var n=(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length;tabs[n].focus();sel(tabs[n]);}});});
+  var root=document.documentElement,tb=document.getElementById('theme');
+  try{var sv=localStorage.getItem('ldd-theme');if(sv)root.setAttribute('data-theme',sv);}catch(e){}
+  tb.addEventListener('click',function(){var c=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');var n=c==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ldd-theme',n);}catch(e){}});
+</script>
