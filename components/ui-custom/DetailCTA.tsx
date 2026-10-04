@@ -16,35 +16,23 @@ export default function DetailCTA({ label, projectTitle }: Props) {
   };
 
   return (
-    <button
-      onClick={handleClick}
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: "10px",
-        padding: "16px 28px",
-        background: "#B45309",
-        color: "#F5EFE6",
-        border: "none",
-        borderRadius: "100px",
-        fontFamily: "var(--font-mono)",
-        fontSize: "13px",
-        fontWeight: 500,
-        cursor: "pointer",
-        transition: "background 0.3s",
-        letterSpacing: "0.02em",
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "#0A1628")}
-      onMouseLeave={(e) => (e.currentTarget.style.background = "#B45309")}
-    >
+    <button onClick={handleClick} className="ds-btn ds-btn-gold">
       {label}
-      <span style={{
-        width: "26px", height: "26px",
-        background: "rgba(245,239,230,0.2)",
-        borderRadius: "50%",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        fontSize: "13px",
-      }}>→</span>
+      <span
+        aria-hidden="true"
+        style={{
+          width: "26px",
+          height: "26px",
+          background: "color-mix(in srgb, var(--sp-bleu-nuit) 12%, transparent)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "13px",
+        }}
+      >
+        →
+      </span>
     </button>
   );
 }

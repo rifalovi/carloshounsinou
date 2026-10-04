@@ -16,15 +16,15 @@ export default function LanguageSwitcher({ locale }: Props) {
       href={otherPath}
       aria-label={`Switch to ${otherLocale === "fr" ? "Français" : "English"}`}
       style={{
-        fontFamily: "var(--font-mono)",
+        fontFamily: "var(--sp-font-mono)",
         fontSize: "11px",
         fontWeight: 500,
-        color: "#475569",
+        color: "var(--sp-texte-3)",
         textDecoration: "none",
         letterSpacing: "0.04em",
-        padding: "4px 8px",
-        border: "1px solid rgba(10,22,40,0.12)",
-        borderRadius: "4px",
+        padding: "4px 10px",
+        border: "1px solid var(--sp-ligne)",
+        borderRadius: "var(--sp-radius-pill)",
         transition: "all 0.2s",
       }}
     >

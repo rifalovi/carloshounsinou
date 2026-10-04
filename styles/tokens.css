@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Design system partagé · suivi-projet.org & carloshounsinou.com
+   Version 1.1 · 2026-10-04 · source : suivi-projet (app/globals.css)
+   À importer tel quel dans le site, puis utiliser les classes .ds-* ou les
+   variables --sp-* dans les composants existants.
+   Polices (à placer dans le <head>) :
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+   ========================================================================== */
+
+:root {
+  /* ── Marque ─────────────────────────────────────────────────────────── */
+  --sp-bleu-pilotage: #0e4f88;   /* couleur principale : liens, boutons, titres de carte */
+  --sp-bleu-nuit: #0a2540;       /* fonds sombres, titres forts */
+  --sp-or-jalon: #f5a623;        /* accent unique : sur-titres, filets, badges, CTA sur fond sombre */
+  --sp-bleu-clair: #7cc3f2;      /* mot mis en valeur dans un titre sur fond sombre */
+
+  /* ── Palette institutionnelle complémentaire (couleurs OIF, sans logo) ─
+     Rôles propres aux deux sites : catégories, statuts, données.
+     Aucune signification OIF (pas de PS1/PS2/PS3, pas de piliers). */
+  --sp-cyan: #0198e9;            /* catégorie « diagramme / architecture », liens d'info */
+  --sp-violet: #5d0073;          /* catégorie « maquette / design » */
+  --sp-vert: #7eb301;            /* succès, « en production », catégorie « MVP » */
+  --sp-vert-texte: #3f6a00;      /* vert lisible pour du texte sur fond clair */
+  --sp-jaune: #fdcd00;           /* mise en avant ponctuelle, toujours en fond (jamais en texte sur blanc) */
+  --sp-rouge: #e40001;           /* erreur, suppression, alerte critique */
+  --sp-gris: #2e292d;            /* texte très foncé alternatif, filets sombres */
+  --sp-gris-clair: #dfdcd8;      /* séparateurs doux, fonds neutres chauds */
+
+  /* Fonds teintés associés (pastilles, encarts) */
+  --sp-cyan-bg: #e6f4fd;
+  --sp-violet-bg: #f3e8f6;
+  --sp-vert-bg: #edf6e1;
+  --sp-jaune-bg: #fff8d6;
+  --sp-rouge-bg: #fdecec;
+
+  /* ── Fonds et neutres ──────────────────────────────────────────────── */
+  --sp-blanc: #ffffff;
+  --sp-papier: #f7f6f2;          /* fond de section claire */
+  --sp-ciel: #e8f0f8;            /* fond d'encart informatif */
+  --sp-ligne: #e4e2dc;           /* bordures */
+  --sp-texte: #14171c;           /* texte principal */
+  --sp-texte-2: #3a414c;         /* texte secondaire */
+  --sp-texte-3: #5b6472;         /* légendes, métadonnées */
+
+  /* ── Texte sur fond sombre ─────────────────────────────────────────── */
+  --sp-sur-sombre: #d7e4f3;      /* paragraphe */
+  --sp-sur-sombre-2: #bcd6f1;    /* sur-titre */
+  --sp-sur-sombre-3: #c7d6ea;    /* texte de bandeau */
+
+  /* ── Statuts (pastilles) ───────────────────────────────────────────── */
+  --sp-statut-prod: #1e8e3e;  --sp-statut-prod-bg: #e6f4ea;  --sp-statut-prod-fg: #1b6b34;   /* en production */
+  --sp-statut-dev: #f5a623;   --sp-statut-dev-bg: #fff4de;   --sp-statut-dev-fg: #8a5300;    /* en cours */
+  --sp-statut-livre: #0e4f88; --sp-statut-livre-bg: #e8f0f8; --sp-statut-livre-fg: #0e4f88;  /* livré */
+  --sp-statut-prive: #8a93a0; --sp-statut-prive-bg: #eeeff1; --sp-statut-prive-fg: #3a414c;  /* privé */
+
+  /* ── Dégradés ──────────────────────────────────────────────────────── */
+  --sp-grad-hero-voile: linear-gradient(100deg, rgba(9,26,49,.90) 0%, rgba(12,40,74,.74) 44%, rgba(14,79,136,.40) 100%);
+  --sp-grad-bandeau: linear-gradient(135deg, #0c1a2e, #16335b);
+  --sp-grad-section: linear-gradient(160deg, #0a2540 0%, #0d3561 60%, #0e4f88 100%);
+
+  /* ── Typographie ───────────────────────────────────────────────────── */
+  --sp-font-sans: 'Manrope', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --sp-font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  /* ── Formes ────────────────────────────────────────────────────────── */
+  --sp-radius: 10px;             /* champs, petits blocs */
+  --sp-radius-card: 14px;        /* cartes */
+  --sp-radius-pill: 999px;       /* boutons, pastilles */
+  --sp-shadow-card: 0 1px 2px rgba(14,79,136,.04), 0 10px 30px -22px rgba(14,79,136,.35);
+  --sp-shadow-card-hover: 0 2px 4px rgba(14,79,136,.06), 0 16px 36px -20px rgba(14,79,136,.45);
+  --sp-shadow-btn: 0 10px 30px -12px rgba(0,0,0,.4);
+
+  /* ── Mise en page ──────────────────────────────────────────────────── */
+  --sp-container: 1040px;
+  --sp-gutter: 20px;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--sp-font-sans);
+  color: var(--sp-texte);
+  background: var(--sp-blanc);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.ds-wrap { max-width: var(--sp-container); margin: 0 auto; padding: 0 var(--sp-gutter); }
+
+/* ── Titres ───────────────────────────────────────────────────────────── */
+.ds-h1 { font-weight: 800; font-size: clamp(28px, 5.4vw, 50px); line-height: 1.08; letter-spacing: -.02em; text-wrap: balance; margin: 0 0 16px; }
+.ds-h1 .hl { color: var(--sp-bleu-clair); }              /* sur fond sombre */
+.ds-h2 { font-weight: 800; font-size: clamp(20px, 3vw, 28px); letter-spacing: -.01em; color: var(--sp-bleu-nuit); margin: 0 0 8px; }
+.ds-lead { font-size: clamp(15px, 2vw, 18px); line-height: 1.6; max-width: 58ch; }
+
+/* Sur-titre (petites capitales espacées) */
+.ds-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--sp-or-jalon); margin: 0 0 12px; }
+.ds-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.ds-eyebrow.on-dark { color: var(--sp-sur-sombre-2); }
+.ds-eyebrow.on-dark .dot { background: var(--sp-cyan); }  /* point cyan sur fond sombre */
+
+/* Titre de section avec filet or */
+.ds-section-title { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--sp-texte-3); margin: 0 0 16px; }
+.ds-section-title::before { content: ""; width: 26px; height: 3px; border-radius: 3px; background: var(--sp-or-jalon); }
+
+/* Étiquette technique (chiffres, références) */
+.ds-mono { font-family: var(--sp-font-mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; }
+
+/* ── Boutons (toujours en pilule) ─────────────────────────────────────── */
+.ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: inherit;
+  font-weight: 700; font-size: 15px; text-decoration: none; cursor: pointer; border-radius: var(--sp-radius-pill);
+  padding: 13px 24px; border: 1.5px solid transparent; transition: background .15s ease, filter .15s ease; }
+.ds-btn-light   { background: #fff; color: var(--sp-bleu-pilotage); box-shadow: var(--sp-shadow-btn); }      /* principal sur fond sombre */
+.ds-btn-light:hover { background: #eef5fc; }
+.ds-btn-ghost   { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }               /* secondaire sur fond sombre */
+.ds-btn-ghost:hover { background: rgba(255,255,255,.12); }
+.ds-btn-blue    { background: var(--sp-bleu-pilotage); color: #fff; }                                        /* principal sur fond clair */
+.ds-btn-blue:hover { background: #0b4274; }
+.ds-btn-outline { background: transparent; color: var(--sp-bleu-pilotage); border-color: var(--sp-bleu-pilotage); } /* secondaire sur fond clair */
+.ds-btn-outline:hover { background: color-mix(in srgb, var(--sp-bleu-pilotage) 8%, white); }
+.ds-btn-gold    { background: var(--sp-or-jalon); color: var(--sp-bleu-nuit); font-weight: 800; }            /* action majeure, une seule par écran */
+.ds-btn-gold:hover { filter: brightness(1.06); }
+
+/* ── Cartes ───────────────────────────────────────────────────────────── */
+.ds-card { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid var(--sp-ligne);
+  border-radius: var(--sp-radius-card); padding: 18px 18px 16px; box-shadow: var(--sp-shadow-card);
+  transition: box-shadow .15s ease, transform .15s ease; color: inherit; text-decoration: none; }
+a.ds-card:hover { box-shadow: var(--sp-shadow-card-hover); transform: translateY(-2px); }
+.ds-card h3 { margin: 0; font-size: 16px; font-weight: 700; color: var(--sp-bleu-pilotage); }
+.ds-card p { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--sp-texte-2); }
+.ds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+/* ── Pastilles de statut ──────────────────────────────────────────────── */
+.ds-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700;
+  border-radius: var(--sp-radius-pill); padding: 3px 10px; white-space: nowrap; }
+.ds-pill.prod   { background: var(--sp-statut-prod-bg);  color: var(--sp-statut-prod-fg); }
+.ds-pill.dev    { background: var(--sp-statut-dev-bg);   color: var(--sp-statut-dev-fg); }
+.ds-pill.livre  { background: var(--sp-statut-livre-bg); color: var(--sp-statut-livre-fg); }
+.ds-pill.prive  { background: var(--sp-statut-prive-bg); color: var(--sp-statut-prive-fg); }
+
+/* ── Catégories (contenus, livrables, projets) ─────────────────────────── */
+.ds-cat { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700;
+  border-radius: var(--sp-radius-pill); padding: 4px 10px; white-space: nowrap; }
+.ds-cat.architecture { color: var(--sp-cyan);   background: var(--sp-cyan-bg); }
+.ds-cat.design       { color: var(--sp-violet); background: var(--sp-violet-bg); }
+.ds-cat.mvp          { color: var(--sp-vert-texte); background: var(--sp-vert-bg); }
+.ds-cat.offre        { color: var(--sp-statut-dev-fg); background: var(--sp-statut-dev-bg); }
+.ds-cat.document     { color: var(--sp-bleu-pilotage); background: var(--sp-ciel); }
+/* Carte marquée par une bande latérale de la couleur de sa catégorie */
+.ds-card[data-cat] { border-left: 5px solid var(--cat, var(--sp-ligne)); }
+.ds-card[data-cat="architecture"] { --cat: var(--sp-cyan); }
+.ds-card[data-cat="design"]       { --cat: var(--sp-violet); }
+.ds-card[data-cat="mvp"]          { --cat: var(--sp-vert); }
+.ds-card[data-cat="offre"]        { --cat: var(--sp-or-jalon); }
+.ds-card[data-cat="document"]     { --cat: var(--sp-bleu-pilotage); }
+
+/* ── Alertes ──────────────────────────────────────────────────────────── */
+.ds-alert { border-radius: var(--sp-radius); padding: 12px 14px; font-size: 13.5px; border: 1px solid; }
+.ds-alert.info    { background: var(--sp-ciel);     border-color: #c9dcef; color: var(--sp-bleu-nuit); }
+.ds-alert.succes  { background: var(--sp-vert-bg);  border-color: #cfe5ad; color: var(--sp-vert-texte); }
+.ds-alert.attente { background: var(--sp-jaune-bg); border-color: #f5e08a; color: #6b5300; }
+.ds-alert.erreur  { background: var(--sp-rouge-bg); border-color: #f5b5b5; color: #a80001; }
+.ds-btn-danger { background: var(--sp-rouge); color: #fff; }
+
+/* ── Bannière photo + voile bleu ──────────────────────────────────────── */
+.ds-hero { position: relative; color: #fff; overflow: hidden; }
+.ds-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.ds-hero-veil { position: absolute; inset: 0; background: var(--sp-grad-hero-voile); }
+.ds-hero-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 48px 22px 56px; }
+.ds-hero p { color: var(--sp-sur-sombre); }
+
+/* ── Bandeau d'appel à l'action ───────────────────────────────────────── */
+.ds-cta-band { background: var(--sp-grad-bandeau); color: #fff; text-align: center; padding: 42px var(--sp-gutter); }
+.ds-cta-band h2 { font-size: clamp(20px, 3vw, 28px); margin: 0 0 6px; }
+.ds-cta-band p { color: var(--sp-sur-sombre-3); margin: 0 0 20px; }
+
+/* ── Navigation ───────────────────────────────────────────────────────── */
+.ds-nav-link { color: #dbe7f7; font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: var(--sp-radius-pill); text-decoration: none; }
+.ds-nav-link:hover { background: rgba(255,255,255,.12); }
+
+/* ── Pied de page ─────────────────────────────────────────────────────── */
+.ds-footer { border-top: 1px solid var(--sp-ligne); }
+.ds-footer .ds-wrap { padding-block: 20px; font-size: 12.5px; color: var(--sp-texte-3);
+  display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between; }
+
+/* ── Accessibilité ────────────────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--sp-or-jalon); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

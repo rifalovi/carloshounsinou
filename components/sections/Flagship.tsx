@@ -93,9 +93,9 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
     width: "40px",
     height: "40px",
     borderRadius: "50%",
-    background: "#060F1C",
-    border: "1px solid rgba(245,239,230,0.18)",
-    color: "#F5EFE6",
+    background: "var(--sp-bleu-nuit)",
+    border: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)",
+    color: "var(--sp-blanc)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -112,7 +112,7 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
       role="region"
       aria-roledescription="carousel"
       aria-label={eyebrow}
-      style={{ padding: "140px 0", background: "#EDE5D6", position: "relative" }}
+      style={{ padding: "140px 0", background: "var(--sp-papier)", position: "relative" }}
     >
       {/* Header */}
       <motion.div
@@ -128,22 +128,22 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
             <SectionLabel>{eyebrow}</SectionLabel>
             <h2
               style={{
-                fontFamily: "var(--font-serif)",
-                fontWeight: 300,
-                fontSize: "clamp(40px, 5.5vw, 76px)",
-                lineHeight: 1.0,
-                letterSpacing: "-0.03em",
-                color: "#0A1628",
+                fontFamily: "var(--sp-font-sans)",
+                fontWeight: 800,
+                fontSize: "clamp(28px, 4vw, 44px)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+                color: "var(--sp-bleu-nuit)",
               }}
             >
               {h2Part1}{" "}
-              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
+              <em style={{ fontStyle: "normal", color: "var(--sp-bleu-pilotage)" }}>
                 {h2Emphasis}
               </em>
               {h2End}
             </h2>
           </div>
-          <p className="prose-justify" style={{ fontSize: "16px", color: "#475569", lineHeight: 1.75, maxWidth: "480px" }}>
+          <p className="prose-justify" style={{ fontSize: "16px", color: "var(--sp-texte-3)", lineHeight: 1.75, maxWidth: "480px" }}>
             {intro}
           </p>
         </div>
@@ -160,12 +160,12 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
             style={navBtn("left")}
             className="flagship-nav-btn"
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#B45309";
-              e.currentTarget.style.borderColor = "#B45309";
+              e.currentTarget.style.background = "var(--sp-bleu-pilotage)";
+              e.currentTarget.style.borderColor = "var(--sp-bleu-pilotage)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#060F1C";
-              e.currentTarget.style.borderColor = "rgba(245,239,230,0.18)";
+              e.currentTarget.style.background = "var(--sp-bleu-nuit)";
+              e.currentTarget.style.borderColor = "color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)";
             }}
           >
             ←
@@ -224,12 +224,12 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
             style={navBtn("right")}
             className="flagship-nav-btn"
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#B45309";
-              e.currentTarget.style.borderColor = "#B45309";
+              e.currentTarget.style.background = "var(--sp-bleu-pilotage)";
+              e.currentTarget.style.borderColor = "var(--sp-bleu-pilotage)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#060F1C";
-              e.currentTarget.style.borderColor = "rgba(245,239,230,0.18)";
+              e.currentTarget.style.background = "var(--sp-bleu-nuit)";
+              e.currentTarget.style.borderColor = "color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)";
             }}
           >
             →
@@ -254,9 +254,9 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
               style={{
                 width: activeIndex === i ? "24px" : "8px",
                 height: "8px",
-                background: activeIndex === i ? "#B45309" : "#E5DAC4",
+                background: activeIndex === i ? "var(--sp-bleu-pilotage)" : "var(--sp-ligne)",
                 opacity: activeIndex === i ? 1 : 0.4,
-                borderRadius: "100px",
+                borderRadius: "var(--sp-radius-pill)",
                 border: "none",
                 cursor: "pointer",
                 transition: "all 0.3s",
@@ -282,8 +282,8 @@ export default function Flagship({ eyebrow, h2Part1, h2Emphasis, h2End, intro, c
           margin: 0 auto;
         }
 
-        .flagship-dot:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; }
-        .flagship-nav-btn:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; }
+        .flagship-dot:focus-visible { outline: 2px solid var(--sp-bleu-pilotage); outline-offset: 2px; }
+        .flagship-nav-btn:focus-visible { outline: 2px solid var(--sp-bleu-pilotage); outline-offset: 2px; }
         button[disabled].flagship-nav-btn { opacity: 0.25; pointer-events: none; }
 
         @media (max-width: 1279px) {

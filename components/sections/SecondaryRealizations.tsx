@@ -23,7 +23,7 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
   return (
     <section
       id="secondary-realizations"
-      style={{ padding: "120px 48px", background: "#EDE5D6" }}
+      style={{ padding: "120px 48px", background: "var(--sp-papier)" }}
     >
       <div style={{ maxWidth: "1300px", margin: "0 auto" }}>
         <motion.div
@@ -36,17 +36,17 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
           <SectionLabel>{eyebrow}</SectionLabel>
           <h2
             style={{
-              fontFamily: "var(--font-serif)",
-              fontWeight: 300,
-              fontSize: "clamp(32px, 4vw, 56px)",
-              lineHeight: 1.0,
-              letterSpacing: "-0.03em",
-              color: "#0A1628",
+              fontFamily: "var(--sp-font-sans)",
+              fontWeight: 800,
+              fontSize: "clamp(26px, 3.5vw, 40px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: "var(--sp-bleu-nuit)",
               marginTop: "16px",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>
+            <em style={{ fontStyle: "normal", color: "var(--sp-bleu-pilotage)" }}>
               {h2Emphasis}
             </em>{" "}
             {h2End}
@@ -65,12 +65,12 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
             >
               <div
                 style={{
-                  fontFamily: "var(--font-mono)",
+                  fontFamily: "var(--sp-font-mono)",
                   fontSize: "10px",
-                  color: "#B45309",
+                  color: "var(--sp-or-jalon)",
                   textTransform: "uppercase",
                   letterSpacing: "0.08em",
-                  fontWeight: 500,
+                  fontWeight: 700,
                   marginBottom: "10px",
                 }}
               >
@@ -79,12 +79,12 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
 
               <h3
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--sp-font-sans)",
                   fontSize: "1.2rem",
-                  fontWeight: 400,
+                  fontWeight: 700,
                   lineHeight: 1.25,
                   letterSpacing: "-0.015em",
-                  color: "#0A1628",
+                  color: "var(--sp-bleu-nuit)",
                   marginBottom: "12px",
                 }}
               >
@@ -93,10 +93,10 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
 
               <p
                 style={{
-                  fontFamily: "var(--font-sans)",
+                  fontFamily: "var(--sp-font-sans)",
                   fontSize: "14px",
                   lineHeight: 1.65,
-                  color: "#475569",
+                  color: "var(--sp-texte-3)",
                   marginBottom: "20px",
                   flexGrow: 1,
                 }}
@@ -109,12 +109,12 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
                   <span
                     key={tag}
                     style={{
-                      fontFamily: "var(--font-mono)",
+                      fontFamily: "var(--sp-font-mono)",
                       fontSize: "10px",
-                      color: "#64748B",
-                      background: "rgba(10,22,40,0.05)",
+                      color: "var(--sp-texte-3)",
+                      background: "var(--sp-papier)",
                       padding: "3px 8px",
-                      borderRadius: "100px",
+                      borderRadius: "var(--sp-radius-pill)",
                       letterSpacing: "0.04em",
                     }}
                   >
@@ -134,16 +134,18 @@ export default function SecondaryRealizations({ eyebrow, h2Part1, h2Emphasis, h2
           gap: 24px;
         }
         .sr-card {
-          background: #F5EFE6;
+          background: var(--sp-blanc);
           padding: 32px;
           display: flex;
           flex-direction: column;
-          border: 1px solid rgba(10,22,40,0.06);
+          border: 1px solid var(--sp-ligne);
+          border-radius: var(--sp-radius-card);
+          box-shadow: var(--sp-shadow-card);
           transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
         .sr-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(180,83,9,0.10);
+          box-shadow: var(--sp-shadow-card-hover);
         }
         @media (max-width: 1024px) {
           .sr-grid { grid-template-columns: repeat(2, 1fr); }

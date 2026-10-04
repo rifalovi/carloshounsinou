@@ -45,14 +45,14 @@ function StatBar({ target }: { target: number }) {
   return (
     <div
       ref={ref}
-      style={{ height: "3px", background: "rgba(245,239,230,0.12)", marginBottom: "20px", position: "relative", overflow: "hidden" }}
+      style={{ height: "3px", background: "color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)", marginBottom: "20px", position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
           position: "absolute",
           top: 0, left: 0,
           height: "100%",
-          background: "#C2701F",
+          background: "var(--sp-or-jalon)",
           width: `${width}%`,
           transition: "width 1.4s cubic-bezier(0.4,0,0.2,1)",
         }}
@@ -67,8 +67,8 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
       id="stats"
       style={{
         padding: "140px 48px",
-        background: "#0A1628",
-        color: "#F5EFE6",
+        background: "var(--sp-bleu-nuit)",
+        color: "var(--sp-blanc)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -79,7 +79,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
         style={{
           position: "absolute", top: 0, right: 0,
           width: "40%", height: "100%",
-          background: "radial-gradient(circle at 70% 30%, rgba(180,83,9,0.08) 0%, transparent 60%)",
+          background: "radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--sp-or-jalon) 8%, transparent) 0%, transparent 60%)",
           pointerEvents: "none",
         }}
       />
@@ -104,22 +104,22 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           <SectionLabel light>{eyebrow}</SectionLabel>
           <h2
             style={{
-              fontFamily: "var(--font-serif)",
-              fontWeight: 300,
-              fontSize: "clamp(40px, 5.5vw, 76px)",
-              lineHeight: 1.0,
-              letterSpacing: "-0.03em",
-              color: "#F5EFE6",
+              fontFamily: "var(--sp-font-sans)",
+              fontWeight: 800,
+              fontSize: "clamp(28px, 4vw, 44px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: "var(--sp-blanc)",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>
+            <em style={{ fontStyle: "normal", color: "var(--sp-bleu-clair)" }}>
               {h2Emphasis}
             </em>
             {h2End}
           </h2>
         </div>
-        <p style={{ fontSize: "16px", color: "rgba(245,239,230,0.7)", lineHeight: 1.7, maxWidth: "480px" }}>
+        <p style={{ fontSize: "16px", color: "color-mix(in srgb, var(--sp-sur-sombre) 70%, transparent)", lineHeight: 1.7, maxWidth: "480px" }}>
           {intro}
         </p>
       </motion.div>
@@ -130,9 +130,9 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
           gap: "1px",
-          background: "rgba(245,239,230,0.08)",
-          borderTop: "1px solid rgba(245,239,230,0.12)",
-          borderBottom: "1px solid rgba(245,239,230,0.12)",
+          background: "color-mix(in srgb, var(--sp-sur-sombre) 8%, transparent)",
+          borderTop: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)",
+          borderBottom: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)",
           position: "relative",
           zIndex: 1,
         }}
@@ -141,19 +141,19 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           <div
             key={item.label}
             style={{
-              background: "#0A1628",
+              background: "var(--sp-bleu-nuit)",
               padding: "56px 32px",
               transition: "background 0.4s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = "#1A2537")}
-            onMouseLeave={(e) => (e.currentTarget.style.background = "#0A1628")}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--sp-bleu-nuit) 80%, var(--sp-bleu-pilotage))")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "var(--sp-bleu-nuit)")}
           >
             <div
               style={{
-                fontFamily: "var(--font-mono)",
+                fontFamily: "var(--sp-font-mono)",
                 fontSize: "11px",
-                color: "#C2701F",
-                fontWeight: 500,
+                color: "var(--sp-or-jalon)",
+                fontWeight: 700,
                 marginBottom: "24px",
               }}
             >
@@ -161,12 +161,12 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
             </div>
             <div
               style={{
-                fontFamily: "var(--font-serif)",
+                fontFamily: "var(--sp-font-sans)",
                 fontSize: "clamp(60px, 7vw, 100px)",
-                fontWeight: 300,
-                color: "#F5EFE6",
+                fontWeight: 800,
+                color: "var(--sp-blanc)",
                 lineHeight: 1,
-                letterSpacing: "-0.04em",
+                letterSpacing: "-0.02em",
                 marginBottom: "20px",
               }}
             >
@@ -177,7 +177,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
               style={{
                 fontSize: "13px",
                 lineHeight: 1.5,
-                color: "rgba(245,239,230,0.75)",
+                color: "color-mix(in srgb, var(--sp-sur-sombre) 75%, transparent)",
                 fontWeight: 400,
               }}
             >
@@ -193,9 +193,9 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           marginTop: "48px",
           display: "flex",
           justifyContent: "space-between",
-          fontFamily: "var(--font-mono)",
+          fontFamily: "var(--sp-font-mono)",
           fontSize: "11px",
-          color: "rgba(245,239,230,0.5)",
+          color: "color-mix(in srgb, var(--sp-sur-sombre) 50%, transparent)",
           textTransform: "uppercase",
           letterSpacing: "0.05em",
           position: "relative",

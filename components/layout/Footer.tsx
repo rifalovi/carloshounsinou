@@ -25,14 +25,9 @@ export default function Footer({
   ];
 
   return (
-    <footer
-      style={{
-        background: "#060F1C",
-        borderTop: "1px solid rgba(245,239,230,0.1)",
-        padding: "32px 48px",
-      }}
-    >
+    <footer className="ds-footer" style={{ background: "var(--sp-blanc)", padding: "32px 48px" }}>
       <div
+        className="footer-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
@@ -46,27 +41,20 @@ export default function Footer({
             style={{
               width: "28px",
               height: "28px",
-              background: "#F5EFE6",
-              color: "#0A1628",
+              background: "var(--sp-bleu-nuit)",
+              color: "var(--sp-blanc)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontFamily: "var(--font-serif)",
-              fontWeight: 500,
-              fontSize: "13px",
+              fontWeight: 800,
+              fontSize: "12px",
+              borderRadius: "var(--sp-radius)",
               flexShrink: 0,
             }}
           >
             {brand}
           </div>
-          <span
-            style={{
-              fontFamily: "var(--font-serif)",
-              color: "#F5EFE6",
-              fontSize: "16px",
-              fontWeight: 500,
-            }}
-          >
+          <span style={{ color: "var(--sp-bleu-nuit)", fontSize: "15px", fontWeight: 700 }}>
             {brandName}
           </span>
         </div>
@@ -74,9 +62,9 @@ export default function Footer({
         {/* Copyright */}
         <div
           style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: "11px",
-            color: "rgba(245,239,230,0.4)",
+            fontFamily: "var(--sp-font-mono)",
+            fontSize: "11.5px",
+            color: "var(--sp-texte-3)",
             textAlign: "center",
             letterSpacing: "0.04em",
           }}
@@ -100,30 +88,21 @@ export default function Footer({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
+              className="footer-social"
               style={{
                 width: "36px",
                 height: "36px",
-                border: "1px solid rgba(245,239,230,0.18)",
-                borderRadius: "50%",
+                border: "1.5px solid var(--sp-bleu-pilotage)",
+                borderRadius: "var(--sp-radius-pill)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#F5EFE6",
+                color: "var(--sp-bleu-pilotage)",
                 textDecoration: "none",
-                fontFamily: "var(--font-mono)",
-                fontSize: "9px",
+                fontFamily: "var(--sp-font-mono)",
+                fontSize: "10px",
                 fontWeight: 500,
-                transition: "all 0.3s",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "#B45309";
-                el.style.borderColor = "#B45309";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "transparent";
-                el.style.borderColor = "rgba(245,239,230,0.18)";
+                transition: "background 0.15s ease, color 0.15s ease",
               }}
             >
               {abbr.toUpperCase()}
@@ -136,14 +115,10 @@ export default function Footer({
       </div>
 
       <style>{`
+        .footer-social:hover { background: var(--sp-bleu-pilotage); color: var(--sp-blanc) !important; }
         @media (max-width: 1024px) {
-          footer > div {
-            grid-template-columns: 1fr !important;
-            text-align: center;
-          }
-          footer > div > div:last-child {
-            justify-content: center !important;
-          }
+          .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+          .footer-grid > div:last-child { justify-content: center !important; }
         }
         @media (max-width: 480px) {
           footer { padding: 24px 20px !important; }

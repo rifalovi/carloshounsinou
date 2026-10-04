@@ -1,11 +1,19 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Manrope, IBM_Plex_Mono } from "next/font/google";
 
-// Sans et Serif : system fonts Apple (SF Pro / New York)
-// définis directement dans globals.css via --font-sans et --font-serif
+// Polices du design system partagé (styles/tokens.css) : Manrope pour tout le
+// texte, IBM Plex Mono pour les références et données techniques. Servies par
+// next/font (auto-hébergées, sans requête vers Google Fonts à l'exécution).
 
-export const mono = JetBrains_Mono({
+export const sans = Manrope({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+export const mono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: "--font-mono",
+  variable: "--font-plex-mono",
   display: "swap",
 });

@@ -64,7 +64,7 @@
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
     "timeline": [
       {
-        "period": "2024 — Today",
+        "period": "2024 to today",
         "title": "From project engineering to M&E modernization",
         "org": "Organisation Internationale de la Francophonie · Paris",
         "description": "Piloting the modernisation of monitoring and evaluation systems and supervising référent teams across multiple countries. Design and deployment of an institutional platform to digitalise the steering of an international programme portfolio. End-to-end leadership of an institutional mapping platform for multilateral projects, including automated data extraction through artificial intelligence, in technical supervision of an external service provider and coordination of institutional compliance. From specification to governance, with direct team management.",
@@ -76,7 +76,7 @@
         "accent": "primary"
       },
       {
-        "period": "2021 — 2024",
+        "period": "2021-2024",
         "title": "Deputy Direction · Data Strategy",
         "org": "Heaven Immobilier Groupe · France",
         "description": "Deputy leadership of a multidisciplinary operational team responsible for the group's data strategy and delivery of annual contractual objectives. Designed estimation tools and financial KPIs (cost, margin, profitability). Market intelligence and expansion into new segments.",
@@ -88,7 +88,7 @@
         "accent": "secondary"
       },
       {
-        "period": "2018 — 2021",
+        "period": "2018-2021",
         "title": "Systems Designer for EU Donors",
         "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
         "description": "Senior consulting assignment for the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system. Training and support of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants across the full system.",
@@ -100,7 +100,7 @@
         "accent": "primary"
       },
       {
-        "period": "2019 — 2020",
+        "period": "2019-2020",
         "title": "Programming tools structuring",
         "org": "OIF · External Representations Service · Paris",
         "description": "International Volunteer of La Francophonie (VIF) at the Coordination Service for Off-Site Units. Design and deployment of indicator monitoring tools for the 2019-2022 four-year programming. Capacity building of focal points on tool usage. Support to national structures (RESIFS) on the complete strategic planning cycle.",
@@ -112,7 +112,7 @@
         "accent": "tertiary"
       },
       {
-        "period": "2016 — 2018",
+        "period": "2016-2018",
         "title": "Statistician · Health Research",
         "org": "Health Research Project Coordination · Benin",
         "description": "Senior statistician within a health research project coordination, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research. Training of field teams on data collection protocols and improvement of living conditions of vulnerable populations ('Health Equity' project).",
@@ -124,7 +124,7 @@
         "accent": "tertiary"
       },
       {
-        "period": "2012 — 2016",
+        "period": "2012-2016",
         "title": "Head of Services in Local Governance",
         "org": "Territorial Administration · Benin",
         "description": "Three successive head-of-service positions within a territorial administration in West Africa: Planning and Development, Statistics and Analysis, Communication. Built the monitoring system for the Decennial Education Plan. Designed tools for Municipal Development Plan monitoring and financial management. Team leadership and management.",
@@ -611,7 +611,7 @@
     ]
   },
   "aiCapabilities": {
-    "eyebrow": "─── ARTIFICIAL INTELLIGENCE",
+    "eyebrow": "ARTIFICIAL INTELLIGENCE",
     "title": "Artificial intelligence, integrated with rigour.",
     "subtitle": "Three years of concrete generative AI integration in institutional platforms. Always with safeguards, source citation, and controlled quotas.",
     "cards": [
@@ -714,7 +714,7 @@
       {
         "id": "territorial-pcd",
         "eyebrow": "Territorial Planning",
-        "title": "Communal Development Plans — Participatory Diagnosis",
+        "title": "Communal Development Plans · Participatory Diagnosis",
         "description": "Data collection and analysis framework for development plan diagnostics across ten municipalities.",
         "tags": [
           "ODK",
@@ -785,11 +785,11 @@
     "ui": {
       "back": "← Back to projects",
       "cta": "Get in touch →",
-      "labelContext": "── Context",
-      "labelChallenge": "── Challenge",
-      "labelApproach": "── Approach",
-      "labelResults": "── Results",
-      "labelStack": "── Stack & methods"
+      "labelContext": "Context",
+      "labelChallenge": "Challenge",
+      "labelApproach": "Approach",
+      "labelResults": "Results",
+      "labelStack": "Stack & methods"
     },
     "items": [
       {

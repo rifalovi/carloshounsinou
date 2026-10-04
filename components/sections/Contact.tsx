@@ -77,45 +77,45 @@ export default function Contact({
     width: "100%",
     background: "transparent",
     border: "none",
-    borderBottom: "1px solid rgba(10,22,40,0.18)",
+    borderBottom: "1px solid var(--sp-ligne)",
     paddingBottom: "12px",
-    fontFamily: "var(--font-sans)",
+    fontFamily: "var(--sp-font-sans)",
     fontSize: "15px",
-    color: "#0A1628",
+    color: "var(--sp-bleu-nuit)",
     outline: "none",
   };
 
   return (
     <section
       id="contact"
-      style={{ padding: "140px 48px", background: "#060F1C", position: "relative", overflow: "hidden" }}
+      style={{ padding: "140px 48px", background: "var(--sp-grad-bandeau)", position: "relative", overflow: "hidden" }}
     >
-      <div aria-hidden="true" style={{ position: "absolute", top: 0, right: 0, width: "60%", height: "100%", background: "radial-gradient(ellipse at top right, rgba(180,83,9,0.06) 0%, transparent 60%)", pointerEvents: "none" }}/>
+      <div aria-hidden="true" style={{ position: "absolute", top: 0, right: 0, width: "60%", height: "100%", background: "radial-gradient(ellipse at top right, color-mix(in srgb, var(--sp-or-jalon) 6%, transparent) 0%, transparent 60%)", pointerEvents: "none" }}/>
 
       <div style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: "80px", position: "relative", zIndex: 1, maxWidth: "1300px", margin: "0 auto" }}>
         {/* Left */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7 }}>
           <SectionLabel light>{eyebrow}</SectionLabel>
-          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(40px, 5.5vw, 76px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#F5EFE6", marginBottom: "32px" }}>
+          <h2 style={{ fontFamily: "var(--sp-font-sans)", fontWeight: 800, fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--sp-blanc)", marginBottom: "32px" }}>
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C2701F" }}>{h2Emphasis}</em>
+            <em style={{ fontStyle: "normal", color: "var(--sp-bleu-clair)" }}>{h2Emphasis}</em>
             {h2End}
           </h2>
-          <p style={{ fontSize: "16px", color: "rgba(245,239,230,0.7)", lineHeight: 1.7, marginBottom: "40px" }}>{intro}</p>
-          <div style={{ display: "flex", flexDirection: "column", paddingTop: "36px", borderTop: "1px solid rgba(245,239,230,0.1)" }}>
+          <p style={{ fontSize: "16px", color: "color-mix(in srgb, var(--sp-sur-sombre) 70%, transparent)", lineHeight: 1.7, marginBottom: "40px" }}>{intro}</p>
+          <div style={{ display: "flex", flexDirection: "column", paddingTop: "36px", borderTop: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" }}>
             {channels.map(({ label, value, href }) => (
               <a key={label} href={href}
                 target={label === "LinkedIn" ? "_blank" : undefined}
                 rel={label === "LinkedIn" ? "noopener noreferrer" : undefined}
-                style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 0", borderBottom: "1px solid rgba(245,239,230,0.06)", textDecoration: "none", transition: "padding-left 0.3s" }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 0", borderBottom: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 6%, transparent)", textDecoration: "none", transition: "padding-left 0.3s" }}
                 onMouseEnter={(e) => (e.currentTarget.style.paddingLeft = "8px")}
                 onMouseLeave={(e) => (e.currentTarget.style.paddingLeft = "0")}
               >
                 <div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "#C2701F", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 500, marginBottom: "2px" }}>{label}</div>
-                  <div style={{ fontSize: "15px", color: "#F5EFE6", fontWeight: 500 }}>{value}</div>
+                  <div style={{ fontFamily: "var(--sp-font-mono)", fontSize: "10px", color: "var(--sp-or-jalon)", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 700, marginBottom: "2px" }}>{label}</div>
+                  <div style={{ fontSize: "15px", color: "var(--sp-blanc)", fontWeight: 500 }}>{value}</div>
                 </div>
-                <div aria-hidden="true" style={{ width: "32px", height: "32px", border: "1px solid rgba(245,239,230,0.2)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#F5EFE6", fontSize: "12px", transition: "all 0.3s", flexShrink: 0 }}>→</div>
+                <div aria-hidden="true" style={{ width: "32px", height: "32px", border: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 20%, transparent)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--sp-blanc)", fontSize: "12px", transition: "all 0.3s", flexShrink: 0 }}>→</div>
               </a>
             ))}
           </div>
@@ -123,13 +123,13 @@ export default function Contact({
 
         {/* Right — form */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.15 }}
-          style={{ background: "#F5EFE6", padding: "48px", position: "relative" }}
+          style={{ background: "var(--sp-blanc)", padding: "48px", position: "relative", borderRadius: "var(--sp-radius-card)", boxShadow: "var(--sp-shadow-card)", overflow: "hidden" }}
         >
-          <div aria-hidden="true" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", background: "linear-gradient(90deg, #B45309, #C2701F)" }}/>
+          <div aria-hidden="true" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", background: "linear-gradient(90deg, var(--sp-or-jalon), var(--sp-or-jalon))" }}/>
 
           {status === "success" ? (
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", minHeight: "300px" }}>
-              <p style={{ fontFamily: "var(--font-serif)", fontSize: "20px", color: "#0A1628", textAlign: "center", lineHeight: 1.6 }}>{form.success}</p>
+              <p style={{ fontFamily: "var(--sp-font-sans)", fontSize: "20px", color: "var(--sp-bleu-nuit)", fontWeight: 600, textAlign: "center", lineHeight: 1.6 }}>{form.success}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
@@ -147,49 +147,49 @@ export default function Contact({
               {/* Step 1 */}
               <div style={{ marginBottom: "32px" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "12px" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#B45309", fontWeight: 500, background: "#FEF3E7", padding: "3px 8px", borderRadius: "4px", flexShrink: 0 }}>{form.step1Label}</span>
-                  <label htmlFor="contact-name" style={{ fontFamily: "var(--font-serif)", fontSize: "18px", color: "#0A1628", fontWeight: 500, letterSpacing: "-0.01em" }}>{form.step1Question}</label>
+                  <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "11px", color: "var(--sp-statut-dev-fg)", fontWeight: 700, background: "var(--sp-statut-dev-bg)", padding: "3px 10px", borderRadius: "var(--sp-radius-pill)", flexShrink: 0 }}>{form.step1Label}</span>
+                  <label htmlFor="contact-name" style={{ fontFamily: "var(--sp-font-sans)", fontSize: "18px", color: "var(--sp-bleu-nuit)", fontWeight: 700, letterSpacing: "-0.01em" }}>{form.step1Question}</label>
                 </div>
                 <input id="contact-name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}
                   placeholder={form.step1Placeholder} required autoComplete="name"
                   style={{ ...inputStyle }}
-                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "#B45309")}
-                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(10,22,40,0.18)")}
+                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-bleu-pilotage)")}
+                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-ligne)")}
                 />
               </div>
 
               {/* Step 2 */}
               <div style={{ marginBottom: "32px" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "12px" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#B45309", fontWeight: 500, background: "#FEF3E7", padding: "3px 8px", borderRadius: "4px", flexShrink: 0 }}>{form.step2Label}</span>
-                  <label htmlFor="contact-email" style={{ fontFamily: "var(--font-serif)", fontSize: "18px", color: "#0A1628", fontWeight: 500, letterSpacing: "-0.01em" }}>{form.step2Question}</label>
+                  <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "11px", color: "var(--sp-statut-dev-fg)", fontWeight: 700, background: "var(--sp-statut-dev-bg)", padding: "3px 10px", borderRadius: "var(--sp-radius-pill)", flexShrink: 0 }}>{form.step2Label}</span>
+                  <label htmlFor="contact-email" style={{ fontFamily: "var(--sp-font-sans)", fontSize: "18px", color: "var(--sp-bleu-nuit)", fontWeight: 700, letterSpacing: "-0.01em" }}>{form.step2Question}</label>
                 </div>
                 <input id="contact-email" name="email" type="email" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)}
                   placeholder={form.step2Placeholder} required autoComplete="email"
                   style={{ ...inputStyle }}
-                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "#B45309")}
-                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(10,22,40,0.18)")}
+                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-bleu-pilotage)")}
+                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-ligne)")}
                 />
               </div>
 
               {/* Step 3 — chips */}
               <div style={{ marginBottom: "32px" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "12px" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#B45309", fontWeight: 500, background: "#FEF3E7", padding: "3px 8px", borderRadius: "4px", flexShrink: 0 }}>{form.step3Label}</span>
-                  <span style={{ fontFamily: "var(--font-serif)", fontSize: "18px", color: "#0A1628", fontWeight: 500, letterSpacing: "-0.01em" }}>{form.step3Question}</span>
+                  <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "11px", color: "var(--sp-statut-dev-fg)", fontWeight: 700, background: "var(--sp-statut-dev-bg)", padding: "3px 10px", borderRadius: "var(--sp-radius-pill)", flexShrink: 0 }}>{form.step3Label}</span>
+                  <span style={{ fontFamily: "var(--sp-font-sans)", fontSize: "18px", color: "var(--sp-bleu-nuit)", fontWeight: 700, letterSpacing: "-0.01em" }}>{form.step3Question}</span>
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                   {form.step3Chips.map((chip) => (
                     <button key={chip} type="button" onClick={() => setTopic(chip === topic ? "" : chip)}
                       style={{
                         padding: "8px 14px",
-                        border: topic === chip ? "1px solid #B45309" : "1px solid rgba(10,22,40,0.18)",
-                        borderRadius: "100px",
+                        border: topic === chip ? "1px solid var(--sp-bleu-pilotage)" : "1px solid var(--sp-ligne)",
+                        borderRadius: "var(--sp-radius-pill)",
                         fontSize: "13px",
                         fontWeight: 500,
-                        color: topic === chip ? "#B45309" : "#1F2937",
-                        background: topic === chip ? "rgba(180,83,9,0.06)" : "transparent",
-                        fontFamily: "var(--font-sans)",
+                        color: topic === chip ? "var(--sp-bleu-pilotage)" : "var(--sp-texte-2)",
+                        background: topic === chip ? "var(--sp-ciel)" : "transparent",
+                        fontFamily: "var(--sp-font-sans)",
                         cursor: "pointer",
                         transition: "all 0.2s",
                       }}
@@ -203,8 +203,8 @@ export default function Contact({
               {/* Step 4 — textarea with prefill */}
               <div style={{ marginBottom: "32px" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "12px" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#B45309", fontWeight: 500, background: "#FEF3E7", padding: "3px 8px", borderRadius: "4px", flexShrink: 0 }}>{form.step4Label}</span>
-                  <label htmlFor="contact-message" style={{ fontFamily: "var(--font-serif)", fontSize: "18px", color: "#0A1628", fontWeight: 500, letterSpacing: "-0.01em" }}>{form.step4Question}</label>
+                  <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "11px", color: "var(--sp-statut-dev-fg)", fontWeight: 700, background: "var(--sp-statut-dev-bg)", padding: "3px 10px", borderRadius: "var(--sp-radius-pill)", flexShrink: 0 }}>{form.step4Label}</span>
+                  <label htmlFor="contact-message" style={{ fontFamily: "var(--sp-font-sans)", fontSize: "18px", color: "var(--sp-bleu-nuit)", fontWeight: 700, letterSpacing: "-0.01em" }}>{form.step4Question}</label>
                 </div>
                 <textarea
                   id="contact-message"
@@ -213,41 +213,22 @@ export default function Contact({
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={form.step4Placeholder}
                   rows={4}
-                  style={{ ...inputStyle, resize: "vertical", paddingTop: "4px", borderBottom: "1px solid rgba(10,22,40,0.18)" }}
-                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "#B45309")}
-                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(10,22,40,0.18)")}
+                  style={{ ...inputStyle, resize: "vertical", paddingTop: "4px", borderBottom: "1px solid var(--sp-ligne)" }}
+                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-bleu-pilotage)")}
+                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--sp-ligne)")}
                 />
               </div>
 
               {status === "error" && (
-                <p style={{ fontSize: "13px", color: "#DC2626", marginBottom: "16px" }}>{form.error}</p>
+                <p style={{ fontSize: "13px", color: "var(--sp-rouge)", marginBottom: "16px" }}>{form.error}</p>
               )}
 
               <button type="submit" disabled={status === "sending"}
-                style={{
-                  width: "100%",
-                  background: "#0A1628",
-                  color: "#F5EFE6",
-                  padding: "18px",
-                  border: "none",
-                  borderRadius: "100px",
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  cursor: status === "sending" ? "wait" : "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "12px",
-                  marginTop: "8px",
-                  transition: "background 0.3s",
-                  opacity: status === "sending" ? 0.7 : 1,
-                }}
-                onMouseEnter={(e) => { if (status !== "sending") e.currentTarget.style.background = "#B45309"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "#0A1628"; }}
+                className="ds-btn ds-btn-gold"
+                style={{ width: "100%", marginTop: "8px", cursor: status === "sending" ? "wait" : "pointer", opacity: status === "sending" ? 0.7 : 1 }}
               >
                 {status === "sending" ? "…" : form.submit}
-                <span style={{ width: "24px", height: "24px", background: "#F5EFE6", color: "#0A1628", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px" }}>→</span>
+                <span aria-hidden="true" style={{ width: "24px", height: "24px", background: "var(--sp-bleu-nuit)", color: "var(--sp-blanc)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px" }}>→</span>
               </button>
             </form>
           )}

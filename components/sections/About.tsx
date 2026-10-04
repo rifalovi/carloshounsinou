@@ -34,7 +34,7 @@ export default function About({
       id="parcours"
       style={{
         padding: "140px 48px",
-        background: "#F5EFE6",
+        background: "var(--sp-blanc)",
         position: "relative",
       }}
     >
@@ -56,16 +56,16 @@ export default function About({
           <SectionLabel>{eyebrow}</SectionLabel>
           <h2
             style={{
-              fontFamily: "var(--font-serif)",
-              fontWeight: 300,
-              fontSize: "clamp(40px, 5.5vw, 76px)",
-              lineHeight: 1.0,
-              letterSpacing: "-0.03em",
-              color: "#0A1628",
+              fontFamily: "var(--sp-font-sans)",
+              fontWeight: 800,
+              fontSize: "clamp(28px, 4vw, 44px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: "var(--sp-bleu-nuit)",
             }}
           >
             {h2Part1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
+            <em style={{ fontStyle: "normal", color: "var(--sp-bleu-pilotage)" }}>
               {h2Emphasis}
             </em>
             {h2End}
@@ -78,35 +78,20 @@ export default function About({
             className="prose-justify"
             style={{
               fontSize: "17px",
-              color: "#1F2937",
+              color: "var(--sp-texte-2)",
               lineHeight: 1.75,
               marginBottom: "22px",
             }}
           >
-            <span
-              aria-hidden="true"
-              style={{
-                float: "left",
-                fontFamily: "var(--font-serif)",
-                fontSize: "clamp(60px, 7vw, 80px)",
-                lineHeight: 0.8,
-                fontStyle: "italic",
-                color: "#A88B4A",
-                marginRight: "8px",
-                marginTop: "6px",
-              }}
-            >
-              {p1[0]}
-            </span>
-            {p1.slice(1)}
+            {p1}
           </p>
-          <p className="prose-justify" style={{ fontSize: "17px", color: "#1F2937", lineHeight: 1.75 }}>
+          <p className="prose-justify" style={{ fontSize: "17px", color: "var(--sp-texte-2)", lineHeight: 1.75 }}>
             {p2Part1}
             <strong
               style={{
-                color: "#0A1628",
+                color: "var(--sp-bleu-nuit)",
                 fontWeight: 600,
-                background: "linear-gradient(transparent 60%, #FEF3E7 60%)",
+                background: "linear-gradient(transparent 60%, var(--sp-statut-dev-bg) 60%)",
                 padding: "0 2px",
               }}
             >

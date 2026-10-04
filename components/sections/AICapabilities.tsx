@@ -20,7 +20,7 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
   return (
     <section
       id="ai-capabilities"
-      style={{ padding: "120px 48px", background: "#060F1C", position: "relative", overflow: "hidden" }}
+      style={{ padding: "120px 48px", background: "var(--sp-bleu-nuit)", position: "relative", overflow: "hidden" }}
     >
       {/* Subtle radial glow */}
       <div
@@ -32,7 +32,7 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
           transform: "translateX(-50%)",
           width: "80%",
           height: "100%",
-          background: "radial-gradient(ellipse at top center, rgba(180,83,9,0.07) 0%, transparent 65%)",
+          background: "radial-gradient(ellipse at top center, color-mix(in srgb, var(--sp-or-jalon) 7%, transparent) 0%, transparent 65%)",
           pointerEvents: "none",
         }}
       />
@@ -58,18 +58,18 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
               style={{
                 width: "32px",
                 height: "1px",
-                background: "#B45309",
+                background: "var(--sp-or-jalon)",
                 flexShrink: 0,
               }}
             />
             <span
               style={{
-                fontFamily: "var(--font-mono)",
+                fontFamily: "var(--sp-font-mono)",
                 fontSize: "10px",
-                color: "#B45309",
+                color: "var(--sp-or-jalon)",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
-                fontWeight: 500,
+                fontWeight: 700,
               }}
             >
               {eyebrow}
@@ -78,12 +78,12 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
 
           <h2
             style={{
-              fontFamily: "var(--font-serif)",
-              fontWeight: 300,
-              fontSize: "clamp(32px, 4vw, 56px)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              color: "#F5EFE6",
+              fontFamily: "var(--sp-font-sans)",
+              fontWeight: 800,
+              fontSize: "clamp(26px, 3.5vw, 40px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: "var(--sp-blanc)",
               marginBottom: "20px",
             }}
           >
@@ -92,9 +92,9 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
 
           <p
             style={{
-              fontFamily: "var(--font-sans)",
+              fontFamily: "var(--sp-font-sans)",
               fontSize: "16px",
-              color: "rgba(245,239,230,0.65)",
+              color: "color-mix(in srgb, var(--sp-sur-sombre) 65%, transparent)",
               lineHeight: 1.7,
               maxWidth: "640px",
             }}
@@ -116,13 +116,13 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
             >
               <div
                 style={{
-                  fontFamily: "var(--font-mono)",
+                  fontFamily: "var(--sp-font-mono)",
                   fontSize: "10px",
-                  color: "#B45309",
+                  color: "var(--sp-or-jalon)",
                   textTransform: "uppercase",
                   letterSpacing: "0.1em",
-                  fontWeight: 500,
-                  borderBottom: "1px solid rgba(180,83,9,0.3)",
+                  fontWeight: 700,
+                  borderBottom: "1px solid color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)",
                   paddingBottom: "10px",
                   marginBottom: "18px",
                 }}
@@ -132,12 +132,12 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
 
               <h3
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--sp-font-sans)",
                   fontSize: "1.2rem",
-                  fontWeight: 400,
+                  fontWeight: 700,
                   lineHeight: 1.25,
                   letterSpacing: "-0.015em",
-                  color: "#F5EFE6",
+                  color: "var(--sp-blanc)",
                   marginBottom: "14px",
                 }}
               >
@@ -146,10 +146,10 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
 
               <p
                 style={{
-                  fontFamily: "var(--font-sans)",
+                  fontFamily: "var(--sp-font-sans)",
                   fontSize: "0.95rem",
                   lineHeight: 1.65,
-                  color: "rgba(245,239,230,0.65)",
+                  color: "color-mix(in srgb, var(--sp-sur-sombre) 65%, transparent)",
                   flexGrow: 1,
                   marginBottom: "20px",
                 }}
@@ -162,13 +162,13 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
                   <span
                     key={tag}
                     style={{
-                      fontFamily: "var(--font-mono)",
+                      fontFamily: "var(--sp-font-mono)",
                       fontSize: "10px",
-                      color: "rgba(245,239,230,0.55)",
-                      background: "rgba(245,239,230,0.06)",
-                      border: "1px solid rgba(245,239,230,0.12)",
+                      color: "color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)",
+                      background: "color-mix(in srgb, var(--sp-sur-sombre) 6%, transparent)",
+                      border: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)",
                       padding: "3px 9px",
-                      borderRadius: "100px",
+                      borderRadius: "var(--sp-radius-pill)",
                       letterSpacing: "0.04em",
                     }}
                   >
@@ -188,8 +188,9 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
           gap: 24px;
         }
         .ai-card {
-          background: rgba(245,239,230,0.04);
-          border: 1px solid rgba(245,239,230,0.1);
+          border-radius: var(--sp-radius-card);
+          background: color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent);
+          border: 1px solid color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent);
           padding: 32px;
           display: flex;
           flex-direction: column;
@@ -197,8 +198,8 @@ export default function AICapabilities({ eyebrow, title, subtitle, cards }: Prop
         }
         .ai-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 32px rgba(180,83,9,0.12);
-          border-color: rgba(180,83,9,0.35);
+          box-shadow: none;
+          border-color: color-mix(in srgb, var(--sp-or-jalon) 35%, transparent);
         }
         @media (max-width: 768px) {
           .ai-grid { grid-template-columns: 1fr; }

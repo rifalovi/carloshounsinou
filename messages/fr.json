@@ -64,7 +64,7 @@
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
     "timeline": [
       {
-        "period": "2024 — Aujourd'hui",
+        "period": "2024 à aujourd'hui",
         "title": "De l'ingénierie des projets à la modernisation des S&E",
         "org": "Organisation Internationale de la Francophonie · Paris",
         "description": "Pilotage de la modernisation des dispositifs de suivi-évaluation et supervision des équipes référentes sur plusieurs pays. Conception et déploiement d'une plateforme institutionnelle pour digitaliser le pilotage d'un portefeuille de programmes internationaux. Pilotage de bout en bout d'une plateforme institutionnelle de cartographie des projets multilatéraux, intégrant une extraction automatique de données par intelligence artificielle, en supervision technique d'un prestataire externe et coordination de la conformité institutionnelle. De la spécification à la gouvernance, en encadrement direct des opérateurs.",
@@ -76,7 +76,7 @@
         "accent": "primary"
       },
       {
-        "period": "2021 — 2024",
+        "period": "2021-2024",
         "title": "Direction adjointe · Stratégie data",
         "org": "Heaven Immobilier Groupe · France",
         "description": "Direction adjointe d'une équipe opérationnelle pluridisciplinaire en charge de la stratégie data du groupe et de l'atteinte des contrats d'objectifs annuels. Conception d'outils d'estimation et de KPIs financiers (coût, marge, rentabilité). Veille immo-tech et expansion sur de nouveaux marchés.",
@@ -88,7 +88,7 @@
         "accent": "secondary"
       },
       {
-        "period": "2018 — 2021",
+        "period": "2018-2021",
         "title": "Concepteur de systèmes pour bailleurs UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
         "description": "Mission de conseil senior auprès du programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé. Formation et accompagnement des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques sur l'ensemble du dispositif.",
@@ -100,7 +100,7 @@
         "accent": "primary"
       },
       {
-        "period": "2019 — 2020",
+        "period": "2019-2020",
         "title": "Structuration des outils de programmation",
         "org": "OIF · Service des Représentations Extérieures · Paris",
         "description": "Volontaire International de la Francophonie (VIF) au Service de la Coordination des Unités Hors Siège. Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022. Renforcement des capacités des points focaux sur l'utilisation des outils. Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique.",
@@ -112,7 +112,7 @@
         "accent": "tertiary"
       },
       {
-        "period": "2016 — 2018",
+        "period": "2016-2018",
         "title": "Statisticien · Recherche en santé",
         "org": "Coordination de projets en santé · Bénin",
         "description": "Statisticien au sein d'une coordination de projets de recherche en santé, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique. Formation des équipes terrain sur les protocoles de collecte et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
@@ -124,7 +124,7 @@
         "accent": "tertiary"
       },
       {
-        "period": "2012 — 2016",
+        "period": "2012-2016",
         "title": "Direction de services en gouvernance locale",
         "org": "Administration territoriale · Bénin",
         "description": "Trois postes successifs de direction de service au sein d'une administration territoriale en Afrique de l'Ouest : Planification et Développement, Statistique et Analyse, Communication. Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils de suivi du Plan de Développement Communal et de la gestion financière. Encadrement d'équipes opérationnelles.",
@@ -611,7 +611,7 @@
     ]
   },
   "aiCapabilities": {
-    "eyebrow": "─── INTELLIGENCE ARTIFICIELLE",
+    "eyebrow": "INTELLIGENCE ARTIFICIELLE",
     "title": "L'intelligence artificielle, intégrée avec rigueur.",
     "subtitle": "Trois ans d'intégration concrète d'IA générative dans des plateformes institutionnelles. Toujours avec garde-fous, citation des sources, et quotas maîtrisés.",
     "cards": [
@@ -714,7 +714,7 @@
       {
         "id": "territorial-pcd",
         "eyebrow": "Planification territoriale",
-        "title": "Plans communaux de développement — Diagnostic participatif",
+        "title": "Plans communaux de développement · Diagnostic participatif",
         "description": "Dispositif de collecte et d'analyse des données de diagnostic pour l'élaboration des plans communaux de développement dans dix communes.",
         "tags": [
           "ODK",
@@ -785,11 +785,11 @@
     "ui": {
       "back": "← Retour aux réalisations",
       "cta": "Prendre contact →",
-      "labelContext": "── Contexte",
-      "labelChallenge": "── Défi",
-      "labelApproach": "── Approche",
-      "labelResults": "── Résultats",
-      "labelStack": "── Stack & méthodes"
+      "labelContext": "Contexte",
+      "labelChallenge": "Défi",
+      "labelApproach": "Approche",
+      "labelResults": "Résultats",
+      "labelStack": "Stack & méthodes"
     },
     "items": [
       {

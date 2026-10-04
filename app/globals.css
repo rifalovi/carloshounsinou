@@ -1,34 +1,13 @@
+/* Design system partagé suivi-projet.org · carloshounsinou.com.
+   tokens.css est importé tel quel, avant toute autre feuille de style. */
+@import "../styles/tokens.css";
 @import "tailwindcss";
 
-@theme {
-  /* ─── Palette "Force tranquille" ─── */
-  --color-slate:         #0A1628;
-  --color-slate-deep:    #060F1C;
-  --color-slate-mid:     #1A2537;
-  --color-slate-light:   #475569;
-  --color-copper:        #B45309;
-  --color-copper-soft:   #C2701F;
-  --color-copper-pale:   #FEF3E7;
-  --color-gold:          #A88B4A;
-  --color-gold-soft:     #C9AE7A;
-  --color-gold-deep:     #816A37;
-  --color-cream:         #F5EFE6;
-  --color-cream-soft:    #EDE5D6;
-  --color-bone:          #E5DAC4;
-  --color-ink:           #080E18;
-  --color-ink-soft:      #1F2937;
-  --color-grey:          #475569;
-  --color-grey-soft:     #64748B;
-
-  /* ─── Fonts — system fonts Apple ─── */
-  /* --font-mono → JetBrains Mono (via next/font) */
-}
-
+/* Les polices sont servies par next/font (auto-hébergées) : on redirige les
+   familles déclarées dans tokens.css vers les variables générées. */
 :root {
-  --font-sans:  -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
-  --line:        rgba(10, 22, 40, 0.08);
-  --line-strong: rgba(10, 22, 40, 0.18);
+  --sp-font-sans: var(--font-manrope), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sp-font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
 }
 
 * {
@@ -41,30 +20,32 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), "Helvetica Neue", system-ui, sans-serif;
+  font-family: var(--sp-font-sans);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7;
-  color: #080E18;
-  background: #F5EFE6;
+  line-height: 1.6;
+  color: var(--sp-texte);
+  background: var(--sp-blanc);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #B45309;
-  color: #F5EFE6;
+  background: var(--sp-bleu-pilotage);
+  color: var(--sp-blanc);
 }
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -48px;
   left: 0;
-  background: #B45309;
-  color: #F5EFE6;
+  background: var(--sp-bleu-pilotage);
+  color: var(--sp-blanc);
   padding: 8px 16px;
   z-index: 999;
-  font-family: var(--font-sans);
+  font-family: var(--sp-font-sans);
   font-size: 14px;
+  font-weight: 700;
+  border-radius: 0 0 var(--sp-radius) 0;
   transition: top 0.2s;
   text-decoration: none;
 }
@@ -78,14 +59,4 @@ body {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }

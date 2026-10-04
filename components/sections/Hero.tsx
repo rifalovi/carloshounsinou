@@ -60,9 +60,10 @@ export default function Hero({
       className="hero-section"
       style={{
         minHeight: "100vh",
-        padding: "100px 48px 80px",
+        padding: "120px 48px 80px",
         position: "relative",
-        background: "#F5EFE6",
+        background: "var(--sp-grad-section)",
+        color: "var(--sp-blanc)",
       }}
     >
       {/* Main grid */}
@@ -77,34 +78,16 @@ export default function Hero({
       >
         {/* Left */}
         <div>
-          {/* Tag */}
+          {/* Sur-titre */}
           <motion.div
             custom={0}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "8px 14px",
-              background: "#E5DAC4",
-              borderRadius: "100px",
-              fontSize: "12px",
-              fontWeight: 500,
-              color: "#1F2937",
-              marginBottom: "16px",
-            }}
+            className="ds-eyebrow on-dark"
+            style={{ marginBottom: "16px" }}
           >
-            <span
-              style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "#B45309",
-                flexShrink: 0,
-              }}
-            />
+            <span className="dot" />
             {tag}
           </motion.div>
 
@@ -114,32 +97,20 @@ export default function Hero({
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="hero-h1"
-            style={{
-              fontFamily: "var(--font-serif)",
-              fontWeight: 300,
-              fontSize: "clamp(26px, 6vw, 80px)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.035em",
-              color: "#0A1628",
-              marginBottom: 0,
-            }}
+            className="hero-h1 ds-h1"
+            style={{ color: "var(--sp-blanc)", marginBottom: 0 }}
           >
             {h1Line1}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
-              {h1Emphasis1}
-            </em>{" "}
+            <span className="hl">{h1Emphasis1}</span>{" "}
             {h1Line2}{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#B45309" }}>
-              {h1Emphasis2}
-            </em>
+            <span className="hl">{h1Emphasis2}</span>
             {h1End}
           </motion.h1>
 
-          {/* Signature monospace */}
+          {/* Signature */}
           <div
             style={{
-              marginTop: "32px",
+              marginTop: "28px",
               display: "flex",
               alignItems: "center",
               gap: "16px",
@@ -148,22 +119,17 @@ export default function Hero({
             <span
               aria-hidden="true"
               style={{
-                height: "2px",
-                width: "48px",
-                background: "rgba(180,83,9,0.7)",
+                height: "3px",
+                width: "26px",
+                borderRadius: "3px",
+                background: "var(--sp-or-jalon)",
                 flexShrink: 0,
                 display: "inline-block",
               }}
             />
             <p
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: "14px",
-                textTransform: "uppercase",
-                letterSpacing: "0.2em",
-                color: "rgba(6,15,28,0.8)",
-                margin: 0,
-              }}
+              className="ds-mono"
+              style={{ fontSize: "12px", color: "var(--sp-sur-sombre-2)", margin: 0 }}
             >
               {signature}
             </p>
@@ -182,46 +148,29 @@ export default function Hero({
               gap: "32px",
               marginTop: "56px",
               paddingTop: "32px",
-              borderTop: "1px solid rgba(10,22,40,0.08)",
+              borderTop: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)",
               maxWidth: "700px",
             }}
           >
             {[
-              { num: "— 01", label: kpi1Label, value: kpi1Value },
-              { num: "— 02", label: kpi2Label, value: kpi2Value },
-              { num: "— 03", label: kpi3Label, value: kpi3Value },
+              { num: "01", label: kpi1Label, value: kpi1Value },
+              { num: "02", label: kpi2Label, value: kpi2Value },
+              { num: "03", label: kpi3Label, value: kpi3Value },
             ].map(({ num, label, value }) => (
               <div key={num}>
                 <div
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "11px",
-                    color: "#B45309",
-                    marginBottom: "8px",
-                    fontWeight: 500,
-                  }}
+                  className="ds-mono"
+                  style={{ color: "var(--sp-or-jalon)", marginBottom: "8px", fontWeight: 500 }}
                 >
                   {num}
                 </div>
                 <div
-                  style={{
-                    fontSize: "13px",
-                    color: "#475569",
-                    marginBottom: "6px",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.04em",
-                    fontFamily: "var(--font-mono)",
-                  }}
+                  className="ds-mono"
+                  style={{ color: "var(--sp-sur-sombre-2)", marginBottom: "6px" }}
                 >
                   {label}
                 </div>
-                <div
-                  style={{
-                    fontSize: "15px",
-                    color: "#0A1628",
-                    fontWeight: 500,
-                  }}
-                >
+                <div style={{ fontSize: "15px", color: "var(--sp-blanc)", fontWeight: 600 }}>
                   {value}
                 </div>
               </div>
@@ -242,39 +191,15 @@ export default function Hero({
               flexWrap: "wrap",
             }}
           >
-            <button
-              onClick={() => scrollTo("contact")}
-              style={{
-                background: "#0A1628",
-                color: "#F5EFE6",
-                padding: "18px 28px",
-                border: "none",
-                borderRadius: "100px",
-                fontFamily: "var(--font-sans)",
-                fontSize: "14px",
-                fontWeight: 500,
-                cursor: "pointer",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "14px",
-                transition: "all 0.3s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#B45309";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#0A1628";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
+            <button onClick={() => scrollTo("contact")} className="ds-btn ds-btn-light">
               {ctaPrimary}
               <span
+                aria-hidden="true"
                 style={{
                   width: "24px",
                   height: "24px",
-                  background: "#F5EFE6",
-                  color: "#0A1628",
+                  background: "var(--sp-bleu-pilotage)",
+                  color: "var(--sp-blanc)",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -287,29 +212,13 @@ export default function Hero({
               </span>
             </button>
 
-            <button
-              onClick={() => scrollTo("realisations")}
-              style={{
-                background: "none",
-                border: "none",
-                fontFamily: "var(--font-mono)",
-                fontSize: "13px",
-                color: "#1F2937",
-                cursor: "pointer",
-                padding: "18px 0",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                transition: "color 0.3s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#B45309")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#1F2937")}
-            >
+            <button onClick={() => scrollTo("realisations")} className="ds-btn ds-btn-ghost">
               <span
+                aria-hidden="true"
                 style={{
                   width: "24px",
                   height: "24px",
-                  border: "1px solid rgba(10,22,40,0.18)",
+                  border: "1px solid color-mix(in srgb, var(--sp-blanc) 50%, transparent)",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -324,7 +233,7 @@ export default function Hero({
           </motion.div>
         </div>
 
-        {/* Right — Portrait modulaire */}
+        {/* Portrait modulaire */}
         <motion.div
           custom={2}
           initial="hidden"
@@ -343,12 +252,13 @@ export default function Hero({
               width: "100%",
             }}
           >
-            {/* Main tile — spans 2 rows */}
+            {/* Tuile principale : 2 lignes */}
             <div
               style={{
                 gridRow: "1 / 3",
                 position: "relative",
                 overflow: "hidden",
+                borderRadius: "var(--sp-radius-card)",
               }}
             >
               <Image
@@ -363,67 +273,42 @@ export default function Hero({
               />
             </div>
 
-            {/* Top-right — quote */}
+            {/* Haut droite : citation */}
             <div
               style={{
-                background: "#E5DAC4",
+                background: "var(--sp-ciel)",
+                color: "var(--sp-bleu-nuit)",
                 padding: "14px",
+                borderRadius: "var(--sp-radius-card)",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <div
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "11px",
-                  color: "#B45309",
-                  fontWeight: 500,
-                }}
-              >
+              <div className="ds-mono" style={{ color: "var(--sp-bleu-pilotage)", fontWeight: 500 }}>
                 Bénin · Paris
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "16px",
-                  color: "#0A1628",
-                  lineHeight: 1.2,
-                  fontStyle: "italic",
-                }}
-              >
+              <div style={{ fontSize: "15px", lineHeight: 1.25, fontWeight: 600 }}>
                 {portraitQuote}
               </div>
             </div>
 
-            {/* Bottom-right — location */}
+            {/* Bas droite : localisation */}
             <div
               style={{
-                background: "#B45309",
-                color: "#F5EFE6",
+                background: "var(--sp-or-jalon)",
+                color: "var(--sp-bleu-nuit)",
                 padding: "14px",
+                borderRadius: "var(--sp-radius-card)",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <div
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "11px",
-                  fontWeight: 500,
-                  opacity: 0.85,
-                }}
-              >
+              <div className="ds-mono" style={{ fontWeight: 500, opacity: 0.8 }}>
                 {portraitLocation.split(" · ")[0]}
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                }}
-              >
+              <div style={{ fontSize: "16px", fontWeight: 800 }}>
                 {portraitLocation.split(" · ").slice(1).join(" · ")}
               </div>
             </div>
@@ -439,10 +324,10 @@ export default function Hero({
           .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
         }
         @media (max-width: 768px) {
-          .hero-section { padding: 88px 28px 60px !important; }
+          .hero-section { padding: 104px 28px 60px !important; }
         }
         @media (max-width: 480px) {
-          .hero-section { padding: 72px 20px 48px !important; }
+          .hero-section { padding: 96px 20px 48px !important; }
           .hero-kpis { gap: 20px !important; }
         }
       `}</style>

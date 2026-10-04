@@ -50,9 +50,9 @@ export default function Navigation({
         alignItems: "center",
         gap: "40px",
         transition: "all 0.4s ease",
-        background: scrolled ? "rgba(245,239,230,0.85)" : "transparent",
-        backdropFilter: scrolled ? "blur(24px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(10,22,40,0.08)" : "none",
+        background: "color-mix(in srgb, var(--sp-blanc) 88%, transparent)",
+        backdropFilter: "blur(16px)",
+        borderBottom: "1px solid var(--sp-ligne)",
       }}
     >
       {/* Logo */}
@@ -61,14 +61,14 @@ export default function Navigation({
           style={{
             width: "36px",
             height: "36px",
-            background: "#0A1628",
+            background: "var(--sp-bleu-nuit)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontFamily: "var(--font-serif)",
-            color: "#F5EFE6",
+            fontFamily: "var(--sp-font-sans)",
+            color: "var(--sp-blanc)",
             fontSize: "16px",
-            fontWeight: 500,
+            fontWeight: 800,
             position: "relative",
             flexShrink: 0,
           }}
@@ -82,17 +82,17 @@ export default function Navigation({
               right: "-3px",
               width: "12px",
               height: "12px",
-              background: "#B45309",
+              background: "var(--sp-or-jalon)",
             }}
           />
         </div>
         <span
           className="nav-brand"
           style={{
-            fontFamily: "var(--font-serif)",
+            fontFamily: "var(--sp-font-sans)",
             fontSize: "17px",
-            fontWeight: 500,
-            color: "#0A1628",
+            fontWeight: 700,
+            color: "var(--sp-bleu-nuit)",
             letterSpacing: "-0.01em",
             whiteSpace: "nowrap",
           }}
@@ -124,16 +124,16 @@ export default function Navigation({
               style={{
                 background: "none",
                 border: "none",
-                fontFamily: "var(--font-sans)",
+                fontFamily: "var(--sp-font-sans)",
                 fontSize: "14px",
                 fontWeight: 500,
-                color: "#1F2937",
+                color: "var(--sp-texte-2)",
                 cursor: "pointer",
                 padding: 0,
                 transition: "color 0.3s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#B45309")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#1F2937")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--sp-bleu-pilotage)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--sp-texte-2)")}
             >
               {label}
             </button>
@@ -157,9 +157,9 @@ export default function Navigation({
             display: "flex",
             alignItems: "center",
             gap: "8px",
-            fontFamily: "var(--font-mono)",
+            fontFamily: "var(--sp-font-mono)",
             fontSize: "12px",
-            color: "#475569",
+            color: "var(--sp-texte-3)",
           }}
         >
           <span
@@ -168,7 +168,7 @@ export default function Navigation({
               width: "8px",
               height: "8px",
               borderRadius: "50%",
-              background: "#10B981",
+              background: "var(--sp-statut-prod)",
               position: "relative",
               flexShrink: 0,
               animation: "navPulse 2s ease-in-out infinite",
@@ -183,23 +183,8 @@ export default function Navigation({
         <button
           onClick={() => scrollTo("contact")}
           aria-label={navCta}
-          style={{
-            background: "#0A1628",
-            color: "#F5EFE6",
-            padding: "11px 20px",
-            border: "none",
-            borderRadius: "100px",
-            fontFamily: "var(--font-sans)",
-            fontSize: "13px",
-            fontWeight: 500,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            transition: "background 0.3s",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#B45309")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#0A1628")}
+          className="ds-btn ds-btn-blue"
+          style={{ padding: "10px 18px", fontSize: "13px" }}
         >
           {navCta} →
         </button>
@@ -207,8 +192,8 @@ export default function Navigation({
 
       <style>{`
         @keyframes navPulse {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
-          50% { box-shadow: 0 0 0 5px rgba(16,185,129,0); }
+          0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--sp-statut-prod) 40%, transparent); }
+          50% { box-shadow: 0 0 0 5px transparent; }
         }
         @media (max-width: 1024px) {
           nav ul { display: none !important; }

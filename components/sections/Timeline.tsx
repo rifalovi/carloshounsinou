@@ -15,9 +15,9 @@ type TimelineItem = {
 type Props = { items: TimelineItem[] };
 
 const ACCENT: Record<string, string> = {
-  primary: "#B45309",
-  secondary: "#A88B4A",
-  tertiary: "#475569",
+  primary: "var(--sp-or-jalon)",
+  secondary: "var(--sp-bleu-pilotage)",
+  tertiary: "var(--sp-texte-3)",
 };
 
 function Card({
@@ -30,7 +30,7 @@ function Card({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
-  const color = ACCENT[item.accent] ?? "#C2701F";
+  const color = ACCENT[item.accent] ?? "var(--sp-or-jalon)";
 
   return (
     <motion.div
@@ -43,36 +43,23 @@ function Card({
       style={{
         position: "relative",
         padding: "24px",
-        background: hovered ? "#EDE5D6" : "transparent",
-        border: `1px solid ${hovered ? color + "55" : "rgba(10,22,40,0.08)"}`,
-        boxShadow: hovered ? "0 4px 24px rgba(0,0,0,0.07)" : "none",
-        transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
+        background: "var(--sp-blanc)",
+        borderRadius: "var(--sp-radius-card)",
+        borderLeft: `5px solid ${color}`,
+        border: "1px solid var(--sp-ligne)",
+        boxShadow: hovered ? "var(--sp-shadow-card-hover)" : "var(--sp-shadow-card)",
+        transform: hovered ? "translateY(-2px)" : "translateY(0)",
+        transition: "box-shadow 0.15s ease, transform 0.15s ease",
         maxWidth: "420px",
         width: "100%",
       }}
     >
-      {/* Corner ornament — top-left for odd (left) items, top-right for even (right) items */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: isLeft ? 0 : undefined,
-          right: isLeft ? undefined : 0,
-          width: "14px",
-          height: "14px",
-          borderTop: `2px solid ${color}`,
-          borderLeft: isLeft ? `2px solid ${color}` : undefined,
-          borderRight: isLeft ? undefined : `2px solid ${color}`,
-        }}
-      />
-
-      {/* Period */}
+            {/* Period */}
       <div
         style={{
-          fontFamily: "var(--font-mono)",
-          fontSize: "10px",
-          fontWeight: 600,
+          fontFamily: "var(--sp-font-mono)",
+          fontSize: "11px",
+          fontWeight: 700,
           color,
           letterSpacing: "0.08em",
           textTransform: "uppercase",
@@ -85,10 +72,10 @@ function Card({
       {/* Title */}
       <div
         style={{
-          fontFamily: "var(--font-serif)",
+          fontFamily: "var(--sp-font-sans)",
           fontSize: "20px",
-          fontWeight: 500,
-          color: "#0A1628",
+          fontWeight: 700,
+          color: "var(--sp-bleu-nuit)",
           lineHeight: 1.25,
           letterSpacing: "-0.01em",
           marginBottom: "8px",
@@ -100,22 +87,22 @@ function Card({
       {/* Org */}
       <div
         style={{
-          fontFamily: "var(--font-mono)",
+          fontFamily: "var(--sp-font-mono)",
           fontSize: "11px",
-          color: "#475569",
+          color: "var(--sp-texte-3)",
           lineHeight: 1.5,
           marginBottom: "14px",
         }}
       >
-        — {item.org}
+        {item.org}
       </div>
 
       {/* Description */}
       <p
         style={{
-          fontFamily: "var(--font-sans)",
+          fontFamily: "var(--sp-font-sans)",
           fontSize: "14px",
-          color: "#1F2937",
+          color: "var(--sp-texte-2)",
           lineHeight: 1.7,
           margin: "0 0 18px",
         }}
@@ -129,13 +116,13 @@ function Card({
           <span
             key={tag}
             style={{
-              fontFamily: "var(--font-mono)",
+              fontFamily: "var(--sp-font-mono)",
               fontSize: "10px",
               fontWeight: 600,
               padding: "3px 10px",
-              border: "1px solid rgba(10,22,40,0.18)",
-              borderRadius: "100px",
-              color: "#1F2937",
+              border: "1px solid var(--sp-ligne)",
+              borderRadius: "var(--sp-radius-pill)",
+              color: "var(--sp-texte-2)",
               letterSpacing: "0.05em",
               textTransform: "uppercase",
             }}
@@ -170,7 +157,7 @@ export default function Timeline({ items }: Props) {
           top: 0,
           bottom: 0,
           width: "1px",
-          background: "rgba(10,22,40,0.06)",
+          background: "var(--sp-ligne)",
           transform: "translateX(-50%)",
         }}
       />
@@ -188,14 +175,14 @@ export default function Timeline({ items }: Props) {
           transform: "translateX(-50%)",
           scaleY: prefersReducedMotion ? 1 : lineScaleY,
           transformOrigin: "top",
-          background: "linear-gradient(to bottom, #A88B4A 0%, rgba(180,83,9,0.5) 60%, rgba(71,86,105,0.3) 100%)",
+          background: "linear-gradient(to bottom, var(--sp-or-jalon) 0%, color-mix(in srgb, var(--sp-or-jalon) 50%, transparent) 60%, color-mix(in srgb, var(--sp-texte-3) 30%, transparent) 100%)",
         }}
       />
 
       <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
         {items.map((item, i) => {
           const isLeft = i % 2 === 0;
-          const accentColor = ACCENT[item.accent] ?? "#C2701F";
+          const accentColor = ACCENT[item.accent] ?? "var(--sp-or-jalon)";
 
           return (
             <div
@@ -237,10 +224,10 @@ export default function Timeline({ items }: Props) {
                     width: "16px",
                     height: "16px",
                     borderRadius: "50%",
-                    background: "#F5EFE6",
+                    background: "var(--sp-blanc)",
                     border: `2.5px solid ${accentColor}`,
                     flexShrink: 0,
-                    boxShadow: `0 0 0 4px ${accentColor}18`,
+                    boxShadow: `0 0 0 4px color-mix(in srgb, ${accentColor} 12%, transparent)`,
                   }}
                 />
               </motion.div>
