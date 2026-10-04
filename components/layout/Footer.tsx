@@ -1,6 +1,7 @@
 "use client";
 
 import LanguageSwitcher from "./LanguageSwitcher";
+import BrandMark from "@/components/ui-custom/BrandMark";
 
 type Props = {
   locale: string;
@@ -37,23 +38,7 @@ export default function Footer({
       >
         {/* Brand */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <div
-            style={{
-              width: "28px",
-              height: "28px",
-              background: "var(--sp-bleu-nuit)",
-              color: "var(--sp-blanc)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 800,
-              fontSize: "12px",
-              borderRadius: "var(--sp-radius)",
-              flexShrink: 0,
-            }}
-          >
-            {brand}
-          </div>
+          <BrandMark size={28} initials={brand} />
           <span style={{ color: "var(--sp-bleu-nuit)", fontSize: "15px", fontWeight: 700 }}>
             {brandName}
           </span>

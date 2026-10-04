@@ -187,19 +187,19 @@ export default function ChatBot() {
           width: 56px;
           height: 56px;
           border-radius: 50%;
-          background: var(--sp-bleu-nuit);
+          background: var(--sp-bleu-pilotage);
           border: none;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 20px color-mix(in srgb, var(--sp-bleu-nuit) 35%, transparent);
+          box-shadow: var(--sp-shadow-btn);
           z-index: 1000;
           transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
         .chatbot-btn:hover {
           transform: scale(1.07);
-          box-shadow: 0 6px 28px color-mix(in srgb, var(--sp-bleu-nuit) 45%, transparent);
+          box-shadow: var(--sp-shadow-btn);
         }
         .chatbot-modal {
           position: fixed;
@@ -223,7 +223,7 @@ export default function ChatBot() {
           to   { opacity: 1; transform: translateY(0); }
         }
         .chat-header {
-          background: var(--sp-bleu-nuit);
+          background: var(--sp-grad-bandeau);
           padding: 16px 20px;
           display: flex;
           align-items: center;
@@ -231,14 +231,14 @@ export default function ChatBot() {
           flex-shrink: 0;
         }
         .chat-header-title {
-          font-family: var(--font-sans, sans-serif);
+          font-family: var(--sp-font-sans);
           font-size: 14px;
           font-weight: 600;
           color: var(--sp-blanc);
           letter-spacing: 0.02em;
         }
         .chat-header-sub {
-          font-family: var(--font-mono, monospace);
+          font-family: var(--sp-font-mono);
           font-size: 10px;
           color: var(--sp-or-jalon);
           letter-spacing: 0.08em;
@@ -271,7 +271,7 @@ export default function ChatBot() {
           max-width: 84%;
           padding: 10px 14px;
           border-radius: var(--sp-radius);
-          font-family: var(--font-sans, sans-serif);
+          font-family: var(--sp-font-sans);
           font-size: 13.5px;
           line-height: 1.55;
         }
@@ -332,7 +332,7 @@ export default function ChatBot() {
           border: 1px solid var(--sp-ligne);
           border-radius: var(--sp-radius);
           padding: 8px 12px;
-          font-family: var(--font-sans, sans-serif);
+          font-family: var(--sp-font-sans);
           font-size: 13.5px;
           color: var(--sp-texte);
           outline: none;
@@ -360,7 +360,7 @@ export default function ChatBot() {
         .chat-send-btn:disabled { background: var(--sp-gris-clair); cursor: default; }
         .chat-footer {
           padding: 6px 16px 10px;
-          font-family: var(--font-mono, monospace);
+          font-family: var(--sp-font-mono);
           font-size: 10px;
           color: var(--sp-texte-3);
           letter-spacing: 0.04em;
@@ -376,7 +376,7 @@ export default function ChatBot() {
         .md ol { list-style: decimal; padding-left: 1.2em; margin-bottom: 0.5em; }
         .md li { margin-bottom: 0.2em; line-height: 1.5; }
         .md h1, .md h2, .md h3 {
-          font-family: var(--font-serif, serif);
+          font-family: var(--sp-font-sans);
           font-weight: 600;
           color: var(--sp-bleu-nuit);
           margin: 0.6em 0 0.3em;
@@ -405,7 +405,7 @@ export default function ChatBot() {
         }
         .md tr:last-child td { border-bottom: none; }
         .md code {
-          font-family: var(--font-mono, monospace);
+          font-family: var(--sp-font-mono);
           font-size: 12px;
           padding: 1px 5px;
           border-radius: var(--sp-radius);
@@ -436,7 +436,7 @@ export default function ChatBot() {
           text-align: left;
           cursor: pointer;
           transition: all 0.15s ease;
-          font-family: var(--font-sans, sans-serif);
+          font-family: var(--sp-font-sans);
           line-height: 1.4;
         }
         .choice-button:hover:not(:disabled) {
@@ -464,8 +464,8 @@ export default function ChatBot() {
           </svg>
         ) : (
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <path d="M4 7h14M4 11h10M4 15h7" stroke="var(--sp-blanc)" strokeWidth="1.8" strokeLinecap="round"/>
-            <circle cx="19" cy="18" r="3" fill="var(--sp-or-jalon)"/>
+            <path d="M4 4.5h14a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-7.5L6 19.5V16H4a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z" stroke="var(--sp-blanc)" strokeWidth="1.6" strokeLinejoin="round"/>
+            <circle cx="15" cy="10.5" r="2" fill="var(--sp-or-jalon)"/>
           </svg>
         )}
       </button>

@@ -28,6 +28,7 @@ export default function Expertise({ eyebrow, h2Part1, h2Emphasis, h2End, intro, 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.7 }}
+        className="expertise-header"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -60,6 +61,7 @@ export default function Expertise({ eyebrow, h2Part1, h2Emphasis, h2End, intro, 
 
       {/* Mosaic: 1 feature (spans 2 rows) + 4 small tiles */}
       <div
+        className="expertise-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1.6fr 1fr 1fr",
@@ -70,6 +72,7 @@ export default function Expertise({ eyebrow, h2Part1, h2Emphasis, h2End, intro, 
       >
         {/* Feature tile */}
         <motion.div
+          className="expertise-feature"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -180,19 +183,19 @@ export default function Expertise({ eyebrow, h2Part1, h2Emphasis, h2End, intro, 
 
       <style>{`
         @media (max-width: 1024px) {
-          #expertise > div:last-child {
+          .expertise-grid {
             grid-template-columns: 1fr !important;
             grid-template-rows: auto !important;
             min-height: 0 !important;
           }
-          #expertise > div:last-child > div:first-child {
+          .expertise-feature {
             grid-row: auto !important;
             padding: 36px !important;
           }
-          #expertise > div:last-child > div:first-child h3 {
+          .expertise-feature h3 {
             font-size: 32px !important;
           }
-          #expertise > div:nth-child(2) {
+          .expertise-header {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
           }

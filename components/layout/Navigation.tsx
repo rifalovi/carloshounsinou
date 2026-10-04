@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
+import BrandMark from "@/components/ui-custom/BrandMark";
 
 type Props = {
   locale: string;
@@ -57,35 +58,7 @@ export default function Navigation({
     >
       {/* Logo */}
       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <div
-          style={{
-            width: "36px",
-            height: "36px",
-            background: "var(--sp-bleu-nuit)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "var(--sp-font-sans)",
-            color: "var(--sp-blanc)",
-            fontSize: "16px",
-            fontWeight: 800,
-            position: "relative",
-            flexShrink: 0,
-          }}
-        >
-          CH
-          <span
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              bottom: "-3px",
-              right: "-3px",
-              width: "12px",
-              height: "12px",
-              background: "var(--sp-or-jalon)",
-            }}
-          />
-        </div>
+        <BrandMark size={36} />
         <span
           className="nav-brand"
           style={{

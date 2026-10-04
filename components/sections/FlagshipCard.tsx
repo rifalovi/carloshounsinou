@@ -561,11 +561,11 @@ export default function FlagshipCard({
 
       {/* Content */}
       <div style={{ padding: "28px", flex: 1, display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px", gap: "12px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px", gap: "12px", flexWrap: "wrap" }}>
           <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "10px", color: "var(--sp-or-jalon)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>
             {category}
           </span>
-          <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "10px", color: "var(--sp-texte-3)", fontWeight: 500, flexShrink: 0 }}>
+          <span style={{ fontFamily: "var(--sp-font-mono)", fontSize: "10px", color: "var(--sp-texte-3)", fontWeight: 500, textAlign: "right" }}>
             {role}
           </span>
         </div>

@@ -92,7 +92,7 @@ export default function Contact({
     >
       <div aria-hidden="true" style={{ position: "absolute", top: 0, right: 0, width: "60%", height: "100%", background: "radial-gradient(ellipse at top right, color-mix(in srgb, var(--sp-or-jalon) 6%, transparent) 0%, transparent 60%)", pointerEvents: "none" }}/>
 
-      <div style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: "80px", position: "relative", zIndex: 1, maxWidth: "1300px", margin: "0 auto" }}>
+      <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: "80px", position: "relative", zIndex: 1, maxWidth: "1300px", margin: "0 auto" }}>
         {/* Left */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7 }}>
           <SectionLabel light>{eyebrow}</SectionLabel>
@@ -123,6 +123,7 @@ export default function Contact({
 
         {/* Right — form */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7, delay: 0.15 }}
+          className="contact-form"
           style={{ background: "var(--sp-blanc)", padding: "48px", position: "relative", borderRadius: "var(--sp-radius-card)", boxShadow: "var(--sp-shadow-card)", overflow: "hidden" }}
         >
           <div aria-hidden="true" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", background: "linear-gradient(90deg, var(--sp-or-jalon), var(--sp-or-jalon))" }}/>
@@ -237,11 +238,11 @@ export default function Contact({
 
       <style>{`
         @media (max-width: 1024px) {
-          #contact > div:last-child { grid-template-columns: 1fr !important; gap: 40px !important; }
+          .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
           #contact { padding: 80px 24px !important; }
         }
         @media (max-width: 480px) {
-          #contact > div:last-child > div:last-child { padding: 24px !important; }
+          .contact-form { padding: 24px !important; }
         }
       `}</style>
     </section>

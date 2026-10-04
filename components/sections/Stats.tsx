@@ -86,6 +86,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
 
       {/* Header */}
       <motion.div
+        className="stats-header"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -126,6 +127,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
 
       {/* Stats grid */}
       <div
+        className="stats-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
@@ -189,6 +191,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
 
       {/* Footer */}
       <div
+        className="stats-footer"
         style={{
           marginTop: "48px",
           display: "flex",
@@ -208,19 +211,19 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
 
       <style>{`
         @media (max-width: 1024px) {
-          #stats > div:nth-child(3) {
+          .stats-grid {
             grid-template-columns: repeat(2, 1fr) !important;
           }
-          #stats > div:nth-child(2) {
+          .stats-header {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
           }
         }
         @media (max-width: 600px) {
-          #stats > div:nth-child(3) {
+          .stats-grid {
             grid-template-columns: 1fr !important;
           }
-          #stats > div:last-child {
+          .stats-footer {
             flex-direction: column;
             gap: 8px;
           }
