@@ -100,10 +100,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY.trim() });
 
     const response = await anthropic.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-haiku-4-5",
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: recentMessages,
@@ -120,6 +120,33 @@ export async function POST(req: NextRequest) {
       remaining: rateLimit.remaining,
     });
   } catch (error) {
+    // Erreurs typées du SDK : on distingue un problème de configuration
+    // (clé invalide, modèle inconnu) d'une saturation ou d'une panne passagère,
+    // pour que le message affiché et les logs pointent vers la bonne cause.
+    if (
+      error instanceof Anthropic.AuthenticationError ||
+      error instanceof Anthropic.PermissionDeniedError
+    ) {
+      console.error("Erreur API chat: clé ANTHROPIC_API_KEY refusée par l'API (", error.status, ")");
+      return NextResponse.json(
+        { error: "Service temporairement indisponible. Pour échanger avec Carlos, utilisez le formulaire Contact." },
+        { status: 503 }
+      );
+    }
+    if (error instanceof Anthropic.NotFoundError) {
+      console.error("Erreur API chat: modèle introuvable", error.message);
+      return NextResponse.json(
+        { error: "Service temporairement indisponible. Pour échanger avec Carlos, utilisez le formulaire Contact." },
+        { status: 503 }
+      );
+    }
+    if (error instanceof Anthropic.RateLimitError) {
+      console.error("Erreur API chat: limite de débit Anthropic atteinte");
+      return NextResponse.json(
+        { error: "Le service est saturé. Veuillez réessayer dans quelques instants." },
+        { status: 429 }
+      );
+    }
     console.error("Erreur API chat:", error);
     return NextResponse.json(
       {
