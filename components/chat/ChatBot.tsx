@@ -59,19 +59,56 @@ export default function ChatBot() {
   const [loading, setLoading] = useState(false);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const messagesRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  // Défilement limité au conteneur des messages : scrollIntoView ferait aussi
+  // défiler la page derrière la fenêtre sur mobile.
   useEffect(() => {
-    if (open && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    const el = messagesRef.current;
+    if (open && el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
   }, [messages, open]);
 
+  // Focus automatique sur desktop seulement : sur mobile il ouvrirait le
+  // clavier dès l'ouverture de la fenêtre.
   useEffect(() => {
-    if (open && inputRef.current) {
+    if (open && inputRef.current && !window.matchMedia("(max-width: 640px)").matches) {
       inputRef.current.focus();
     }
+  }, [open]);
+
+  // Mobile : feuille plein écran calée sur le viewport visuel (qui suit le
+  // clavier sur iOS, contrairement à 100vh) et page bloquée derrière.
+  useEffect(() => {
+    if (!open || !window.matchMedia("(max-width: 640px)").matches) return;
+    const modal = modalRef.current;
+    const vv = window.visualViewport;
+    const body = document.body;
+    const scrollY = window.scrollY;
+    const prev = { position: body.style.position, top: body.style.top, width: body.style.width, overflow: body.style.overflow };
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+
+    const fit = () => {
+      if (!modal || !vv) return;
+      modal.style.height = `${vv.height}px`;
+      modal.style.top = `${vv.offsetTop}px`;
+    };
+    fit();
+    vv?.addEventListener("resize", fit);
+    vv?.addEventListener("scroll", fit);
+    return () => {
+      vv?.removeEventListener("resize", fit);
+      vv?.removeEventListener("scroll", fit);
+      body.style.position = prev.position;
+      body.style.top = prev.top;
+      body.style.width = prev.width;
+      body.style.overflow = prev.overflow;
+      window.scrollTo({ top: scrollY, behavior: "instant" });
+    };
   }, [open]);
 
   async function sendMessage(text: string) {
@@ -260,6 +297,8 @@ export default function ChatBot() {
         .chat-messages {
           flex: 1;
           overflow-y: auto;
+          overscroll-behavior: contain;
+          -webkit-overflow-scrolling: touch;
           padding: 16px;
           display: flex;
           flex-direction: column;
@@ -446,15 +485,23 @@ export default function ChatBot() {
         }
         .choice-button:active:not(:disabled) { transform: translateY(0); }
         .choice-button:disabled { opacity: 0.5; cursor: default; }
-        @media (max-width: 480px) {
+        @media (max-width: 640px) {
           .chatbot-btn { bottom: 20px; right: 16px; }
-          .chatbot-modal { right: 16px; bottom: 88px; width: calc(100vw - 32px); }
+          .chatbot-btn.is-open { display: none; }
+          .chatbot-modal {
+            top: 0; left: 0; right: 0; bottom: auto;
+            width: 100%; max-width: 100%;
+            height: 100dvh; max-height: none;
+            border-radius: 0;
+            animation: none;
+          }
+          .chat-textarea { font-size: 16px; }
         }
       `}</style>
 
       {/* Floating button */}
       <button
-        className="chatbot-btn"
+        className={`chatbot-btn${open ? " is-open" : ""}`}
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Fermer le chat" : "Ouvrir le chat"}
       >
@@ -472,7 +519,7 @@ export default function ChatBot() {
 
       {/* Modal */}
       {open && (
-        <div className="chatbot-modal" role="dialog" aria-label="Assistant IA de Carlos Hounsinou">
+        <div ref={modalRef} className="chatbot-modal" role="dialog" aria-label="Assistant IA de Carlos Hounsinou">
           <div className="chat-header">
             <div>
               <div className="chat-header-title">Assistant IA · Carlos Hounsinou</div>
@@ -483,7 +530,7 @@ export default function ChatBot() {
             </button>
           </div>
 
-          <div className="chat-messages">
+          <div ref={messagesRef} className="chat-messages">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -506,7 +553,6 @@ export default function ChatBot() {
             {error && (
               <div className="msg-bubble msg-error">{error}</div>
             )}
-            <div ref={messagesEndRef} />
           </div>
 
           <div className="chat-input-area">
