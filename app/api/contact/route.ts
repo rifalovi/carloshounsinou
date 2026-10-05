@@ -46,16 +46,16 @@ export async function POST(request: Request) {
       replyTo: email.trim(),
       subject: `Message depuis carloshounsinou.com · ${esc(name.trim())}`,
       html: `
-        <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
-          <h2 style="color:#0A1628;border-bottom:2px solid #B45309;padding-bottom:8px">
+        <div style="font-family:Manrope,'Helvetica Neue',Helvetica,Arial,sans-serif;max-width:600px;color:#14171c;margin:0 auto">
+          <h2 style="color:#0a2540;border-bottom:3px solid #f5a623;padding-bottom:8px">
             Nouveau message depuis carloshounsinou.com
           </h2>
           <p><strong>De :</strong> ${esc(name.trim())} &lt;${esc(email.trim())}&gt;</p>
           ${project ? `<p><strong>Projet :</strong> ${esc(project)}</p>` : ""}
           ${topic ? `<p><strong>Thème :</strong> ${esc(topic)}</p>` : ""}
-          <hr style="border:none;border-top:1px solid #eee;margin:16px 0"/>
+          <hr style="border:none;border-top:1px solid #e4e2dc;margin:16px 0"/>
           <p><strong>Message :</strong></p>
-          <p style="white-space:pre-wrap;line-height:1.6;color:#1F2937">${esc(message.trim())}</p>
+          <p style="white-space:pre-wrap;line-height:1.6;color:#3a414c">${esc(message.trim())}</p>
         </div>
       `,
     });
