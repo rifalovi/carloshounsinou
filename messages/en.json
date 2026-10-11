@@ -139,10 +139,10 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Ten architectures, ten",
+    "h2Part1": "Eleven architectures, eleven",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "A selection of ten flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance, private operations and data-driven steering. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
+    "intro": "A selection of eleven flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance, private operations and data-driven steering. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -597,6 +597,50 @@
             "label": "Learn more →",
             "type": "detail",
             "href": "/realisations/akto"
+          }
+        ]
+      },
+      {
+        "id": "data-studio",
+        "visual": "datastudio",
+        "category": "Analysis tool · Monitoring & evaluation",
+        "role": "Design · Development",
+        "title": "Data Studio · Offline M&E analysis workbench",
+        "subtitle": "Desktop application · Windows & macOS",
+        "status": "Delivered · In production",
+        "statusType": "live",
+        "description": "Offline desktop application for monitoring and evaluation data analysis: SPSS and Power BI file reading, automated audit of performance measurement frameworks (RBM), PDF country sheets and self-contained HTML dashboards. No server, no network, no language model at runtime: data confidentiality is guaranteed by design.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Python 3 · Tkinter · 5 business modules"
+          },
+          {
+            "label": "Features",
+            "value": "SPSS · Power BI · PMF audit · Country sheets"
+          },
+          {
+            "label": "Constraint",
+            "value": "100% offline · Local data"
+          },
+          {
+            "label": "Status",
+            "value": "V4.10 · In production"
+          }
+        ],
+        "stack": [
+          "Python 3",
+          "Tkinter",
+          "pandas",
+          "pbixray",
+          "reportlab",
+          "PyInstaller"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/data-studio"
           }
         ]
       }
@@ -1083,6 +1127,25 @@
         ],
         "results": "A shared visual reporting system that gives a consistent reading of training activity and supports steering.",
         "stackDetail": "Looker Studio · Data model · Steering indicators · Automated reporting"
+      },
+      {
+        "id": "data-studio",
+        "metaTitle": "Data Studio · Offline M&E analysis workbench · Carlos Hounsinou",
+        "metaDescription": "Offline Python desktop application for monitoring and evaluation data analysis: SPSS, Power BI, performance measurement framework audit, PDF country sheets, self-contained HTML dashboards.",
+        "title": "Data Studio · Offline M&E analysis workbench",
+        "subtitle": "Desktop application · Windows & macOS",
+        "category": "Analysis tool · Monitoring & evaluation",
+        "status": "Delivered · In production",
+        "context": "Monitoring and evaluation teams handle sensitive data, SPSS surveys, Power BI models, performance measurement frameworks, often without reliable network access or permission to send that data to an external service. I designed and developed Data Studio, a desktop analysis workbench that runs entirely offline.",
+        "challenge": "Bringing together in a single tool, installable without technical prerequisites, the reading of business formats (SPSS, Power BI), the methodological audit of results frameworks and the production of deliverables (PDF country sheets, HTML dashboards), while guaranteeing that no data leaves the workstation.",
+        "approach": [
+          "Interface in six sections (home, data, analyses and reports, PMF audit, country sheet, quality and method) around an in-memory pandas core that preserves SPSS metadata, variable and value labels.",
+          "Autonomous, testable business modules: Power BI to Excel reading in four modes including the star schema, star unification and Access package, a rule- and statistics-based PMF audit engine, PDF sheet generation.",
+          "Self-contained deliverables: HTML dashboards with embedded SVG charts, with no dependency on a remote service.",
+          "Distributed as an archive and as Windows and macOS executables with no Python installation for the user; evidence and integrity-check page built into the application."
+        ],
+        "results": "Version 4.10 in production, around 8,000 lines of code in five modules: performance measurement framework audits, Power BI model exploitation and country sheet production, with no data ever leaving the workstation.",
+        "stackDetail": "Python 3 · Tkinter · pandas · pyreadstat · pbixray · openpyxl · matplotlib · reportlab · PyInstaller"
       }
     ]
   },

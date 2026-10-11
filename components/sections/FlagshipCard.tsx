@@ -14,7 +14,7 @@ type Action = {
 };
 
 type Props = {
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab" | "determines" | "akto";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab" | "determines" | "akto" | "datastudio";
   badge: string;
   badgeType: "dev" | "live" | "done";
   hasAI?: boolean;
@@ -525,6 +525,56 @@ function AktoVisual() {
   );
 }
 
+function DataStudioVisual() {
+  const nav = ["ACCUEIL", "DONNÉES", "ANALYSES", "AUDIT CMR", "FICHE PAYS", "QUALITÉ"];
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
+      {/* Fenêtre de bureau */}
+      <rect x="14" y="12" width="252" height="152" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 20%, transparent)" strokeWidth="0.8" rx="3"/>
+      <rect x="14" y="12" width="252" height="14" fill="color-mix(in srgb, var(--sp-sur-sombre) 8%, transparent)" rx="3"/>
+      {[22, 30, 38].map((cx) => (<circle key={cx} cx={cx} cy="19" r="2.2" fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)"/>))}
+      <text x="140" y="22" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6"
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">DATA STUDIO · V4.10 · HORS LIGNE</text>
+      {/* Barre latérale */}
+      <rect x="14" y="26" width="66" height="138" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"/>
+      {nav.map((label, i) => (
+        <g key={label}>
+          {i === 3 && <rect x="18" y={34 + i * 20} width="58" height="14" fill="color-mix(in srgb, var(--sp-or-jalon) 22%, transparent)" rx="2"/>}
+          <text x="24" y={43 + i * 20} fontFamily="var(--sp-font-mono)" fontSize="5.5"
+            fill={i === 3 ? COPPER : C_SOFT} fontWeight="500" letterSpacing="0.06em">{label}</text>
+        </g>
+      ))}
+      {/* Zone principale : table d'audit */}
+      <text x="90" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">CADRE DE MESURE DU RENDEMENT</text>
+      {[0, 1, 2, 3, 4].map((r) => (
+        <g key={r}>
+          <rect x="90" y={48 + r * 13} width="110" height="9" fill="color-mix(in srgb, var(--sp-sur-sombre) 6%, transparent)" rx="1"/>
+          <rect x="94" y={51 + r * 13} width={40 + (r % 3) * 12} height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" rx="1"/>
+          <circle cx="194" cy={52.5 + r * 13} r="2.5" fill={r === 2 ? GOLD : r === 4 ? "color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" : COPPER}/>
+        </g>
+      ))}
+      {/* Graphique SVG embarqué */}
+      <rect x="208" y="34" width="50" height="78" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.6" rx="2"/>
+      {[30, 46, 38, 58].map((h, i) => (
+        <rect key={i} x={214 + i * 11} y={106 - h} width="7" height={h}
+          fill={i === 3 ? COPPER : "color-mix(in srgb, var(--sp-or-jalon) 40%, transparent)"} rx="1"/>
+      ))}
+      {/* Fiche pays PDF */}
+      <rect x="90" y="118" width="168" height="38" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-or-jalon) 35%, transparent)" strokeWidth="0.7" rx="2"/>
+      <text x="96" y="129" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={COPPER} fontWeight="500" letterSpacing="0.08em">FICHE PAYS · PDF</text>
+      <rect x="96" y="135" width="120" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 22%, transparent)" rx="1"/>
+      <rect x="96" y="142" width="90" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 14%, transparent)" rx="1"/>
+      <rect x="96" y="149" width="104" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="1"/>
+      <text x="140" y="174" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">PYTHON · TKINTER · SPSS · POWER BI · AUCUN RÉSEAU</text>
+    </svg>
+  );
+}
+
 /* ── visual config ── */
 const visualBg: Record<string, string> = {
   oif:          "var(--sp-grad-section)",
@@ -537,6 +587,7 @@ const visualBg: Record<string, string> = {
   cevelab:      "var(--sp-grad-section)",
   determines:   "var(--sp-grad-section)",
   akto:         "var(--sp-grad-section)",
+  datastudio:   "var(--sp-grad-section)",
 };
 
 const badgeColors: Record<string, string> = {
@@ -641,6 +692,7 @@ export default function FlagshipCard({
         {visual === "cevelab" && <CevelabVisual />}
         {visual === "determines" && <DeterminesVisual />}
         {visual === "akto" && <AktoVisual />}
+        {visual === "datastudio" && <DataStudioVisual />}
       </div>
 
       {/* Content */}

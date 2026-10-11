@@ -42,6 +42,7 @@ const VALID_SLUGS = [
   "operations-platform",
   "les-determines",
   "akto",
+  "data-studio",
 ] as const;
 
 type Props = { params: Promise<{ locale: string; slug: string }> };

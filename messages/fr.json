@@ -139,10 +139,10 @@
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Dix architectures, dix",
+    "h2Part1": "Onze architectures, onze",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Une sélection de dix architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale, les opérations privées et le pilotage par la donnée. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
+    "intro": "Une sélection de onze architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale, les opérations privées et le pilotage par la donnée. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -597,6 +597,50 @@
             "label": "En savoir plus →",
             "type": "detail",
             "href": "/realisations/akto"
+          }
+        ]
+      },
+      {
+        "id": "data-studio",
+        "visual": "datastudio",
+        "category": "Outil d'analyse · Suivi-évaluation",
+        "role": "Conception · Développement",
+        "title": "Data Studio · Atelier d'analyse S&E hors ligne",
+        "subtitle": "Application de bureau · Windows & macOS",
+        "status": "Livré · En production",
+        "statusType": "live",
+        "description": "Application de bureau hors ligne pour l'analyse de données de suivi-évaluation : lecture de fichiers SPSS et Power BI, audit automatisé des cadres de mesure du rendement (GAR), fiches pays PDF et tableaux de bord HTML autonomes. Aucun serveur, aucun réseau, aucun modèle de langage à l'exécution : la confidentialité des données est garantie par construction.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Python 3 · Tkinter · 5 modules métier"
+          },
+          {
+            "label": "Fonctionnalités",
+            "value": "SPSS · Power BI · Audit CMR · Fiches pays"
+          },
+          {
+            "label": "Contrainte",
+            "value": "100 % hors ligne · Données locales"
+          },
+          {
+            "label": "Statut",
+            "value": "V4.10 · En production"
+          }
+        ],
+        "stack": [
+          "Python 3",
+          "Tkinter",
+          "pandas",
+          "pbixray",
+          "reportlab",
+          "PyInstaller"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/data-studio"
           }
         ]
       }
@@ -1083,6 +1127,25 @@
         ],
         "results": "Un dispositif de restitution visuelle partagé, qui donne une lecture homogène de l'activité formation et sert de support au pilotage.",
         "stackDetail": "Looker Studio · Modèle de données · Indicateurs de pilotage · Reporting automatisé"
+      },
+      {
+        "id": "data-studio",
+        "metaTitle": "Data Studio · Atelier d'analyse S&E hors ligne · Carlos Hounsinou",
+        "metaDescription": "Application de bureau Python hors ligne pour l'analyse de données de suivi-évaluation : SPSS, Power BI, audit de cadres de mesure du rendement, fiches pays PDF, tableaux de bord HTML autonomes.",
+        "title": "Data Studio · Atelier d'analyse S&E hors ligne",
+        "subtitle": "Application de bureau · Windows & macOS",
+        "category": "Outil d'analyse · Suivi-évaluation",
+        "status": "Livré · En production",
+        "context": "Les équipes de suivi-évaluation manipulent des données sensibles, enquêtes SPSS, modèles Power BI, cadres de mesure du rendement, souvent sans accès réseau fiable ni droit d'envoyer ces données vers un service externe. J'ai conçu et développé Data Studio, un atelier d'analyse de bureau qui fonctionne entièrement hors ligne.",
+        "challenge": "Réunir dans un seul outil, installable sans prérequis technique, la lecture des formats métier (SPSS, Power BI), l'audit méthodologique des cadres de résultats et la production de livrables (fiches pays PDF, tableaux de bord HTML), en garantissant qu'aucune donnée ne quitte le poste de travail.",
+        "approach": [
+          "Interface en six sections (accueil, données, analyses et rapports, audit CMR, fiche pays, qualité et méthode) autour d'un noyau pandas en mémoire qui conserve les métadonnées SPSS, étiquettes de variables et de valeurs.",
+          "Modules métier autonomes et testables : lecture Power BI vers Excel selon quatre modes dont le modèle en étoile, unification en étoile et paquet Access, moteur d'audit CMR fondé sur des règles et des statistiques, génération de fiches PDF.",
+          "Livrables autonomes : tableaux de bord HTML avec graphiques SVG embarqués, sans dépendance à un service distant.",
+          "Distribution en archive et en exécutables Windows et macOS sans installation de Python pour l'utilisateur ; page de preuves et contrôles d'intégrité intégrée à l'application."
+        ],
+        "results": "Version 4.10 en production, environ 8 000 lignes de code en cinq modules : audit de cadres de mesure du rendement, exploitation de modèles Power BI et production de fiches pays, sans qu'aucune donnée ne quitte le poste de travail.",
+        "stackDetail": "Python 3 · Tkinter · pandas · pyreadstat · pbixray · openpyxl · matplotlib · reportlab · PyInstaller"
       }
     ]
   },

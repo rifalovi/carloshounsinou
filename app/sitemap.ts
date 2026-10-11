@@ -13,6 +13,7 @@ const SLUGS = [
   "operations-platform",
   "les-determines",
   "akto",
+  "data-studio",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
