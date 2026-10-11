@@ -40,6 +40,8 @@ const VALID_SLUGS = [
   "cevelab",
   "cap-citoyen",
   "operations-platform",
+  "les-determines",
+  "akto",
 ] as const;
 
 type Props = { params: Promise<{ locale: string; slug: string }> };

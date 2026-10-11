@@ -11,6 +11,8 @@ const SLUGS = [
   "cevelab",
   "cap-citoyen",
   "operations-platform",
+  "les-determines",
+  "akto",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

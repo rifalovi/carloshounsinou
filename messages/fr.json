@@ -139,10 +139,10 @@
   },
   "flagship": {
     "eyebrow": "Réalisations phares",
-    "h2Part1": "Huit architectures, huit",
+    "h2Part1": "Dix architectures, dix",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Une sélection de huit architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale et les opérations privées. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
+    "intro": "Une sélection de dix architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale, les opérations privées et le pilotage par la donnée. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -508,6 +508,95 @@
             "label": "En savoir plus →",
             "type": "detail",
             "href": "/realisations/operations-platform"
+          }
+        ]
+      },
+      {
+        "id": "les-determines",
+        "visual": "determines",
+        "category": "Dispositif S&E · Secteur associatif",
+        "role": "Conception data · Tableaux de bord",
+        "title": "Tableau de bord d'impact des programmes d'accompagnement",
+        "subtitle": "Les Déterminés · Association · France",
+        "status": "Livré",
+        "statusType": "done",
+        "description": "Conception de tableaux de bord Looker Studio pour le pilotage des programmes Entrepreneuriat et Employabilité de l'association : suivi des cohortes et des parcours, résultats par territoire, consolidation des données de terrain pour le reporting aux partenaires et financeurs.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Looker Studio · Sources consolidées"
+          },
+          {
+            "label": "Périmètre",
+            "value": "Programmes Entrepreneuriat · Employabilité"
+          },
+          {
+            "label": "Approche",
+            "value": "Indicateurs de résultats · Reporting partenaires"
+          },
+          {
+            "label": "Statut",
+            "value": "Livré"
+          }
+        ],
+        "stack": [
+          "Looker Studio",
+          "Modèle de données",
+          "Indicateurs de résultats",
+          "Reporting automatisé"
+        ],
+        "actions": [
+          {
+            "label": "Voir le site",
+            "type": "external",
+            "href": "https://lesdetermines.org"
+          },
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/les-determines"
+          }
+        ]
+      },
+      {
+        "id": "akto",
+        "visual": "akto",
+        "category": "Dispositif de pilotage · Formation professionnelle",
+        "role": "Conception data · Tableaux de bord",
+        "title": "Tableaux de bord de pilotage de l'activité formation",
+        "subtitle": "AKTO · Opérateur de compétences · France",
+        "status": "Livré",
+        "statusType": "done",
+        "description": "Conception de tableaux de bord Looker Studio pour un opérateur de compétences : consolidation des données de formation, indicateurs de suivi de l'activité et des dispositifs financés, restitution visuelle pour les équipes et le pilotage.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Looker Studio · Sources consolidées"
+          },
+          {
+            "label": "Périmètre",
+            "value": "Activité formation · Dispositifs financés"
+          },
+          {
+            "label": "Approche",
+            "value": "Indicateurs de pilotage · Restitution visuelle"
+          },
+          {
+            "label": "Statut",
+            "value": "Livré"
+          }
+        ],
+        "stack": [
+          "Looker Studio",
+          "Modèle de données",
+          "Indicateurs de pilotage",
+          "Reporting automatisé"
+        ],
+        "actions": [
+          {
+            "label": "En savoir plus →",
+            "type": "detail",
+            "href": "/realisations/akto"
           }
         ]
       }
@@ -956,6 +1045,44 @@
         ],
         "results": "Plateforme en production dans 6 pays (France, Bénin, Côte d'Ivoire, Sénégal, Togo, Cameroun). 26 templates professionnels avec auto-compactage 1 page. Paiement sans abonnement, uniquement à la génération, à partir de 2,90€ / 1 900 FCFA selon le marché.",
         "stackDetail": "Next.js 14 · React 18 · TypeScript · Supabase · Capacitor 8 · Claude Sonnet 4.6 · Claude Haiku 4.5 · Stripe · FedaPay · Puppeteer · next-intl · Sentry"
+      },
+      {
+        "id": "les-determines",
+        "metaTitle": "Tableau de bord d'impact · Les Déterminés · Carlos Hounsinou",
+        "metaDescription": "Conception de tableaux de bord Looker Studio pour le pilotage des programmes d'accompagnement de l'association Les Déterminés : cohortes, parcours, résultats par territoire, reporting partenaires.",
+        "title": "Tableau de bord d'impact des programmes d'accompagnement",
+        "subtitle": "Les Déterminés · Association · France",
+        "category": "Dispositif S&E · Secteur associatif",
+        "status": "Livré",
+        "context": "Les Déterminés accompagne vers l'entrepreneuriat et l'emploi les habitants des quartiers prioritaires et des zones rurales, dans une vingtaine de villes en France. J'ai conçu le dispositif de tableaux de bord qui donne à l'association une lecture consolidée de ses programmes Entrepreneuriat et Employabilité.",
+        "challenge": "Rendre lisibles, dans un même outil, des données de terrain produites par plusieurs équipes et territoires, et en tirer des indicateurs de résultats fiables, utiles au pilotage interne comme au reporting auprès des partenaires et financeurs.",
+        "approach": [
+          "Cadrage des indicateurs de résultats avec les équipes : cohortes, parcours, répartition par programme et par territoire.",
+          "Structuration d'un modèle de données commun aux programmes et consolidation des sources existantes.",
+          "Conception des tableaux de bord Looker Studio : vues de pilotage, filtres par programme, territoire et période.",
+          "Rafraîchissement automatique des données et documentation des indicateurs pour une lecture partagée."
+        ],
+        "results": "L'association dispose d'un tableau de bord d'impact unique et actualisé automatiquement, utilisé pour le pilotage de ses programmes et la restitution auprès de ses partenaires.",
+        "stackDetail": "Looker Studio · Modèle de données · Indicateurs de résultats · Reporting automatisé"
+      },
+      {
+        "id": "akto",
+        "metaTitle": "Tableaux de bord de pilotage · AKTO · Carlos Hounsinou",
+        "metaDescription": "Conception de tableaux de bord Looker Studio pour le pilotage de l'activité formation d'un opérateur de compétences : données consolidées, indicateurs de suivi, dispositifs financés.",
+        "title": "Tableaux de bord de pilotage de l'activité formation",
+        "subtitle": "AKTO · Opérateur de compétences · France",
+        "category": "Dispositif de pilotage · Formation professionnelle",
+        "status": "Livré",
+        "context": "AKTO est l'opérateur de compétences des services à forte intensité de main-d'œuvre. J'ai conçu des tableaux de bord Looker Studio pour le pilotage de l'activité formation, à partir des données consolidées de l'opérateur.",
+        "challenge": "Transformer des données de formation volumineuses et hétérogènes en indicateurs de pilotage lisibles à plusieurs niveaux, des équipes opérationnelles au pilotage de l'activité.",
+        "approach": [
+          "Cadrage des indicateurs de pilotage : activité, dispositifs financés, évolution dans le temps.",
+          "Structuration du modèle de données et consolidation des sources.",
+          "Conception des tableaux de bord Looker Studio : vues synthétiques et détaillées, filtres par dispositif et par période.",
+          "Rafraîchissement automatique des données et documentation des indicateurs."
+        ],
+        "results": "Un dispositif de restitution visuelle partagé, qui donne une lecture homogène de l'activité formation et sert de support au pilotage.",
+        "stackDetail": "Looker Studio · Modèle de données · Indicateurs de pilotage · Reporting automatisé"
       }
     ]
   },

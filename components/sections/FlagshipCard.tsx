@@ -14,7 +14,7 @@ type Action = {
 };
 
 type Props = {
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab";
+  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab" | "determines" | "akto";
   badge: string;
   badgeType: "dev" | "live" | "done";
   hasAI?: boolean;
@@ -445,6 +445,86 @@ function CevelabVisual() {
   );
 }
 
+function DeterminesVisual() {
+  const bars = [34, 52, 46, 68, 58, 80];
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
+      <text x="140" y="14" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6.5"
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">IMPACT · PROGRAMMES</text>
+      <line x1="16" y1="20" x2="264" y2="20" stroke={C_SOFT} strokeWidth="0.8"/>
+      {/* Tuiles KPI */}
+      {[["COHORTES", 16], ["PARCOURS", 100], ["TERRITOIRES", 184]].map(([label, x]) => (
+        <g key={label as string}>
+          <rect x={x as number} y="28" width="80" height="40" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
+            stroke="color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)" strokeWidth="0.8" rx="2"/>
+          <text x={(x as number) + 8} y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5"
+            fill={C_SOFT} fontWeight="500" letterSpacing="0.08em">{label}</text>
+          <rect x={(x as number) + 8} y="48" width="40" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 28%, transparent)" rx="1"/>
+          <rect x={(x as number) + 8} y="58" width="64" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="1"/>
+          <rect x={(x as number) + 8} y="58" width="46" height="3" fill={COPPER} rx="1"/>
+        </g>
+      ))}
+      {/* Histogramme */}
+      <rect x="16" y="78" width="150" height="90" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="24" y="90" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">RÉSULTATS PAR TERRITOIRE</text>
+      {bars.map((h, i) => (
+        <rect key={i} x={26 + i * 22} y={158 - h * 0.7} width="12" height={h * 0.7}
+          fill={i === bars.length - 1 ? COPPER : "color-mix(in srgb, var(--sp-or-jalon) 40%, transparent)"} rx="1"/>
+      ))}
+      <line x1="24" y1="158" x2="158" y2="158" stroke="color-mix(in srgb, var(--sp-sur-sombre) 25%, transparent)" strokeWidth="0.6"/>
+      {/* Anneau */}
+      <rect x="176" y="78" width="88" height="90" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="184" y="90" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">PROGRAMMES</text>
+      <circle cx="220" cy="128" r="20" fill="none" stroke="color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)" strokeWidth="7"/>
+      <circle cx="220" cy="128" r="20" fill="none" stroke={COPPER} strokeWidth="7" strokeDasharray="78 48" transform="rotate(-90 220 128)"/>
+      <text x="220" y="131" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="8" fill={CREAM} fontWeight="500">62 %</text>
+      <text x="140" y="177" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">LOOKER STUDIO · REPORTING PARTENAIRES</text>
+    </svg>
+  );
+}
+
+function AktoVisual() {
+  const points = [150, 142, 136, 128, 131, 118, 110, 104, 96, 90];
+  const path = points.map((y, i) => `${i === 0 ? "M" : "L"}${24 + i * 15} ${y}`).join(" ");
+  return (
+    <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
+      <text x="140" y="14" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6.5"
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">PILOTAGE · ACTIVITÉ FORMATION</text>
+      <line x1="16" y1="20" x2="264" y2="20" stroke={C_SOFT} strokeWidth="0.8"/>
+      {/* Courbe d'activité */}
+      <rect x="16" y="28" width="156" height="140" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="24" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">ACTIONS DE FORMATION</text>
+      {[60, 90, 120, 150].map((y) => (
+        <line key={y} x1="24" y1={y} x2="164" y2={y} stroke="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" strokeWidth="0.5" strokeDasharray="2,2"/>
+      ))}
+      <path d={`${path} L159 158 L24 158 Z`} fill="color-mix(in srgb, var(--sp-or-jalon) 14%, transparent)"/>
+      <path d={path} fill="none" stroke={COPPER} strokeWidth="1.4" strokeLinejoin="round"/>
+      {points.map((y, i) => (
+        <circle key={i} cx={24 + i * 15} cy={y} r={i === points.length - 1 ? 3 : 1.5} fill={i === points.length - 1 ? GOLD : COPPER}/>
+      ))}
+      {/* Tableau des dispositifs */}
+      <rect x="182" y="28" width="82" height="140" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="190" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">DISPOSITIFS</text>
+      {[64, 48, 56, 36, 44].map((w, i) => (
+        <g key={i}>
+          <rect x="190" y={52 + i * 22} width="30" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 28%, transparent)" rx="1"/>
+          <rect x="190" y={59 + i * 22} width="66" height="4" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="1"/>
+          <rect x="190" y={59 + i * 22} width={w} height="4" fill={i === 0 ? COPPER : "color-mix(in srgb, var(--sp-or-jalon) 45%, transparent)"} rx="1"/>
+        </g>
+      ))}
+      <text x="140" y="177" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">LOOKER STUDIO · DONNÉES CONSOLIDÉES</text>
+    </svg>
+  );
+}
+
 /* ── visual config ── */
 const visualBg: Record<string, string> = {
   oif:          "var(--sp-grad-section)",
@@ -455,6 +535,8 @@ const visualBg: Record<string, string> = {
   cap:          "var(--sp-grad-section)",
   operations:   "var(--sp-grad-section)",
   cevelab:      "var(--sp-grad-section)",
+  determines:   "var(--sp-grad-section)",
+  akto:         "var(--sp-grad-section)",
 };
 
 const badgeColors: Record<string, string> = {
@@ -557,6 +639,8 @@ export default function FlagshipCard({
         {visual === "cap" && <CapVisual alt={capImageAlt} />}
         {visual === "operations" && <OperationsVisual />}
         {visual === "cevelab" && <CevelabVisual />}
+        {visual === "determines" && <DeterminesVisual />}
+        {visual === "akto" && <AktoVisual />}
       </div>
 
       {/* Content */}

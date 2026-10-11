@@ -139,10 +139,10 @@
   },
   "flagship": {
     "eyebrow": "Flagship work",
-    "h2Part1": "Eight architectures, eight",
+    "h2Part1": "Ten architectures, ten",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "A selection of eight flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance and private operations. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
+    "intro": "A selection of ten flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance, private operations and data-driven steering. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -508,6 +508,95 @@
             "label": "Learn more →",
             "type": "detail",
             "href": "/realisations/operations-platform"
+          }
+        ]
+      },
+      {
+        "id": "les-determines",
+        "visual": "determines",
+        "category": "M&E system · Non-profit sector",
+        "role": "Data design · Dashboards",
+        "title": "Impact dashboard for support programmes",
+        "subtitle": "Les Déterminés · Non-profit · France",
+        "status": "Delivered",
+        "statusType": "done",
+        "description": "Design of Looker Studio dashboards to steer the organisation's Entrepreneurship and Employability programmes: cohort and pathway tracking, results by territory, consolidation of field data for reporting to partners and funders.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Looker Studio · Consolidated sources"
+          },
+          {
+            "label": "Scope",
+            "value": "Entrepreneurship · Employability programmes"
+          },
+          {
+            "label": "Approach",
+            "value": "Outcome indicators · Partner reporting"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered"
+          }
+        ],
+        "stack": [
+          "Looker Studio",
+          "Data model",
+          "Outcome indicators",
+          "Automated reporting"
+        ],
+        "actions": [
+          {
+            "label": "Visit the site",
+            "type": "external",
+            "href": "https://lesdetermines.org"
+          },
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/les-determines"
+          }
+        ]
+      },
+      {
+        "id": "akto",
+        "visual": "akto",
+        "category": "Steering system · Vocational training",
+        "role": "Data design · Dashboards",
+        "title": "Steering dashboards for training activity",
+        "subtitle": "AKTO · Skills operator · France",
+        "status": "Delivered",
+        "statusType": "done",
+        "description": "Design of Looker Studio dashboards for a skills operator: consolidation of training data, indicators tracking activity and funded schemes, visual reporting for teams and management.",
+        "specs": [
+          {
+            "label": "Architecture",
+            "value": "Looker Studio · Consolidated sources"
+          },
+          {
+            "label": "Scope",
+            "value": "Training activity · Funded schemes"
+          },
+          {
+            "label": "Approach",
+            "value": "Steering indicators · Visual reporting"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered"
+          }
+        ],
+        "stack": [
+          "Looker Studio",
+          "Data model",
+          "Steering indicators",
+          "Automated reporting"
+        ],
+        "actions": [
+          {
+            "label": "Learn more →",
+            "type": "detail",
+            "href": "/realisations/akto"
           }
         ]
       }
@@ -956,6 +1045,44 @@
         ],
         "results": "Platform live in 6 countries (France, Benin, Ivory Coast, Senegal, Togo, Cameroon). 26 professional templates with 1-page auto-compact. Pay-per-use only, no subscription, from €2.90 / 1,900 XOF depending on market.",
         "stackDetail": "Next.js 14 · React 18 · TypeScript · Supabase · Capacitor 8 · Claude Sonnet 4.6 · Claude Haiku 4.5 · Stripe · FedaPay · Puppeteer · next-intl · Sentry"
+      },
+      {
+        "id": "les-determines",
+        "metaTitle": "Impact dashboard · Les Déterminés · Carlos Hounsinou",
+        "metaDescription": "Design of Looker Studio dashboards to steer the support programmes of the non-profit Les Déterminés: cohorts, pathways, results by territory, partner reporting.",
+        "title": "Impact dashboard for support programmes",
+        "subtitle": "Les Déterminés · Non-profit · France",
+        "category": "M&E system · Non-profit sector",
+        "status": "Delivered",
+        "context": "Les Déterminés supports residents of priority neighbourhoods and rural areas towards entrepreneurship and employment, in around twenty French cities. I designed the dashboard system that gives the organisation a consolidated view of its Entrepreneurship and Employability programmes.",
+        "challenge": "Making field data produced by several teams and territories readable in a single tool, and turning it into reliable outcome indicators, useful for internal steering as well as reporting to partners and funders.",
+        "approach": [
+          "Framing of outcome indicators with the teams: cohorts, pathways, breakdown by programme and territory.",
+          "Structuring a data model shared across programmes and consolidating existing sources.",
+          "Design of the Looker Studio dashboards: steering views, filters by programme, territory and period.",
+          "Automatic data refresh and indicator documentation for a shared reading."
+        ],
+        "results": "The organisation has a single, automatically updated impact dashboard, used to steer its programmes and report to its partners.",
+        "stackDetail": "Looker Studio · Data model · Outcome indicators · Automated reporting"
+      },
+      {
+        "id": "akto",
+        "metaTitle": "Steering dashboards · AKTO · Carlos Hounsinou",
+        "metaDescription": "Design of Looker Studio dashboards to steer the training activity of a skills operator: consolidated data, tracking indicators, funded schemes.",
+        "title": "Steering dashboards for training activity",
+        "subtitle": "AKTO · Skills operator · France",
+        "category": "Steering system · Vocational training",
+        "status": "Delivered",
+        "context": "AKTO is the skills operator for labour-intensive service industries. I designed Looker Studio dashboards to steer training activity, built on the operator's consolidated data.",
+        "challenge": "Turning large, heterogeneous training data into steering indicators readable at several levels, from operational teams to activity management.",
+        "approach": [
+          "Framing of steering indicators: activity, funded schemes, evolution over time.",
+          "Structuring the data model and consolidating sources.",
+          "Design of the Looker Studio dashboards: summary and detailed views, filters by scheme and period.",
+          "Automatic data refresh and indicator documentation."
+        ],
+        "results": "A shared visual reporting system that gives a consistent reading of training activity and supports steering.",
+        "stackDetail": "Looker Studio · Data model · Steering indicators · Automated reporting"
       }
     ]
   },
