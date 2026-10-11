@@ -142,7 +142,7 @@
     "h2Part1": "Eleven architectures, eleven",
     "h2Emphasis": "scales",
     "h2End": " of transformation.",
-    "intro": "A selection of eleven flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance, private operations and data-driven steering. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
+    "intro": "A selection of eleven flagship architectures, from institutional multilateral steering to my own SaaS product, including European donors, territorial governance, private operations, community and cultural life, and offline data analysis. Each one demonstrates a rare combination: strategic design, operational piloting, technical delivery.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -514,36 +514,40 @@
       {
         "id": "les-determines",
         "visual": "determines",
-        "category": "M&E system · Non-profit sector",
-        "role": "Data design · Dashboards",
-        "title": "Impact dashboard for support programmes",
-        "subtitle": "Les Déterminés · Non-profit · France",
-        "status": "Delivered",
-        "statusType": "done",
-        "description": "Design of Looker Studio dashboards to steer the organisation's Entrepreneurship and Employability programmes: cohort and pathway tracking, results by territory, consolidation of field data for reporting to partners and funders.",
+        "category": "Community platform · Non-profit sector",
+        "role": "Design · Full-stack development",
+        "title": "Les Déterminés community life platform",
+        "subtitle": "Family of disciples · France · lesdetermines.org",
+        "status": "Delivered · In production",
+        "statusType": "live",
+        "description": "Bilingual, mobile-first web application bringing together in one place the life of a community previously scattered across WhatsApp, Zoom and in-person meetings: editable showcase, membership with validation, member area, group-based mentoring, agenda, testimonies, appointments, contributions and email CRM. Security enforced at database level (RLS) and GDPR compliance by design.",
         "specs": [
           {
             "label": "Architecture",
-            "value": "Looker Studio · Consolidated sources"
+            "value": "Next.js · Supabase · RLS on 100% of tables"
           },
           {
-            "label": "Scope",
-            "value": "Entrepreneurship · Employability programmes"
+            "label": "Features",
+            "value": "Membership · Groups · Agenda · Testimonies · CRM"
           },
           {
-            "label": "Approach",
-            "value": "Outcome indicators · Partner reporting"
+            "label": "Access",
+            "value": "7 roles · Bilingual FR/EN · Mobile-first"
           },
           {
             "label": "Status",
-            "value": "Delivered"
+            "value": "Delivered · In production"
           }
         ],
         "stack": [
-          "Looker Studio",
-          "Data model",
-          "Outcome indicators",
-          "Automated reporting"
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Supabase",
+          "Tailwind · shadcn/ui",
+          "next-intl",
+          "Leaflet",
+          "Capacitor"
         ],
         "actions": [
           {
@@ -561,36 +565,39 @@
       {
         "id": "akto",
         "visual": "akto",
-        "category": "Steering system · Vocational training",
-        "role": "Data design · Dashboards",
-        "title": "Steering dashboards for training activity",
-        "subtitle": "AKTO · Skills operator · France",
-        "status": "Delivered",
-        "statusType": "done",
-        "description": "Design of Looker Studio dashboards for a skills operator: consolidation of training data, indicators tracking activity and funded schemes, visual reporting for teams and management.",
+        "category": "Cultural platform · Showcasing a body of work",
+        "role": "Design · Full-stack development",
+        "title": "AKTO · Platform showcasing a composer and choir conductor",
+        "subtitle": "Dr Ambroise Kua-Nzambi Toko · African Academy of Choral Music",
+        "status": "In development · Showcase live",
+        "statusType": "dev",
+        "description": "Bilingual digital hub for the work of a Congolese composer, choir conductor and educator: showcase, catalogue of works, distinctions, events, gallery, press review and publications, then a training academy and a shop in later phases. Every public claim is sourced, every table is protected by RLS, 287 automated tests.",
         "specs": [
           {
             "label": "Architecture",
-            "value": "Looker Studio · Consolidated sources"
+            "value": "Next.js · Supabase · 14 tables under RLS"
           },
           {
-            "label": "Scope",
-            "value": "Training activity · Funded schemes"
+            "label": "Features",
+            "value": "Catalogue · Events · Press · Gallery · Accounts"
           },
           {
             "label": "Approach",
-            "value": "Steering indicators · Visual reporting"
+            "value": "Sourced content · Bilingual FR/EN · Automated tests"
           },
           {
             "label": "Status",
-            "value": "Delivered"
+            "value": "Sprint 1 live · Academy and shop to come"
           }
         ],
         "stack": [
-          "Looker Studio",
-          "Data model",
-          "Steering indicators",
-          "Automated reporting"
+          "Next.js 16",
+          "TypeScript",
+          "Supabase",
+          "next-intl",
+          "Zod",
+          "Vitest · Playwright",
+          "Vercel"
         ],
         "actions": [
           {
@@ -603,13 +610,13 @@
       {
         "id": "data-studio",
         "visual": "datastudio",
-        "category": "Analysis tool · Monitoring & evaluation",
+        "category": "Data analysis workbench · Monitoring & evaluation",
         "role": "Design · Development",
-        "title": "Data Studio · Offline M&E analysis workbench",
+        "title": "DataStudio · Offline M&E analysis workbench",
         "subtitle": "Desktop application · Windows & macOS",
-        "status": "Delivered · In production",
-        "statusType": "live",
-        "description": "Offline desktop application for monitoring and evaluation data analysis: SPSS and Power BI file reading, automated audit of performance measurement frameworks (RBM), PDF country sheets and self-contained HTML dashboards. No server, no network, no language model at runtime: data confidentiality is guaranteed by design.",
+        "status": "Delivered",
+        "statusType": "done",
+        "description": "Desktop analysis workbench, 100% offline, for monitoring and evaluation teams: SPSS surveys, performance measurement framework audits, unified Power BI models, PDF country sheets, self-contained dashboards. No server, no external service: no data ever leaves the workstation.",
         "specs": [
           {
             "label": "Architecture",
@@ -621,11 +628,11 @@
           },
           {
             "label": "Constraint",
-            "value": "100% offline · Local data"
+            "value": "100% offline · No external service"
           },
           {
             "label": "Status",
-            "value": "V4.10 · In production"
+            "value": "V4.10 · Delivered"
           }
         ],
         "stack": [
@@ -1092,60 +1099,64 @@
       },
       {
         "id": "les-determines",
-        "metaTitle": "Impact dashboard · Les Déterminés · Carlos Hounsinou",
-        "metaDescription": "Design of Looker Studio dashboards to steer the support programmes of the non-profit Les Déterminés: cohorts, pathways, results by territory, partner reporting.",
-        "title": "Impact dashboard for support programmes",
-        "subtitle": "Les Déterminés · Non-profit · France",
-        "category": "M&E system · Non-profit sector",
-        "status": "Delivered",
-        "context": "Les Déterminés supports residents of priority neighbourhoods and rural areas towards entrepreneurship and employment, in around twenty French cities. I designed the dashboard system that gives the organisation a consolidated view of its Entrepreneurship and Employability programmes.",
-        "challenge": "Making field data produced by several teams and territories readable in a single tool, and turning it into reliable outcome indicators, useful for internal steering as well as reporting to partners and funders.",
+        "metaTitle": "Les Déterminés community platform · Carlos Hounsinou",
+        "metaDescription": "Design and development of a bilingual community life platform: membership, member area, group-based mentoring, agenda, testimonies, appointments, CRM. Next.js, Supabase, Row-Level Security.",
+        "title": "Les Déterminés community life platform",
+        "subtitle": "Family of disciples · France · lesdetermines.org",
+        "category": "Community platform · Non-profit sector",
+        "status": "Delivered · In production",
+        "context": "Les Déterminés is a family of disciples, a Christian community whose daily life was scattered across WhatsApp, Zoom and in-person meetings. The community wanted a single space for membership, mentoring, community life and communication, accessible first from a phone, in French and English.",
+        "challenge": "Giving each person a space suited to their role, from visitor to super-administrator through pending member, active member, disciple-maker and division lead, while guaranteeing that security never depends on the interface: a member must never be able to read another member's data, even by bypassing the screen.",
         "approach": [
-          "Framing of outcome indicators with the teams: cohorts, pathways, breakdown by programme and territory.",
-          "Structuring a data model shared across programmes and consolidating existing sources.",
-          "Design of the Looker Studio dashboards: steering views, filters by programme, territory and period.",
-          "Automatic data refresh and indicator documentation for a shared reading."
+          "Bilingual public showcase editable by administrators without touching the code: programmes, vision and pillars, organisation chart of the eight divisions, testimonies, interactive map of the community.",
+          "Online membership with timestamped GDPR consent, validation queue for leads, automatic emails and one-click unsubscribe via signed link.",
+          "Member area whose menu and dashboard adapt to the role: session attendance, commitments and involvement rate, text, audio or video testimonies, appointment booking with one's disciple-maker on a slot calendar.",
+          "Full administration: members, groups and divisions, programmes with automatic generation of occurrences, moderation, payment accounts for contributions, email CRM with targeted campaigns.",
+          "Security enforced in PostgreSQL: Row-Level Security on every table, anti-privilege-escalation trigger, three separate key levels, Zod validation shared by client and server, audit log of sensitive actions.",
+          "Native iOS and Android shell prepared with Capacitor (push notifications, sharing), loading the deployed site."
         ],
-        "results": "The organisation has a single, automatically updated impact dashboard, used to steer its programmes and report to its partners.",
-        "stackDetail": "Looker Studio · Data model · Outcome indicators · Automated reporting"
+        "results": "Platform in production, delivered with a feature sheet and a technical sheet for the community. Serverless architecture (Vercel, Supabase) ready to scale without rewriting: online contributions, the member journey and a chatbot will be added without touching the foundations.",
+        "stackDetail": "Next.js 16 · React 19 · strict TypeScript · Tailwind CSS 4 · shadcn/ui · next-intl · Supabase (PostgreSQL, Auth, Storage) · Row-Level Security · Zod · Leaflet · Capacitor · Vercel"
       },
       {
         "id": "akto",
-        "metaTitle": "Steering dashboards · AKTO · Carlos Hounsinou",
-        "metaDescription": "Design of Looker Studio dashboards to steer the training activity of a skills operator: consolidated data, tracking indicators, funded schemes.",
-        "title": "Steering dashboards for training activity",
-        "subtitle": "AKTO · Skills operator · France",
-        "category": "Steering system · Vocational training",
-        "status": "Delivered",
-        "context": "AKTO is the skills operator for labour-intensive service industries. I designed Looker Studio dashboards to steer training activity, built on the operator's consolidated data.",
-        "challenge": "Turning large, heterogeneous training data into steering indicators readable at several levels, from operational teams to activity management.",
+        "metaTitle": "AKTO · Platform showcasing a musical body of work · Carlos Hounsinou",
+        "metaDescription": "Design and development of a bilingual platform showcasing the work of a composer and choir conductor: catalogue, distinctions, events, press, academy and shop to come. Next.js, Supabase, RLS.",
+        "title": "AKTO · Platform showcasing a composer and choir conductor",
+        "subtitle": "Dr Ambroise Kua-Nzambi Toko · African Academy of Choral Music",
+        "category": "Cultural platform · Showcasing a body of work",
+        "status": "In development · Showcase live",
+        "context": "Dr Ambroise Kua-Nzambi Toko, a Congolese composer, choir conductor, researcher and educator, founder of the African Academy of Choral Music, has an international body of work and career scattered across videos, press articles and documents. The AKTO platform turns it into a digital hub: showcase, reach an international audience, ease access to content, train and, in time, sell.",
+        "challenge": "Building a real platform from a reference mock-up and a brief, with no unsourced claim: every published figure, title or distinction must be traceable, and no media may be re-hosted or monetised until rights are confirmed. All of it strictly bilingual, on a database that denies by default.",
         "approach": [
-          "Framing of steering indicators: activity, funded schemes, evolution over time.",
-          "Structuring the data model and consolidating sources.",
-          "Design of the Looker Studio dashboards: summary and detailed views, filters by scheme and period.",
-          "Automatic data refresh and indicator documentation."
+          "Three-sprint phasing: showcase and catalogue, then training academy, then shop and premium content with card and mobile money payment.",
+          "Bilingual showcase over fourteen routes: biography, sourced key figures, career, catalogue of works, distinctions, events agenda, video gallery, press review and publications, contact, user accounts.",
+          "Data model in versioned SQL migrations: 14 tables, 13 enumerated types, 32 RLS policies, trigger-fed audit log, invariants guaranteed in the database (a published work requires a source).",
+          "Tooled quality: strict TypeScript, FR/EN key parity checked by test, 287 Vitest tests including cookie-based RLS tests, Playwright, dated build journal and status reports.",
+          "Product safeguards: public video embeds only in the first sprint, no payment before the catalogue and merchant account are confirmed."
         ],
-        "results": "A shared visual reporting system that gives a consistent reading of training activity and supports steering.",
-        "stackDetail": "Looker Studio · Data model · Steering indicators · Automated reporting"
+        "results": "First sprint in production: showcase and catalogue populated (21 works, 10 distinctions, 31 press and publication references, 25 videos), user accounts and contact form operational. Academy and shop planned for the next sprints.",
+        "stackDetail": "Next.js 16 · React 19 · strict TypeScript · Tailwind CSS 4 · next-intl · Supabase (PostgreSQL, Auth, Storage, Edge Functions) · Row-Level Security · Zod · Vitest · Playwright · Vercel"
       },
       {
         "id": "data-studio",
-        "metaTitle": "Data Studio · Offline M&E analysis workbench · Carlos Hounsinou",
-        "metaDescription": "Offline Python desktop application for monitoring and evaluation data analysis: SPSS, Power BI, performance measurement framework audit, PDF country sheets, self-contained HTML dashboards.",
-        "title": "Data Studio · Offline M&E analysis workbench",
+        "metaTitle": "DataStudio · Offline M&E analysis workbench · Carlos Hounsinou",
+        "metaDescription": "100% offline desktop analysis workbench for monitoring and evaluation: SPSS surveys, performance measurement framework audits, unified Power BI models, PDF country sheets, self-contained dashboards.",
+        "title": "DataStudio · Offline M&E analysis workbench",
         "subtitle": "Desktop application · Windows & macOS",
-        "category": "Analysis tool · Monitoring & evaluation",
-        "status": "Delivered · In production",
-        "context": "Monitoring and evaluation teams handle sensitive data, SPSS surveys, Power BI models, performance measurement frameworks, often without reliable network access or permission to send that data to an external service. I designed and developed Data Studio, a desktop analysis workbench that runs entirely offline.",
-        "challenge": "Bringing together in a single tool, installable without technical prerequisites, the reading of business formats (SPSS, Power BI), the methodological audit of results frameworks and the production of deliverables (PDF country sheets, HTML dashboards), while guaranteeing that no data leaves the workstation.",
+        "category": "Data analysis workbench · Monitoring & evaluation",
+        "status": "Delivered",
+        "context": "Monitoring and evaluation teams work with SPSS surveys, performance measurement frameworks and Power BI models, with sensitive data that must not leave the workstation. DataStudio answers that constraint: a desktop analysis workbench, entirely offline, that turns those files into analyses, reports and dashboards with no server or external service.",
+        "challenge": "Giving non-statistician teams the power of an analysis tool with no network dependency: reading specialised formats (SPSS, Power BI), auditing a performance measurement framework with explicit rules rather than AI, and producing shareable deliverables from a plain workstation.",
         "approach": [
-          "Interface in six sections (home, data, analyses and reports, PMF audit, country sheet, quality and method) around an in-memory pandas core that preserves SPSS metadata, variable and value labels.",
-          "Autonomous, testable business modules: Power BI to Excel reading in four modes including the star schema, star unification and Access package, a rule- and statistics-based PMF audit engine, PDF sheet generation.",
-          "Self-contained deliverables: HTML dashboards with embedded SVG charts, with no dependency on a remote service.",
-          "Distributed as an archive and as Windows and macOS executables with no Python installation for the user; evidence and integrity-check page built into the application."
+          "Single-window desktop application (Python, Tkinter), 100% offline: no data leaves the workstation, no external service called.",
+          "Reading of specialised formats: SPSS surveys (.sav) with variable and value labels, Excel and CSV, Power BI models (.pbix) unified into a star schema towards Excel or Access.",
+          "PMF audit engine (results-based management) built on explicit rules and statistics, without AI: every finding is traceable.",
+          "Ready-to-share outputs: PDF country sheets, Word reports, Excel workbooks, self-contained HTML dashboards with embedded charts, readable offline.",
+          "Turnkey distribution: standalone Windows executable and macOS application, with no Python installation for the user."
         ],
-        "results": "Version 4.10 in production, around 8,000 lines of code in five modules: performance measurement framework audits, Power BI model exploitation and country sheet production, with no data ever leaving the workstation.",
-        "stackDetail": "Python 3 · Tkinter · pandas · pyreadstat · pbixray · openpyxl · matplotlib · reportlab · PyInstaller"
+        "results": "Workbench delivered in version 4.10 and distributed as a standalone executable. Around 8,100 lines of Python in five modules, with a business core (PMF audit, Power BI, PDF sheets) separated from the interface and testable in isolation.",
+        "stackDetail": "Python 3 · Tkinter · pandas, scipy, matplotlib · pyreadstat (SPSS) · pbixray (Power BI) · reportlab, python-docx, openpyxl · PyInstaller (Windows, macOS)"
       }
     ]
   },

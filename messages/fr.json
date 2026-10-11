@@ -142,7 +142,7 @@
     "h2Part1": "Onze architectures, onze",
     "h2Emphasis": "échelles",
     "h2End": " de transformation.",
-    "intro": "Une sélection de onze architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale, les opérations privées et le pilotage par la donnée. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
+    "intro": "Une sélection de onze architectures phares, du pilotage institutionnel multilatéral au produit SaaS en propre, en passant par les bailleurs européens, la gouvernance territoriale, les opérations privées, la vie communautaire et culturelle, et l'analyse de données hors ligne. Chacune témoigne d'une combinaison rare : conception stratégique, pilotage opérationnel, livraison technique.",
     "cards": [
       {
         "id": "institutional-pilot",
@@ -514,36 +514,40 @@
       {
         "id": "les-determines",
         "visual": "determines",
-        "category": "Dispositif S&E · Secteur associatif",
-        "role": "Conception data · Tableaux de bord",
-        "title": "Tableau de bord d'impact des programmes d'accompagnement",
-        "subtitle": "Les Déterminés · Association · France",
-        "status": "Livré",
-        "statusType": "done",
-        "description": "Conception de tableaux de bord Looker Studio pour le pilotage des programmes Entrepreneuriat et Employabilité de l'association : suivi des cohortes et des parcours, résultats par territoire, consolidation des données de terrain pour le reporting aux partenaires et financeurs.",
+        "category": "Plateforme communautaire · Secteur associatif",
+        "role": "Conception · Développement full-stack",
+        "title": "Plateforme de vie communautaire Les Déterminés",
+        "subtitle": "Famille de disciples · France · lesdetermines.org",
+        "status": "Livré · En production",
+        "statusType": "live",
+        "description": "Application web bilingue, pensée d'abord pour le mobile, qui réunit en un seul espace la vie d'une communauté jusque-là dispersée entre WhatsApp, Zoom et le présentiel : vitrine éditable, adhésion avec validation, espace membre, accompagnement par groupes, agenda, témoignages, rendez-vous, cotisations et CRM email. Sécurité posée au niveau de la base (RLS) et conformité RGPD dès la conception.",
         "specs": [
           {
             "label": "Architecture",
-            "value": "Looker Studio · Sources consolidées"
+            "value": "Next.js · Supabase · RLS sur 100 % des tables"
           },
           {
-            "label": "Périmètre",
-            "value": "Programmes Entrepreneuriat · Employabilité"
+            "label": "Fonctionnalités",
+            "value": "Adhésion · Groupes · Agenda · Témoignages · CRM"
           },
           {
-            "label": "Approche",
-            "value": "Indicateurs de résultats · Reporting partenaires"
+            "label": "Accès",
+            "value": "7 rôles · Bilingue FR/EN · Mobile-first"
           },
           {
             "label": "Statut",
-            "value": "Livré"
+            "value": "Livré · En production"
           }
         ],
         "stack": [
-          "Looker Studio",
-          "Modèle de données",
-          "Indicateurs de résultats",
-          "Reporting automatisé"
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Supabase",
+          "Tailwind · shadcn/ui",
+          "next-intl",
+          "Leaflet",
+          "Capacitor"
         ],
         "actions": [
           {
@@ -561,36 +565,39 @@
       {
         "id": "akto",
         "visual": "akto",
-        "category": "Dispositif de pilotage · Formation professionnelle",
-        "role": "Conception data · Tableaux de bord",
-        "title": "Tableaux de bord de pilotage de l'activité formation",
-        "subtitle": "AKTO · Opérateur de compétences · France",
-        "status": "Livré",
-        "statusType": "done",
-        "description": "Conception de tableaux de bord Looker Studio pour un opérateur de compétences : consolidation des données de formation, indicateurs de suivi de l'activité et des dispositifs financés, restitution visuelle pour les équipes et le pilotage.",
+        "category": "Plateforme culturelle · Valorisation d'une œuvre",
+        "role": "Conception · Développement full-stack",
+        "title": "AKTO · Plateforme de valorisation d'un compositeur et chef de chœur",
+        "subtitle": "Dr Ambroise Kua-Nzambi Toko · Académie Africaine de Musique Chorale",
+        "status": "En développement · Vitrine en ligne",
+        "statusType": "dev",
+        "description": "Hub numérique bilingue de l'œuvre d'un compositeur, chef de chœur et pédagogue congolais : vitrine, catalogue d'œuvres, distinctions, agenda, galerie, revue de presse et publications, puis académie de formations et boutique aux phases suivantes. Chaque affirmation publique est sourcée, chaque table est protégée par RLS, 287 tests automatisés.",
         "specs": [
           {
             "label": "Architecture",
-            "value": "Looker Studio · Sources consolidées"
+            "value": "Next.js · Supabase · 14 tables sous RLS"
           },
           {
-            "label": "Périmètre",
-            "value": "Activité formation · Dispositifs financés"
+            "label": "Fonctionnalités",
+            "value": "Catalogue · Agenda · Presse · Galerie · Comptes"
           },
           {
             "label": "Approche",
-            "value": "Indicateurs de pilotage · Restitution visuelle"
+            "value": "Contenu sourcé · Bilingue FR/EN · Tests automatisés"
           },
           {
             "label": "Statut",
-            "value": "Livré"
+            "value": "Sprint 1 en ligne · Académie et boutique à venir"
           }
         ],
         "stack": [
-          "Looker Studio",
-          "Modèle de données",
-          "Indicateurs de pilotage",
-          "Reporting automatisé"
+          "Next.js 16",
+          "TypeScript",
+          "Supabase",
+          "next-intl",
+          "Zod",
+          "Vitest · Playwright",
+          "Vercel"
         ],
         "actions": [
           {
@@ -603,13 +610,13 @@
       {
         "id": "data-studio",
         "visual": "datastudio",
-        "category": "Outil d'analyse · Suivi-évaluation",
+        "category": "Atelier d'analyse de données · Suivi-évaluation",
         "role": "Conception · Développement",
-        "title": "Data Studio · Atelier d'analyse S&E hors ligne",
+        "title": "DataStudio · Atelier d'analyse S&E hors ligne",
         "subtitle": "Application de bureau · Windows & macOS",
-        "status": "Livré · En production",
-        "statusType": "live",
-        "description": "Application de bureau hors ligne pour l'analyse de données de suivi-évaluation : lecture de fichiers SPSS et Power BI, audit automatisé des cadres de mesure du rendement (GAR), fiches pays PDF et tableaux de bord HTML autonomes. Aucun serveur, aucun réseau, aucun modèle de langage à l'exécution : la confidentialité des données est garantie par construction.",
+        "status": "Livré",
+        "statusType": "done",
+        "description": "Atelier d'analyse de bureau, 100 % hors ligne, pour les équipes de suivi-évaluation : enquêtes SPSS, audit de cadres de mesure du rendement, modèles Power BI unifiés, fiches pays PDF, tableaux de bord autonomes. Aucun serveur, aucun service externe : aucune donnée ne quitte le poste de travail.",
         "specs": [
           {
             "label": "Architecture",
@@ -621,11 +628,11 @@
           },
           {
             "label": "Contrainte",
-            "value": "100 % hors ligne · Données locales"
+            "value": "100 % hors ligne · Aucun service externe"
           },
           {
             "label": "Statut",
-            "value": "V4.10 · En production"
+            "value": "V4.10 · Livré"
           }
         ],
         "stack": [
@@ -1092,60 +1099,64 @@
       },
       {
         "id": "les-determines",
-        "metaTitle": "Tableau de bord d'impact · Les Déterminés · Carlos Hounsinou",
-        "metaDescription": "Conception de tableaux de bord Looker Studio pour le pilotage des programmes d'accompagnement de l'association Les Déterminés : cohortes, parcours, résultats par territoire, reporting partenaires.",
-        "title": "Tableau de bord d'impact des programmes d'accompagnement",
-        "subtitle": "Les Déterminés · Association · France",
-        "category": "Dispositif S&E · Secteur associatif",
-        "status": "Livré",
-        "context": "Les Déterminés accompagne vers l'entrepreneuriat et l'emploi les habitants des quartiers prioritaires et des zones rurales, dans une vingtaine de villes en France. J'ai conçu le dispositif de tableaux de bord qui donne à l'association une lecture consolidée de ses programmes Entrepreneuriat et Employabilité.",
-        "challenge": "Rendre lisibles, dans un même outil, des données de terrain produites par plusieurs équipes et territoires, et en tirer des indicateurs de résultats fiables, utiles au pilotage interne comme au reporting auprès des partenaires et financeurs.",
+        "metaTitle": "Plateforme communautaire Les Déterminés · Carlos Hounsinou",
+        "metaDescription": "Conception et développement d'une plateforme de vie communautaire bilingue : adhésion, espace membre, accompagnement par groupes, agenda, témoignages, rendez-vous, CRM. Next.js, Supabase, Row-Level Security.",
+        "title": "Plateforme de vie communautaire Les Déterminés",
+        "subtitle": "Famille de disciples · France · lesdetermines.org",
+        "category": "Plateforme communautaire · Secteur associatif",
+        "status": "Livré · En production",
+        "context": "Les Déterminés est une famille de disciples, communauté chrétienne dont la vie quotidienne était éclatée entre WhatsApp, Zoom et le présentiel. La communauté souhaitait un espace unique pour l'adhésion, l'accompagnement, la vie communautaire et la communication, accessible d'abord depuis un téléphone, en français et en anglais.",
+        "challenge": "Donner à chaque personne un espace adapté à son rôle, du visiteur au super-administrateur en passant par le membre en attente, le membre actif, le faiseur de disciple et le responsable de pôle, en garantissant que la sécurité ne dépende pas de l'interface : un membre ne doit jamais pouvoir lire les données d'un autre, même en contournant l'écran.",
         "approach": [
-          "Cadrage des indicateurs de résultats avec les équipes : cohortes, parcours, répartition par programme et par territoire.",
-          "Structuration d'un modèle de données commun aux programmes et consolidation des sources existantes.",
-          "Conception des tableaux de bord Looker Studio : vues de pilotage, filtres par programme, territoire et période.",
-          "Rafraîchissement automatique des données et documentation des indicateurs pour une lecture partagée."
+          "Vitrine publique bilingue éditable par les administrateurs sans toucher au code : programmes, vision et piliers, organigramme des huit pôles, témoignages, cartographie interactive de la communauté.",
+          "Adhésion en ligne avec consentement RGPD horodaté, file de validation par les responsables, emails automatiques et désinscription en un clic par lien signé.",
+          "Espace membre dont le menu et le tableau de bord s'adaptent au rôle : présence aux séances, engagements et taux d'implication, témoignages texte, audio ou vidéo, prise de rendez-vous avec son faiseur de disciple sur un calendrier de créneaux.",
+          "Administration complète : membres, groupes et pôles, programmes avec génération automatique des occurrences, modération, comptes de paiement pour les cotisations, CRM email avec campagnes ciblées.",
+          "Sécurité posée dans PostgreSQL : Row-Level Security sur toutes les tables, trigger anti-escalade de privilèges, trois niveaux de clé séparés, validation Zod partagée client et serveur, journal d'audit des actions sensibles.",
+          "Coque native iOS et Android préparée via Capacitor (notifications push, partage), chargeant le site déployé."
         ],
-        "results": "L'association dispose d'un tableau de bord d'impact unique et actualisé automatiquement, utilisé pour le pilotage de ses programmes et la restitution auprès de ses partenaires.",
-        "stackDetail": "Looker Studio · Modèle de données · Indicateurs de résultats · Reporting automatisé"
+        "results": "Plateforme en production, livrée avec une fiche fonctionnalités et une fiche technique à destination de la communauté. Architecture serverless (Vercel, Supabase) prête à monter en charge sans réécriture : cotisations en ligne, parcours du déterminé et chatbot s'ajouteront sans remettre en cause les fondations.",
+        "stackDetail": "Next.js 16 · React 19 · TypeScript strict · Tailwind CSS 4 · shadcn/ui · next-intl · Supabase (PostgreSQL, Auth, Storage) · Row-Level Security · Zod · Leaflet · Capacitor · Vercel"
       },
       {
         "id": "akto",
-        "metaTitle": "Tableaux de bord de pilotage · AKTO · Carlos Hounsinou",
-        "metaDescription": "Conception de tableaux de bord Looker Studio pour le pilotage de l'activité formation d'un opérateur de compétences : données consolidées, indicateurs de suivi, dispositifs financés.",
-        "title": "Tableaux de bord de pilotage de l'activité formation",
-        "subtitle": "AKTO · Opérateur de compétences · France",
-        "category": "Dispositif de pilotage · Formation professionnelle",
-        "status": "Livré",
-        "context": "AKTO est l'opérateur de compétences des services à forte intensité de main-d'œuvre. J'ai conçu des tableaux de bord Looker Studio pour le pilotage de l'activité formation, à partir des données consolidées de l'opérateur.",
-        "challenge": "Transformer des données de formation volumineuses et hétérogènes en indicateurs de pilotage lisibles à plusieurs niveaux, des équipes opérationnelles au pilotage de l'activité.",
+        "metaTitle": "AKTO · Plateforme de valorisation d'une œuvre musicale · Carlos Hounsinou",
+        "metaDescription": "Conception et développement d'une plateforme bilingue valorisant l'œuvre d'un compositeur et chef de chœur : catalogue, distinctions, agenda, presse, académie et boutique à venir. Next.js, Supabase, RLS.",
+        "title": "AKTO · Plateforme de valorisation d'un compositeur et chef de chœur",
+        "subtitle": "Dr Ambroise Kua-Nzambi Toko · Académie Africaine de Musique Chorale",
+        "category": "Plateforme culturelle · Valorisation d'une œuvre",
+        "status": "En développement · Vitrine en ligne",
+        "context": "Le Dr Ambroise Kua-Nzambi Toko, compositeur, chef de chœur, chercheur et pédagogue congolais, fondateur de l'Académie Africaine de Musique Chorale, dispose d'une œuvre et d'un parcours internationaux dispersés entre vidéos, articles de presse et documents. La plateforme AKTO en fait un hub numérique : valoriser, faire connaître à l'international, faciliter l'accès au contenu, former et, à terme, vendre.",
+        "challenge": "Construire une plateforme réelle à partir d'une maquette de référence et d'un brief, sans aucune revendication non sourcée : chaque chiffre, titre ou distinction publié doit être traçable, et aucun média ne doit être ré-hébergé ni monétisé tant que les droits ne sont pas confirmés. Le tout en bilingue strict, avec une base qui refuse par défaut.",
         "approach": [
-          "Cadrage des indicateurs de pilotage : activité, dispositifs financés, évolution dans le temps.",
-          "Structuration du modèle de données et consolidation des sources.",
-          "Conception des tableaux de bord Looker Studio : vues synthétiques et détaillées, filtres par dispositif et par période.",
-          "Rafraîchissement automatique des données et documentation des indicateurs."
+          "Phasage en trois sprints : vitrine et catalogue, puis académie de formations, puis boutique et contenus premium avec paiement par carte et mobile money.",
+          "Vitrine bilingue sur quatorze routes : biographie, repères chiffrés avec leur source, parcours, catalogue d'œuvres, distinctions, agenda d'événements, galerie vidéo, revue de presse et publications, contact, comptes utilisateurs.",
+          "Modèle de données en migrations SQL versionnées : 14 tables, 13 types énumérés, 32 politiques RLS, journal d'audit alimenté par déclencheurs, invariants garantis en base (une œuvre publiée exige une source).",
+          "Qualité outillée : TypeScript strict, parité des clés FR/EN vérifiée par test, 287 tests Vitest dont des tests RLS par cookie, Playwright, journal de build et état des lieux datés.",
+          "Garde-fous produit : embeds de vidéos publiques uniquement au premier sprint, aucun paiement avant confirmation du catalogue et du compte marchand."
         ],
-        "results": "Un dispositif de restitution visuelle partagé, qui donne une lecture homogène de l'activité formation et sert de support au pilotage.",
-        "stackDetail": "Looker Studio · Modèle de données · Indicateurs de pilotage · Reporting automatisé"
+        "results": "Premier sprint en production : vitrine et catalogue nourris (21 œuvres, 10 distinctions, 31 références de presse et publications, 25 vidéos), comptes utilisateurs et formulaire de contact opérationnels. Académie et boutique planifiées aux sprints suivants.",
+        "stackDetail": "Next.js 16 · React 19 · TypeScript strict · Tailwind CSS 4 · next-intl · Supabase (PostgreSQL, Auth, Storage, Edge Functions) · Row-Level Security · Zod · Vitest · Playwright · Vercel"
       },
       {
         "id": "data-studio",
-        "metaTitle": "Data Studio · Atelier d'analyse S&E hors ligne · Carlos Hounsinou",
-        "metaDescription": "Application de bureau Python hors ligne pour l'analyse de données de suivi-évaluation : SPSS, Power BI, audit de cadres de mesure du rendement, fiches pays PDF, tableaux de bord HTML autonomes.",
-        "title": "Data Studio · Atelier d'analyse S&E hors ligne",
+        "metaTitle": "DataStudio · Atelier d'analyse S&E hors ligne · Carlos Hounsinou",
+        "metaDescription": "Atelier d'analyse de bureau 100 % hors ligne pour le suivi-évaluation : enquêtes SPSS, audit de cadres de mesure du rendement, modèles Power BI unifiés, fiches pays PDF, tableaux de bord autonomes.",
+        "title": "DataStudio · Atelier d'analyse S&E hors ligne",
         "subtitle": "Application de bureau · Windows & macOS",
-        "category": "Outil d'analyse · Suivi-évaluation",
-        "status": "Livré · En production",
-        "context": "Les équipes de suivi-évaluation manipulent des données sensibles, enquêtes SPSS, modèles Power BI, cadres de mesure du rendement, souvent sans accès réseau fiable ni droit d'envoyer ces données vers un service externe. J'ai conçu et développé Data Studio, un atelier d'analyse de bureau qui fonctionne entièrement hors ligne.",
-        "challenge": "Réunir dans un seul outil, installable sans prérequis technique, la lecture des formats métier (SPSS, Power BI), l'audit méthodologique des cadres de résultats et la production de livrables (fiches pays PDF, tableaux de bord HTML), en garantissant qu'aucune donnée ne quitte le poste de travail.",
+        "category": "Atelier d'analyse de données · Suivi-évaluation",
+        "status": "Livré",
+        "context": "Des équipes de suivi-évaluation exploitent des enquêtes SPSS, des cadres de mesure du rendement et des modèles Power BI, avec des données sensibles qui ne doivent pas quitter le poste de travail. DataStudio répond à cette contrainte : un atelier d'analyse de bureau, entièrement hors ligne, qui transforme ces fichiers en analyses, rapports et tableaux de bord sans serveur ni service externe.",
+        "challenge": "Offrir à des équipes non statisticiennes la puissance d'un outil d'analyse sans aucune dépendance réseau : lire des formats spécialisés (SPSS, Power BI), auditer un cadre de mesure du rendement par des règles explicites plutôt que par une IA, et produire des livrables diffusables depuis un simple poste de travail.",
         "approach": [
-          "Interface en six sections (accueil, données, analyses et rapports, audit CMR, fiche pays, qualité et méthode) autour d'un noyau pandas en mémoire qui conserve les métadonnées SPSS, étiquettes de variables et de valeurs.",
-          "Modules métier autonomes et testables : lecture Power BI vers Excel selon quatre modes dont le modèle en étoile, unification en étoile et paquet Access, moteur d'audit CMR fondé sur des règles et des statistiques, génération de fiches PDF.",
-          "Livrables autonomes : tableaux de bord HTML avec graphiques SVG embarqués, sans dépendance à un service distant.",
-          "Distribution en archive et en exécutables Windows et macOS sans installation de Python pour l'utilisateur ; page de preuves et contrôles d'intégrité intégrée à l'application."
+          "Application de bureau mono-fenêtre (Python, Tkinter), 100 % hors ligne : aucune donnée ne quitte le poste, aucun service externe appelé.",
+          "Lecture des formats spécialisés : enquêtes SPSS (.sav) avec étiquettes de variables et de valeurs, Excel et CSV, modèles Power BI (.pbix) unifiés en modèle en étoile vers Excel ou Access.",
+          "Moteur d'audit CMR (gestion axée résultats) fondé sur des règles et des statistiques explicites, sans IA : chaque constat est traçable.",
+          "Restitutions prêtes à diffuser : fiches pays PDF, rapports Word, classeurs Excel, tableaux de bord HTML autonomes aux graphiques embarqués, lisibles sans connexion.",
+          "Distribution clé en main : exécutable Windows et application macOS autonomes, sans installation de Python chez l'utilisateur."
         ],
-        "results": "Version 4.10 en production, environ 8 000 lignes de code en cinq modules : audit de cadres de mesure du rendement, exploitation de modèles Power BI et production de fiches pays, sans qu'aucune donnée ne quitte le poste de travail.",
-        "stackDetail": "Python 3 · Tkinter · pandas · pyreadstat · pbixray · openpyxl · matplotlib · reportlab · PyInstaller"
+        "results": "Atelier livré en version 4.10 et distribué en exécutable autonome. Environ 8 100 lignes de Python en cinq modules, avec un noyau métier (audit CMR, Power BI, fiches PDF) séparé de l'interface et testable isolément.",
+        "stackDetail": "Python 3 · Tkinter · pandas, scipy, matplotlib · pyreadstat (SPSS) · pbixray (Power BI) · reportlab, python-docx, openpyxl · PyInstaller (Windows, macOS)"
       }
     ]
   },

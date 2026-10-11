@@ -446,81 +446,93 @@ function CevelabVisual() {
 }
 
 function DeterminesVisual() {
-  const bars = [34, 52, 46, 68, 58, 80];
+  const roles = ["MEMBRE", "DISCIPLE", "PÔLE"];
+  const pins = [[52, 118], [68, 132], [84, 122], [60, 146], [92, 142], [76, 110]];
   return (
     <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
       style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
       <text x="140" y="14" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6.5"
-        fill={COPPER} fontWeight="500" letterSpacing="0.09em">IMPACT · PROGRAMMES</text>
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">VIE COMMUNAUTAIRE · FR / EN</text>
       <line x1="16" y1="20" x2="264" y2="20" stroke={C_SOFT} strokeWidth="0.8"/>
-      {/* Tuiles KPI */}
-      {[["COHORTES", 16], ["PARCOURS", 100], ["TERRITOIRES", 184]].map(([label, x]) => (
-        <g key={label as string}>
-          <rect x={x as number} y="28" width="80" height="40" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
-            stroke="color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)" strokeWidth="0.8" rx="2"/>
-          <text x={(x as number) + 8} y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-            fill={C_SOFT} fontWeight="500" letterSpacing="0.08em">{label}</text>
-          <rect x={(x as number) + 8} y="48" width="40" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 28%, transparent)" rx="1"/>
-          <rect x={(x as number) + 8} y="58" width="64" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="1"/>
-          <rect x={(x as number) + 8} y="58" width="46" height="3" fill={COPPER} rx="1"/>
+      {/* Membres et rôles */}
+      <rect x="16" y="28" width="118" height="66" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="24" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">MEMBRES · VALIDATION</text>
+      {roles.map((r, i) => (
+        <g key={r}>
+          <circle cx="30" cy={54 + i * 14} r="4" fill="color-mix(in srgb, var(--sp-sur-sombre) 25%, transparent)"/>
+          <rect x="38" y={51 + i * 14} width={34 + i * 6} height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" rx="1"/>
+          <rect x="38" y={56 + i * 14} width="24" height="2.5" fill="color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)" rx="1"/>
+          <rect x="96" y={50 + i * 14} width="30" height="8" fill={i === 0 ? "color-mix(in srgb, var(--sp-or-jalon) 25%, transparent)" : "color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)"} rx="4"/>
+          <text x="111" y={56 + i * 14} textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="4.5" fill={i === 0 ? COPPER : "color-mix(in srgb, var(--sp-sur-sombre) 60%, transparent)"} fontWeight="500">{r}</text>
         </g>
       ))}
-      {/* Histogramme */}
-      <rect x="16" y="78" width="150" height="90" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+      {/* Cartographie */}
+      <rect x="16" y="102" width="118" height="66" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
         stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
-      <text x="24" y="90" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">RÉSULTATS PAR TERRITOIRE</text>
-      {bars.map((h, i) => (
-        <rect key={i} x={26 + i * 22} y={158 - h * 0.7} width="12" height={h * 0.7}
-          fill={i === bars.length - 1 ? COPPER : "color-mix(in srgb, var(--sp-or-jalon) 40%, transparent)"} rx="1"/>
+      <text x="24" y="114" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">CARTOGRAPHIE</text>
+      <path d="M24 150 Q50 120 80 140 T128 128" fill="none" stroke="color-mix(in srgb, var(--sp-sur-sombre) 14%, transparent)" strokeWidth="0.8" strokeDasharray="2,2"/>
+      {pins.map(([x, y], i) => (<g key={i}><circle cx={x} cy={y} r="5" fill="color-mix(in srgb, var(--sp-or-jalon) 18%, transparent)"/><circle cx={x} cy={y} r="2" fill={i === 2 ? GOLD : COPPER}/></g>))}
+      {/* Agenda et rendez-vous */}
+      <rect x="142" y="28" width="122" height="140" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
+      <text x="150" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">AGENDA · RENDEZ-VOUS</text>
+      {[0, 1, 2, 3, 4, 5].map((r) => (
+        <g key={r}>
+          <rect x="150" y={48 + r * 19} width="106" height="14" fill="color-mix(in srgb, var(--sp-sur-sombre) 6%, transparent)" rx="2"/>
+          <rect x="150" y={48 + r * 19} width="3" height="14" fill={r % 3 === 0 ? COPPER : r % 3 === 1 ? "color-mix(in srgb, var(--sp-or-jalon) 45%, transparent)" : "color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)"} rx="1"/>
+          <rect x="158" y={52 + r * 19} width={40 + (r % 2) * 16} height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" rx="1"/>
+          <rect x="158" y={57 + r * 19} width="28" height="2.5" fill="color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)" rx="1"/>
+        </g>
       ))}
-      <line x1="24" y1="158" x2="158" y2="158" stroke="color-mix(in srgb, var(--sp-sur-sombre) 25%, transparent)" strokeWidth="0.6"/>
-      {/* Anneau */}
-      <rect x="176" y="78" width="88" height="90" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
-      <text x="184" y="90" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">PROGRAMMES</text>
-      <circle cx="220" cy="128" r="20" fill="none" stroke="color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)" strokeWidth="7"/>
-      <circle cx="220" cy="128" r="20" fill="none" stroke={COPPER} strokeWidth="7" strokeDasharray="78 48" transform="rotate(-90 220 128)"/>
-      <text x="220" y="131" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="8" fill={CREAM} fontWeight="500">62 %</text>
       <text x="140" y="177" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">LOOKER STUDIO · REPORTING PARTENAIRES</text>
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">NEXT.JS · SUPABASE · RLS · 7 RÔLES</text>
     </svg>
   );
 }
 
 function AktoVisual() {
-  const points = [150, 142, 136, 128, 131, 118, 110, 104, 96, 90];
-  const path = points.map((y, i) => `${i === 0 ? "M" : "L"}${24 + i * 15} ${y}`).join(" ");
+  const wave = [6, 12, 20, 14, 26, 18, 30, 22, 16, 28, 20, 12, 24, 16, 10, 18, 26, 14, 8, 12];
   return (
     <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
       style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
       <text x="140" y="14" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6.5"
-        fill={COPPER} fontWeight="500" letterSpacing="0.09em">PILOTAGE · ACTIVITÉ FORMATION</text>
+        fill={COPPER} fontWeight="500" letterSpacing="0.09em">ŒUVRE · CATALOGUE · ACADÉMIE</text>
       <line x1="16" y1="20" x2="264" y2="20" stroke={C_SOFT} strokeWidth="0.8"/>
-      {/* Courbe d'activité */}
-      <rect x="16" y="28" width="156" height="140" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+      {/* Lecteur */}
+      <rect x="16" y="28" width="248" height="52" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-or-jalon) 35%, transparent)" strokeWidth="0.8" rx="2"/>
+      <circle cx="40" cy="54" r="12" fill="color-mix(in srgb, var(--sp-or-jalon) 20%, transparent)" stroke={COPPER} strokeWidth="1"/>
+      <path d="M36 48 L46 54 L36 60 Z" fill={CREAM}/>
+      {wave.map((h, i) => (<rect key={i} x={62 + i * 9} y={54 - h / 2} width="4" height={h} fill={i < 11 ? COPPER : "color-mix(in srgb, var(--sp-sur-sombre) 25%, transparent)"} rx="1"/>))}
+      <text x="248" y="57" textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill="color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)">03:48</text>
+      <text x="62" y="74" fontFamily="var(--sp-font-mono)" fontSize="5" fill={C_SOFT} letterSpacing="0.08em">EMBED · SOURCE VÉRIFIÉE</text>
+      {/* Catalogue */}
+      <rect x="16" y="88" width="150" height="80" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
         stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
-      <text x="24" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">ACTIONS DE FORMATION</text>
-      {[60, 90, 120, 150].map((y) => (
-        <line key={y} x1="24" y1={y} x2="164" y2={y} stroke="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" strokeWidth="0.5" strokeDasharray="2,2"/>
+      <text x="24" y="100" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">ŒUVRES · DISTINCTIONS</text>
+      {[0, 1, 2, 3].map((r) => (
+        <g key={r}>
+          <rect x="24" y={107 + r * 14} width="9" height="9" fill="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)" rx="1"/>
+          <rect x="38" y={109 + r * 14} width={60 + (r % 2) * 20} height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" rx="1"/>
+          <rect x="38" y={114 + r * 14} width="34" height="2.5" fill="color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)" rx="1"/>
+          <text x="156" y={115 + r * 14} textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="5" fill={r === 0 ? GOLD : "color-mix(in srgb, var(--sp-sur-sombre) 45%, transparent)"}>{r === 0 ? "★" : "FR · EN"}</text>
+        </g>
       ))}
-      <path d={`${path} L159 158 L24 158 Z`} fill="color-mix(in srgb, var(--sp-or-jalon) 14%, transparent)"/>
-      <path d={path} fill="none" stroke={COPPER} strokeWidth="1.4" strokeLinejoin="round"/>
-      {points.map((y, i) => (
-        <circle key={i} cx={24 + i * 15} cy={y} r={i === points.length - 1 ? 3 : 1.5} fill={i === points.length - 1 ? GOLD : COPPER}/>
-      ))}
-      {/* Tableau des dispositifs */}
-      <rect x="182" y="28" width="82" height="140" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
+      {/* Agenda et presse */}
+      <rect x="174" y="88" width="90" height="80" fill="color-mix(in srgb, var(--sp-sur-sombre) 4%, transparent)"
         stroke="color-mix(in srgb, var(--sp-sur-sombre) 15%, transparent)" strokeWidth="0.8" rx="2"/>
-      <text x="190" y="40" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">DISPOSITIFS</text>
-      {[64, 48, 56, 36, 44].map((w, i) => (
-        <g key={i}>
-          <rect x="190" y={52 + i * 22} width="30" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 28%, transparent)" rx="1"/>
-          <rect x="190" y={59 + i * 22} width="66" height="4" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="1"/>
-          <rect x="190" y={59 + i * 22} width={w} height="4" fill={i === 0 ? COPPER : "color-mix(in srgb, var(--sp-or-jalon) 45%, transparent)"} rx="1"/>
+      <text x="182" y="100" fontFamily="var(--sp-font-mono)" fontSize="5.5" fill={C_SOFT} letterSpacing="0.08em" fontWeight="500">AGENDA · PRESSE</text>
+      {[0, 1, 2].map((r) => (
+        <g key={r}>
+          <rect x="182" y={107 + r * 19} width="18" height="14" fill="color-mix(in srgb, var(--sp-or-jalon) 22%, transparent)" rx="2"/>
+          <text x="191" y={117 + r * 19} textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="6" fill={COPPER} fontWeight="500">{["12", "26", "04"][r]}</text>
+          <rect x="205" y={109 + r * 19} width="50" height="3" fill="color-mix(in srgb, var(--sp-sur-sombre) 30%, transparent)" rx="1"/>
+          <rect x="205" y={115 + r * 19} width="36" height="2.5" fill="color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)" rx="1"/>
         </g>
       ))}
       <text x="140" y="177" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">LOOKER STUDIO · DONNÉES CONSOLIDÉES</text>
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">NEXT.JS · SUPABASE · RLS · 287 TESTS · FR / EN</text>
     </svg>
   );
 }
