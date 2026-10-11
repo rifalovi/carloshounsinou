@@ -160,11 +160,35 @@ Carlos pilote actuellement deux projets stratégiques à l'OIF :
 
 Sur ces deux projets, il supervise et forme les équipes référentes sur plusieurs pays.
 
+## Formations et certifications
+
+- Certification en suivi-évaluation, Centre international de formation de l'OIT (CIF-OIT), 2024
+- Analyse des données et gestion des connaissances pour le développement, CIF-OIT, 2025 (60 heures)
+- Master of Science en entrepreneuriat et développement de business, Paris School of Business Development and Entrepreneurship (PSBDE), 2021
+- Master 2 en gestion de projet et management de la qualité (ingénierie des projets), ESCAE Bénin, 2019
+- Technicien supérieur de la statistique (licence), ENEAM, Université d'Abomey-Calavi, 2009
+- Formation suivi-évaluation des projets et programmes de développement, Groupe PRODEV, 2018
+- Mention honorable au concours régional ACM-ICPC (IBM), 2009
+
+## Réalisations en chiffres
+
+- 12 architectures de plateformes web conçues, dont 2 pour l'Union européenne
+- 65 outils de suivi-évaluation déployés (46 en VBA, 19 en Access et Python)
+- 12 outils no-code (Glide, Airtable) et 7 processus automatisés (Make)
+- 19 projets de développement planifiés et pilotés, 57 OSC accompagnées
+- 39 ateliers de formation animés dans 6 pays
+- 4 produits SaaS en production : Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen
+
 ## Parcours chronologique
 
 ### 2024 → aujourd'hui : OIF Paris
 - Pilotage de la modernisation S&E
 - Architecture institutionnelle multilatérale
+
+### 2021 - 2024 : Consultant sénior OIF (missions d'assistance technique, en parallèle)
+- Ajustement du barème 2024 des contributions statutaires et du régime des sanctions des États membres
+- Cadre de suivi du plan d'action des stratégies de la Francophonie numérique et économique 2022-2026
+- Inventaire des immobilisations (réconciliation SAP, SAGE, ADDENPARC), manuel de procédures conforme aux normes IPSAS
 
 ### 2021 - 2024 : Heaven Immobilier Groupe (France)
 - Catalyseur de croissance · Stratégie data
@@ -184,6 +208,12 @@ Sur ces deux projets, il supervise et forme les équipes référentes sur plusie
 - Volontaire International de la Francophonie (VIF)
 - Conception et déploiement d'outils de suivi des indicateurs pour la programmation quadriennale 2019-2022
 - Appui aux structures nationales (RESIFS) sur le cycle complet de planification stratégique
+
+### 2017 - 2018 : Cabinet Impact Services Plus · RESAOLAB · Bénin
+- Statisticien analyste-programmeur
+- Outil d'analyse des budgets communaux financé par la GIZ
+- Cartographie des laboratoires et déploiement du SIGL LabBook pour RESAOLAB (Fondation Mérieux, AFD), formation des techniciens
+- Dispositif organisationnel et base de données de l'Association des Biologistes Médicaux du Bénin
 
 ### 2016 - 2018 : Coordination de projets en santé · Bénin
 - Statisticien · Recherche en santé

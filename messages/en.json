@@ -30,28 +30,9 @@
     "kpi2Label": "II. Reach",
     "kpi2Value": "4 countries · 3 continents",
     "kpi3Label": "III. Achievements",
-    "kpi3Value": "3 major platforms",
+    "kpi3Value": "12 architectures · 4 SaaS",
     "ctaPrimary": "Discuss a project",
     "ctaSecondary": "View my work"
-  },
-  "marquee": {
-    "items": [
-      "European Union",
-      "French Development Agency",
-      "German Cooperation (GIZ)",
-      "Swiss Cooperation",
-      "Canadian Institutes of Health Research",
-      "Bill & Melinda Gates Foundation",
-      "Mérieux Foundation",
-      "Augmented Monitoring & Evaluation",
-      "M&E Architecture",
-      "Steering Platforms",
-      "Data Governance",
-      "✦ Governed Generative AI",
-      "✦ Institutional RAG",
-      "✦ Document Assistants",
-      "✦ Ethical Guardrails"
-    ]
   },
   "about": {
     "eyebrow": "Trajectory",
@@ -88,6 +69,18 @@
         "accent": "secondary"
       },
       {
+        "period": "2021-2024",
+        "title": "Senior consultant in project management and digital strategies",
+        "org": "Organisation internationale de la Francophonie · Paris",
+        "description": "Technical assistance missions carried out alongside the deputy management role at Heaven Immobilier: adjustment of the 2024 scale of statutory contributions and sanctions regime for member States and governments, monitoring framework for the action plan of the Francophonie digital and economic strategies 2022-2026, fixed-asset inventory (reconciliation of SAP, SAGE and ADDENPARC databases) and IPSAS-compliant procedures manual.",
+        "tags": [
+          "Consulting",
+          "Strategy",
+          "IPSAS"
+        ],
+        "accent": "primary"
+      },
+      {
         "period": "2018-2021",
         "title": "Systems Designer for EU Donors",
         "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
@@ -112,7 +105,19 @@
         "accent": "tertiary"
       },
       {
-        "period": "2016-2018",
+        "period": "2017-2018",
+        "title": "Statistician and analyst-programmer",
+        "org": "Impact Services Plus · RESAOLAB · Benin",
+        "description": "Design of a retrospective and prospective analysis tool for municipal budgets, funded by German cooperation (GIZ). Mapping of medical biology laboratories and deployment of the laboratory information system (SIGL LabBook) for the RESAOLAB network, co-funded by Fondation Mérieux and AFD, with training of laboratory technicians. Organisational framework and database for the Benin Medical Biologists Association.",
+        "tags": [
+          "Health",
+          "Data",
+          "Training"
+        ],
+        "accent": "secondary"
+      },
+      {
+        "period": "2016-2017",
         "title": "Statistician · Health Research",
         "org": "Health Research Project Coordination · Benin",
         "description": "Senior statistician within a health research project coordination, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research. Training of field teams on data collection protocols and improvement of living conditions of vulnerable populations ('Health Equity' project).",
@@ -1173,5 +1178,87 @@
     "domainsValue": "M&E · Governed AI · SaaS",
     "fundersLabel": "Funders",
     "fundersValue": "EU · AFD · GIZ · Mérieux · Bill & Melinda Gates"
+  },
+  "trust": {
+    "title": "They trusted me",
+    "subtitle": "Institutions, donors, consultancies and organisations I have worked with since 2011."
+  },
+  "profiles": {
+    "eyebrow": "Engagement profiles",
+    "h2Part1": "Four profiles, one",
+    "h2Emphasis": "common thread",
+    "h2End": ".",
+    "intro": "Depending on the need, I step in as an expert, an architect, a statistician or a trainer. Each profile rests on verifiable references and certifications.",
+    "items": [
+      {
+        "label": "I. Certified M&E expert",
+        "title": "Monitoring, evaluation and results-based management expert",
+        "points": [
+          "ITC-ILO certifications in monitoring and evaluation (2024) and in data analysis for development (2025).",
+          "Logical frameworks, theory of change, SMART indicators, OECD-DAC standards.",
+          "57 organisations supported, 65 M&E tools deployed, EU-funded RePaSOC programme."
+        ]
+      },
+      {
+        "label": "II. Platform architect",
+        "title": "Architect of integrated steering systems",
+        "points": [
+          "12 web platform architectures designed, including 2 for the European Union.",
+          "4 SaaS products in production: Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen.",
+          "Specifications, databases, multi-role workflows, RLS security, GDPR, guarded AI."
+        ]
+      },
+      {
+        "label": "III. Statistician and data",
+        "title": "Statistician, from survey to dashboard",
+        "points": [
+          "Higher technician in statistics (ENEAM): SPSS, SAS, R, Stata, CSPro.",
+          "Surveys and databases for health research (CHU de Québec, CIHR, Gates Foundation).",
+          "Laboratory mapping and LabBook system for RESAOLAB (Fondation Mérieux, AFD)."
+        ]
+      },
+      {
+        "label": "IV. Trainer and coach",
+        "title": "Senior trainer and team coach",
+        "points": [
+          "39 workshops delivered in 6 countries, training of focal points and referents.",
+          "Operators and technical assistants of the RePaSOC programme, RESAOLAB laboratory technicians.",
+          "Supervision of multi-country teams at OIF, head of departments in local governance."
+        ]
+      }
+    ],
+    "credentialsTitle": "Education and certifications",
+    "credentials": [
+      {
+        "logo": "cif",
+        "label": "ITC-ILO · International Training Centre",
+        "detail": "Certification in monitoring and evaluation (2024) · Data analysis and knowledge management (2025)"
+      },
+      {
+        "logo": "psbde",
+        "label": "PSBDE · Paris",
+        "detail": "Master of Science, entrepreneurship and business development (2021)"
+      },
+      {
+        "logo": "escae",
+        "label": "ESCAE · Benin",
+        "detail": "Master 2, project engineering and quality management (2019)"
+      },
+      {
+        "logo": "eneam",
+        "label": "ENEAM · University of Abomey-Calavi",
+        "detail": "Higher technician in statistics (2009)"
+      },
+      {
+        "logo": "prodev",
+        "label": "PRODEV Group · Benin",
+        "detail": "Monitoring and evaluation of development projects and programmes (2018)"
+      },
+      {
+        "logo": "acm",
+        "label": "ACM-ICPC · IBM",
+        "detail": "Honorable mention, regional programming contest (2009)"
+      }
+    ]
   }
 }

@@ -2,7 +2,8 @@ import { getTranslations } from "next-intl/server";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import TrustMarquee from "@/components/sections/TrustMarquee";
+import TrustLogos from "@/components/sections/TrustLogos";
+import Profiles from "@/components/sections/Profiles";
 import About from "@/components/sections/About";
 import Flagship from "@/components/sections/Flagship";
 import Stats from "@/components/sections/Stats";
@@ -19,7 +20,8 @@ export default async function Home({ params }: Props) {
 
   const nav = await getTranslations({ locale, namespace: "nav" });
   const hero = await getTranslations({ locale, namespace: "hero" });
-  const marquee = await getTranslations({ locale, namespace: "marquee" });
+  const trust = await getTranslations({ locale, namespace: "trust" });
+  const profiles = await getTranslations({ locale, namespace: "profiles" });
   const about = await getTranslations({ locale, namespace: "about" });
   const flagship = await getTranslations({ locale, namespace: "flagship" });
   const stats = await getTranslations({ locale, namespace: "stats" });
@@ -29,7 +31,6 @@ export default async function Home({ params }: Props) {
   const contact = await getTranslations({ locale, namespace: "contact" });
   const footer = await getTranslations({ locale, namespace: "footer" });
 
-  const marqueeItems = marquee.raw("items") as string[];
   const aboutTimeline = about.raw("timeline") as { period: string; title: string; org: string; description: string; tags: string[]; accent: string }[];
   const statsItems = stats.raw("items") as { label: string; value: number; description: string; bar: number }[];
   const expertiseTiles = expertise.raw("tiles") as { label: string; title: string; description: string; tags: string[] }[];
@@ -82,7 +83,7 @@ export default async function Home({ params }: Props) {
           portraitLocation={hero("portraitLocation")}
         />
 
-        <TrustMarquee items={marqueeItems} />
+        <TrustLogos title={trust("title")} subtitle={trust("subtitle")} />
 
         <About
           eyebrow={about("eyebrow")}
@@ -131,6 +132,17 @@ export default async function Home({ params }: Props) {
           intro={expertise("intro")}
           feature={featureRaw}
           tiles={expertiseTiles}
+        />
+
+        <Profiles
+          eyebrow={profiles("eyebrow")}
+          h2Part1={profiles("h2Part1")}
+          h2Emphasis={profiles("h2Emphasis")}
+          h2End={profiles("h2End")}
+          intro={profiles("intro")}
+          items={profiles.raw("items") as { label: string; title: string; points: string[] }[]}
+          credentialsTitle={profiles("credentialsTitle")}
+          credentials={profiles.raw("credentials") as { logo: string; label: string; detail: string }[]}
         />
 
         <SecondaryRealizations

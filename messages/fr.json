@@ -30,28 +30,9 @@
     "kpi2Label": "II. Périmètre",
     "kpi2Value": "4 pays · 3 continents",
     "kpi3Label": "III. Réalisations",
-    "kpi3Value": "3 plateformes majeures",
+    "kpi3Value": "12 architectures · 4 SaaS",
     "ctaPrimary": "Discuter d'un projet",
     "ctaSecondary": "Voir mes réalisations"
-  },
-  "marquee": {
-    "items": [
-      "Union Européenne",
-      "Agence Française de Développement",
-      "Coopération Allemande (GIZ)",
-      "Coopération Suisse",
-      "Instituts de Recherche en Santé du Canada",
-      "Fondation Bill & Melinda Gates",
-      "Fondation Mérieux",
-      "Suivi-évaluation augmenté",
-      "Architecture S&E",
-      "Plateformes de pilotage",
-      "Gouvernance de la donnée",
-      "✦ IA générative encadrée",
-      "✦ RAG institutionnel",
-      "✦ Assistants documentaires",
-      "✦ Garde-fous éthiques"
-    ]
   },
   "about": {
     "eyebrow": "Trajectoire",
@@ -88,6 +69,18 @@
         "accent": "secondary"
       },
       {
+        "period": "2021-2024",
+        "title": "Consultant sénior en gestion de projets et stratégies numériques",
+        "org": "Organisation Internationale de la Francophonie · Paris",
+        "description": "Missions d'assistance technique menées en parallèle de la direction adjointe chez Heaven Immobilier : ajustement du barème 2024 des contributions statutaires et du régime des sanctions des États et gouvernements membres, cadre de suivi du plan d'action des stratégies de la Francophonie numérique et économique 2022-2026, inventaire des immobilisations (réconciliation des bases SAP, SAGE et ADDENPARC) et manuel de procédures conforme aux normes IPSAS.",
+        "tags": [
+          "Conseil",
+          "Stratégie",
+          "IPSAS"
+        ],
+        "accent": "primary"
+      },
+      {
         "period": "2018-2021",
         "title": "Concepteur de systèmes pour bailleurs UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
@@ -112,7 +105,19 @@
         "accent": "tertiary"
       },
       {
-        "period": "2016-2018",
+        "period": "2017-2018",
+        "title": "Statisticien analyste-programmeur",
+        "org": "Cabinet Impact Services Plus · RESAOLAB · Bénin",
+        "description": "Conception d'un outil d'analyse rétrospective et prospective des budgets communaux, financé par la Coopération allemande (GIZ). Cartographie des laboratoires de biologie médicale et déploiement du système informatisé de gestion des laboratoires (SIGL LabBook) pour le réseau RESAOLAB, cofinancé par la Fondation Mérieux et l'AFD, avec formation des techniciens de laboratoire. Dispositif organisationnel et base de données de l'Association des Biologistes Médicaux du Bénin.",
+        "tags": [
+          "Santé",
+          "Data",
+          "Formation"
+        ],
+        "accent": "secondary"
+      },
+      {
+        "period": "2016-2017",
         "title": "Statisticien · Recherche en santé",
         "org": "Coordination de projets en santé · Bénin",
         "description": "Statisticien au sein d'une coordination de projets de recherche en santé, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique. Formation des équipes terrain sur les protocoles de collecte et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
@@ -1173,5 +1178,87 @@
     "domainsValue": "S&E · IA encadrée · SaaS",
     "fundersLabel": "Bailleurs",
     "fundersValue": "UE · AFD · GIZ · Mérieux · Bill & Melinda Gates"
+  },
+  "trust": {
+    "title": "Ils m'ont fait confiance",
+    "subtitle": "Institutions, bailleurs, cabinets et organisations avec lesquels j'ai travaillé depuis 2011."
+  },
+  "profiles": {
+    "eyebrow": "Profils d'intervention",
+    "h2Part1": "Quatre profils, un même",
+    "h2Emphasis": "fil conducteur",
+    "h2End": ".",
+    "intro": "Selon le besoin, j'interviens comme expert, architecte, statisticien ou formateur. Chaque profil s'appuie sur des références vérifiables et des certifications.",
+    "items": [
+      {
+        "label": "I. Expert S&E certifié",
+        "title": "Expert en suivi-évaluation et gestion axée sur les résultats",
+        "points": [
+          "Certifications CIF-OIT en suivi-évaluation (2024) et en analyse des données pour le développement (2025).",
+          "Cadres logiques, théorie du changement, indicateurs SMART, standards CAD-OCDE.",
+          "57 organisations accompagnées, 65 outils S&E déployés, programme RePaSOC financé par l'Union européenne."
+        ]
+      },
+      {
+        "label": "II. Architecte de plateformes",
+        "title": "Architecte de systèmes intégrés de pilotage",
+        "points": [
+          "12 architectures de plateformes web conçues, dont 2 pour l'Union européenne.",
+          "4 produits SaaS en production : Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen.",
+          "Spécifications, bases de données, workflows multi-rôles, sécurité RLS, RGPD, IA encadrée."
+        ]
+      },
+      {
+        "label": "III. Statisticien et données",
+        "title": "Statisticien, de l'enquête au tableau de bord",
+        "points": [
+          "Technicien supérieur de la statistique (ENEAM) : SPSS, SAS, R, Stata, CSPro.",
+          "Enquêtes et bases de données pour la recherche en santé (CHU de Québec, IRSC, Fondation Gates).",
+          "Cartographie des laboratoires et système LabBook pour RESAOLAB (Fondation Mérieux, AFD)."
+        ]
+      },
+      {
+        "label": "IV. Formateur et accompagnateur",
+        "title": "Formateur senior et accompagnateur d'équipes",
+        "points": [
+          "39 ateliers animés dans 6 pays, formation des référents et points focaux.",
+          "Opérateurs et assistants techniques du programme RePaSOC, techniciens de laboratoire RESAOLAB.",
+          "Supervision d'équipes multi-pays à l'OIF, direction de services en gouvernance locale."
+        ]
+      }
+    ],
+    "credentialsTitle": "Formations et certifications",
+    "credentials": [
+      {
+        "logo": "cif",
+        "label": "CIF-OIT · Centre international de formation",
+        "detail": "Certification en suivi-évaluation (2024) · Analyse des données et gestion des connaissances (2025)"
+      },
+      {
+        "logo": "psbde",
+        "label": "PSBDE · Paris",
+        "detail": "Master of Science, entrepreneuriat et développement de business (2021)"
+      },
+      {
+        "logo": "escae",
+        "label": "ESCAE · Bénin",
+        "detail": "Master 2, ingénierie des projets et management de la qualité (2019)"
+      },
+      {
+        "logo": "eneam",
+        "label": "ENEAM · Université d'Abomey-Calavi",
+        "detail": "Technicien supérieur de la statistique (2009)"
+      },
+      {
+        "logo": "prodev",
+        "label": "Groupe PRODEV · Bénin",
+        "detail": "Suivi-évaluation des projets et programmes de développement (2018)"
+      },
+      {
+        "logo": "acm",
+        "label": "ACM-ICPC · IBM",
+        "detail": "Mention honorable, concours régional de programmation (2009)"
+      }
+    ]
   }
 }
