@@ -568,10 +568,10 @@
         "category": "Cultural platform · Showcasing a body of work",
         "role": "Design · Full-stack development",
         "title": "AKTO · Platform showcasing a composer and choir conductor",
-        "subtitle": "Dr Ambroise Kua-Nzambi Toko · African Academy of Choral Music",
-        "status": "In development · Showcase live",
-        "statusType": "dev",
-        "description": "Bilingual digital hub for the work of a Congolese composer, choir conductor and educator: showcase, catalogue of works, distinctions, events, gallery, press review and publications, then a training academy and a shop in later phases. Every public claim is sourced, every table is protected by RLS, 287 automated tests.",
+        "subtitle": "Composer, choir conductor and educator · Central Africa",
+        "status": "Delivered · In production",
+        "statusType": "live",
+        "description": "Bilingual digital hub for the work of a Congolese composer, choir conductor and educator: showcase, catalogue of works, distinctions, events, gallery, press review and publications; training academy and shop planned as extensions. Every public claim is sourced, every table is protected by RLS, 287 automated tests.",
         "specs": [
           {
             "label": "Architecture",
@@ -587,7 +587,7 @@
           },
           {
             "label": "Status",
-            "value": "Sprint 1 live · Academy and shop to come"
+            "value": "Delivered · In production"
           }
         ],
         "stack": [
@@ -1121,12 +1121,12 @@
       {
         "id": "akto",
         "metaTitle": "AKTO · Platform showcasing a musical body of work · Carlos Hounsinou",
-        "metaDescription": "Design and development of a bilingual platform showcasing the work of a composer and choir conductor: catalogue, distinctions, events, press, academy and shop to come. Next.js, Supabase, RLS.",
+        "metaDescription": "Design and development of a bilingual platform showcasing the work of a composer and choir conductor: catalogue, distinctions, events, press, gallery. Next.js, Supabase, RLS.",
         "title": "AKTO · Platform showcasing a composer and choir conductor",
-        "subtitle": "Dr Ambroise Kua-Nzambi Toko · African Academy of Choral Music",
+        "subtitle": "Composer, choir conductor and educator · Central Africa",
         "category": "Cultural platform · Showcasing a body of work",
-        "status": "In development · Showcase live",
-        "context": "Dr Ambroise Kua-Nzambi Toko, a Congolese composer, choir conductor, researcher and educator, founder of the African Academy of Choral Music, has an international body of work and career scattered across videos, press articles and documents. The AKTO platform turns it into a digital hub: showcase, reach an international audience, ease access to content, train and, in time, sell.",
+        "status": "Delivered · In production",
+        "context": "A Congolese composer, choir conductor, researcher and educator, founder of a choral music academy, has an international body of work and career scattered across videos, press articles and documents. The AKTO platform turns it into a digital hub: showcase, reach an international audience, ease access to content, train and, in time, sell.",
         "challenge": "Building a real platform from a reference mock-up and a brief, with no unsourced claim: every published figure, title or distinction must be traceable, and no media may be re-hosted or monetised until rights are confirmed. All of it strictly bilingual, on a database that denies by default.",
         "approach": [
           "Three-sprint phasing: showcase and catalogue, then training academy, then shop and premium content with card and mobile money payment.",
@@ -1135,7 +1135,7 @@
           "Tooled quality: strict TypeScript, FR/EN key parity checked by test, 287 Vitest tests including cookie-based RLS tests, Playwright, dated build journal and status reports.",
           "Product safeguards: public video embeds only in the first sprint, no payment before the catalogue and merchant account are confirmed."
         ],
-        "results": "First sprint in production: showcase and catalogue populated (21 works, 10 distinctions, 31 press and publication references, 25 videos), user accounts and contact form operational. Academy and shop planned for the next sprints.",
+        "results": "Platform delivered and in production: showcase and catalogue populated (21 works, 10 distinctions, 31 press and publication references, 25 videos), user accounts and contact form operational. Final adjustments completed with the artist; academy and shop planned as extensions.",
         "stackDetail": "Next.js 16 · React 19 · strict TypeScript · Tailwind CSS 4 · next-intl · Supabase (PostgreSQL, Auth, Storage, Edge Functions) · Row-Level Security · Zod · Vitest · Playwright · Vercel"
       },
       {

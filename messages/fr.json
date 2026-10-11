@@ -568,10 +568,10 @@
         "category": "Plateforme culturelle · Valorisation d'une œuvre",
         "role": "Conception · Développement full-stack",
         "title": "AKTO · Plateforme de valorisation d'un compositeur et chef de chœur",
-        "subtitle": "Dr Ambroise Kua-Nzambi Toko · Académie Africaine de Musique Chorale",
-        "status": "En développement · Vitrine en ligne",
-        "statusType": "dev",
-        "description": "Hub numérique bilingue de l'œuvre d'un compositeur, chef de chœur et pédagogue congolais : vitrine, catalogue d'œuvres, distinctions, agenda, galerie, revue de presse et publications, puis académie de formations et boutique aux phases suivantes. Chaque affirmation publique est sourcée, chaque table est protégée par RLS, 287 tests automatisés.",
+        "subtitle": "Compositeur, chef de chœur et pédagogue · Afrique centrale",
+        "status": "Livré · En production",
+        "statusType": "live",
+        "description": "Hub numérique bilingue de l'œuvre d'un compositeur, chef de chœur et pédagogue congolais : vitrine, catalogue d'œuvres, distinctions, agenda, galerie, revue de presse et publications ; académie de formations et boutique prévues en extension. Chaque affirmation publique est sourcée, chaque table est protégée par RLS, 287 tests automatisés.",
         "specs": [
           {
             "label": "Architecture",
@@ -587,7 +587,7 @@
           },
           {
             "label": "Statut",
-            "value": "Sprint 1 en ligne · Académie et boutique à venir"
+            "value": "Livré · En production"
           }
         ],
         "stack": [
@@ -1121,12 +1121,12 @@
       {
         "id": "akto",
         "metaTitle": "AKTO · Plateforme de valorisation d'une œuvre musicale · Carlos Hounsinou",
-        "metaDescription": "Conception et développement d'une plateforme bilingue valorisant l'œuvre d'un compositeur et chef de chœur : catalogue, distinctions, agenda, presse, académie et boutique à venir. Next.js, Supabase, RLS.",
+        "metaDescription": "Conception et développement d'une plateforme bilingue valorisant l'œuvre d'un compositeur et chef de chœur : catalogue, distinctions, agenda, presse, galerie. Next.js, Supabase, RLS.",
         "title": "AKTO · Plateforme de valorisation d'un compositeur et chef de chœur",
-        "subtitle": "Dr Ambroise Kua-Nzambi Toko · Académie Africaine de Musique Chorale",
+        "subtitle": "Compositeur, chef de chœur et pédagogue · Afrique centrale",
         "category": "Plateforme culturelle · Valorisation d'une œuvre",
-        "status": "En développement · Vitrine en ligne",
-        "context": "Le Dr Ambroise Kua-Nzambi Toko, compositeur, chef de chœur, chercheur et pédagogue congolais, fondateur de l'Académie Africaine de Musique Chorale, dispose d'une œuvre et d'un parcours internationaux dispersés entre vidéos, articles de presse et documents. La plateforme AKTO en fait un hub numérique : valoriser, faire connaître à l'international, faciliter l'accès au contenu, former et, à terme, vendre.",
+        "status": "Livré · En production",
+        "context": "Un compositeur, chef de chœur, chercheur et pédagogue congolais, fondateur d'une académie de musique chorale, dispose d'une œuvre et d'un parcours internationaux dispersés entre vidéos, articles de presse et documents. La plateforme AKTO en fait un hub numérique : valoriser, faire connaître à l'international, faciliter l'accès au contenu, former et, à terme, vendre.",
         "challenge": "Construire une plateforme réelle à partir d'une maquette de référence et d'un brief, sans aucune revendication non sourcée : chaque chiffre, titre ou distinction publié doit être traçable, et aucun média ne doit être ré-hébergé ni monétisé tant que les droits ne sont pas confirmés. Le tout en bilingue strict, avec une base qui refuse par défaut.",
         "approach": [
           "Phasage en trois sprints : vitrine et catalogue, puis académie de formations, puis boutique et contenus premium avec paiement par carte et mobile money.",
@@ -1135,7 +1135,7 @@
           "Qualité outillée : TypeScript strict, parité des clés FR/EN vérifiée par test, 287 tests Vitest dont des tests RLS par cookie, Playwright, journal de build et état des lieux datés.",
           "Garde-fous produit : embeds de vidéos publiques uniquement au premier sprint, aucun paiement avant confirmation du catalogue et du compte marchand."
         ],
-        "results": "Premier sprint en production : vitrine et catalogue nourris (21 œuvres, 10 distinctions, 31 références de presse et publications, 25 vidéos), comptes utilisateurs et formulaire de contact opérationnels. Académie et boutique planifiées aux sprints suivants.",
+        "results": "Plateforme livrée et en production : vitrine et catalogue nourris (21 œuvres, 10 distinctions, 31 références de presse et publications, 25 vidéos), comptes utilisateurs et formulaire de contact opérationnels. Derniers ajustements finalisés avec l'artiste ; académie et boutique prévues en extension.",
         "stackDetail": "Next.js 16 · React 19 · TypeScript strict · Tailwind CSS 4 · next-intl · Supabase (PostgreSQL, Auth, Storage, Edge Functions) · Row-Level Security · Zod · Vitest · Playwright · Vercel"
       },
       {
