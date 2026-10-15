@@ -94,6 +94,7 @@ export default async function Home({ params }: Props) {
           p2Part1={about("p2Part1")}
           p2Org={about("p2Org")}
           p2Part2={about("p2Part2")}
+          brief={about.raw("brief") as { label: string; value: string }[]}
           timeline={aboutTimeline}
         />
 

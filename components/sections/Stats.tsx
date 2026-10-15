@@ -130,7 +130,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
         className="stats-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "1px",
           background: "color-mix(in srgb, var(--sp-sur-sombre) 8%, transparent)",
           borderTop: "1px solid color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)",
@@ -142,9 +142,10 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
         {items.map((item, i) => (
           <div
             key={item.label}
+            className="stat-cell"
             style={{
               background: "var(--sp-bleu-nuit)",
-              padding: "56px 32px",
+              padding: "48px 32px",
               transition: "background 0.4s",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "color-mix(in srgb, var(--sp-bleu-nuit) 80%, var(--sp-bleu-pilotage))")}
@@ -162,9 +163,10 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
               {item.label}
             </div>
             <div
+              className="stat-value"
               style={{
                 fontFamily: "var(--sp-font-sans)",
-                fontSize: "clamp(60px, 7vw, 100px)",
+                fontSize: "clamp(56px, 6vw, 88px)",
                 fontWeight: 800,
                 color: "var(--sp-blanc)",
                 lineHeight: 1,
@@ -176,6 +178,7 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
             </div>
             <StatBar target={item.bar} />
             <div
+              className="stat-desc"
               style={{
                 fontSize: "13px",
                 lineHeight: 1.5,
@@ -220,9 +223,9 @@ export default function Stats({ eyebrow, h2Part1, h2Emphasis, h2End, intro, item
           }
         }
         @media (max-width: 600px) {
-          .stats-grid {
-            grid-template-columns: 1fr !important;
-          }
+          .stat-cell { padding: 28px 18px !important; }
+          .stat-cell .stat-value { font-size: 44px !important; margin-bottom: 14px !important; }
+          .stat-cell .stat-desc { font-size: 12px !important; }
           .stats-footer {
             flex-direction: column;
             gap: 8px;

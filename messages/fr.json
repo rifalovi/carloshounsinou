@@ -43,6 +43,24 @@
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
+    "brief": [
+      {
+        "label": "Aujourd'hui",
+        "value": "Chargé d'ingénierie de projet · OIF, Paris"
+      },
+      {
+        "label": "Terrain",
+        "value": "Bénin · Belgique · France · Québec · ateliers dans 6 pays"
+      },
+      {
+        "label": "Langues",
+        "value": "Français courant · Anglais professionnel"
+      },
+      {
+        "label": "Stack",
+        "value": "SPSS, SAS, R, CSPro · Power BI · Supabase, Next.js, API Claude · Make, Airtable, Glide"
+      }
+    ],
     "timeline": [
       {
         "period": "2024 à aujourd'hui",
@@ -660,37 +678,49 @@
   },
   "stats": {
     "eyebrow": "Réalisations · KPI",
-    "h2Part1": "Quatre",
+    "h2Part1": "Treize ans, trois",
     "h2Emphasis": "continents",
-    "h2End": " d'effets mesurables.",
-    "intro": "Au-delà des titres, ce qui compte ce sont les outils déployés, les projets livrés, les équipes formées. Voici ce que représente un parcours de terrain.",
+    "h2End": ", des effets mesurables.",
+    "intro": "Au-delà des titres, ce qui compte ce sont les plateformes conçues, les outils déployés, les équipes formées. Six chiffres issus de mon dossier d'expertise.",
     "items": [
       {
-        "label": "I. Outils",
+        "label": "I. Plateformes",
+        "value": 12,
+        "description": "Architectures de plateformes web conçues, dont 2 pour l'Union européenne",
+        "bar": 80
+      },
+      {
+        "label": "II. SaaS",
+        "value": 4,
+        "description": "Produits SaaS en production : Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen",
+        "bar": 60
+      },
+      {
+        "label": "III. Outils S&E",
         "value": 65,
-        "description": "Outils de suivi-évaluation conçus, dont 46 en VBA-Excel et 19 en Access",
+        "description": "Outils de suivi-évaluation déployés (46 en VBA-Excel, 19 en Access & Python), plus 12 outils no-code et 7 automatisations Make",
         "bar": 92
       },
       {
-        "label": "II. Projets",
+        "label": "IV. Projets",
         "value": 19,
-        "description": "Projets de développement pilotés au sein de plusieurs organismes",
+        "description": "Projets de développement planifiés et pilotés pour l'OIF, l'Union européenne et des bailleurs internationaux",
         "bar": 70
       },
       {
-        "label": "III. OSC",
+        "label": "V. OSC",
         "value": 57,
-        "description": "Organisations de la société civile encadrées en planification & S&E",
+        "description": "Organisations de la société civile accompagnées en planification et suivi-évaluation",
         "bar": 85
       },
       {
-        "label": "IV. Formations",
+        "label": "VI. Ateliers",
         "value": 39,
-        "description": "Ateliers de formation senior animés dans 4 pays auprès de plusieurs dizaines de collaborateurs",
+        "description": "Ateliers de formation animés dans 6 pays : référents, points focaux, opérateurs et assistants techniques",
         "bar": 78
       }
     ],
-    "footerLeft": "// Mise à jour : Mai 2026",
+    "footerLeft": "// Mise à jour : Octobre 2026",
     "footerRight": "Bénin · Belgique · France · Québec"
   },
   "expertise": {

@@ -43,6 +43,24 @@
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
+    "brief": [
+      {
+        "label": "Today",
+        "value": "Project Engineering Officer · OIF, Paris"
+      },
+      {
+        "label": "Field",
+        "value": "Benin · Belgium · France · Québec · workshops in 6 countries"
+      },
+      {
+        "label": "Languages",
+        "value": "French fluent · English professional"
+      },
+      {
+        "label": "Stack",
+        "value": "SPSS, SAS, R, CSPro · Power BI · Supabase, Next.js, Claude API · Make, Airtable, Glide"
+      }
+    ],
     "timeline": [
       {
         "period": "2024 to today",
@@ -660,37 +678,49 @@
   },
   "stats": {
     "eyebrow": "Achievements · KPIs",
-    "h2Part1": "Four",
+    "h2Part1": "Thirteen years, three",
     "h2Emphasis": "continents",
-    "h2End": " of measurable effects.",
-    "intro": "Beyond titles, what counts are the tools deployed, the projects delivered, the teams trained. Here is what a field career represents.",
+    "h2End": ", measurable effects.",
+    "intro": "Beyond titles, what counts are the platforms designed, the tools deployed, the teams trained. Six figures taken from my expertise portfolio.",
     "items": [
       {
-        "label": "I. Tools",
+        "label": "I. Platforms",
+        "value": 12,
+        "description": "Web platform architectures designed, including 2 for the European Union",
+        "bar": 80
+      },
+      {
+        "label": "II. SaaS",
+        "value": 4,
+        "description": "SaaS products in production: Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen",
+        "bar": 60
+      },
+      {
+        "label": "III. M&E tools",
         "value": 65,
-        "description": "Monitoring & evaluation tools designed, including 46 in VBA-Excel and 19 in Access",
+        "description": "Monitoring & evaluation tools deployed (46 in VBA-Excel, 19 in Access & Python), plus 12 no-code tools and 7 Make automations",
         "bar": 92
       },
       {
-        "label": "II. Projects",
+        "label": "IV. Projects",
         "value": 19,
-        "description": "Development projects piloted across multiple organisations",
+        "description": "Development projects planned and piloted for the OIF, the European Union and international donors",
         "bar": 70
       },
       {
-        "label": "III. CSOs",
+        "label": "V. CSOs",
         "value": 57,
-        "description": "Civil society organisations supervised in planning & M&E",
+        "description": "Civil society organisations supported in planning and monitoring & evaluation",
         "bar": 85
       },
       {
-        "label": "IV. Trainings",
+        "label": "VI. Workshops",
         "value": 39,
-        "description": "Senior training workshops delivered in 4 countries to several dozen collaborators",
+        "description": "Training workshops delivered in 6 countries: focal points, operators and technical assistants",
         "bar": 78
       }
     ],
-    "footerLeft": "// Last update: May 2026",
+    "footerLeft": "// Last update: October 2026",
     "footerRight": "Benin · Belgium · France · Québec"
   },
   "expertise": {

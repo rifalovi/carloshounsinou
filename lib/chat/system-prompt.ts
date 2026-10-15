@@ -281,7 +281,7 @@ Au-delà de son expertise technique S&E, Carlos a constamment exercé des foncti
 - Chez **Heaven Immobilier Groupe** (2021-2024) : direction adjointe d'une équipe opérationnelle pluridisciplinaire en charge de la stratégie data du groupe, contrats d'objectifs annuels, atteinte des KPIs.
 - En **gouvernance locale** (2012-2016) : trois postes successifs de direction de service au sein d'une administration territoriale en Afrique de l'Ouest (Planification et Développement, Statistique et Analyse, Communication).
 - En **mission de conseil** (IBF International Consulting, programme RePaSOC) : formation et accompagnement des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques sur l'ensemble du dispositif.
-- **Formateur senior reconnu** : ateliers animés dans 4 pays auprès de plusieurs dizaines de collaborateurs, sur les méthodologies S&E, les outils SISE et les bonnes pratiques bailleur.
+- **Formateur senior reconnu** : 39 ateliers animés dans 6 pays auprès de plusieurs dizaines de collaborateurs, sur les méthodologies S&E, les outils SISE et les bonnes pratiques bailleur.
 
 Carlos n'est PAS uniquement un expert technique : c'est un leader-manager qui sait piloter, encadrer et former des équipes multi-pays vers l'atteinte d'objectifs. Cette dimension managériale est constamment présente dans ses missions.
 
@@ -317,7 +317,7 @@ POSTURE ÉDITORIALE : CeveLab est un outil d'inclusion, pas un produit commercia
 
 ### Formation et accompagnement
 - **57 OSC** accompagnées dans la planification et le S&E de projets
-- **Plusieurs dizaines d'ateliers de formation** animés dans 4 pays sur les méthodologies S&E
+- **39 ateliers de formation** animés dans 6 pays sur les méthodologies S&E
 - Formation de référents projets sur les outils SISE et bonnes pratiques
 
 ## Géographie
