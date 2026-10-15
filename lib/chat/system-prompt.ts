@@ -197,8 +197,8 @@ Sur ces deux projets, il supervise et forme les équipes référentes sur plusie
 - Veille immo-tech et expansion sur de nouveaux marchés
 
 ### 2018 - 2021 : IBF International Consulting (Belgique & Bénin)
-- Concepteur de systèmes pour bailleurs UE
-- Programme RePaSOC, financé par l'Union Européenne
+- Expert sénior (catégorie Senior) de l'assistance technique long terme au programme RePaSOC
+- Programme financé par l'Union Européenne (FED, référence EuropeAid/138483/IH/SER/BJ), pour le compte du Ministère de l'Économie et des Finances du Bénin, Ordonnateur national du FED
 - Mise en place de deux plateformes web complètes de suivi-évaluation
 - Affinement du cadre logique global, conception et déploiement en ligne du système informatisé
 - Formation des opérateurs
@@ -212,19 +212,29 @@ Sur ces deux projets, il supervise et forme les équipes référentes sur plusie
 ### 2017 - 2018 : Cabinet Impact Services Plus · RESAOLAB · Bénin
 - Statisticien analyste-programmeur
 - Outil d'analyse des budgets communaux financé par la GIZ
-- Cartographie des laboratoires et déploiement du SIGL LabBook pour RESAOLAB (Fondation Mérieux, AFD), formation des techniciens
-- Dispositif organisationnel et base de données de l'Association des Biologistes Médicaux du Bénin
+- Coordination de la cartographie nationale des laboratoires de biologie médicale, dispositif de centralisation des données, protocole d'analyse et indicateurs (RESAOLAB, Ministère de la Santé, Fondation Mérieux, AFD)
+- Déploiement du SIGL LabBook et formation des techniciens de laboratoire (Access, Excel, Ubuntu, LabBook) : certificat de formateur, trois ateliers à Bohicon et Porto-Novo en 2017
+- Contribution au Plan stratégique national pour le développement des laboratoires de biologie médicale 2017-2021 et à la Politique nationale des laboratoires du Bénin
+- Base de données unique, immatriculation et répertoire en ligne de l'Association des Biologistes Médicaux du Bénin (mission juillet-septembre 2017)
 
-### 2016 - 2018 : Coordination de projets en santé · Bénin
-- Statisticien · Recherche en santé
-- Financement Instituts de Recherche en Santé du Canada (IRSC) et Fondation Bill & Melinda Gates
-- Conception de bases de données pour la recherche en santé publique
-- Projet "Équité en Santé"
+### 2016 - 2017 : CHU de Québec · Projets de recherche au Bénin
+- Ingénieur des travaux statistiques (octobre 2016 à avril 2017)
+- Projets TasP&PrEP (prévention du VIH) et Équité en santé sexuelle et reproductive, financés par les IRSC et la Fondation Bill & Melinda Gates
+- Supervision de la saisie, validation de la double saisie, apurement, bases Excel et Access pour le monitoring mensuel des indicateurs
+- Analyses sous SPSS et co-rédaction du rapport de l'enquête quantitative nationale
 
-### 2012 - 2016 : Administration Communale · Bénin
-- Bâtisseur du suivi-évaluation territorial
+### 2012 - 2016 : Mairie de Kétou · Bénin
+- Direction des services Planification, Statistique et Communication, puis chef du service Information, Archives et Documentation
+- Administrateur du Système intégré de gestion des marchés publics (SIGMAP) de la commune (désignation juillet 2016)
 - Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation
-- Conception des outils Access pour le suivi du Plan de Développement Communal (PDC) et la gestion financière
+- Conception des outils Access pour le suivi du Plan de Développement Communal (PDC), la gestion du personnel et le suivi financier
+- Titre de « Meilleur directeur de projet » décerné par la JCI Kétou-Ifè en 2014 pour un logiciel de gestion de base de données
+
+### 2011 - 2014 : Premières missions statistiques · Bénin
+- Spécialiste en suivi-évaluation au cabinet La Promo des Leaders (juin 2011 à mai 2012) : bases Excel et Access, apurement et double saisie, analyses STATA, CSPro, SPSS
+- Statisticien stagiaire à l'Agence Nationale Pour l'Emploi, antenne Ouémé-Plateau (2012)
+- Consultant principal pour l'évaluation du Programme d'action Aulacode Atlantique dans cinq communes, ASPAIF-ONG avec l'appui du BIT (2012)
+- Plan d'hygiène et d'assainissement communal de Tchaourou pour Royal Services Plus (2013-2014) : coordination des enquêteurs, base de données statistique, analyses
 
 ## Bailleurs et institutions
 

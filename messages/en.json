@@ -100,13 +100,13 @@
       },
       {
         "period": "2018-2021",
-        "title": "Systems Designer for EU Donors",
-        "org": "IBF International Consulting · RePaSOC Programme · Belgium & Benin",
-        "description": "Senior consulting assignment for the RePaSOC programme, funded by the European Union (consortium IBF International Consulting / NIRAS / QUAREIN). Refinement of the global logical framework, design and online deployment of the computerised system. Training and support of operators (CPSC, Régie, MdSC, GIZ) and Technical Assistants across the full system.",
+        "title": "Senior expert · EU technical assistance",
+        "org": "IBF International Consulting · RePaSOC programme · Belgium & Benin",
+        "description": "Senior expert on the long-term technical assistance to the RePaSOC programme, funded by the European Union (EDF, reference EuropeAid/138483/IH/SER/BJ) on behalf of Benin's Ministry of Economy and Finance, National Authorising Officer of the EDF. Refinement of the financing agreement's overall logical framework, design and online deployment of two monitoring & evaluation platforms. Training of operators (CPSC, Régie, MdSC, GIZ) and technical assistants on the whole system.",
         "tags": [
-          "EU",
+          "EU · EDF",
           "Platform",
-          "Consulting"
+          "Senior expert"
         ],
         "accent": "primary"
       },
@@ -124,37 +124,37 @@
       },
       {
         "period": "2017-2018",
-        "title": "Statistician and analyst-programmer",
-        "org": "Impact Services Plus · RESAOLAB · Benin",
-        "description": "Design of a retrospective and prospective analysis tool for municipal budgets, funded by German cooperation (GIZ). Mapping of medical biology laboratories and deployment of the laboratory information system (SIGL LabBook) for the RESAOLAB network, co-funded by Fondation Mérieux and AFD, with training of laboratory technicians. Organisational framework and database for the Benin Medical Biologists Association.",
+        "title": "Statistician-programmer · Public health",
+        "org": "Cabinet Impact Services Plus · RESAOLAB · Benin",
+        "description": "Deployed on the RESAOLAB network (Ministry of Health, Fondation Mérieux, AFD): coordination of the national mapping of medical biology laboratories, data centralisation system, analysis protocol and indicators, deployment of the SIGL LabBook system and training of technicians, with a trainer certificate for three workshops in Bohicon and Porto-Novo. Contribution to the 2017-2021 National Strategic Plan for laboratory development and to Benin's National Laboratory Policy. Retrospective and prospective analysis tool for municipal budgets funded by GIZ. Single database, registration and online directory of the Benin Association of Medical Biologists.",
         "tags": [
           "Health",
           "Data",
-          "Training"
+          "Public policy"
         ],
         "accent": "secondary"
       },
       {
         "period": "2016-2017",
-        "title": "Statistician · Health Research",
-        "org": "Health Research Project Coordination · Benin",
-        "description": "Senior statistician within a health research project coordination, funded by the Canadian Institutes of Health Research (CIHR) and the Bill and Melinda Gates Foundation. Design of databases for public health research. Training of field teams on data collection protocols and improvement of living conditions of vulnerable populations ('Health Equity' project).",
+        "title": "Statistical engineer · Health research",
+        "org": "CHU de Québec · Research projects in Benin",
+        "description": "TasP&PrEP (HIV prevention) and Sexual and Reproductive Health Equity research projects, funded by the Canadian Institutes of Health Research and the Bill & Melinda Gates Foundation. Data entry supervision, double-entry validation and cleaning, Excel and Access databases for monthly indicator monitoring, SPSS analyses and co-authoring of the national quantitative survey report.",
         "tags": [
           "Research",
           "Health",
-          "Data"
+          "SPSS"
         ],
         "accent": "tertiary"
       },
       {
-        "period": "2012-2016",
-        "title": "Head of Services in Local Governance",
-        "org": "Territorial Administration · Benin",
-        "description": "Three successive head-of-service positions within a territorial administration in West Africa: Planning and Development, Statistics and Analysis, Communication. Built the monitoring system for the Decennial Education Plan. Designed tools for Municipal Development Plan monitoring and financial management. Team leadership and management.",
+        "period": "2011-2016",
+        "title": "Early years: statistics and local governance",
+        "org": "Kétou Town Hall · consulting firms · Benin",
+        "description": "Monitoring & evaluation specialist at La Promo des Leaders from 2011 (Excel and Access databases, STATA, CSPro, SPSS), then statistician at the national employment agency (ANPE). At Kétou Town Hall from 2012: head of the Planning, Statistics and Communication departments, then head of the Information, Archives and Documentation department; administrator of the Integrated Public Procurement Management System (SIGMAP), M&E of the Municipal Development Plan, Access tools for staff and financial management, monitoring of the pilot phase of the Ten-Year Education Plan. In parallel: evaluation of the Aulacode Atlantique programme across five municipalities (ASPAIF-ONG, ILO support), Tchaourou Hygiene and Sanitation Plan (Royal Services Plus), \"Best Project Director\" award from JCI Kétou-Ifè 2014 for a database management software.",
         "tags": [
           "Public",
           "Territory",
-          "M&E"
+          "SIGMAP"
         ],
         "accent": "tertiary"
       }
@@ -1034,7 +1034,7 @@
         "subtitle": "IBF International Consulting · Belgium & Benin",
         "category": "Consulting mission · EU",
         "status": "Delivered",
-        "context": "As part of a consulting mission for IBF International Consulting, I was responsible for designing and deploying the monitoring and evaluation tools for a European Union-funded development programme involving partners in Belgium and West Africa.",
+        "context": "Senior expert engaged by IBF International Consulting for the long-term technical assistance to the RePaSOC programme, funded by the European Union (EDF, reference EuropeAid/138483/IH/SER/BJ) on behalf of Benin's Ministry of Economy and Finance. I took charge of designing and deploying the programme's monitoring & evaluation tools, with partners in Belgium and West Africa.",
         "challenge": "Designing two distinct platforms each tailored to the specific needs of their users, coordinators, donors and implementing partners, while ensuring interoperability and compliance with OECD-DAC donor reporting standards.",
         "approach": [
           "Methodological framing: refinement of the overall logical framework, definition of indicators and targets.",
@@ -1224,36 +1224,36 @@
         "label": "I. Certified M&E expert",
         "title": "Monitoring, evaluation and results-based management expert",
         "points": [
-          "ITC-ILO certifications in monitoring and evaluation (2024) and in data analysis for development (2025).",
-          "Logical frameworks, theory of change, SMART indicators, OECD-DAC standards.",
-          "57 organisations supported, 65 M&E tools deployed, EU-funded RePaSOC programme."
+          "Senior expert on the EU technical assistance to the RePaSOC programme (2018-2021), on behalf of Benin's Ministry of Economy and Finance.",
+          "ITC-ILO certifications in monitoring & evaluation (2024) and data analysis for development (2025); logical frameworks, theory of change, SMART indicators, OECD-DAC standards.",
+          "57 organisations supported, 65 M&E tools deployed, 19 projects planned and piloted."
         ]
       },
       {
         "label": "II. Platform architect",
         "title": "Architect of integrated steering systems",
         "points": [
-          "12 web platform architectures designed, including 2 for the European Union.",
-          "4 SaaS products in production: Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen.",
-          "Specifications, databases, multi-role workflows, RLS security, GDPR, guarded AI."
+          "12 web platform architectures designed, including 2 for the European Union; 4 SaaS products in production.",
+          "Systems deployed in the field: SIGL LabBook for the RESAOLAB network, SIGMAP public procurement system in Kétou, single database of Benin's medical biologists.",
+          "Specifications, databases, multi-role workflows, RLS security, GDPR, guarded AI; \"Best Project Director\" JCI 2014."
         ]
       },
       {
         "label": "III. Statistician and data",
         "title": "Statistician, from survey to dashboard",
         "points": [
-          "Higher technician in statistics (ENEAM): SPSS, SAS, R, Stata, CSPro.",
-          "Surveys and databases for health research (CHU de Québec, CIHR, Gates Foundation).",
-          "Laboratory mapping and LabBook system for RESAOLAB (Fondation Mérieux, AFD)."
+          "Statistical engineer (ENEAM): SPSS, SAS, R, Stata, CSPro, Power BI.",
+          "Health research surveys for CHU de Québec (TasP&PrEP, Health Equity), funded by CIHR and the Gates Foundation.",
+          "National laboratory mapping and contribution to Benin's 2017-2021 laboratory strategic plan (RESAOLAB, Fondation Mérieux, AFD)."
         ]
       },
       {
         "label": "IV. Trainer and coach",
         "title": "Senior trainer and team coach",
         "points": [
-          "39 workshops delivered in 6 countries, training of focal points and referents.",
-          "Operators and technical assistants of the RePaSOC programme, RESAOLAB laboratory technicians.",
-          "Supervision of multi-country teams at OIF, head of departments in local governance."
+          "39 workshops delivered in 6 countries; training of OIF focal points and referents.",
+          "RESAOLAB trainer certificate (2017); operators and technical assistants of the RePaSOC programme (CPSC, Régie, MdSC, GIZ).",
+          "Supervision of multi-country teams at the OIF, management of local-government departments, coordination of field survey teams."
         ]
       }
     ],
@@ -1262,7 +1262,7 @@
       {
         "logo": "cif",
         "label": "ITC-ILO · International Training Centre",
-        "detail": "Certification in monitoring and evaluation (2024) · Data analysis and knowledge management (2025)"
+        "detail": "Certification in monitoring & evaluation (2024) · Data analysis and knowledge management for development, 60 h (2025)"
       },
       {
         "logo": "psbde",
@@ -1272,22 +1272,22 @@
       {
         "logo": "escae",
         "label": "ESCAE · Benin",
-        "detail": "Master 2, project engineering and quality management (2019)"
+        "detail": "Master 2, project engineering and quality management · Professional master in business administration (2019)"
       },
       {
         "logo": "eneam",
         "label": "ENEAM · University of Abomey-Calavi",
-        "detail": "Higher technician in statistics (2009)"
+        "detail": "Senior statistics technician, with honours (2009)"
       },
       {
         "logo": "prodev",
         "label": "PRODEV Group · Benin",
-        "detail": "Monitoring and evaluation of development projects and programmes (2018)"
+        "detail": "Monitoring & evaluation of development projects and programmes, led by the WARCIP · World Bank coordinator (2018)"
       },
       {
         "logo": "acm",
         "label": "ACM-ICPC · IBM",
-        "detail": "Honorable mention, regional programming contest (2009)"
+        "detail": "Honourable mention, ACM-ICPC South Africa regional contest sponsored by IBM (2009)"
       }
     ]
   }

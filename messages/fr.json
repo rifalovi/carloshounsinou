@@ -100,13 +100,13 @@
       },
       {
         "period": "2018-2021",
-        "title": "Concepteur de systèmes pour bailleurs UE",
+        "title": "Expert sénior · Assistance technique UE",
         "org": "IBF International Consulting · Programme RePaSOC · Belgique & Bénin",
-        "description": "Mission de conseil senior auprès du programme RePaSOC, financé par l'Union Européenne (consortium IBF International Consulting / NIRAS / QUAREIN). Affinement du cadre logique global, conception et déploiement en ligne du système informatisé. Formation et accompagnement des opérateurs (CPSC, Régie, MdSC, GIZ) et des Assistants Techniques sur l'ensemble du dispositif.",
+        "description": "Expert sénior de l'assistance technique long terme au programme RePaSOC, financé par l'Union européenne (FED, référence EuropeAid/138483/IH/SER/BJ) pour le compte du Ministère de l'Économie et des Finances du Bénin, Ordonnateur national du FED. Affinement du cadre logique global de la convention de financement, conception et mise en ligne de deux plateformes de suivi-évaluation. Formation des opérateurs (CPSC, Régie, MdSC, GIZ) et des assistants techniques sur l'ensemble du dispositif.",
         "tags": [
-          "UE",
+          "UE · FED",
           "Plateforme",
-          "Conseil"
+          "Expert sénior"
         ],
         "accent": "primary"
       },
@@ -124,37 +124,37 @@
       },
       {
         "period": "2017-2018",
-        "title": "Statisticien analyste-programmeur",
+        "title": "Statisticien analyste-programmeur · Santé publique",
         "org": "Cabinet Impact Services Plus · RESAOLAB · Bénin",
-        "description": "Conception d'un outil d'analyse rétrospective et prospective des budgets communaux, financé par la Coopération allemande (GIZ). Cartographie des laboratoires de biologie médicale et déploiement du système informatisé de gestion des laboratoires (SIGL LabBook) pour le réseau RESAOLAB, cofinancé par la Fondation Mérieux et l'AFD, avec formation des techniciens de laboratoire. Dispositif organisationnel et base de données de l'Association des Biologistes Médicaux du Bénin.",
+        "description": "Mobilisé sur le réseau RESAOLAB (Ministère de la Santé, Fondation Mérieux, AFD) : coordination de la cartographie nationale des laboratoires de biologie médicale, dispositif de centralisation des données, protocole d'analyse et indicateurs, déploiement du SIGL LabBook et formation des techniciens, avec certificat de formateur pour trois ateliers à Bohicon et Porto-Novo. Contribution au Plan stratégique national de développement des laboratoires 2017-2021 et à la Politique nationale des laboratoires du Bénin. Outil d'analyse rétrospective et prospective des budgets communaux financé par la GIZ. Base de données unique, immatriculation et répertoire en ligne de l'Association des Biologistes Médicaux du Bénin.",
         "tags": [
           "Santé",
           "Data",
-          "Formation"
+          "Politique publique"
         ],
         "accent": "secondary"
       },
       {
         "period": "2016-2017",
-        "title": "Statisticien · Recherche en santé",
-        "org": "Coordination de projets en santé · Bénin",
-        "description": "Statisticien au sein d'une coordination de projets de recherche en santé, financée par les Instituts de Recherche en Santé du Canada (IRSC) et la Fondation Bill et Melinda Gates. Conception de bases de données pour la recherche en santé publique. Formation des équipes terrain sur les protocoles de collecte et l'amélioration des conditions de vie de populations vulnérables (projet 'Équité en Santé').",
+        "title": "Ingénieur des travaux statistiques · Recherche en santé",
+        "org": "CHU de Québec · Projets de recherche au Bénin",
+        "description": "Projets de recherche TasP&PrEP (prévention du VIH) et Équité en santé sexuelle et reproductive, financés par les Instituts de recherche en santé du Canada et la Fondation Bill & Melinda Gates. Supervision de la saisie, validation de la double saisie et apurement des données, bases Excel et Access pour le monitoring mensuel des indicateurs, analyses sous SPSS et co-rédaction du rapport de l'enquête quantitative nationale.",
         "tags": [
           "Recherche",
           "Santé",
-          "Data"
+          "SPSS"
         ],
         "accent": "tertiary"
       },
       {
-        "period": "2012-2016",
-        "title": "Direction de services en gouvernance locale",
-        "org": "Administration territoriale · Bénin",
-        "description": "Trois postes successifs de direction de service au sein d'une administration territoriale en Afrique de l'Ouest : Planification et Développement, Statistique et Analyse, Communication. Mise en place du système de suivi-monitoring du Plan Décennal de l'Éducation. Conception des outils de suivi du Plan de Développement Communal et de la gestion financière. Encadrement d'équipes opérationnelles.",
+        "period": "2011-2016",
+        "title": "Débuts : statistique et gouvernance locale",
+        "org": "Mairie de Kétou · cabinets d'études · Bénin",
+        "description": "Spécialiste en suivi-évaluation au cabinet La Promo des Leaders dès 2011 (bases Excel et Access, STATA, CSPro, SPSS), puis statisticien à l'ANPE. À la Mairie de Kétou à partir de 2012 : direction des services Planification, Statistique et Communication, puis chef du service Information, Archives et Documentation ; administrateur du Système intégré de gestion des marchés publics (SIGMAP), suivi-évaluation du Plan de développement communal, outils Access de gestion du personnel et de suivi financier, suivi de la phase pilote du Plan décennal de l'éducation. En parallèle : évaluation du programme Aulacode Atlantique dans cinq communes (ASPAIF-ONG, appui du BIT), Plan d'hygiène et d'assainissement de Tchaourou (Royal Services Plus), titre de « Meilleur directeur de projet » JCI Kétou-Ifè 2014 pour un logiciel de gestion de base de données.",
         "tags": [
           "Public",
           "Territoire",
-          "S&E"
+          "SIGMAP"
         ],
         "accent": "tertiary"
       }
@@ -1034,7 +1034,7 @@
         "subtitle": "IBF International Consulting · Belgique & Bénin",
         "category": "Mission de conseil · UE",
         "status": "Livré",
-        "context": "Dans le cadre d'une mission de conseil pour IBF International Consulting, j'ai pris en charge la conception et le déploiement des outils de suivi-évaluation pour un programme de développement financé par l'Union Européenne, impliquant des partenaires en Belgique et en Afrique de l'Ouest.",
+        "context": "Expert sénior mobilisé par IBF International Consulting pour l'assistance technique long terme au programme RePaSOC, financé par l'Union européenne (FED, référence EuropeAid/138483/IH/SER/BJ) pour le compte du Ministère de l'Économie et des Finances du Bénin. J'ai pris en charge la conception et le déploiement des outils de suivi-évaluation du programme, avec des partenaires en Belgique et en Afrique de l'Ouest.",
         "challenge": "Concevoir deux plateformes distinctes répondant chacune aux besoins spécifiques de leurs utilisateurs, coordinateurs, bailleurs et partenaires de mise en œuvre, tout en garantissant leur interopérabilité et leur conformité aux standards CAD-OCDE de reporting bailleur.",
         "approach": [
           "Cadrage méthodologique : affinement du cadre logique global, définition des indicateurs et des cibles.",
@@ -1224,36 +1224,36 @@
         "label": "I. Expert S&E certifié",
         "title": "Expert en suivi-évaluation et gestion axée sur les résultats",
         "points": [
-          "Certifications CIF-OIT en suivi-évaluation (2024) et en analyse des données pour le développement (2025).",
-          "Cadres logiques, théorie du changement, indicateurs SMART, standards CAD-OCDE.",
-          "57 organisations accompagnées, 65 outils S&E déployés, programme RePaSOC financé par l'Union européenne."
+          "Expert sénior de l'assistance technique UE au programme RePaSOC (2018-2021), pour le compte du Ministère de l'Économie et des Finances du Bénin.",
+          "Certifications CIF-OIT en suivi-évaluation (2024) et en analyse des données pour le développement (2025) ; cadres logiques, théorie du changement, indicateurs SMART, standards CAD-OCDE.",
+          "57 organisations accompagnées, 65 outils S&E déployés, 19 projets planifiés et pilotés."
         ]
       },
       {
         "label": "II. Architecte de plateformes",
         "title": "Architecte de systèmes intégrés de pilotage",
         "points": [
-          "12 architectures de plateformes web conçues, dont 2 pour l'Union européenne.",
-          "4 produits SaaS en production : Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen.",
-          "Spécifications, bases de données, workflows multi-rôles, sécurité RLS, RGPD, IA encadrée."
+          "12 architectures de plateformes web conçues, dont 2 pour l'Union européenne ; 4 produits SaaS en production.",
+          "Systèmes déployés sur le terrain : SIGL LabBook pour le réseau RESAOLAB, SIGMAP des marchés publics à Kétou, base unique des biologistes médicaux du Bénin.",
+          "Spécifications, bases de données, workflows multi-rôles, sécurité RLS, RGPD, IA encadrée ; « Meilleur directeur de projet » JCI 2014."
         ]
       },
       {
         "label": "III. Statisticien et données",
         "title": "Statisticien, de l'enquête au tableau de bord",
         "points": [
-          "Technicien supérieur de la statistique (ENEAM) : SPSS, SAS, R, Stata, CSPro.",
-          "Enquêtes et bases de données pour la recherche en santé (CHU de Québec, IRSC, Fondation Gates).",
-          "Cartographie des laboratoires et système LabBook pour RESAOLAB (Fondation Mérieux, AFD)."
+          "Ingénieur des travaux statistiques (ENEAM) : SPSS, SAS, R, Stata, CSPro, Power BI.",
+          "Enquêtes de recherche en santé pour le CHU de Québec (TasP&PrEP, Équité en santé), financées par les IRSC et la Fondation Gates.",
+          "Cartographie nationale des laboratoires et contribution au Plan stratégique 2017-2021 des laboratoires du Bénin (RESAOLAB, Fondation Mérieux, AFD)."
         ]
       },
       {
         "label": "IV. Formateur et accompagnateur",
         "title": "Formateur senior et accompagnateur d'équipes",
         "points": [
-          "39 ateliers animés dans 6 pays, formation des référents et points focaux.",
-          "Opérateurs et assistants techniques du programme RePaSOC, techniciens de laboratoire RESAOLAB.",
-          "Supervision d'équipes multi-pays à l'OIF, direction de services en gouvernance locale."
+          "39 ateliers animés dans 6 pays ; formation des référents et points focaux de l'OIF.",
+          "Certificat de formateur RESAOLAB (2017) ; opérateurs et assistants techniques du programme RePaSOC (CPSC, Régie, MdSC, GIZ).",
+          "Supervision d'équipes multi-pays à l'OIF, direction de services en gouvernance locale, coordination d'enquêteurs terrain."
         ]
       }
     ],
@@ -1262,7 +1262,7 @@
       {
         "logo": "cif",
         "label": "CIF-OIT · Centre international de formation",
-        "detail": "Certification en suivi-évaluation (2024) · Analyse des données et gestion des connaissances (2025)"
+        "detail": "Certification en suivi-évaluation (2024) · Analyse des données et gestion des connaissances pour le développement, 60 h (2025)"
       },
       {
         "logo": "psbde",
@@ -1272,22 +1272,22 @@
       {
         "logo": "escae",
         "label": "ESCAE · Bénin",
-        "detail": "Master 2, ingénierie des projets et management de la qualité (2019)"
+        "detail": "Master 2, ingénierie des projets et management de la qualité · Master professionnel en administration des entreprises (2019)"
       },
       {
         "logo": "eneam",
         "label": "ENEAM · Université d'Abomey-Calavi",
-        "detail": "Technicien supérieur de la statistique (2009)"
+        "detail": "Technicien supérieur de la statistique, mention Assez bien (2009)"
       },
       {
         "logo": "prodev",
         "label": "Groupe PRODEV · Bénin",
-        "detail": "Suivi-évaluation des projets et programmes de développement (2018)"
+        "detail": "Suivi-évaluation des projets et programmes de développement, animée par le coordonnateur WARCIP · Banque mondiale (2018)"
       },
       {
         "logo": "acm",
         "label": "ACM-ICPC · IBM",
-        "detail": "Mention honorable, concours régional de programmation (2009)"
+        "detail": "Mention honorable, concours régional ACM-ICPC Afrique du Sud parrainé par IBM (2009)"
       }
     ]
   }
