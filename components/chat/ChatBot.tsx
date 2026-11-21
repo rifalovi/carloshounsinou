@@ -566,6 +566,7 @@ export default function ChatBot() {
                 onKeyDown={handleKeyDown}
                 disabled={loading || remaining === 0}
                 rows={1}
+                maxLength={1200}
               />
               <button
                 className="chat-send-btn"

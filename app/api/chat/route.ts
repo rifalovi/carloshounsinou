@@ -2,9 +2,76 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
 import { SYSTEM_PROMPT } from "@/lib/chat/system-prompt";
 
+// --- Maîtrise des coûts -----------------------------------------------------
+// Les compteurs vivent en mémoire de l'instance serverless : ils sont remis à
+// zéro à chaque démarrage à froid. Ils freinent les abus ordinaires ; la
+// limite de dépense mensuelle fixée dans la console Anthropic reste le
+// plafond dur.
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const DAILY_LIMIT = 10;
+const DAILY_LIMIT = 10;              // messages par adresse IP et par jour
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const BURST_WINDOW_MS = 60 * 1000;
+const BURST_LIMIT_PER_IP = 4;        // messages par IP et par minute
+const GLOBAL_LIMIT_PER_MINUTE = 30;  // messages toutes IP confondues, par instance
+const MAX_MESSAGE_CHARS = 1200;      // taille d'un message utilisateur
+const MAX_HISTORY_MESSAGES = 8;      // fenêtre d'historique envoyée au modèle
+const MAX_HISTORY_CHARS = 5000;      // taille totale de l'historique
+const MAX_BODY_BYTES = 20_000;       // taille brute du corps JSON
+const MAX_OUTPUT_TOKENS = 700;
+
+const burstMap = new Map<string, number[]>();
+let globalWindowStart = Date.now();
+let globalWindowCount = 0;
+
+function checkBurst(ip: string): boolean {
+  const now = Date.now();
+  const times = (burstMap.get(ip) ?? []).filter((t) => now - t < BURST_WINDOW_MS);
+  if (times.length >= BURST_LIMIT_PER_IP) {
+    burstMap.set(ip, times);
+    return false;
+  }
+  times.push(now);
+  burstMap.set(ip, times);
+  // Évite une croissance sans fin de la table sur une instance chaude.
+  if (burstMap.size > 5000) burstMap.clear();
+  return true;
+}
+
+function checkGlobal(): boolean {
+  const now = Date.now();
+  if (now - globalWindowStart > BURST_WINDOW_MS) {
+    globalWindowStart = now;
+    globalWindowCount = 0;
+  }
+  if (globalWindowCount >= GLOBAL_LIMIT_PER_MINUTE) return false;
+  globalWindowCount++;
+  return true;
+}
+
+/**
+ * N'accepte que les appels émis depuis le site lui-même. Un en-tête Origin se
+ * falsifie, mais ce contrôle écarte les scripts tiers et les réutilisations de
+ * l'endpoint depuis d'autres sites, qui constituent l'essentiel des abus.
+ */
+function isAllowedOrigin(req: NextRequest): boolean {
+  const origin = req.headers.get("origin") ?? req.headers.get("referer");
+  if (!origin) return false;
+  let host: string;
+  try {
+    host = new URL(origin).hostname;
+  } catch {
+    return false;
+  }
+  if (host === "localhost" || host === "127.0.0.1") return true;
+  const allowed = ["carloshounsinou.com"];
+  const site = process.env.NEXT_PUBLIC_SITE_URL;
+  if (site) {
+    try { allowed.push(new URL(site).hostname); } catch { /* ignorée */ }
+  }
+  if (process.env.VERCEL_URL) allowed.push(process.env.VERCEL_URL);
+  if (process.env.VERCEL_BRANCH_URL) allowed.push(process.env.VERCEL_BRANCH_URL);
+  return allowed.some((a) => host === a || host.endsWith("." + a));
+}
 
 function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
   const now = Date.now();
@@ -44,7 +111,9 @@ function sanitizeMessages(raw: unknown): ChatMessage[] {
     const content = (item as { content?: unknown }).content;
     if (role !== "user" && role !== "assistant") continue;
     if (typeof content !== "string") continue;
-    const text = content.trim();
+    // Un contenu trop long est tronqué plutôt que rejeté : l'historique
+    // renvoyé par le client peut contenir de longues réponses de l'assistant.
+    const text = content.trim().slice(0, MAX_MESSAGE_CHARS * 2);
     if (!text) continue;
 
     const last = cleaned[cleaned.length - 1];
@@ -68,6 +137,22 @@ export async function POST(req: NextRequest) {
       req.headers.get("x-real-ip") ||
       "unknown";
 
+    if (!isAllowedOrigin(req)) {
+      return NextResponse.json({ error: "Origine non autorisée" }, { status: 403 });
+    }
+
+    if (!checkGlobal() || !checkBurst(ip)) {
+      return NextResponse.json(
+        { error: "Trop de requêtes. Patientez une minute avant de réessayer." },
+        { status: 429 }
+      );
+    }
+
+    const contentLength = Number(req.headers.get("content-length") ?? 0);
+    if (contentLength > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Requête trop volumineuse" }, { status: 413 });
+    }
+
     const rateLimit = checkRateLimit(ip);
     if (!rateLimit.allowed) {
       return NextResponse.json(
@@ -87,7 +172,24 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Messages requis" }, { status: 400 });
     }
 
-    const recentMessages = messages.slice(-10);
+    const lastUser = messages[messages.length - 1];
+    if (lastUser.role !== "user" || lastUser.content.length > MAX_MESSAGE_CHARS) {
+      return NextResponse.json(
+        { error: `Message trop long (${MAX_MESSAGE_CHARS} caractères maximum).` },
+        { status: 400 }
+      );
+    }
+
+    // Fenêtre d'historique bornée en nombre de messages et en caractères.
+    const recentMessages = messages.slice(-MAX_HISTORY_MESSAGES);
+    let total = 0;
+    for (let i = recentMessages.length - 1; i >= 0; i--) {
+      total += recentMessages[i].content.length;
+      if (total > MAX_HISTORY_CHARS) {
+        recentMessages.splice(0, i + 1);
+        break;
+      }
+    }
     // La fenêtre glissante peut débuter par un message assistant : on le retire
     // pour respecter la contrainte "premier message = utilisateur".
     while (recentMessages.length > 0 && recentMessages[0].role === "assistant") {
@@ -106,8 +208,10 @@ export async function POST(req: NextRequest) {
 
     const response = await anthropic.messages.create({
       model: CHAT_MODEL,
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
+      max_tokens: MAX_OUTPUT_TOKENS,
+      // Le prompt système (~9 000 tokens) est mis en cache côté Anthropic :
+      // les lectures suivantes coûtent un dixième du prix d'entrée.
+      system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
       messages: recentMessages,
     });
 
@@ -165,7 +269,16 @@ export async function POST(req: NextRequest) {
  * tokens ni exposer la clé, que ANTHROPIC_API_KEY est présente et acceptée par
  * l'API et que le modèle utilisé existe. Ne renvoie que des catégories d'état.
  */
+let lastDiagnosticAt = 0;
+
 export async function GET() {
+  // Au plus un contrôle toutes les 10 secondes par instance.
+  const now = Date.now();
+  if (now - lastDiagnosticAt < 10_000) {
+    return NextResponse.json({ status: "throttled" }, { status: 429 });
+  }
+  lastDiagnosticAt = now;
+
   const raw = process.env.ANTHROPIC_API_KEY;
   if (!raw || !raw.trim()) {
     return NextResponse.json(
