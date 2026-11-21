@@ -23,6 +23,8 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
   return { allowed: true, remaining: DAILY_LIMIT - entry.count };
 }
 
+const CHAT_MODEL = "claude-haiku-4-5";
+
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
 /**
@@ -103,7 +105,7 @@ export async function POST(req: NextRequest) {
     const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY.trim() });
 
     const response = await anthropic.messages.create({
-      model: "claude-haiku-4-5",
+      model: CHAT_MODEL,
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: recentMessages,
@@ -155,5 +157,37 @@ export async function POST(req: NextRequest) {
       },
       { status: 500 }
     );
+  }
+}
+
+/**
+ * Diagnostic de configuration (GET /api/chat) : vérifie, sans dépenser de
+ * tokens ni exposer la clé, que ANTHROPIC_API_KEY est présente et acceptée par
+ * l'API et que le modèle utilisé existe. Ne renvoie que des catégories d'état.
+ */
+export async function GET() {
+  const raw = process.env.ANTHROPIC_API_KEY;
+  if (!raw || !raw.trim()) {
+    return NextResponse.json(
+      { status: "missing_key", detail: "ANTHROPIC_API_KEY absente de l'environnement Vercel" },
+      { status: 503 }
+    );
+  }
+  const key = raw.trim();
+  const shape = key.startsWith("sk-ant-") ? "ok" : "unexpected_prefix";
+  try {
+    const anthropic = new Anthropic({ apiKey: key });
+    const model = await anthropic.models.retrieve(CHAT_MODEL);
+    return NextResponse.json({ status: "ok", keyShape: shape, keyLength: key.length, model: model.id });
+  } catch (error) {
+    const status =
+      error instanceof Anthropic.AuthenticationError || error instanceof Anthropic.PermissionDeniedError
+        ? "invalid_key"
+        : error instanceof Anthropic.NotFoundError
+          ? "model_not_found"
+          : "api_error";
+    const httpStatus = error instanceof Anthropic.APIError ? error.status : undefined;
+    console.error("Diagnostic chat:", status, httpStatus, error instanceof Error ? error.message : error);
+    return NextResponse.json({ status, keyShape: shape, keyLength: key.length, httpStatus }, { status: 503 });
   }
 }
