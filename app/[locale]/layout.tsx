@@ -83,8 +83,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     },
     "sameAs": ["https://www.linkedin.com/in/carloshounsinou"],
     "description": locale === "fr"
-      ? "Carlos Hounsinou, expert chevronné du Suivi-Évaluation, de la planification stratégique et de la gestion de programmes de développement. 13 ans d'expérience pour l'OIF, l'UE, l'AFD, la GIZ, la Fondation Bill & Melinda Gates."
-      : "Carlos Hounsinou, seasoned expert in Monitoring & Evaluation, strategic planning and development programme management. 13 years for OIF, EU, AFD, GIZ, Bill & Melinda Gates Foundation.",
+      ? "Carlos Hounsinou, expert chevronné du Suivi-Évaluation, de la planification stratégique et de la gestion de programmes de développement. 15 ans d'expérience pour l'OIF, l'UE, l'AFD, la GIZ, la Fondation Bill & Melinda Gates."
+      : "Carlos Hounsinou, seasoned expert in Monitoring & Evaluation, strategic planning and development programme management. 15 years for OIF, EU, AFD, GIZ, Bill & Melinda Gates Foundation.",
     "knowsAbout": [
       "Suivi-Évaluation", "Monitoring and Evaluation", "Gestion de programmes",
       "Programme management", "Architecture systèmes augmentés IA",

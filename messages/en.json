@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Carlos HOUNSINOU · Programme Piloting · AI-Augmented Systems Architecture",
-    "description": "Carlos Hounsinou, rare profile combining institutional programme piloting, public policy structuring and AI-augmented systems architecture. 13 years serving the OIF, EU, AFD, GIZ, Bill & Melinda Gates Foundation.",
+    "description": "Carlos Hounsinou, rare profile combining institutional programme piloting, public policy structuring and AI-augmented systems architecture. 15 years serving the OIF, EU, AFD, GIZ, Bill & Melinda Gates Foundation.",
     "keywords": "programme piloting, monitoring evaluation, project engineering, OIF, integrated systems architecture, governed AI, senior M&E consultant, Carlos Hounsinou"
   },
   "nav": {
@@ -16,7 +16,7 @@
     "eyebrowLeft": "Paris, Île-de-France",
     "eyebrowCenter": "Portfolio · MMXXVI Edition",
     "eyebrowRight": "Programme piloting · AI-augmented systems",
-    "tag": "Programme piloting · Building augmented systems · 13 years",
+    "tag": "Programme piloting · Building augmented systems · 15 years",
     "h1Line1": "Piloting",
     "h1Emphasis1": "programmes.",
     "h1Line2": "Building lasting",
@@ -26,11 +26,11 @@
     "portraitQuote": "\"From logical framework to source code.\"",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Experience",
-    "kpi1Value": "13 years",
+    "kpi1Value": "15 years",
     "kpi2Label": "II. Reach",
-    "kpi2Value": "4 countries · 3 continents",
+    "kpi2Value": "6 countries · 3 continents",
     "kpi3Label": "III. Achievements",
-    "kpi3Value": "12 architectures · 4 SaaS",
+    "kpi3Value": "12 architectures · 5 SaaS",
     "ctaPrimary": "Discuss a project",
     "ctaSecondary": "View my work"
   },
@@ -39,7 +39,7 @@
     "h2Part1": "A trajectory of structured",
     "h2Emphasis": "programmes",
     "h2End": ".",
-    "p1": "At the rare intersection between institutional programme piloting, the management of operational teams and the architecture of AI-augmented systems, I help organisations transform their public policies without endless dependency on vendors. Thirteen years spent structuring systems, bringing together multi-country teams around a common goal, training several dozen operators and designing platforms for the OIF, the European Union, AFD, GIZ, Swiss Cooperation, IRSC, Fondation Mérieux or the Bill & Melinda Gates Foundation have taught me a simple truth: value no longer emerges at the level of strategy or technique alone, but at their point of intersection. That is the point I know how to hold, from the steering committee through to operational deployment, including the direct management of teams.",
+    "p1": "At the rare intersection between institutional programme piloting, the management of operational teams and the architecture of AI-augmented systems, I help organisations transform their public policies without endless dependency on vendors. Fifteen years spent structuring systems, bringing together multi-country teams around a common goal, training several dozen operators and designing platforms for the OIF, the European Union, AFD, GIZ, Swiss Cooperation, IRSC, Fondation Mérieux or the Bill & Melinda Gates Foundation have taught me a simple truth: value no longer emerges at the level of strategy or technique alone, but at their point of intersection. That is the point I know how to hold, from the steering committee through to operational deployment, including the direct management of teams.",
     "p2Part1": "From Benin to Paris, via Belgium, I now serve the ",
     "p2Org": "International Organisation of La Francophonie",
     "p2Part2": " as Project Engineering Officer, after designing platforms for international donors and launching my own SaaS product. A path that taught me to design, specify and ship systems that last.",
@@ -678,7 +678,7 @@
   },
   "stats": {
     "eyebrow": "Achievements · KPIs",
-    "h2Part1": "Thirteen years, three",
+    "h2Part1": "Fifteen years, three",
     "h2Emphasis": "continents",
     "h2End": ", measurable effects.",
     "intro": "Beyond titles, what counts are the platforms designed, the tools deployed, the teams trained. Six figures taken from my expertise portfolio.",
@@ -691,8 +691,8 @@
       },
       {
         "label": "II. SaaS",
-        "value": 4,
-        "description": "SaaS products in production: Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen",
+        "value": 5,
+        "description": "SaaS products in production, including Suivi-Projets, Emploi-Jeune, CeveLab and Cap Citoyen",
         "bar": 60
       },
       {
@@ -1233,7 +1233,7 @@
         "label": "II. Platform architect",
         "title": "Architect of integrated steering systems",
         "points": [
-          "12 web platform architectures designed, including 2 for the European Union; 4 SaaS products in production.",
+          "12 web platform architectures designed, including 2 for the European Union; 5 SaaS products in production.",
           "Systems deployed in the field: SIGL LabBook for the RESAOLAB network, SIGMAP public procurement system in Kétou, single database of Benin's medical biologists.",
           "Specifications, databases, multi-role workflows, RLS security, GDPR, guarded AI; \"Best Project Director\" JCI 2014."
         ]

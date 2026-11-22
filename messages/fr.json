@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Carlos HOUNSINOU · Pilotage de programmes · Architecture des systèmes augmentés IA",
-    "description": "Carlos Hounsinou, profil rare alliant pilotage de programmes institutionnels, structuration de politiques publiques et architecture des systèmes augmentés par l'IA. 13 ans au service de l'OIF, l'UE, l'AFD, la GIZ, la Fondation Bill & Melinda Gates.",
+    "description": "Carlos Hounsinou, profil rare alliant pilotage de programmes institutionnels, structuration de politiques publiques et architecture des systèmes augmentés par l'IA. 15 ans au service de l'OIF, l'UE, l'AFD, la GIZ, la Fondation Bill & Melinda Gates.",
     "keywords": "pilotage de programmes, suivi-évaluation, ingénierie de projet, OIF, architecture systèmes intégrés, IA encadrée, consultant senior S&E, Carlos Hounsinou"
   },
   "nav": {
@@ -16,7 +16,7 @@
     "eyebrowLeft": "Paris, Île-de-France",
     "eyebrowCenter": "Portfolio · Édition MMXXVI",
     "eyebrowRight": "Pilotage de programmes · Systèmes augmentés IA",
-    "tag": "Pilotage de programmes · Construction de systèmes augmentés · 13 ans",
+    "tag": "Pilotage de programmes · Construction de systèmes augmentés · 15 ans",
     "h1Line1": "Piloter des",
     "h1Emphasis1": "programmes.",
     "h1Line2": "Bâtir des",
@@ -26,11 +26,11 @@
     "portraitQuote": "« Du cadre logique au code source. »",
     "portraitLocation": "2024 → · OIF · Paris",
     "kpi1Label": "I. Expérience",
-    "kpi1Value": "13 années",
+    "kpi1Value": "15 années",
     "kpi2Label": "II. Périmètre",
-    "kpi2Value": "4 pays · 3 continents",
+    "kpi2Value": "6 pays · 3 continents",
     "kpi3Label": "III. Réalisations",
-    "kpi3Value": "12 architectures · 4 SaaS",
+    "kpi3Value": "12 architectures · 5 SaaS",
     "ctaPrimary": "Discuter d'un projet",
     "ctaSecondary": "Voir mes réalisations"
   },
@@ -39,7 +39,7 @@
     "h2Part1": "Une trajectoire de programmes",
     "h2Emphasis": "structurés",
     "h2End": ".",
-    "p1": "À l'intersection rare entre le pilotage de programmes institutionnels, l'encadrement d'équipes opérationnelles et l'architecture des systèmes augmentés par l'intelligence artificielle, j'aide les organisations à transformer leurs politiques publiques sans dépendre éternellement de prestataires. Treize années passées à structurer des dispositifs, à fédérer des équipes multi-pays autour d'un objectif commun, à former plusieurs dizaines d'opérateurs et à concevoir des plateformes pour l'OIF, l'Union Européenne, l'AFD, la GIZ, la Coopération Suisse, l'IRSC, la Fondation Mérieux ou la Fondation Bill & Melinda Gates m'ont appris une vérité simple : la valeur ne se crée plus au seul niveau de la stratégie ni de la technique, mais à leur point de jonction. C'est ce point que je sais tenir, du comité de pilotage jusqu'au déploiement opérationnel, en passant par l'encadrement direct des équipes.",
+    "p1": "À l'intersection rare entre le pilotage de programmes institutionnels, l'encadrement d'équipes opérationnelles et l'architecture des systèmes augmentés par l'intelligence artificielle, j'aide les organisations à transformer leurs politiques publiques sans dépendre éternellement de prestataires. Quinze années passées à structurer des dispositifs, à fédérer des équipes multi-pays autour d'un objectif commun, à former plusieurs dizaines d'opérateurs et à concevoir des plateformes pour l'OIF, l'Union Européenne, l'AFD, la GIZ, la Coopération Suisse, l'IRSC, la Fondation Mérieux ou la Fondation Bill & Melinda Gates m'ont appris une vérité simple : la valeur ne se crée plus au seul niveau de la stratégie ni de la technique, mais à leur point de jonction. C'est ce point que je sais tenir, du comité de pilotage jusqu'au déploiement opérationnel, en passant par l'encadrement direct des équipes.",
     "p2Part1": "Du Bénin à Paris, en passant par la Belgique, je sers aujourd'hui l'",
     "p2Org": "Organisation Internationale de la Francophonie",
     "p2Part2": " en tant que Chargé d'Ingénierie de Projet, après avoir conçu des plateformes pour le compte de bailleurs internationaux et lancé mon propre produit SaaS. Une trajectoire qui m'a appris à concevoir, spécifier et livrer des systèmes qui durent.",
@@ -678,7 +678,7 @@
   },
   "stats": {
     "eyebrow": "Réalisations · KPI",
-    "h2Part1": "Treize ans, trois",
+    "h2Part1": "Quinze ans, trois",
     "h2Emphasis": "continents",
     "h2End": ", des effets mesurables.",
     "intro": "Au-delà des titres, ce qui compte ce sont les plateformes conçues, les outils déployés, les équipes formées. Six chiffres issus de mon dossier d'expertise.",
@@ -691,8 +691,8 @@
       },
       {
         "label": "II. SaaS",
-        "value": 4,
-        "description": "Produits SaaS en production : Suivi-Projets, Emploi-Jeune, CeveLab, Cap Citoyen",
+        "value": 5,
+        "description": "Produits SaaS en production, dont Suivi-Projets, Emploi-Jeune, CeveLab et Cap Citoyen",
         "bar": 60
       },
       {
@@ -1233,7 +1233,7 @@
         "label": "II. Architecte de plateformes",
         "title": "Architecte de systèmes intégrés de pilotage",
         "points": [
-          "12 architectures de plateformes web conçues, dont 2 pour l'Union européenne ; 4 produits SaaS en production.",
+          "12 architectures de plateformes web conçues, dont 2 pour l'Union européenne ; 5 produits SaaS en production.",
           "Systèmes déployés sur le terrain : SIGL LabBook pour le réseau RESAOLAB, SIGMAP des marchés publics à Kétou, base unique des biologistes médicaux du Bénin.",
           "Spécifications, bases de données, workflows multi-rôles, sécurité RLS, RGPD, IA encadrée ; « Meilleur directeur de projet » JCI 2014."
         ]
