@@ -5,7 +5,7 @@ const LOCALES = ["fr", "en"];
 const SLUGS = [
   "institutional-pilot",
   "incubation-platform",
-  "valorisation-platform",
+  "tbs-pdc",
   "eu-platforms",
   "indicators-platform",
   "cevelab",

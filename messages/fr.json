@@ -255,46 +255,52 @@
         ]
       },
       {
-        "id": "valorisation-platform",
-        "visual": "valorisation",
-        "category": "Plateforme institutionnelle",
-        "role": "Concepteur · Référent technique",
-        "title": "Plateforme de valorisation de portefeuille programmatique",
-        "subtitle": "Organisation institutionnelle · Paris",
-        "status": "Livré · Pilote actif",
+        "id": "tbs-pdc",
+        "visual": "tbs",
+        "category": "Gouvernance locale · Suivi-évaluation",
+        "role": "Concepteur · Architecte fonctionnel · Porteur",
+        "title": "TBS-PDC · Suivi-évaluation des plans de développement communaux",
+        "subtitle": "Communes du Bénin · tbs-pdc.suivi-projet.org",
+        "status": "En production · Pilote Bassila",
         "statusType": "live",
-        "description": "Conception et livraison d'une plateforme web institutionnelle pour la valorisation publique d'un portefeuille de projets stratégiques. Architecture combinant fiches projet en data storytelling, dashboard analytique, exploration cartographique et assistant conversationnel basé sur la recherche sémantique.",
+        "description": "Plateforme qui relie, pour une commune, la situation de ses indicateurs de développement aux projets de son Plan de développement communal, puis à leur exécution physique et financière, à leur évaluation et à leur capitalisation. Toute la chaîne de la gestion axée sur les résultats, de la vision aux impacts, avec un principe simple : tout agrégat est calculé, jamais saisi. Vitrines communales publiques en marque blanche, tutelle départementale, bilan annuel du PDC exporté.",
         "specs": [
           {
-            "label": "Architecture",
-            "value": "Full-stack · recherche vectorielle"
+            "label": "Chaîne GAR",
+            "value": "10 maillons, de la vision aux impacts"
           },
           {
-            "label": "Cadre",
-            "value": "Exigences institutionnelles internationales"
+            "label": "Calculs",
+            "value": "Taux d'atteinte · IPC valeur acquise · jalons validés sur PV"
           },
           {
             "label": "Sécurité",
-            "value": "RLS multi-rôles · anti-hallucination"
+            "value": "RLS refus par défaut · moindre privilège · audit"
           },
           {
             "label": "Statut",
-            "value": "Livré · Pilote en production"
+            "value": "En production · 77 communes référencées"
           }
         ],
-        "hasAI": true,
+        "hasAI": false,
         "stack": [
-          "Architecture full-stack",
-          "Base vectorielle",
-          "IA générative encadrée",
-          "Cartographie web",
-          "Workflow éditorial multi-rôles"
+          "Next.js 16",
+          "TypeScript strict",
+          "PostgreSQL · Supabase",
+          "RLS · Zod",
+          "Docker · CI",
+          "735 tests"
         ],
         "actions": [
           {
+            "label": "Voir la plateforme ↗",
+            "type": "external",
+            "href": "https://tbs-pdc.suivi-projet.org"
+          },
+          {
             "label": "En savoir plus →",
             "type": "detail",
-            "href": "/realisations/valorisation-platform"
+            "href": "/realisations/tbs-pdc"
           }
         ]
       },
@@ -1007,24 +1013,26 @@
         "stackDetail": "Architecture full-stack · Base vectorielle · IA générative encadrée (RAG + Vision) · Workflow multi-rôles · RLS · Cron alertes · Reporting automatisé"
       },
       {
-        "id": "valorisation-platform",
-        "metaTitle": "Plateforme de valorisation de portefeuille · Carlos Hounsinou",
-        "metaDescription": "Plateforme institutionnelle de data storytelling, cartographie et assistant IA pour valoriser un portefeuille de projets stratégiques.",
-        "title": "Plateforme de valorisation de portefeuille programmatique",
-        "subtitle": "Organisation institutionnelle · Paris",
-        "category": "Plateforme institutionnelle",
-        "status": "Livré · Pilote actif",
-        "context": "Une institution internationale souhaitait rendre visible sa valeur ajoutée à travers son portefeuille de projets stratégiques. Les données existaient, mais restaient enfouies dans des rapports PDF inaccessibles au grand public et aux partenaires potentiels.",
-        "challenge": "Transformer des rapports statiques en expériences web interactives tout en garantissant l'exactitude des informations présentées par l'assistant conversationnel, enjeu d'image institutionnelle majeur, et en maîtrisant le workflow éditorial pour des équipes aux compétences numériques hétérogènes.",
+        "id": "tbs-pdc",
+        "metaTitle": "TBS-PDC · Suivi-évaluation des plans de développement communaux · Carlos Hounsinou",
+        "metaDescription": "Plateforme de suivi-évaluation des plans de développement communaux du Bénin : chaîne GAR complète, indicateurs calculés, jalons, suivi financier, évaluation, capitalisation, vitrines publiques.",
+        "title": "TBS-PDC · Suivi-évaluation des plans de développement communaux",
+        "subtitle": "Communes du Bénin · tbs-pdc.suivi-projet.org",
+        "category": "Gouvernance locale · Suivi-évaluation",
+        "status": "En production · Pilote Bassila",
+        "context": "Les communes du Bénin tiennent un tableau de bord social (population, éducation, santé, eau, infrastructures) et un Plan de développement communal. Aucun outil ne reliait la situation des indicateurs aux projets du plan, à leur exécution physique et financière, puis à leur évaluation. Le tableau de bord manuel de la commune pilote avait demandé plus de six mois de compilation, sans aucune formule, et 17 anomalies y avaient été relevées.",
+        "challenge": "Modéliser toute la chaîne de la gestion axée sur les résultats sans jamais inventer une norme ni une donnée : le catalogue d'indicateurs, les normes et les cibles sont chargés comme données après ateliers avec les services sources. Garantir qu'aucun total ne soit saisi à la main, que chaque valeur garde sa source, son année et sa cellule d'origine, et que l'interface reste utilisable à 400 px de large par des agents communaux.",
         "approach": [
-          "CMS éditorial multi-rôles permettant aux équipes de créer, relire et publier des fiches projet structurées.",
-          "Data storytelling : visualisations de données, indicateurs clés, chronologie des résultats par projet.",
-          "Dashboard analytique offrant une vue d'ensemble du portefeuille : répartition géographique, thématiques, niveaux d'avancement.",
-          "Exploration cartographique interactive des projets par zone géographique.",
-          "Assistant conversationnel basé sur une base vectorielle propriétaire, avec guardrails anti-hallucination et audit des réponses."
+          "Chaîne GAR en dix maillons : vision, programmes, secteurs, indicateurs, projets, suivi, résultats, évaluation, capitalisation, impacts (plan national, ODD).",
+          "Moteur de formules sûr : indicateurs recalculés à partir des variables, taux d'atteinte, valeur acquise et indice de performance des coûts, statut plafonné par la nature de la norme ; « non disponible » n'est jamais zéro.",
+          "Avancement physique calculé par jalons pondérés, chacun validé sur pièce justificative par un validateur distinct du déclarant.",
+          "Fiches de référence par indicateur, socle commun verrouillé par l'administration nationale, qualité des données appréciée sur cinq critères, fenêtre d'historique paramétrable de sept ans.",
+          "Sécurité institutionnelle : PostgreSQL avec RLS refusant tout par défaut, rôles de base de moindre privilège, journal d'audit sur toute écriture sensible, validation Zod côté client et serveur, hébergement en région européenne, registre des traitements.",
+          "Vitrine publique par commune en marque blanche, tutelle et agrégation départementales sur les 12 départements, exports ouverts et bilan annuel du PDC publié.",
+          "Livraison par sprints avec une définition de « fait » stricte : zéro erreur TypeScript, 735 tests automatisés (moteur, RLS, socle, intégrité), images Docker construites en intégration continue."
         ],
-        "results": "Pilote déployé en production. Adoption par l'équipe éditoriale dès la première semaine. L'assistant conversationnel répond aux questions des partenaires externes avec une précision mesurée sur la base de référence institutionnelle.",
-        "stackDetail": "Architecture full-stack · Base vectorielle propriétaire · IA générative encadrée · Cartographie web · Workflow éditorial multi-rôles · RLS · Anti-hallucination"
+        "results": "Cinq sprints livrés entre mi-octobre et fin novembre 2026. Plateforme en production : commune pilote de Bassila publiée avec 59 indicateurs sur 9 secteurs et une fenêtre 2019-2025, 77 communes référencées par pôle et par département. Objectif visé : produire le bilan annuel du PDC en moins de 30 jours au lieu de plus de six mois.",
+        "stackDetail": "Next.js 16 App Router · TypeScript strict · Tailwind · shadcn/ui · PostgreSQL / Supabase (RLS, migrations versionnées) · Moteur de formules sûr · Stockage compatible S3 · Zod · Docker Compose · CI · Vitest · Vercel (région cdg1)"
       },
       {
         "id": "eu-platforms",

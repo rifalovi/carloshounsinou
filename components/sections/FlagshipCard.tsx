@@ -14,7 +14,7 @@ type Action = {
 };
 
 type Props = {
-  visual: "oif" | "incubation" | "valorisation" | "ibf" | "gov" | "cap" | "operations" | "cevelab" | "determines" | "akto" | "datastudio";
+  visual: "oif" | "incubation" | "tbs" | "ibf" | "gov" | "cap" | "operations" | "cevelab" | "determines" | "akto" | "datastudio";
   badge: string;
   badgeType: "dev" | "live" | "done";
   hasAI?: boolean;
@@ -131,56 +131,80 @@ function IncubationVisual() {
   );
 }
 
-function ValorisationVisual() {
+function TbsVisual() {
+  const links = ["Vision", "Prog.", "Sect.", "Indic.", "Projets", "Suivi", "Résult.", "Éval.", "Capit.", "Impacts"];
+  const bars = [
+    { label: "DEM-01", v: 0.82, ok: true },
+    { label: "EDU-04", v: 0.58, ok: false },
+    { label: "EAU-02", v: 0.91, ok: true },
+    { label: "SAN-03", v: 0.47, ok: false },
+  ];
   return (
     <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg"
       style={{ width: "100%", maxWidth: "280px", height: "auto", opacity: 0.85 }}>
-      {/* Star MVP */}
-      <text x="265" y="18" textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="7"
-        fill={GOLD} fontWeight="500">★ MVP LIVRÉ</text>
-      {/* Main story area */}
-      <rect x="14" y="24" width="252" height="96" fill="color-mix(in srgb, var(--sp-sur-sombre) 6%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 42%, transparent)" strokeWidth="0.8" rx="3"/>
-      <text x="24" y="39" fontFamily="var(--sp-font-mono)" fontSize="7"
-        fill={COPPER} fontWeight="500" letterSpacing="0.1em">PROJECT STORIES</text>
-      <rect x="24" y="46" width="176" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 18%, transparent)" rx="2"/>
-      <rect x="24" y="55" width="216" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)" rx="2"/>
-      <rect x="24" y="64" width="156" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)" rx="2"/>
-      <rect x="24" y="73" width="196" height="5" fill="color-mix(in srgb, var(--sp-sur-sombre) 7%, transparent)" rx="2"/>
-      <rect x="24" y="88" width="56" height="20" fill="color-mix(in srgb, var(--sp-or-jalon) 20%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 42%, transparent)" strokeWidth="0.5" rx="10"/>
-      <text x="52" y="101" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 70%, transparent)">Data story</text>
-      <rect x="86" y="88" width="56" height="20" fill="color-mix(in srgb, var(--sp-or-jalon) 14%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 32%, transparent)" strokeWidth="0.5" rx="10"/>
-      <text x="114" y="101" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 70%, transparent)">Analytics</text>
-      {/* Panel 1: Dashboard */}
-      <rect x="14" y="128" width="78" height="44" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)" strokeWidth="0.7" rx="2"/>
-      <circle cx="36" cy="150" r="10" fill="none" stroke="color-mix(in srgb, var(--sp-or-jalon) 50%, transparent)" strokeWidth="1.5"/>
-      <path d="M36 140 A10 10 0 0 1 46 150 Z" fill="color-mix(in srgb, var(--sp-or-jalon) 42%, transparent)"/>
-      <text x="56" y="153" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 45%, transparent)">Analytics</text>
-      {/* Panel 2: Map */}
-      <rect x="101" y="128" width="78" height="44" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)" strokeWidth="0.7" rx="2"/>
-      <rect x="112" y="140" width="22" height="22" fill="none"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 50%, transparent)" strokeWidth="0.8" rx="1"/>
-      <line x1="118" y1="140" x2="118" y2="162" stroke="color-mix(in srgb, var(--sp-or-jalon) 28%, transparent)" strokeWidth="0.5"/>
-      <line x1="126" y1="140" x2="126" y2="162" stroke="color-mix(in srgb, var(--sp-or-jalon) 28%, transparent)" strokeWidth="0.5"/>
-      <line x1="112" y1="148" x2="134" y2="148" stroke="color-mix(in srgb, var(--sp-or-jalon) 28%, transparent)" strokeWidth="0.5"/>
-      <line x1="112" y1="155" x2="134" y2="155" stroke="color-mix(in srgb, var(--sp-or-jalon) 28%, transparent)" strokeWidth="0.5"/>
-      <text x="144" y="153" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 45%, transparent)">Cartog.</text>
-      {/* Panel 3: Chat */}
-      <rect x="188" y="128" width="78" height="44" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)" strokeWidth="0.7" rx="2"/>
-      <rect x="200" y="139" width="22" height="14" fill="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)"
-        stroke="color-mix(in srgb, var(--sp-or-jalon) 50%, transparent)" strokeWidth="0.8" rx="4"/>
-      <path d="M204 153 L202 160 L210 153 Z" fill="color-mix(in srgb, var(--sp-or-jalon) 30%, transparent)"/>
-      <text x="231" y="153" fontFamily="var(--sp-font-mono)" fontSize="5.5"
-        fill="color-mix(in srgb, var(--sp-sur-sombre) 45%, transparent)">Assistant</text>
+      <text x="14" y="14" fontFamily="var(--sp-font-mono)" fontSize="6.5"
+        fill={COPPER} fontWeight="500" letterSpacing="0.1em">TBS-PDC · CHAÎNE GAR · 10 MAILLONS</text>
+      <text x="266" y="14" textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="6.5"
+        fill={GOLD} fontWeight="500">● EN PRODUCTION</text>
+      {/* Chaîne des résultats */}
+      <line x1="20" y1="34" x2="260" y2="34" stroke="color-mix(in srgb, var(--sp-or-jalon) 35%, transparent)" strokeWidth="0.8"/>
+      {links.map((l, i) => {
+        const x = 20 + i * (240 / 9);
+        const done = i < 6;
+        return (
+          <g key={l}>
+            <circle cx={x} cy="34" r={done ? 3.2 : 2.6}
+              fill={done ? "color-mix(in srgb, var(--sp-or-jalon) 70%, transparent)" : "color-mix(in srgb, var(--sp-sur-sombre) 10%, transparent)"}
+              stroke="color-mix(in srgb, var(--sp-or-jalon) 60%, transparent)" strokeWidth="0.8"/>
+            <text x={x} y="46" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="4.6"
+              fill="color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)">{l}</text>
+          </g>
+        );
+      })}
+      {/* Panneau indicateurs : réel vs cible, norme sourcée */}
+      <rect x="14" y="56" width="162" height="98" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-or-jalon) 35%, transparent)" strokeWidth="0.8" rx="3"/>
+      <text x="22" y="68" fontFamily="var(--sp-font-mono)" fontSize="5.5"
+        fill={COPPER} letterSpacing="0.08em" fontWeight="500">INDICATEURS · TAUX D'ATTEINTE</text>
+      {bars.map((b, i) => {
+        const y = 76 + i * 18;
+        return (
+          <g key={b.label}>
+            <text x="22" y={y + 7} fontFamily="var(--sp-font-mono)" fontSize="5"
+              fill="color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)">{b.label}</text>
+            <rect x="54" y={y} width="100" height="8" fill="color-mix(in srgb, var(--sp-sur-sombre) 8%, transparent)" rx="1.5"/>
+            <rect x="54" y={y} width={100 * b.v} height="8" rx="1.5"
+              fill={b.ok ? "color-mix(in srgb, var(--sp-or-jalon) 55%, transparent)" : "color-mix(in srgb, var(--sp-or-jalon) 25%, transparent)"}/>
+            <line x1="124" y1={y - 2} x2="124" y2={y + 10} stroke="color-mix(in srgb, var(--sp-sur-sombre) 45%, transparent)" strokeWidth="0.7" strokeDasharray="1.5,1.5"/>
+            <text x="160" y={y + 7} fontFamily="var(--sp-font-mono)" fontSize="5"
+              fill="color-mix(in srgb, var(--sp-sur-sombre) 60%, transparent)">{Math.round(b.v * 100)}%</text>
+          </g>
+        );
+      })}
+      <text x="124" y="150" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="4.4"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 40%, transparent)">norme sourcée</text>
+      {/* Panneau projet : jalons et IPC */}
+      <rect x="184" y="56" width="82" height="98" fill="color-mix(in srgb, var(--sp-sur-sombre) 5%, transparent)"
+        stroke="color-mix(in srgb, var(--sp-or-jalon) 35%, transparent)" strokeWidth="0.8" rx="3"/>
+      <text x="192" y="68" fontFamily="var(--sp-font-mono)" fontSize="5.5"
+        fill={COPPER} letterSpacing="0.08em" fontWeight="500">PROJET · JALONS</text>
+      {[1, 1, 1, 0, 0].map((d, i) => (
+        <g key={i}>
+          <rect x="192" y={76 + i * 11} width="7" height="7" rx="1.5"
+            fill={d ? "color-mix(in srgb, var(--sp-or-jalon) 60%, transparent)" : "transparent"}
+            stroke="color-mix(in srgb, var(--sp-or-jalon) 55%, transparent)" strokeWidth="0.7"/>
+          <rect x="204" y={78 + i * 11} width={d ? 46 : 34} height="3.5" rx="1"
+            fill={d ? "color-mix(in srgb, var(--sp-sur-sombre) 28%, transparent)" : "color-mix(in srgb, var(--sp-sur-sombre) 12%, transparent)"}/>
+        </g>
+      ))}
+      <text x="192" y="141" fontFamily="var(--sp-font-mono)" fontSize="5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)">Avancement</text>
+      <text x="258" y="141" textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="6" fontWeight="700" fill={GOLD}>60 %</text>
+      <text x="192" y="150" fontFamily="var(--sp-font-mono)" fontSize="5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 55%, transparent)">IPC</text>
+      <text x="258" y="150" textAnchor="end" fontFamily="var(--sp-font-mono)" fontSize="6" fontWeight="700" fill={GOLD}>0,80</text>
+      <text x="140" y="170" textAnchor="middle" fontFamily="var(--sp-font-mono)" fontSize="5.5"
+        fill="color-mix(in srgb, var(--sp-sur-sombre) 35%, transparent)" letterSpacing="0.06em">CALCULÉ, JAMAIS SAISI · NEXT.JS · POSTGRESQL · RLS · 735 TESTS</text>
     </svg>
   );
 }
@@ -591,7 +615,7 @@ function DataStudioVisual() {
 const visualBg: Record<string, string> = {
   oif:          "var(--sp-grad-section)",
   incubation:   "var(--sp-grad-section)",
-  valorisation: "var(--sp-grad-section)",
+  tbs:          "var(--sp-grad-section)",
   ibf:          "var(--sp-grad-section)",
   gov:          "var(--sp-grad-section)",
   cap:          "var(--sp-grad-section)",
@@ -696,7 +720,7 @@ export default function FlagshipCard({
         )}
         {visual === "oif" && <OifVisual />}
         {visual === "incubation" && <IncubationVisual />}
-        {visual === "valorisation" && <ValorisationVisual />}
+        {visual === "tbs" && <TbsVisual />}
         {visual === "ibf" && <IbfVisual />}
         {visual === "gov" && <GovVisual />}
         {visual === "cap" && <CapVisual alt={capImageAlt} />}

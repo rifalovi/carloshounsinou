@@ -34,7 +34,7 @@ type UI = {
 const VALID_SLUGS = [
   "institutional-pilot",
   "incubation-platform",
-  "valorisation-platform",
+  "tbs-pdc",
   "eu-platforms",
   "indicators-platform",
   "cevelab",

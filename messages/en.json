@@ -255,46 +255,52 @@
         ]
       },
       {
-        "id": "valorisation-platform",
-        "visual": "valorisation",
-        "category": "Institutional platform",
-        "role": "Designer · Senior technical lead",
-        "title": "Programme portfolio valorisation platform",
-        "subtitle": "Institutional organisation · Paris",
-        "status": "Delivered · Active pilot",
+        "id": "tbs-pdc",
+        "visual": "tbs",
+        "category": "Local governance · Monitoring & evaluation",
+        "role": "Designer · Functional architect · Project owner",
+        "title": "TBS-PDC · Monitoring & evaluation of municipal development plans",
+        "subtitle": "Municipalities of Benin · tbs-pdc.suivi-projet.org",
+        "status": "In production · Bassila pilot",
         "statusType": "live",
-        "description": "Design and delivery of an institutional web platform for the public valorisation of a portfolio of strategic projects. Architecture combining data storytelling project sheets, analytical dashboard, map exploration and a conversational assistant powered by semantic search.",
+        "description": "A platform that links, for a municipality, the state of its development indicators to the projects of its Municipal Development Plan, then to their physical and financial execution, evaluation and capitalisation. The whole results-based management chain, from vision to impacts, with one simple principle: every aggregate is computed, never typed in. Public white-label municipal showcases, departmental oversight, exported annual plan review.",
         "specs": [
           {
-            "label": "Architecture",
-            "value": "Full-stack · vector search"
+            "label": "RBM chain",
+            "value": "10 links, from vision to impacts"
           },
           {
-            "label": "Framework",
-            "value": "International institutional standards"
+            "label": "Computations",
+            "value": "Achievement rate · earned-value CPI · milestones validated on evidence"
           },
           {
             "label": "Security",
-            "value": "Multi-role RLS · anti-hallucination"
+            "value": "Deny-by-default RLS · least privilege · audit log"
           },
           {
             "label": "Status",
-            "value": "Delivered · Live pilot"
+            "value": "In production · 77 municipalities listed"
           }
         ],
-        "hasAI": true,
+        "hasAI": false,
         "stack": [
-          "Full-stack architecture",
-          "Vector base",
-          "Encapsulated AI",
-          "Web cartography",
-          "Multi-role editorial workflow"
+          "Next.js 16",
+          "Strict TypeScript",
+          "PostgreSQL · Supabase",
+          "RLS · Zod",
+          "Docker · CI",
+          "735 tests"
         ],
         "actions": [
           {
+            "label": "Open the platform ↗",
+            "type": "external",
+            "href": "https://tbs-pdc.suivi-projet.org"
+          },
+          {
             "label": "Learn more →",
             "type": "detail",
-            "href": "/realisations/valorisation-platform"
+            "href": "/realisations/tbs-pdc"
           }
         ]
       },
@@ -1007,24 +1013,26 @@
         "stackDetail": "Full-stack architecture · Vector base · Encapsulated generative AI (RAG + Vision) · Multi-role workflow · RLS · Scheduled alerts · Automated reporting"
       },
       {
-        "id": "valorisation-platform",
-        "metaTitle": "Programme portfolio valorisation platform · Carlos Hounsinou",
-        "metaDescription": "Institutional platform combining data storytelling, cartography and AI assistant to valorise a portfolio of strategic projects: RLS, anti-hallucination.",
-        "title": "Programme portfolio valorisation platform",
-        "subtitle": "Institutional organisation · Paris",
-        "category": "Institutional platform",
-        "status": "Delivered · Active pilot",
-        "context": "An international institution wanted to make its added value visible through its portfolio of strategic projects. The data existed but was buried in PDF reports inaccessible to the general public and potential partners.",
-        "challenge": "Transforming static reports into interactive web experiences while guaranteeing the accuracy of information provided by the conversational assistant, a major institutional reputation issue, and managing the editorial workflow for teams with heterogeneous digital skills.",
+        "id": "tbs-pdc",
+        "metaTitle": "TBS-PDC · Monitoring & evaluation of municipal development plans · Carlos Hounsinou",
+        "metaDescription": "Monitoring & evaluation platform for Benin's municipal development plans: full RBM chain, computed indicators, milestones, financial tracking, evaluation, capitalisation, public showcases.",
+        "title": "TBS-PDC · Monitoring & evaluation of municipal development plans",
+        "subtitle": "Municipalities of Benin · tbs-pdc.suivi-projet.org",
+        "category": "Local governance · Monitoring & evaluation",
+        "status": "In production · Bassila pilot",
+        "context": "Benin's municipalities keep a social dashboard (population, education, health, water, infrastructure) and a Municipal Development Plan. No tool linked the state of the indicators to the plan's projects, their physical and financial execution, and then their evaluation. The pilot municipality's manual dashboard had taken more than six months to compile, contained no formulas, and 17 anomalies had been found in it.",
+        "challenge": "Model the entire results-based management chain without ever inventing a standard or a figure: the indicator catalogue, standards and targets are loaded as data after workshops with the source departments. Guarantee that no total is ever typed by hand, that every value keeps its source, year and original cell, and that the interface stays usable at 400 px wide by municipal staff.",
         "approach": [
-          "Multi-role editorial CMS enabling teams to create, review and publish structured project pages.",
-          "Data storytelling: data visualisations, key indicators, results timeline per project.",
-          "Analytical dashboard offering a portfolio overview: geographic spread, themes, progress levels.",
-          "Interactive map exploration of projects by geographic zone.",
-          "Conversational assistant powered by a proprietary vector base, with anti-hallucination guardrails and response audit."
+          "Ten-link RBM chain: vision, programmes, sectors, indicators, projects, monitoring, results, evaluation, capitalisation, impacts (national plan, SDGs).",
+          "Safe formula engine: indicators recomputed from variables, achievement rate, earned value and cost performance index, status capped by the nature of the standard; \"not available\" is never zero.",
+          "Physical progress computed from weighted milestones, each validated on supporting evidence by a validator distinct from the declarant.",
+          "Reference sheet per indicator, common core locked by the national administration, data quality assessed on five criteria, configurable seven-year history window.",
+          "Institutional security: PostgreSQL with deny-by-default RLS, least-privilege database roles, audit log on every sensitive write, Zod validation on client and server, EU-region hosting, processing register.",
+          "Public white-label showcase per municipality, departmental oversight and aggregation across the 12 departments, open exports and published annual plan review.",
+          "Sprint delivery with a strict definition of done: zero TypeScript errors, 735 automated tests (engine, RLS, core, integrity), Docker images built in continuous integration."
         ],
-        "results": "Pilot deployed in production. Adopted by the editorial team from day one. The conversational assistant responds to external partner questions with precision benchmarked against the institutional reference base.",
-        "stackDetail": "Full-stack architecture · Proprietary vector base · Encapsulated AI · Web cartography · Multi-role editorial workflow · RLS · Anti-hallucination"
+        "results": "Five sprints delivered between mid-October and late November 2026. Platform in production: the Bassila pilot municipality is published with 59 indicators across 9 sectors and a 2019-2025 window, and 77 municipalities are listed by cluster and department. Target: produce the annual plan review in under 30 days instead of more than six months.",
+        "stackDetail": "Next.js 16 App Router · Strict TypeScript · Tailwind · shadcn/ui · PostgreSQL / Supabase (RLS, versioned migrations) · Safe formula engine · S3-compatible storage · Zod · Docker Compose · CI · Vitest · Vercel (cdg1 region)"
       },
       {
         "id": "eu-platforms",
